@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -28,19 +26,19 @@ namespace SharpMath2
             bool checkedX = false, checkedY = false;
             for (int i = 0; i < poly.Normals.Count; i++)
             {
-                var norm = Math2.Rotate(poly.Normals[i], Vector2.Zero, rot1);
+                var norm = Math2.Rotate(poly.Normals[i], Vector2.zero, rot1);
                 if (!IntersectsAlongAxis(poly, rect, pos1, pos2, rot1, strict, norm))
                     return false;
 
-                if (norm.X == 0)
+                if (norm.x == 0)
                     checkedY = true;
-                if (norm.Y == 0)
+                if (norm.y == 0)
                     checkedX = true;
             }
 
-            if (!checkedX && !IntersectsAlongAxis(poly, rect, pos1, pos2, rot1, strict, Vector2.UnitX))
+            if (!checkedX && !IntersectsAlongAxis(poly, rect, pos1, pos2, rot1, strict, Vector2.right))
                 return false;
-            if (!checkedY && !IntersectsAlongAxis(poly, rect, pos1, pos2, rot1, strict, Vector2.UnitY))
+            if (!checkedY && !IntersectsAlongAxis(poly, rect, pos1, pos2, rot1, strict, Vector2.up))
                 return false;
 
             return true;
@@ -60,12 +58,12 @@ namespace SharpMath2
         {
             bool checkedX = false, checkedY = false;
 
-            Vector2 bestAxis = Vector2.Zero;
+            Vector2 bestAxis = Vector2.zero;
             float bestMagn = float.MaxValue;
 
             for (int i = 0; i < poly.Normals.Count; i++)
             {
-                var norm = Math2.Rotate(poly.Normals[i], Vector2.Zero, rot1);
+                var norm = Math2.Rotate(poly.Normals[i], Vector2.zero, rot1);
                 var mtv = IntersectMTVAlongAxis(poly, rect, pos1, pos2, rot1, norm);
                 if (!mtv.HasValue)
                     return null;
@@ -76,34 +74,34 @@ namespace SharpMath2
                     bestMagn = mtv.Value;
                 }
 
-                if (norm.X == 0)
+                if (norm.x == 0)
                     checkedY = true;
-                if (norm.Y == 0)
+                if (norm.y == 0)
                     checkedX = true;
             }
 
             if (!checkedX)
             {
-                var mtv = IntersectMTVAlongAxis(poly, rect, pos1, pos2, rot1, Vector2.UnitX);
+                var mtv = IntersectMTVAlongAxis(poly, rect, pos1, pos2, rot1, Vector2.right);
                 if (!mtv.HasValue)
                     return null;
 
                 if (Math.Abs(mtv.Value) < Math.Abs(bestMagn))
                 {
-                    bestAxis = Vector2.UnitX;
+                    bestAxis = Vector2.right;
                     bestMagn = mtv.Value;
                 }
             }
 
             if (!checkedY)
             {
-                var mtv = IntersectMTVAlongAxis(poly, rect, pos1, pos2, rot1, Vector2.UnitY);
+                var mtv = IntersectMTVAlongAxis(poly, rect, pos1, pos2, rot1, Vector2.up);
                 if (!mtv.HasValue)
                     return null;
 
                 if (Math.Abs(mtv.Value) < Math.Abs(bestMagn))
                 {
-                    bestAxis = Vector2.UnitY;
+                    bestAxis = Vector2.up;
                     bestMagn = mtv.Value;
                 }
             }
@@ -231,7 +229,7 @@ namespace SharpMath2
         {
             // look at pictures of https://stackoverflow.com/questions/401847/circle-rectangle-collision-detection-intersection if you don't
             // believe this is true
-            return poly.Lines.Any((l) => CircleIntersectsLine(circle, l, pos2, pos1, rot1, poly.Center, strict)) || Polygon2.Contains(poly, pos1, rot1, new Vector2(pos2.X + circle.Radius, pos2.Y + circle.Radius), strict);
+            return poly.Lines.Any((l) => CircleIntersectsLine(circle, l, pos2, pos1, rot1, poly.Center, strict)) || Polygon2.Contains(poly, pos1, rot1, new Vector2(pos2.x + circle.Radius, pos2.y + circle.Radius), strict);
         }
 
         /// <summary>
@@ -272,7 +270,7 @@ namespace SharpMath2
 
             HashSet<Vector2> checkedAxis = new HashSet<Vector2>();
 
-            Vector2 bestAxis = Vector2.Zero;
+            Vector2 bestAxis = Vector2.zero;
             float shortestOverlap = float.MaxValue;
 
             Func<Vector2, bool> checkAxis = (axis) =>
@@ -297,7 +295,7 @@ namespace SharpMath2
                 return true;
             };
 
-            var circleCenter = new Vector2(pos2.X + circle.Radius, pos2.Y + circle.Radius);
+            var circleCenter = new Vector2(pos2.x + circle.Radius, pos2.y + circle.Radius);
             int last = poly.Vertices.Length - 1;
             var lastVec = Math2.Rotate(poly.Vertices[last], poly.Center, rot1) + pos1;
             for(int curr = 0; curr < poly.Vertices.Length; curr++)
@@ -305,11 +303,11 @@ namespace SharpMath2
                 var currVec = Math2.Rotate(poly.Vertices[curr], poly.Center, rot1) + pos1;
 
                 // Test along circle center -> vector
-                if (!checkAxis(Vector2.Normalize(currVec - circleCenter)))
+                if (!checkAxis((currVec - circleCenter).normalized))
                     return null;
 
                 // Test along line normal
-                if (!checkAxis(Vector2.Normalize(Math2.Perpendicular(currVec - lastVec))))
+                if (!checkAxis(Math2.Perpendicular(currVec - lastVec).normalized))
                     return null;
 
                 last = curr;
@@ -366,12 +364,12 @@ namespace SharpMath2
         /// <returns>If circle at pos1 intersects rect at pos2</returns>
         public static bool Intersects(Circle2 circle, Rect2 rect, Vector2 pos1, Vector2 pos2, bool strict)
         {
-            var circleCenter = new Vector2(pos1.X + circle.Radius, pos1.Y + circle.Radius);
+            var circleCenter = new Vector2(pos1.x + circle.Radius, pos1.y + circle.Radius);
             return CircleIntersectsHorizontalLine(circle, new Line2(rect.Min + pos2, rect.UpperRight + pos2), circleCenter, strict)
                 || CircleIntersectsHorizontalLine(circle, new Line2(rect.LowerLeft + pos2, rect.Max + pos2), circleCenter, strict)
                 || CircleIntersectsVerticalLine(circle, new Line2(rect.Min + pos2, rect.LowerLeft + pos2), circleCenter, strict)
                 || CircleIntersectsVerticalLine(circle, new Line2(rect.UpperRight + pos2, rect.Max + pos2), circleCenter, strict)
-                || Rect2.Contains(rect, pos2, new Vector2(pos1.X + circle.Radius, pos1.Y + circle.Radius), strict);
+                || Rect2.Contains(rect, pos2, new Vector2(pos1.x + circle.Radius, pos1.y + circle.Radius), strict);
         }
 
         /// <summary>
@@ -402,7 +400,7 @@ namespace SharpMath2
             // Same as polygon rect, just converted to rects points
             HashSet<Vector2> checkedAxis = new HashSet<Vector2>();
 
-            Vector2 bestAxis = Vector2.Zero;
+            Vector2 bestAxis = Vector2.zero;
             float shortestOverlap = float.MaxValue;
 
             Func<Vector2, bool> checkAxis = (axis) =>
@@ -427,12 +425,12 @@ namespace SharpMath2
                 return true;
             };
 
-            var circleCenter = new Vector2(pos1.X + circle.Radius, pos1.Y + circle.Radius);
+            var circleCenter = new Vector2(pos1.x + circle.Radius, pos1.y + circle.Radius);
             int last = 4;
             var lastVec = rect.UpperRight + pos2;
             for (int curr = 0; curr < 4; curr++)
             {
-                Vector2 currVec = Vector2.Zero;
+                Vector2 currVec = Vector2.zero;
                 switch(curr)
                 {
                     case 0:
@@ -450,11 +448,11 @@ namespace SharpMath2
                 }
 
                 // Test along circle center -> vector
-                if (!checkAxis(Vector2.Normalize(currVec - circleCenter)))
+                if (!checkAxis((currVec - circleCenter).normalized))
                     return null;
 
                 // Test along line normal
-                if (!checkAxis(Vector2.Normalize(Math2.Perpendicular(currVec - lastVec))))
+                if (!checkAxis(Math2.Perpendicular(currVec - lastVec).normalized))
                     return null;
 
                 last = curr;
@@ -501,7 +499,7 @@ namespace SharpMath2
             for (int i = 0; i < points.Length; i++)
             {
                 var polyPt = Math2.Rotate(points[i], center, rot);
-                var tmp = Math2.Dot(polyPt.X + pos.X, polyPt.Y + pos.Y, axis.X, axis.Y);
+                var tmp = Math2.Dot(polyPt.x + pos.x, polyPt.y + pos.y, axis.x, axis.y);
 
                 if (i == 0)
                 {
@@ -534,11 +532,11 @@ namespace SharpMath2
             float max;
             fixed(Vector2* pt = points)
             {
-                min = axis.X * (pt[0].X + pos.X) + axis.Y * (pt[0].Y + pos.Y);
+                min = axis.x * (pt[0].x + pos.x) + axis.y * (pt[0].y + pos.y);
                 max = min;
                 for (int i = 1; i < len; i++)
                 {
-                    float tmp = axis.X * (pt[i].X + pos.X) + axis.Y * (pt[i].Y + pos.Y);
+                    float tmp = axis.x * (pt[i].x + pos.x) + axis.y * (pt[i].y + pos.y);
 
                     if (tmp < min)
                         min = tmp;
@@ -566,7 +564,7 @@ namespace SharpMath2
         {
             // Make more math friendly
             var actualLine = new Line2(Math2.Rotate(line.Start, about2, rot2) + pos2, Math2.Rotate(line.End, about2, rot2) + pos2);
-            var circleCenter = new Vector2(pos1.X + circle.Radius, pos1.Y + circle.Radius);
+            var circleCenter = new Vector2(pos1.x + circle.Radius, pos1.y + circle.Radius);
 
             // Check weird situations
             if (actualLine.Horizontal)
@@ -647,7 +645,7 @@ namespace SharpMath2
             // closest point is less than the start, OR the start is greater than the end and
             // closest point is greater than the end.
 
-            var closestEdge = Vector2.Zero;
+            var closestEdge = Vector2.zero;
             if (lineStartProjectedOntoLineAxis < lineEndProjectedOntoLineAxis)
                 closestEdge = (closestPointProjectedOntoLineAxis <= lineStartProjectedOntoLineAxis) ? actualLine.Start : actualLine.End;
             else
@@ -656,7 +654,7 @@ namespace SharpMath2
             // Step 5
             // Circle->Point intersection for closestEdge
 
-            var distToCircleFromClosestEdgeSq = (circleCenter - closestEdge).LengthSquared();
+            var distToCircleFromClosestEdgeSq = (circleCenter - closestEdge).sqrMagnitude;
             if (strict)
                 return distToCircleFromClosestEdgeSq < (circle.Radius * circle.Radius);
             else
@@ -678,10 +676,10 @@ namespace SharpMath2
         protected static bool CircleIntersectsHorizontalLine(Circle2 circle, Line2 line, Vector2 circleCenter, bool strict)
         {
             // This is exactly the same process as CircleIntersectsLine, except the projetions are easier
-            var lineY = line.Start.Y;
+            var lineY = line.Start.y;
 
             // Step 1 - Find closest distance
-            var vecCircleCenterToLine1D = lineY - circleCenter.Y;
+            var vecCircleCenterToLine1D = lineY - circleCenter.y;
             var closestDistance = Math.Abs(vecCircleCenterToLine1D);
 
             // Step 1a
@@ -696,21 +694,21 @@ namespace SharpMath2
             }
 
             // Step 2 - Find closest point
-            var closestPointX = circleCenter.X;
+            var closestPointX = circleCenter.x;
 
             // Step 3 - Is closest point on line
-            if (AxisAlignedLine2.Contains(line.Start.X, line.End.X, closestPointX, false, true))
+            if (AxisAlignedLine2.Contains(line.Start.x, line.End.x, closestPointX, false, true))
                 return true;
 
             // Step 4 - Find edgeClosest
             float edgeClosestX;
-            if (line.Start.X < line.End.X)
-                edgeClosestX = (closestPointX <= line.Start.X) ? line.Start.X : line.End.X;
+            if (line.Start.x < line.End.x)
+                edgeClosestX = (closestPointX <= line.Start.x) ? line.Start.x : line.End.x;
             else
-                edgeClosestX = (closestPointX >= line.Start.X) ? line.Start.X : line.End.X;
+                edgeClosestX = (closestPointX >= line.Start.x) ? line.Start.x : line.End.x;
 
             // Step 5 - Circle-point intersection on closest point
-            var distClosestEdgeToCircleSq = new Vector2(circleCenter.X - edgeClosestX, circleCenter.Y - lineY).LengthSquared();
+            var distClosestEdgeToCircleSq = new Vector2(circleCenter.x - edgeClosestX, circleCenter.y - lineY).sqrMagnitude;
 
             if (strict)
                 return distClosestEdgeToCircleSq < circle.Radius * circle.Radius;
@@ -730,9 +728,9 @@ namespace SharpMath2
         protected static bool CircleIntersectsVerticalLine(Circle2 circle, Line2 line, Vector2 circleCenter, bool strict)
         {
             // Same process as horizontal, but axis flipped
-            var lineX = line.Start.X;
+            var lineX = line.Start.x;
             // Step 1 - Find closest distance
-            var vecCircleCenterToLine1D = lineX - circleCenter.X;
+            var vecCircleCenterToLine1D = lineX - circleCenter.x;
             var closestDistance = Math.Abs(vecCircleCenterToLine1D);
 
             // Step 1a
@@ -748,21 +746,21 @@ namespace SharpMath2
             }
 
             // Step 2 - Find closest point
-            var closestPointY = circleCenter.Y;
+            var closestPointY = circleCenter.y;
 
             // Step 3 - Is closest point on line
-            if (AxisAlignedLine2.Contains(line.Start.Y, line.End.Y, closestPointY, false, true))
+            if (AxisAlignedLine2.Contains(line.Start.y, line.End.y, closestPointY, false, true))
                 return true;
 
             // Step 4 - Find edgeClosest
             float edgeClosestY;
-            if (line.Start.Y < line.End.Y)
-                edgeClosestY = (closestPointY <= line.Start.Y) ? line.Start.Y : line.End.Y;
+            if (line.Start.y < line.End.y)
+                edgeClosestY = (closestPointY <= line.Start.y) ? line.Start.y : line.End.y;
             else
-                edgeClosestY = (closestPointY >= line.Start.Y) ? line.Start.Y : line.End.Y;
+                edgeClosestY = (closestPointY >= line.Start.y) ? line.Start.y : line.End.y;
 
             // Step 5 - Circle-point intersection on closest point
-            var distClosestEdgeToCircleSq = new Vector2(circleCenter.X - lineX, circleCenter.Y - edgeClosestY).LengthSquared();
+            var distClosestEdgeToCircleSq = new Vector2(circleCenter.x - lineX, circleCenter.y - edgeClosestY).sqrMagnitude;
 
             if (strict)
                 return distClosestEdgeToCircleSq < circle.Radius * circle.Radius;

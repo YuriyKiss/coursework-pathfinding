@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -65,27 +61,27 @@ namespace SharpMath2
         /// <exception cref="ArgumentException">If min and max do not make a box</exception>
         public Rect2(Vector2 min, Vector2 max)
         {
-            float area = (max.X - min.X) * (max.Y - min.Y);
+            float area = (max.x - min.x) * (max.y - min.y);
             if(area > -Math2.DEFAULT_EPSILON && area < Math2.DEFAULT_EPSILON)
                 throw new ArgumentException($"min={min}, max={max} - that's a line or a point, not a box (area below epsilon {Math2.DEFAULT_EPSILON} (got {area}))");
 
-            float tmpX1 = min.X, tmpX2 = max.X;
-            float tmpY1 = min.Y, tmpY2 = max.Y;
+            float tmpX1 = min.x, tmpX2 = max.x;
+            float tmpY1 = min.y, tmpY2 = max.y;
 
-            min.X = Math.Min(tmpX1, tmpX2);
-            min.Y = Math.Min(tmpY1, tmpY2);
-            max.X = Math.Max(tmpX1, tmpX2);
-            max.Y = Math.Max(tmpY1, tmpY2);
+            min.x = Math.Min(tmpX1, tmpX2);
+            min.y = Math.Min(tmpY1, tmpY2);
+            max.x = Math.Max(tmpX1, tmpX2);
+            max.y = Math.Max(tmpY1, tmpY2);
 
             Vertices = new Vector2[]
             {
-                min, new Vector2(max.X, min.Y), max, new Vector2(min.X, max.Y)
+                min, new Vector2(max.x, min.y), max, new Vector2(min.x, max.y)
             };
 
-            Center = new Vector2((Min.X + Max.X) / 2, (Min.Y + Max.Y) / 2);
+            Center = new Vector2((Min.x + Max.x) / 2, (Min.y + Max.y) / 2);
 
-            Width = Max.X - Min.X;
-            Height = Max.Y - Min.Y;
+            Width = Max.x - Min.x;
+            Height = Max.y - Min.y;
         }
 
         /// <summary>
@@ -110,8 +106,8 @@ namespace SharpMath2
         /// <returns>If box1 intersects box2 when box1 is at pos1 and box2 is at pos2</returns>
         public static bool Intersects(Rect2 box1, Rect2 box2, Vector2 pos1, Vector2 pos2, bool strict)
         {
-            return AxisAlignedLine2.Intersects(box1.Min.X + pos1.X, box1.Max.X + pos1.X, box2.Min.X + pos2.X, box2.Max.X + pos2.X, strict, false)
-                && AxisAlignedLine2.Intersects(box1.Min.Y + pos1.Y, box1.Max.Y + pos1.Y, box2.Min.Y + pos2.Y, box2.Max.Y + pos2.Y, strict, false);
+            return AxisAlignedLine2.Intersects(box1.Min.x + pos1.x, box1.Max.x + pos1.x, box2.Min.x + pos2.x, box2.Max.x + pos2.x, strict, false)
+                && AxisAlignedLine2.Intersects(box1.Min.y + pos1.y, box1.Max.y + pos1.y, box2.Min.y + pos2.y, box2.Max.y + pos2.y, strict, false);
         }
 
         /// <summary>
@@ -124,8 +120,8 @@ namespace SharpMath2
         /// <returns>If the box at pos contains point</returns>
         public static bool Contains(Rect2 box, Vector2 pos, Vector2 point, bool strict)
         {
-            return AxisAlignedLine2.Contains(box.Min.X + pos.X, box.Max.X + pos.X, point.X, strict, false)
-                && AxisAlignedLine2.Contains(box.Min.Y + pos.Y, box.Max.Y + pos.Y, point.Y, strict, false);
+            return AxisAlignedLine2.Contains(box.Min.x + pos.x, box.Max.x + pos.x, point.x, strict, false)
+                && AxisAlignedLine2.Contains(box.Min.y + pos.y, box.Max.y + pos.y, point.y, strict, false);
         }
 
         /// <summary>

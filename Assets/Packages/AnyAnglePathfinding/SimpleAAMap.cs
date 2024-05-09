@@ -1,10 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using UnityEngine;
 using SharpMath2;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnyAnglePathfinding
 {
@@ -62,7 +58,7 @@ namespace AnyAnglePathfinding
         /// <returns>True if the specified polygon fits in the map, False otherwise</returns>
         public bool Contains(Polygon2 poly, Vector2 pos)
         {
-            return pos.X >= 0 && pos.Y >= 0 && pos.X + poly.AABB.Width < Width && pos.Y + poly.AABB.Height < Height;
+            return pos.x >= 0 && pos.y >= 0 && pos.x + poly.AABB.Width < Width && pos.y + poly.AABB.Height < Height;
         }
 
         /// <summary>

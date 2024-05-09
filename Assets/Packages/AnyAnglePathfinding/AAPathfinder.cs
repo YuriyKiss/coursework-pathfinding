@@ -1,11 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿using UnityEngine;
 using Priority_Queue;
 using SharpMath2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnyAnglePathfinding
 {
@@ -137,7 +135,7 @@ namespace AnyAnglePathfinding
                 Parent = null,
                 Location = Start,
                 DistanceStartToHere = 0,
-                HeurDistanceHereToDest = (End - Start).Length()
+                HeurDistanceHereToDest = (End - Start).magnitude
             };
 
             QueueCollidables(uvStart, collidables, open, closed);
@@ -393,8 +391,8 @@ namespace AnyAnglePathfinding
             Vector2 myVert = Bounds.Vertices[myVertexIndex];
             Vector2 collidableVert = collidable.Bounds.Vertices[collidableVertexIndex];
             Vector2 point = new Vector2(
-                collidable.Position.X + collidableVert.X - myVert.X,
-                collidable.Position.Y + collidableVert.Y - myVert.Y
+                collidable.Position.x + collidableVert.x - myVert.x,
+                collidable.Position.y + collidableVert.y - myVert.y
             );
 
             if (!Map.Contains(Bounds, point))
@@ -417,8 +415,8 @@ namespace AnyAnglePathfinding
                     Collidable = collidable,
                     CollidableVertexInd = collidableVertexIndex,
                     OurVertexInd = myVertexIndex,
-                    DistanceStartToHere = from.DistanceStartToHere + (point - from.Location).Length(),
-                    HeurDistanceHereToDest = (End - point).Length()
+                    DistanceStartToHere = from.DistanceStartToHere + (point - from.Location).magnitude,
+                    HeurDistanceHereToDest = (End - point).magnitude
                 };
                 open.Enqueue(unv, unv.CorrectPrio);
                 return null;

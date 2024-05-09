@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -130,22 +126,22 @@ namespace SharpMath2
 
 
             Delta = End - Start;
-            Axis = Vector2.Normalize(Delta);
-            Normal = Vector2.Normalize(Math2.Perpendicular(Delta));
-            MagnitudeSquared = Delta.LengthSquared();
+            Axis = Delta.normalized;
+            Normal = Math2.Perpendicular(Delta).normalized;
+            MagnitudeSquared = Delta.sqrMagnitude;
             Magnitude = (float)Math.Sqrt(MagnitudeSquared);
 
-            MinX = Math.Min(Start.X, End.X);
-            MinY = Math.Min(Start.Y, End.Y);
-            MaxX = Math.Max(Start.X, End.X);
-            MaxY = Math.Max(Start.Y, End.Y);
-            Horizontal = Math.Abs(End.Y - Start.Y) <= Math2.DEFAULT_EPSILON;
-            Vertical = Math.Abs(End.X - Start.X) <= Math2.DEFAULT_EPSILON;
+            MinX = Math.Min(Start.x, End.x);
+            MinY = Math.Min(Start.y, End.y);
+            MaxX = Math.Max(Start.x, End.x);
+            MaxY = Math.Max(Start.y, End.y);
+            Horizontal = Math.Abs(End.y - Start.y) <= Math2.DEFAULT_EPSILON;
+            Vertical = Math.Abs(End.x - Start.x) <= Math2.DEFAULT_EPSILON;
 
             if (Vertical)
                 Slope = float.PositiveInfinity;
             else
-                Slope = (End.Y - Start.Y) / (End.X - Start.X);
+                Slope = (End.y - Start.y) / (End.x - Start.x);
 
             if (Vertical)
                 YIntercept = float.NaN;
@@ -154,7 +150,7 @@ namespace SharpMath2
                 // y = mx + b
                 // Start.Y = Slope * Start.X + b
                 // b = Start.Y - Slope * Start.X
-                YIntercept = Start.Y - Slope * Start.X;
+                YIntercept = Start.y - Slope * Start.x;
             }
         }
 
@@ -201,13 +197,13 @@ namespace SharpMath2
             // (false) very quickly
             if(line.Horizontal)
             {
-                return Math2.Approximately(line.Start.Y + pos.Y, pt.Y)
-                    && AxisAlignedLine2.Contains(line.MinX, line.MaxX, pt.X - pos.X, false, false);
+                return Math2.Approximately(line.Start.y + pos.y, pt.y)
+                    && AxisAlignedLine2.Contains(line.MinX, line.MaxX, pt.x - pos.x, false, false);
             }
             if(line.Vertical)
             {
-                return Math2.Approximately(line.Start.X + pos.X, pt.X)
-                    && AxisAlignedLine2.Contains(line.MinY, line.MaxY, pt.Y - pos.Y, false, false);
+                return Math2.Approximately(line.Start.x + pos.x, pt.x)
+                    && AxisAlignedLine2.Contains(line.MinY, line.MaxY, pt.y - pos.y, false, false);
             }
 
             // Our line is not necessarily a linear space, but if we shift
@@ -347,14 +343,14 @@ namespace SharpMath2
             // Bezier lines to skip the vertical case
             // https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection
 
-            float x1 = line1.Start.X + pos1.X;
-            float x2 = line1.End.X + pos1.X;
-            float x3 = line2.Start.X + pos2.X;
-            float x4 = line2.End.X + pos2.X;
-            float y1 = line1.Start.Y + pos1.Y;
-            float y2 = line1.End.Y + pos1.Y;
-            float y3 = line2.Start.Y + pos2.Y;
-            float y4 = line2.End.Y + pos2.Y;
+            float x1 = line1.Start.x + pos1.x;
+            float x2 = line1.End.x + pos1.x;
+            float x3 = line2.Start.x + pos2.x;
+            float x4 = line2.End.x + pos2.x;
+            float y1 = line1.Start.y + pos1.y;
+            float y2 = line1.End.y + pos1.y;
+            float y3 = line2.Start.y + pos2.y;
+            float y4 = line2.End.y + pos2.y;
 
             float det = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
             // we assume det != 0 (lines not parallel)
@@ -475,7 +471,7 @@ namespace SharpMath2
                 nearestAxisPart = axisPart;
 
             Vector2 nearestOnLine = line.Start + pos + nearestAxisPart * line.Axis;
-            return (pt - nearestOnLine).Length();
+            return (pt - nearestOnLine).magnitude;
         }
 
         /// <summary>

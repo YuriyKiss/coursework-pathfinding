@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -29,7 +25,7 @@ namespace SharpMath2
         public static bool IsOnLine(Vector2 v1, Vector2 v2, Vector2 v3, float epsilon = DEFAULT_EPSILON)
         {
             var fromV1ToV2 = v2 - v1;
-            var axis = Vector2.Normalize(fromV1ToV2);
+            var axis = fromV1ToV2.normalized;
             var normal = Perpendicular(axis);
 
             var fromV1ToV3 = v3 - v1;
@@ -49,7 +45,7 @@ namespace SharpMath2
         public static bool IsBetweenLine(Vector2 v1, Vector2 v2, Vector2 pt, float epsilon = DEFAULT_EPSILON)
         {
             var fromV1ToV2 = v2 - v1;
-            var axis = Vector2.Normalize(fromV1ToV2);
+            var axis = fromV1ToV2.normalized;
             var normal = Perpendicular(axis);
 
             var fromV1ToPt = pt - v1;
@@ -63,7 +59,7 @@ namespace SharpMath2
             if (axisPortion < -epsilon)
                 return false; // left of the first point
 
-            if (axisPortion > fromV1ToV2.Length() + epsilon)
+            if (axisPortion > fromV1ToV2.magnitude + epsilon)
                 return false; // right of second point
 
             return true;
@@ -81,8 +77,8 @@ namespace SharpMath2
         public static Vector2 TripleCross(Vector2 a, Vector2 b)
         {
             return new Vector2(
-                -a.X * a.Y * b.Y + a.Y * a.Y * b.X,
-                a.X * a.X * b.Y - a.X * a.Y * b.X
+                -a.x * a.y * b.y + a.y * a.y * b.x,
+                a.x * a.x * b.y - a.x * a.y * b.x
             );
         }
 
@@ -95,7 +91,7 @@ namespace SharpMath2
         /// <returns>Area of the triangle made up of the given 3 points</returns>
         public static float AreaOfTriangle(Vector2 v1, Vector2 v2, Vector2 v3)
         {
-            return 0.5f * Math.Abs((v2.X - v1.X) * (v3.Y - v1.Y) - (v3.X - v1.X) * (v2.Y - v1.Y));
+            return 0.5f * Math.Abs((v2.x - v1.x) * (v3.y - v1.y) - (v3.x - v1.x) * (v2.y - v1.y));
         }
 
         /// <summary>
@@ -105,7 +101,7 @@ namespace SharpMath2
         /// <param name="v">Vector</param>
         public static Vector2 Perpendicular(Vector2 v)
         {
-            return new Vector2(-v.Y, v.X);
+            return new Vector2(-v.y, v.x);
         }
 
         /// <summary>
@@ -129,7 +125,7 @@ namespace SharpMath2
         /// <returns>The dot product between v1 and v2</returns>
         public static float Dot(Vector2 v1, Vector2 v2)
         {
-            return Dot(v1.X, v1.Y, v2.X, v2.Y);
+            return Dot(v1.x, v1.y, v2.x, v2.y);
         }
 
         /// <summary>
@@ -142,7 +138,7 @@ namespace SharpMath2
         /// <returns>The dot product of v and (x2, y2)</returns>
         public static float Dot(Vector2 v, float x2, float y2)
         {
-            return Dot(v.X, v.Y, x2, y2);
+            return Dot(v.x, v.y, x2, y2);
         }
 
         /// <summary>
@@ -167,7 +163,7 @@ namespace SharpMath2
         /// <param name="epsilon">Epsilon.</param>
         public static bool Approximately(Vector2 v1, Vector2 v2, float epsilon = DEFAULT_EPSILON)
         {
-            return Approximately(v1.X, v2.X, epsilon) && Approximately(v1.Y, v2.Y, epsilon);
+            return Approximately(v1.x, v2.x, epsilon) && Approximately(v1.y, v2.y, epsilon);
         }
 
         /// <summary>
@@ -183,8 +179,8 @@ namespace SharpMath2
             if (rotation.Theta == 0)
                 return vec;
             var tmp = vec - about;
-            return new Vector2(tmp.X * rotation.CosTheta - tmp.Y * rotation.SinTheta + about.X,
-                               tmp.X * rotation.SinTheta + tmp.Y * rotation.CosTheta + about.Y);
+            return new Vector2(tmp.x * rotation.CosTheta - tmp.y * rotation.SinTheta + about.x,
+                               tmp.x * rotation.SinTheta + tmp.y * rotation.CosTheta + about.y);
         }
 
         /// <summary>
@@ -194,10 +190,10 @@ namespace SharpMath2
         /// <returns>Normal such that vec.X is positive (unless vec.X is 0, in which such that vec.Y is positive)</returns>
         public static Vector2 MakeStandardNormal(Vector2 vec)
         {
-            if (vec.X < -DEFAULT_EPSILON)
+            if (vec.x < -DEFAULT_EPSILON)
                 return -vec;
 
-            if (Approximately(vec.X, 0) && vec.Y < 0)
+            if (Approximately(vec.x, 0) && vec.y < 0)
                 return -vec;
 
             return vec;

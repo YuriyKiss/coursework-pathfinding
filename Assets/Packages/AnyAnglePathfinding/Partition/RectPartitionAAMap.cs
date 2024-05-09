@@ -1,8 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using UnityEngine;
 using SharpMath2;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AnyAnglePathfinding.Partition
 {
@@ -266,8 +265,8 @@ namespace AnyAnglePathfinding.Partition
                 Flags = PartitionMapFlags.Left,
                 Partition = 0,
                 Map = new SimpleAAMap<T>(-1, -1),
-                Rect = new Rect2(Vector2.Zero, new Vector2(this.Partitions[0].Split, height)),
-                Position = Vector2.Zero
+                Rect = new Rect2(Vector2.zero, new Vector2(this.Partitions[0].Split, height)),
+                Position = Vector2.zero
             };
 
             this.Maps[1] = new PartitionMap()
@@ -386,7 +385,7 @@ namespace AnyAnglePathfinding.Partition
                 if ((this.Partitions[partitionIndex].Flags & PartitionFlags.Horizontal) != 0)
                 {
                     // horizontal split
-                    if (pos.Y <= this.Partitions[partitionIndex].Split)
+                    if (pos.y <= this.Partitions[partitionIndex].Split)
                     {
                         // point is on the left side
                         if ((this.Partitions[partitionIndex].Flags & PartitionFlags.LeftLeaf) != 0)
@@ -420,7 +419,7 @@ namespace AnyAnglePathfinding.Partition
                 else
                 {
                     // vertical split
-                    if (pos.X <= this.Partitions[partitionIndex].Split)
+                    if (pos.x <= this.Partitions[partitionIndex].Split)
                     {
                         // point is above
                         if ((this.Partitions[partitionIndex].Flags & PartitionFlags.LeftLeaf) != 0)
@@ -695,11 +694,11 @@ namespace AnyAnglePathfinding.Partition
             {
                 if (!horizontal)
                 {
-                    val = (collidables[i].Position.X + collidables[i].Bounds.Center.X) - this.Maps[map].Position.X;
+                    val = (collidables[i].Position.x + collidables[i].Bounds.Center.x) - this.Maps[map].Position.x;
                 }
                 else
                 {
-                    val = (collidables[i].Position.Y + collidables[i].Bounds.Center.Y) - this.Maps[map].Position.Y;
+                    val = (collidables[i].Position.y + collidables[i].Bounds.Center.y) - this.Maps[map].Position.y;
                 }
 
                 pts[i] = val * mult + add;
@@ -817,7 +816,7 @@ namespace AnyAnglePathfinding.Partition
                 Partition = partInd,
                 Map = new SimpleAAMap<T>(-1, -1),
                 Rect = new Rect2(0, 0, leftWidth, leftHeight),
-                Position = new Vector2(this.Maps[mapInd].Position.X, this.Maps[mapInd].Position.Y)
+                Position = new Vector2(this.Maps[mapInd].Position.x, this.Maps[mapInd].Position.y)
             };
 
             this.Maps[rightMapInd] = new PartitionMap()
@@ -826,7 +825,7 @@ namespace AnyAnglePathfinding.Partition
                 Partition = partInd,
                 Map = new SimpleAAMap<T>(-1, -1),
                 Rect = new Rect2(0, 0, rightWidth, rightHeight),
-                Position = new Vector2(this.Maps[mapInd].Position.X + rightOffsetX, this.Maps[mapInd].Position.Y + rightOffsetY)
+                Position = new Vector2(this.Maps[mapInd].Position.x + rightOffsetX, this.Maps[mapInd].Position.y + rightOffsetY)
             };
 
             this.Partitions[partInd] = new Partition()
@@ -893,7 +892,7 @@ namespace AnyAnglePathfinding.Partition
         {
             PartitionMap oldMap = this.Maps[mapInd];
 
-            float leftWidth = x - oldMap.Position.X;
+            float leftWidth = x - oldMap.Position.x;
             float rightWidth = oldMap.Rect.Width - leftWidth;
             float height = oldMap.Rect.Height;
 
@@ -909,7 +908,7 @@ namespace AnyAnglePathfinding.Partition
         {
             PartitionMap oldMap = this.Maps[mapInd];
 
-            float leftHeight = y - oldMap.Position.Y;
+            float leftHeight = y - oldMap.Position.y;
             float rightHeight = oldMap.Rect.Height - leftHeight;
             float width = oldMap.Rect.Width;
 
@@ -959,14 +958,14 @@ namespace AnyAnglePathfinding.Partition
             {
                 double offset = (bestVertLoc - addV) / multV;
 
-                float trueX = (float)(this.Maps[mapInd].Position.X + offset);
+                float trueX = (float)(this.Maps[mapInd].Position.x + offset);
                 DoVerticalSplit(mapInd, trueX);
             }
             else
             {
                 double offset = (bestHorizLoc - addH) / multH;
 
-                float trueY = (float)(this.Maps[mapInd].Position.Y + offset);
+                float trueY = (float)(this.Maps[mapInd].Position.y + offset);
                 DoHorizontalSplit(mapInd, trueY);
             }
 
@@ -1540,7 +1539,7 @@ namespace AnyAnglePathfinding.Partition
         /// <param name="poly">The polygon</param>
         /// <param name="pos">The position of the polygon</param>
         /// <returns>True if the specified polygon fits in the map, False otherwise</returns>
-        public bool Contains(Polygon2 poly, Vector2 pos) => pos.X >= 0 && pos.Y >= 0 && pos.X + poly.AABB.Width < this.Width && pos.Y + poly.AABB.Height < this.Height;
+        public bool Contains(Polygon2 poly, Vector2 pos) => pos.x >= 0 && pos.y >= 0 && pos.x + poly.AABB.Width < this.Width && pos.y + poly.AABB.Height < this.Height;
 
         /// <summary>
         /// Finds the id of the first entity which intersects the given position if any entity fits that

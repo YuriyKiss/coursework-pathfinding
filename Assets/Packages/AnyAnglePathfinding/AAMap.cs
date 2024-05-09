@@ -1,8 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using UnityEngine;
 using SharpMath2;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AnyAnglePathfinding
 {

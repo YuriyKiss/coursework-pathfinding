@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Xna.Framework;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -51,17 +49,17 @@ namespace SharpMath2
         {
             Vertices = vertices;
 
-            Vector2 vertSum = Vector2.Zero;
+            Vector2 vertSum = Vector2.zero;
             for(int i = 0; i < 3; i++)
             {
                 vertSum += vertices[i];
             }
 
             Center = vertSum / 3.0f;
-            float a = vertices[1].X - vertices[0].X;
-            float b = vertices[2].X - vertices[0].X;
-            float c = vertices[1].Y - vertices[0].Y;
-            float d = vertices[2].Y - vertices[0].Y;
+            float a = vertices[1].x - vertices[0].x;
+            float b = vertices[2].x - vertices[0].x;
+            float c = vertices[1].y - vertices[0].y;
+            float d = vertices[2].y - vertices[0].y;
 
             float det = a * d - b * c;
             Area = Math.Abs(0.5f * det);
@@ -93,11 +91,11 @@ namespace SharpMath2
         public static bool Contains(Triangle2 tri, Vector2 pos, Vector2 pt)
         {
             Vector2 relPt = pt - pos - tri.Vertices[0];
-            float r = tri.InvContainsBasis[0] * relPt.X + tri.InvContainsBasis[1] * relPt.Y;
+            float r = tri.InvContainsBasis[0] * relPt.x + tri.InvContainsBasis[1] * relPt.y;
             if (r < -Math2.DEFAULT_EPSILON)
                 return false;
 
-            float t = tri.InvContainsBasis[2] * relPt.X + tri.InvContainsBasis[3] * relPt.Y;
+            float t = tri.InvContainsBasis[2] * relPt.x + tri.InvContainsBasis[3] * relPt.y;
             if (t < -Math2.DEFAULT_EPSILON)
                 return false;
 
@@ -115,10 +113,10 @@ namespace SharpMath2
         /// <returns>True if the given triangle contains the origin, false otherwise</returns>
         public static bool ContainsOrigin(Vector2[] vertices)
         {
-            float a = vertices[1].X - vertices[0].X;
-            float b = vertices[2].X - vertices[0].X;
-            float c = vertices[1].Y - vertices[0].Y;
-            float d = vertices[2].Y - vertices[0].Y;
+            float a = vertices[1].x - vertices[0].x;
+            float b = vertices[2].x - vertices[0].x;
+            float c = vertices[1].y - vertices[0].y;
+            float d = vertices[2].y - vertices[0].y;
             float det = a * d - b * c;
             float invDet = 1 / det;
             /*{
@@ -127,11 +125,11 @@ namespace SharpMath2
             };*/
 
             // relPt = -vertices[0]
-            float r = (invDet * d) * (-(vertices[0].X)) + (-invDet * b) * (-(vertices[0].Y));
+            float r = (invDet * d) * (-(vertices[0].x)) + (-invDet * b) * (-(vertices[0].y));
             if (r < -Math2.DEFAULT_EPSILON)
                 return false;
 
-            float t = (-invDet * c) * (-(vertices[0].X)) + (invDet * a) * (-(vertices[0].Y));
+            float t = (-invDet * c) * (-(vertices[0].x)) + (invDet * a) * (-(vertices[0].y));
             if (t < -Math2.DEFAULT_EPSILON)
                 return false;
 

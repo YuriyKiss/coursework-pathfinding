@@ -1,11 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Xna.Framework;
-
-#if NOT_MONOGAME
-using Microsoft.Xna.Framework.Graphics;
-#endif
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -29,62 +24,6 @@ namespace SharpMath2
         /// </summary>
         private static Dictionary<int, Polygon2> ConvexPolygonCache = new Dictionary<int, Polygon2>();
 
-#if NOT_MONOGAME
-        /// <summary>
-        /// Fetches the convex polygon (the smallest possible polygon containing all the non-transparent pixels) of the given texture.
-        /// </summary>
-        /// <param name="Texture">The texture.</param>
-        public static Polygon2 CreateConvexPolygon(Texture2D Texture)
-        {
-            var Key = Texture.GetHashCode();
-
-            if (ConvexPolygonCache.ContainsKey(Key))
-                return ConvexPolygonCache[Key];
-
-            var uints = new uint[Texture.Width * Texture.Height];
-            Texture.GetData<uint>(uints);
-
-            var Points = new List<Vector2>();
-
-            for (var i = 0; i < Texture.Width; i++)
-                for (var j = 0; j < Texture.Height; j++)
-                    if (uints[j * Texture.Width + i] != 0)
-                        Points.Add(new Vector2(i, j));
-
-            if (Points.Count <= 2)
-                throw new Exception("Can not create a convex hull from a line.");
-
-            int n = Points.Count, k = 0;
-            var h = new List<Vector2>(
-                new Vector2[2 * n]
-            );
-
-            Points.Sort(
-                (a, b) =>
-                a.X == b.X ?
-                     a.Y.CompareTo(b.Y)
-                : (a.X > b.X ? 1 : -1)
-             );
-
-            for (var i = 0; i < n; ++i)
-            {
-                while (k >= 2 && cross(h[k - 2], h[k - 1], Points[i]) <= 0)
-                    k--;
-                h[k++] = Points[i];
-            }
-
-            for (int i = n - 2, t = k + 1; i >= 0; i--)
-            {
-                while (k >= t && cross(h[k - 2], h[k - 1], Points[i]) <= 0)
-                    k--;
-                h[k++] = Points[i];
-            }
-
-            Points = h.Take(k - 1).ToList();
-            return ConvexPolygonCache[Key] = new Polygon2(Points.ToArray());
-        }
-#endif
-
         /// <summary>
         /// Returns the cross product of the given three vectors.
         /// </summary>
@@ -94,7 +33,7 @@ namespace SharpMath2
         /// <returns></returns>
         private static double cross(Vector2 v1, Vector2 v2, Vector2 v3)
         {
-            return (v2.X - v1.X) * (v3.Y - v1.Y) - (v2.Y - v1.Y) * (v3.X - v1.X);
+            return (v2.x - v1.x) * (v3.y - v1.y) - (v2.y - v1.y) * (v3.x - v1.x);
         }
 
         /// <summary>
@@ -150,10 +89,10 @@ namespace SharpMath2
                         (float)Math.Sin(theta)
                     );
 
-                if (vert.X < correction.X)
-                    correction.X = vert.X;
-                if (vert.Y < correction.Y)
-                    correction.Y = vert.Y;
+                if (vert.x < correction.x)
+                    correction.x = vert.x;
+                if (vert.y < correction.y)
+                    correction.y = vert.y;
 
                 verts.Add(
                     Center + vert
@@ -161,8 +100,8 @@ namespace SharpMath2
                 theta += increment;
             }
 
-            correction.X += radius;
-            correction.Y += radius;
+            correction.x += radius;
+            correction.y += radius;
 
             for(var i = 0; i < segments; i++)
             {

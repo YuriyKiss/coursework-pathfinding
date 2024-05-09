@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -70,7 +68,7 @@ namespace SharpMath2
                         for (int j = 0; j < i; j++)
                         {
                             var vec = verts[i] - verts[j];
-                            var vecLenSq = vec.LengthSquared();
+                            var vecLenSq = vec.sqrMagnitude;
                             if (vecLenSq > longestAxisLenSq)
                                 longestAxisLenSq = vecLenSq;
                         }
@@ -108,23 +106,23 @@ namespace SharpMath2
             Vector2 tmp;
             for (int i = 1; i < vertices.Length; i++)
             {
-                tmp = Math2.MakeStandardNormal(Vector2.Normalize(Math2.Perpendicular(vertices[i] - vertices[i - 1])));
+                tmp = Math2.MakeStandardNormal(Math2.Perpendicular(vertices[i] - vertices[i - 1]).normalized);
                 if (!Normals.Contains(tmp))
                     Normals.Add(tmp);
             }
 
-            tmp = Math2.MakeStandardNormal(Vector2.Normalize(Math2.Perpendicular(vertices[0] - vertices[vertices.Length - 1])));
+            tmp = Math2.MakeStandardNormal(Math2.Perpendicular(vertices[0] - vertices[vertices.Length - 1]).normalized);
             if (!Normals.Contains(tmp))
                 Normals.Add(tmp);
 
-            var min = new Vector2(vertices[0].X, vertices[0].Y);
-            var max = new Vector2(min.X, min.Y);
+            var min = new Vector2(vertices[0].x, vertices[0].y);
+            var max = new Vector2(min.x, min.y);
             for (int i = 1; i < vertices.Length; i++)
             {
-                min.X = Math.Min(min.X, vertices[i].X);
-                min.Y = Math.Min(min.Y, vertices[i].Y);
-                max.X = Math.Max(max.X, vertices[i].X);
-                max.Y = Math.Max(max.Y, vertices[i].Y);
+                min.x = Math.Min(min.x, vertices[i].x);
+                min.y = Math.Min(min.y, vertices[i].y);
+                max.x = Math.Max(max.x, vertices[i].x);
+                max.y = Math.Max(max.y, vertices[i].y);
             }
             AABB = new Rect2(min, max);
 
@@ -159,7 +157,7 @@ namespace SharpMath2
 
             last = Vertices[Vertices.Length - 1];
             var centToLast = (last - Center);
-            var angLast = Rotation2.Standardize((float)Math.Atan2(centToLast.Y, centToLast.X));
+            var angLast = Rotation2.Standardize((float)Math.Atan2(centToLast.y, centToLast.x));
             var cwCounter = 0;
             var ccwCounter = 0;
             var foundDefinitiveResult = false;
@@ -167,7 +165,7 @@ namespace SharpMath2
             {
                 var curr = Vertices[i];
                 var centToCurr = (curr - Center);
-                var angCurr = Rotation2.Standardize((float)Math.Atan2(centToCurr.Y, centToCurr.X));
+                var angCurr = Rotation2.Standardize((float)Math.Atan2(centToCurr.y, centToCurr.x));
 
 
                 var clockwise = (angCurr < angLast && (angCurr - angLast) < Math.PI) || (angCurr - angLast) > Math.PI;
@@ -217,28 +215,28 @@ namespace SharpMath2
                 for (; i + 3 < len; i += 4)
                 {
                     result[i] = new Vector2(
-                        polygon.Vertices[i].X + offset.X,
-                        polygon.Vertices[i].Y + offset.Y
+                        polygon.Vertices[i].x + offset.x,
+                        polygon.Vertices[i].y + offset.y
                     );
                     result[i + 1] = new Vector2(
-                        polygon.Vertices[i + 1].X + offset.X,
-                        polygon.Vertices[i + 1].Y + offset.Y
+                        polygon.Vertices[i + 1].x + offset.x,
+                        polygon.Vertices[i + 1].y + offset.y
                     );
                     result[i + 2] = new Vector2(
-                        polygon.Vertices[i + 2].X + offset.X,
-                        polygon.Vertices[i + 2].Y + offset.Y
+                        polygon.Vertices[i + 2].x + offset.x,
+                        polygon.Vertices[i + 2].y + offset.y
                     );
                     result[i + 3] = new Vector2(
-                        polygon.Vertices[i + 3].X + offset.X,
-                        polygon.Vertices[i + 3].Y + offset.Y
+                        polygon.Vertices[i + 3].x + offset.x,
+                        polygon.Vertices[i + 3].y + offset.y
                     );
                 }
 
                 for (; i < len; i++)
                 {
                     result[i] = new Vector2(
-                        polygon.Vertices[i].X + offset.X,
-                        polygon.Vertices[i].Y + offset.Y
+                        polygon.Vertices[i].x + offset.x,
+                        polygon.Vertices[i].y + offset.y
                     );
                 }
             }
@@ -341,7 +339,7 @@ namespace SharpMath2
 
             foreach (var norm in poly1.Normals.Select((v) => Tuple.Create(v, rot1)).Union(poly2.Normals.Select((v) => Tuple.Create(v, rot2))))
             {
-                var axis = Math2.Rotate(norm.Item1, Vector2.Zero, norm.Item2);
+                var axis = Math2.Rotate(norm.Item1, Vector2.zero, norm.Item2);
                 if (!IntersectsAlongAxis(poly1, poly2, pos1, pos2, rot1, rot2, strict, axis))
                     return false;
             }
@@ -378,12 +376,12 @@ namespace SharpMath2
             Vector2[] verts2 = ActualizePolygon(poly2, pos2, rot2);
 
             Vector2 desiredAxis = new Vector2(
-                poly1.Center.X + pos1.X - poly2.Center.X - pos2.X,
-                poly2.Center.Y + pos1.Y - poly2.Center.Y - pos2.Y
+                poly1.Center.x + pos1.x - poly2.Center.x - pos2.x,
+                poly2.Center.y + pos1.y - poly2.Center.y - pos2.y
             );
 
-            if (Math2.Approximately(desiredAxis, Vector2.Zero))
-                desiredAxis = Vector2.UnitX;
+            if (Math2.Approximately(desiredAxis, Vector2.zero))
+                desiredAxis = Vector2.right;
             else
                 desiredAxis.Normalize(); // cleanup rounding issues
 
@@ -404,7 +402,7 @@ namespace SharpMath2
 
                     if (progressFromOriginTowardDesiredAxis < Math2.DEFAULT_EPSILON)
                     {
-                        if (Math2.Approximately(simplex[simplexIndex], Vector2.Zero))
+                        if (Math2.Approximately(simplex[simplexIndex], Vector2.zero))
                         {
                             // We've determined that the origin is a point on the
                             // edge of the minkowski difference. In fact, it's even
@@ -430,7 +428,7 @@ namespace SharpMath2
                         // We only have 2 points; we need to select the third.
                         desiredAxis = Math2.TripleCross(simplex[1] - simplex[0], -simplex[1]);
 
-                        if (Math2.Approximately(desiredAxis, Vector2.Zero))
+                        if (Math2.Approximately(desiredAxis, Vector2.zero))
                         {
                             // This means that the origin lies along the infinite
                             // line which goes through simplex[0] and simplex[1].
@@ -500,7 +498,7 @@ namespace SharpMath2
                         // We'll check edges first.
                         bool isOnABEdge = false;
 
-                        if (Math2.IsBetweenLine(simplex[0], simplex[2], Vector2.Zero))
+                        if (Math2.IsBetweenLine(simplex[0], simplex[2], Vector2.zero))
                         {
                             // we've determined the origin is on the edge AC.
                             // we'll swap B and C so that we're now on the edge
@@ -512,7 +510,7 @@ namespace SharpMath2
                             abPerp = acPerp;
                             isOnABEdge = true;
                         }
-                        else if (Math2.IsBetweenLine(simplex[0], simplex[1], Vector2.Zero))
+                        else if (Math2.IsBetweenLine(simplex[0], simplex[1], Vector2.zero))
                         {
                             // we've determined the origin is on edge BC.
                             // we'll swap A and C so that we're now on the
@@ -528,7 +526,7 @@ namespace SharpMath2
                             isOnABEdge = true;
                         }
 
-                        if (isOnABEdge || Math2.IsBetweenLine(simplex[1], simplex[2], Vector2.Zero))
+                        if (isOnABEdge || Math2.IsBetweenLine(simplex[1], simplex[2], Vector2.zero))
                         {
                             // The origin is along the line AB. This means we'll either
                             // have another choice for A that wouldn't have done this,
@@ -559,7 +557,7 @@ namespace SharpMath2
                             if (
                                 Math2.Approximately(simplex[1], simplex[2]) ||
                                 Math2.Approximately(ogSimplex2, simplex[2]) ||
-                                Math2.Approximately(simplex[2], Vector2.Zero)
+                                Math2.Approximately(simplex[2], Vector2.zero)
                             )
                             {
                                 // we've shown that this is a true edge
@@ -572,7 +570,7 @@ namespace SharpMath2
                                 return !strict;
                             }
 
-                            if (Math2.IsBetweenLine(simplex[0], simplex[2], Vector2.Zero))
+                            if (Math2.IsBetweenLine(simplex[0], simplex[2], Vector2.zero))
                             {
                                 // We've proven that we're contained in a quadrilateral
                                 // Example of how we get here: C B A ogSimplex2
@@ -580,7 +578,7 @@ namespace SharpMath2
                                 return true;
                             }
 
-                            if (Math2.IsBetweenLine(simplex[1], simplex[2], Vector2.Zero))
+                            if (Math2.IsBetweenLine(simplex[1], simplex[2], Vector2.zero))
                             {
                                 // We've shown that we on the edge
                                 // Example of how we get here: C B A ogSimplex2
@@ -662,11 +660,11 @@ namespace SharpMath2
         {
             // performance sensitive section
             // force inlining of dots
-            float max = verts[0].X * axis.X + verts[0].Y * axis.Y;
+            float max = verts[0].x * axis.x + verts[0].y * axis.y;
             int index = 0;
             for (int i = 1, len = verts.Length; i < len; i++)
             {
-                float dot = verts[i].X * axis.X + verts[i].Y * axis.Y;
+                float dot = verts[i].x * axis.x + verts[i].y * axis.y;
                 if (dot > max)
                 {
                     max = dot;
@@ -681,19 +679,19 @@ namespace SharpMath2
             Console.WriteLine("Polygon2 poly1 = new Polygon2(new Vector2[]");
             Console.WriteLine("{");
             foreach (Vector2 v in poly1.Vertices) {
-                Console.WriteLine($"  new Vector2({v.X}f, {v.Y}f),");
+                Console.WriteLine($"  new Vector2({v.x}f, {v.y}f),");
             }
             Console.WriteLine("});");
             Console.WriteLine("Polygon2 poly2 = new Polygon2(new Vector2[]");
             Console.WriteLine("{");
             foreach (Vector2 v in poly2.Vertices)
             {
-                Console.WriteLine($"  new Vector2({v.X}f, {v.Y}f),");
+                Console.WriteLine($"  new Vector2({v.x}f, {v.y}f),");
             }
             Console.WriteLine("});");
 
-            Console.WriteLine($"Vector2 pos1 = new Vector2({pos1.X}f, {pos1.Y}f);");
-            Console.WriteLine($"Vector2 pos2 = new Vector2({pos2.X}f, {pos2.Y}f);");
+            Console.WriteLine($"Vector2 pos1 = new Vector2({pos1.x}f, {pos1.y}f);");
+            Console.WriteLine($"Vector2 pos2 = new Vector2({pos2.x}f, {pos2.y}f);");
             Console.WriteLine($"bool strict = {strict.ToString().ToLower()};");
         }
 
@@ -701,7 +699,7 @@ namespace SharpMath2
         {
             foreach (Vector2 v in verts)
             {
-                Console.Write($"({v.X},{v.Y}),");
+                Console.Write($"({v.x},{v.y}),");
             }
             Console.WriteLine();
         }
@@ -719,12 +717,12 @@ namespace SharpMath2
         /// <returns>MTV to move poly1 to prevent intersection with poly2</returns>
         public static Tuple<Vector2, float> IntersectMTV(Polygon2 poly1, Polygon2 poly2, Vector2 pos1, Vector2 pos2, Rotation2 rot1, Rotation2 rot2)
         {
-            Vector2 bestAxis = Vector2.Zero;
+            Vector2 bestAxis = Vector2.zero;
             float bestMagn = float.MaxValue;
 
             foreach (var norm in poly1.Normals.Select((v) => Tuple.Create(v, rot1)).Union(poly2.Normals.Select((v) => Tuple.Create(v, rot2))))
             {
-                var axis = Math2.Rotate(norm.Item1, Vector2.Zero, norm.Item2);
+                var axis = Math2.Rotate(norm.Item1, Vector2.zero, norm.Item2);
                 var mtv = IntersectMTVAlongAxis(poly1, poly2, pos1, pos2, rot1, rot2, axis);
                 if (!mtv.HasValue)
                     return null;
@@ -832,11 +830,11 @@ namespace SharpMath2
                 var axis = curr - last;
                 Vector2 norm;
                 if (poly.Clockwise)
-                    norm = new Vector2(-axis.Y, axis.X);
+                    norm = new Vector2(-axis.y, axis.x);
                 else
-                    norm = new Vector2(axis.Y, -axis.X);
-                norm = Vector2.Normalize(norm);
-                axis = Vector2.Normalize(axis);
+                    norm = new Vector2(axis.y, -axis.x);
+                norm = norm.normalized;
+                axis = axis.normalized;
 
                 var lineProjOnNorm = Vector2.Dot(norm, last);
                 var ptProjOnNorm = Vector2.Dot(norm, pt);
@@ -849,7 +847,7 @@ namespace SharpMath2
                     if (ptProjOnAxis < stProjOnAxis)
                     {
                         var res = pt - last;
-                        return Tuple.Create(Vector2.Normalize(res), res.Length());
+                        return Tuple.Create(res.normalized, res.magnitude);
                     }
 
                     var enProjOnAxis = Vector2.Dot(axis, curr);
@@ -857,7 +855,7 @@ namespace SharpMath2
                     if (ptProjOnAxis > enProjOnAxis)
                     {
                         var res = pt - curr;
-                        return Tuple.Create(Vector2.Normalize(res), res.Length());
+                        return Tuple.Create(res.normalized, res.magnitude);
                     }
 
 
@@ -985,7 +983,7 @@ namespace SharpMath2
         public static List<Polygon2> CreateRaytraceAbles(Polygon2 poly, Vector2 offset)
         {
             var ourLinesAsRects = new List<Polygon2>();
-            if (Math2.Approximately(offset, Vector2.Zero))
+            if (Math2.Approximately(offset, Vector2.zero))
             {
                 ourLinesAsRects.Add(poly);
                 return ourLinesAsRects;

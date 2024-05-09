@@ -1,7 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using UnityEngine;
 
 namespace SharpMath2
 {
@@ -86,7 +84,7 @@ namespace SharpMath2
         /// <returns>If the circle at pos contains point</returns>
         public static bool Contains(Circle2 circle, Vector2 pos, Vector2 point, bool strict)
         {
-            var distSq = (point - new Vector2(pos.X + circle.Radius, pos.Y + circle.Radius)).LengthSquared();
+            var distSq = (point - new Vector2(pos.x + circle.Radius, pos.y + circle.Radius)).sqrMagnitude;
 
             if (strict)
                 return distSq < circle.Radius * circle.Radius;
@@ -122,9 +120,9 @@ namespace SharpMath2
         public static bool Intersects(float radius1, float radius2, Vector2 pos1, Vector2 pos2, bool strict)
         {
             var vecCenterToCenter = pos1 - pos2;
-            vecCenterToCenter.X += radius1 - radius2;
-            vecCenterToCenter.Y += radius1 - radius2;
-            var distSq = vecCenterToCenter.LengthSquared();
+            vecCenterToCenter.x += radius1 - radius2;
+            vecCenterToCenter.y += radius1 - radius2;
+            var distSq = vecCenterToCenter.sqrMagnitude;
             return distSq < (radius1 + radius2) * (radius1 + radius2);
         }
 
@@ -155,10 +153,10 @@ namespace SharpMath2
         public static Tuple<Vector2, float> IntersectMTV(float radius1, float radius2, Vector2 pos1, Vector2 pos2)
         {
             var betweenVec = pos1 - pos2;
-            betweenVec.X += (radius1 - radius2);
-            betweenVec.Y += (radius1 - radius2);
+            betweenVec.x += (radius1 - radius2);
+            betweenVec.y += (radius1 - radius2);
 
-            var lengthSq = betweenVec.LengthSquared();
+            var lengthSq = betweenVec.sqrMagnitude;
             if(lengthSq < (radius1 + radius2) * (radius1 + radius2))
             {
                 var len = Math.Sqrt(lengthSq);
@@ -192,7 +190,7 @@ namespace SharpMath2
         /// <returns></returns>
         public static AxisAlignedLine2 ProjectAlongAxis(float radius, Vector2 pos, Vector2 axis)
         {
-            var centerProj = Vector2.Dot(new Vector2(pos.X + radius, pos.Y + radius), axis);
+            var centerProj = Vector2.Dot(new Vector2(pos.x + radius, pos.y + radius), axis);
 
             return new AxisAlignedLine2(axis, centerProj - radius, centerProj + radius);
         }
