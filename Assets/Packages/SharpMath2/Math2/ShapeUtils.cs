@@ -76,7 +76,7 @@ namespace SharpMath2
             if (CircleCache.ContainsKey(Key))
                 return CircleCache[Key];
 
-            var Center = new Vector2(radius + x, radius + y);
+            var Center = new Vector2(x, y);
             var increment = (Math.PI * 2.0) / segments;
             var theta = 0.0;
             var verts = new List<Vector2>(segments);
