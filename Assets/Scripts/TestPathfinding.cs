@@ -6,33 +6,72 @@ using SharpMath2;
 
 public class TestPathfinding : MonoBehaviour
 {
+    [SerializeField] private LineRenderer lineRenderer;
+
+    [Header("Entites")]
+    [SerializeField] private Transform agentTransform;
+    [SerializeField] private List<Transform> obstacleList;
+    [SerializeField] private Transform goalTransform;
+
     private void Start()
     {
-        var map = new RectPartitionAAMap<AACollidable>(200, 100);
+        RecalculatePath();
+    }
 
-        var entity = new AACollidable()
-        {
-            Position = new Vector2(50, 70),
-            Bounds = ShapeUtils.CreateCircle(radius: 10, segments: 7)
-        };
-        map.Register(entity);
+    [ContextMenu("Recalculate")]
+    private void RecalculatePath()
+    {
+        var map = new RectPartitionAAMap<AACollidable>(10, 10);
 
-        var entity2 = new AACollidable()
+        var agent = new AACollidable()
         {
-            Position = new Vector2(100, 70),
-            Bounds = ShapeUtils.CreateCircle(radius: 7, segments: 5)
+            Position = new Vector2(agentTransform.position.x, agentTransform.position.z),
+            Bounds = ShapeUtils.CreateCircle(radius: agentTransform.localScale.x, segments: 16)
         };
-        map.Register(entity2);
+        map.Register(agent);
+
+        foreach (Transform obstacleTransform in obstacleList)
+        {
+            var obstacle = new AACollidable()
+            {
+                Position = new Vector2(obstacleTransform.position.x, obstacleTransform.position.z),
+                Bounds = ShapeUtils.CreateRectangle(width: obstacleTransform.localScale.x * 2, height: obstacleTransform.localScale.z * 2)
+            };
+            map.Register(obstacle);
+        }
 
         var excludeIds = new HashSet<int>();
-        excludeIds.Add(entity.ID);
+        excludeIds.Add(agent.ID);
 
-        List<Vector2> path = new AAPathfinder<AACollidable>(
-                map, entity.Bounds, entity.Position,
-                new Vector2(150, 70), excludeIds, 0
-            ).CalculatePath();
+        List<Vector2> path = new AAPathfinder<AACollidable>
+            (map, agent.Bounds, agent.Position,
+            new Vector2(goalTransform.position.x, goalTransform.position.z), excludeIds, 0).
+                CalculatePath();
 
-        print($"entity 1 at {entity.Position}");
+        if (path == null)
+        {
+            print("Path not found");
+            return;
+        }
+
+        List<Vector3> positions = new List<Vector3>();
+        if (path.Count == 1)
+        {
+            positions.Add(agentTransform.position);
+            positions.Add(goalTransform.position);
+        }
+        else
+        {
+            foreach (Vector2 vector in path)
+            {
+                positions.Add(new Vector3(vector.x, 0.075f, vector.y));
+            }
+        }
+
+        lineRenderer.positionCount = positions.Count;
+        lineRenderer.SetPositions(positions.ToArray());
+
+        print($"entity 1 at {agent.Position}");
         foreach (var loc in path)
         {
             print($"moved entity 1 to {loc}");
