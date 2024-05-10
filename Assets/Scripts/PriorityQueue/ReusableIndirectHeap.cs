@@ -1,14 +1,13 @@
 using System;
 using System.Text;
 
-namespace priorityqueue
+namespace PriorityQueue
 {
-    /**
+    /*
      * Indirect binary heap. Used for O(lgn) deleteMin and O(lgn) decreaseKey.
      */
     public class ReusableIndirectHeap
     {
-
         private static float[] keyList;
         private static int[] inList;
         private static int[] outList;
@@ -19,36 +18,7 @@ namespace priorityqueue
         private static int[] ticketCheck;
         private static int ticketNumber = 0;
 
-        public class Context
-        {
-            public float[] keyList;
-            public int[] inList;
-            public int[] outList;
-            public int[] ticketCheck;
-            public int ticketNumber;
-
-            public Context() { }
-        }
-
-        public static void loadContext(Context context)
-        {
-            ReusableIndirectHeap.keyList = context.keyList;
-            ReusableIndirectHeap.inList = context.inList;
-            ReusableIndirectHeap.outList = context.outList;
-            ReusableIndirectHeap.ticketCheck = context.ticketCheck;
-            ReusableIndirectHeap.ticketNumber = context.ticketNumber;
-        }
-
-        public static void saveContext(Context context)
-        {
-            context.keyList = ReusableIndirectHeap.keyList;
-            context.inList = ReusableIndirectHeap.inList;
-            context.outList = ReusableIndirectHeap.outList;
-            context.ticketCheck = ReusableIndirectHeap.ticketCheck;
-            context.ticketNumber = ReusableIndirectHeap.ticketNumber;
-        }
-
-        public static void initialise(int size, float defaultKey)
+        public static void Initialise(int size, float defaultKey)
         {
             ReusableIndirectHeap.defaultKey = defaultKey;
 
@@ -72,22 +42,22 @@ namespace priorityqueue
             }
         }
 
-        public static float getKey(int index)
+        public static float GetKey(int index)
         {
             return ticketCheck[index] == ticketNumber ? keyList[index] : defaultKey;
         }
 
-        public static int getIn(int index)
+        public static int GetIn(int index)
         {
             return ticketCheck[index] == ticketNumber ? inList[index] : index;
         }
 
-        public static int getOut(int index)
+        public static int GetOut(int index)
         {
             return ticketCheck[index] == ticketNumber ? outList[index] : index;
         }
 
-        public static void setKey(int index, float value)
+        public static void SetKey(int index, float value)
         {
             if (ticketCheck[index] != ticketNumber)
             {
@@ -102,7 +72,7 @@ namespace priorityqueue
             }
         }
 
-        public static void setIn(int index, int value)
+        public static void SetIn(int index, int value)
         {
             if (ticketCheck[index] != ticketNumber)
             {
@@ -117,7 +87,7 @@ namespace priorityqueue
             }
         }
 
-        public static void setOut(int index, int value)
+        public static void SetOut(int index, int value)
         {
             if (ticketCheck[index] != ticketNumber)
             {
@@ -132,38 +102,37 @@ namespace priorityqueue
             }
         }
 
-
-        /**
+        /*
          * Runtime: O(1)
          */
         public ReusableIndirectHeap(int size)
         {
-            initialise(size, float.PositiveInfinity);
+            Initialise(size, float.PositiveInfinity);
             heapSize = 0;
         }
 
-        /**
+        /*
          * Runtime: O(1)
          */
         public ReusableIndirectHeap(int size, int memorySize)
         {
-            initialise(memorySize, float.PositiveInfinity);
+            Initialise(memorySize, float.PositiveInfinity);
             heapSize = 0;
         }
 
-        private void bubbleUp(int index)
+        private void BubbleUp(int index)
         {
             int parent = (index - 1) / 2;
-            while (index > 0 && getKey(index) < getKey(parent))
+            while (index > 0 && GetKey(index) < GetKey(parent))
             {
                 // If meets the conditions to bubble up,
-                swapData(index, parent);
+                SwapData(index, parent);
                 index = parent;
                 parent = (index - 1) / 2;
             }
         }
 
-        private void swapData(int a, int b)
+        private void SwapData(int a, int b)
         {
             // s = Data at a = out[a]
             // t = Data at b = out[b]
@@ -171,45 +140,45 @@ namespace priorityqueue
             // in[s] <-> in[t]
             // out[a] <-> out[b]
 
-            int s = getOut(a);
-            int t = getOut(b);
+            int s = GetOut(a);
+            int t = GetOut(b);
 
-            swapKey(a, b);
-            swapIn(s, t);
-            swapOut(a, b);
+            SwapKey(a, b);
+            SwapIn(s, t);
+            SwapOut(a, b);
         }
 
-        /**
+        /*
          * swap integers in list
          */
-        private void swapKey(int i1, int i2)
+        private void SwapKey(int i1, int i2)
         {
-            float temp = getKey(i1);
-            setKey(i1, getKey(i2));
-            setKey(i2, temp);
+            float temp = GetKey(i1);
+            SetKey(i1, GetKey(i2));
+            SetKey(i2, temp);
         }
 
-        /**
+        /*
          * swap integers in list
          */
-        private void swapOut(int i1, int i2)
+        private void SwapOut(int i1, int i2)
         {
-            int temp = getOut(i1);
-            setOut(i1, getOut(i2));
-            setOut(i2, temp);
+            int temp = GetOut(i1);
+            SetOut(i1, GetOut(i2));
+            SetOut(i2, temp);
         }
 
-        /**
+        /*
          * swap integers in list
          */
-        private void swapIn(int i1, int i2)
+        private void SwapIn(int i1, int i2)
         {
-            int temp = getIn(i1);
-            setIn(i1, getIn(i2));
-            setIn(i2, temp);
+            int temp = GetIn(i1);
+            SetIn(i1, GetIn(i2));
+            SetIn(i2, temp);
         }
 
-        private int smallerNode(int index1, int index2)
+        private int SmallerNode(int index1, int index2)
         {
             if (index1 >= heapSize)
             {
@@ -221,67 +190,67 @@ namespace priorityqueue
             if (index2 >= heapSize)
                 return index1;
 
-            return getKey(index1) < getKey(index2) ? index1 : index2;
+            return GetKey(index1) < GetKey(index2) ? index1 : index2;
         }
 
-        private void bubbleDown(int index)
+        private void BubbleDown(int index)
         {
             int leftChild = 2 * index + 1;
             int rightChild = 2 * index + 2;
-            int smallerChild = smallerNode(leftChild, rightChild);
+            int smallerChild = SmallerNode(leftChild, rightChild);
 
-            while (smallerChild != -1 && getKey(index) > getKey(smallerChild))
+            while (smallerChild != -1 && GetKey(index) > GetKey(smallerChild))
             {
                 // If meets the conditions to bubble down,
-                swapData(index, smallerChild);
+                SwapData(index, smallerChild);
 
                 // Recurse
                 index = smallerChild;
                 leftChild = 2 * index + 1;
                 rightChild = 2 * index + 2;
-                smallerChild = smallerNode(leftChild, rightChild);
+                smallerChild = SmallerNode(leftChild, rightChild);
             }
         }
 
-        /**
+        /*
          * Runtime: O(lgn)
          */
-        public void decreaseKey(int outIndex, float newKey)
+        public void DecreaseKey(int outIndex, float newKey)
         {
             // Assume newKey < old key
-            int inIndex = getIn(outIndex);
+            int inIndex = GetIn(outIndex);
 
             // Optimisation: Jump the newly set value to the bottom of the heap.
             // Faster if there are a lot of POSITIVE_INFINITY values.
             // This is equivalent to an insert operation.
-            if (getKey(inIndex) == float.PositiveInfinity)
+            if (GetKey(inIndex) == float.PositiveInfinity)
             {
-                swapData(inIndex, heapSize);
+                SwapData(inIndex, heapSize);
                 inIndex = heapSize;
                 ++heapSize;
             }
-            setKey(inIndex, newKey);
+            SetKey(inIndex, newKey);
 
-            bubbleUp(inIndex);
+            BubbleUp(inIndex);
         }
 
-        public float getMinValue()
+        public float GetMinValue()
         {
-            return getKey(0);
+            return GetKey(0);
         }
 
         /**
          * Runtime: O(lgn)
          * @return index of min element
          */
-        public int popMinIndex()
+        public int PopMinIndex()
         {
             if (heapSize == 0)
                 throw new NullReferenceException("Indirect Heap is empty!");
             else if (heapSize == 1)
             {
                 --heapSize;
-                return getOut(0);
+                return GetOut(0);
             }
             // nodeList.size() > 1
 
@@ -293,49 +262,76 @@ namespace priorityqueue
             // out[0] = out[lastIndex], remove out[lastIndex]
 
             //E temp = keyList.get(0);
-            int s = getOut(0);
-            swapData(0, heapSize - 1);
+            int s = GetOut(0);
+            SwapData(0, heapSize - 1);
 
             --heapSize;
-            bubbleDown(0);
+            BubbleDown(0);
 
             return s;
         }
 
-
-        public string arrayToString()
+        public string ArrayToString()
         {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < ticketCheck.Length; i++)
             {
                 if (i == heapSize) sb.Append("* ");
                 sb.Append("[");
-                sb.Append(getOut(i));
+                sb.Append(GetOut(i));
                 sb.Append(" ");
-                float val = getKey(i);
+                float val = GetKey(i);
                 sb.Append(val == float.PositiveInfinity ? "_" : (int)val);
                 sb.Append("], ");
             }
-            return getIn(1) + " / " + sb.ToString();
+            return GetIn(1) + " / " + sb.ToString();
         }
 
-        public int size()
+        public int Size()
         {
             return heapSize;
         }
 
-        public bool isEmpty()
+        public bool IsEmpty()
         {
             return heapSize <= 0;
         }
 
-        public static void clearMemory()
+        public static void ClearMemory()
         {
             keyList = null;
             inList = null;
             outList = null;
             ticketCheck = null;
             GC.Collect();
+        }
+
+        // Reusable Indirect Heap Context
+        public struct Context
+        {
+            public float[] keyList;
+            public int[] inList;
+            public int[] outList;
+            public int[] ticketCheck;
+            public int ticketNumber;
+        }
+
+        public static void LoadContext(Context context)
+        {
+            keyList = context.keyList;
+            inList = context.inList;
+            outList = context.outList;
+            ticketCheck = context.ticketCheck;
+            ticketNumber = context.ticketNumber;
+        }
+
+        public static void SaveContext(Context context)
+        {
+            context.keyList = keyList;
+            context.inList = inList;
+            context.outList = outList;
+            context.ticketCheck = ticketCheck;
+            context.ticketNumber = ticketNumber;
         }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace algorithms.datatypes
+namespace Datatypes
 {
     public static class Memory
     {
@@ -16,47 +16,6 @@ namespace algorithms.datatypes
         private static int ticketNumber = 0;
 
         private static int size = 0;
-
-        public sealed class Context
-        {
-            public float[] distance;
-            public int[] parent;
-            public bool[] visited;
-            public float defaultDistance;
-            public int defaultParent;
-            public bool defaultVisited;
-            public int[] ticketCheck;
-            public int ticketNumber;
-            public int size;
-
-            public Context() { }
-        }
-
-        public static void LoadContext(Context context)
-        {
-            Memory.distance = context.distance;
-            Memory.parent = context.parent;
-            Memory.visited = context.visited;
-            Memory.defaultDistance = context.defaultDistance;
-            Memory.defaultParent = context.defaultParent;
-            Memory.defaultVisited = context.defaultVisited;
-            Memory.ticketCheck = context.ticketCheck;
-            Memory.ticketNumber = context.ticketNumber;
-            Memory.size = context.size;
-        }
-
-        public static void SaveContext(Context context)
-        {
-            context.distance = Memory.distance;
-            context.parent = Memory.parent;
-            context.visited = Memory.visited;
-            context.defaultDistance = Memory.defaultDistance;
-            context.defaultParent = Memory.defaultParent;
-            context.defaultVisited = Memory.defaultVisited;
-            context.ticketCheck = Memory.ticketCheck;
-            context.ticketNumber = Memory.ticketNumber;
-            context.size = Memory.size;
-        }
 
         public static int Initialise(int size, float defaultDistance, int defaultParent, bool defaultVisited)
         {
@@ -99,18 +58,21 @@ namespace algorithms.datatypes
         public static float Distance(int index)
         {
             if (ticketCheck[index] != ticketNumber) return defaultDistance;
+
             return distance[index];
         }
 
         public static int Parent(int index)
         {
             if (ticketCheck[index] != ticketNumber) return defaultParent;
+
             return parent[index];
         }
 
         public static bool Visited(int index)
         {
             if (ticketCheck[index] != ticketNumber) return defaultVisited;
+
             return visited[index];
         }
 
@@ -166,6 +128,46 @@ namespace algorithms.datatypes
             visited = null;
             ticketCheck = null;
             GC.Collect();
+        }
+
+        // Memory Context struct
+        public struct Context
+        {
+            public float[] Distance;
+            public int[] Parent;
+            public bool[] Visited;
+            public float DefaultDistance;
+            public int DefaultParent;
+            public bool DefaultVisited;
+            public int[] TicketCheck;
+            public int TicketNumber;
+            public int Size;
+        }
+
+        public static void LoadContext(Context context)
+        {
+            distance = context.Distance;
+            parent = context.Parent;
+            visited = context.Visited;
+            defaultDistance = context.DefaultDistance;
+            defaultParent = context.DefaultParent;
+            defaultVisited = context.DefaultVisited;
+            ticketCheck = context.TicketCheck;
+            ticketNumber = context.TicketNumber;
+            size = context.Size;
+        }
+
+        public static void SaveContext(Context context)
+        {
+            context.Distance = distance;
+            context.Parent = parent;
+            context.Visited = visited;
+            context.DefaultDistance = defaultDistance;
+            context.DefaultParent = defaultParent;
+            context.DefaultVisited = defaultVisited;
+            context.TicketCheck = ticketCheck;
+            context.TicketNumber = ticketNumber;
+            context.Size = size;
         }
     }
 }

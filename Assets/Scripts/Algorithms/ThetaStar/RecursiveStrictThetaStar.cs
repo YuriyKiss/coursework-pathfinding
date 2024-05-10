@@ -1,7 +1,7 @@
-using grid;
-using priorityqueue;
+using Grid;
+using PriorityQueue;
 
-namespace algorithms.strictthetastar
+namespace Algorithms.Theta
 {
     public class RecursiveStrictThetaStar : BasicThetaStar
     {
@@ -40,32 +40,32 @@ namespace algorithms.strictthetastar
             return algo;
         }
 
-        public override void computePath()
+        public override void ComputePath()
         {
             int totalSize = (graph.sizeX + 1) * (graph.sizeY + 1);
 
-            int start = toOneDimIndex(sx, sy);
-            finish = toOneDimIndex(ex, ey);
+            int start = ToOneDimIndex(sx, sy);
+            finish = ToOneDimIndex(ex, ey);
 
             pq = new ReusableIndirectHeap(totalSize);
-            this.initialiseMemory(totalSize, float.PositiveInfinity, -1, false);
+            this.InitialiseMemory(totalSize, float.PositiveInfinity, -1, false);
 
             Initialise(start);
 
-            while (!pq.isEmpty())
+            while (!pq.IsEmpty())
             {
-                int current = pq.popMinIndex();
+                int current = pq.PopMinIndex();
                 TryFixBufferValue(current);
 
                 if (current == finish || Distance(current) == float.PositiveInfinity)
                 {
-                    maybeSaveSearchSnapshot();
+                    MaybeSaveSearchSnapshot();
                     break;
                 }
                 SetVisited(current, true);
 
-                int x = toTwoDimX(current);
-                int y = toTwoDimY(current);
+                int x = ToTwoDimX(current);
+                int y = ToTwoDimY(current);
 
                 TryRelaxNeighbour(current, x, y, x - 1, y - 1);
                 TryRelaxNeighbour(current, x, y, x, y - 1);
@@ -78,13 +78,13 @@ namespace algorithms.strictthetastar
                 TryRelaxNeighbour(current, x, y, x, y + 1);
                 TryRelaxNeighbour(current, x, y, x + 1, y + 1);
 
-                maybeSaveSearchSnapshot();
+                MaybeSaveSearchSnapshot();
             }
 
             MaybePostSmooth();
         }
 
-        protected new float Heuristic(int x, int y)
+        protected override float Heuristic(int x, int y)
         {
             return heuristicWeight * graph.Distance(x, y, ex, ey);
         }
@@ -98,12 +98,12 @@ namespace algorithms.strictthetastar
             }
         }
 
-        protected new void TryRelaxNeighbour(int current, int currentX, int currentY, int x, int y)
+        protected override void TryRelaxNeighbour(int current, int currentX, int currentY, int x, int y)
         {
             if (!graph.IsValidCoordinate(x, y))
                 return;
 
-            int destination = toOneDimIndex(x, y);
+            int destination = ToOneDimIndex(x, y);
             if (Visited(destination))
                 return;
             if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
@@ -114,7 +114,7 @@ namespace algorithms.strictthetastar
             if (Relax(current, destination, Weight(currentX, currentY, x, y)))
             {
                 // If relaxation is done.
-                pq.decreaseKey(destination, Distance(destination) + Heuristic(x, y));
+                pq.DecreaseKey(destination, Distance(destination) + Heuristic(x, y));
             }
         }
 
@@ -177,14 +177,14 @@ namespace algorithms.strictthetastar
             if (u == -1) return false;
             int p = Parent(u);
             if (p == -1) return false; // u is start point.
-            int ux = toTwoDimX(u);
-            int uy = toTwoDimY(u);
+            int ux = ToTwoDimX(u);
+            int uy = ToTwoDimY(u);
             if (IsOuterCorner(ux, uy)) return false; // u is outer corner
 
-            int vx = toTwoDimX(v);
-            int vy = toTwoDimY(v);
-            int px = toTwoDimX(p);
-            int py = toTwoDimY(p);
+            int vx = ToTwoDimX(v);
+            int vy = ToTwoDimY(v);
+            int px = ToTwoDimX(p);
+            int py = ToTwoDimY(p);
 
             return IsCollinear(px, py, ux, uy, vx, vy);
         }
@@ -213,12 +213,12 @@ namespace algorithms.strictthetastar
         {
             int p = Parent(u); // assert u != -1
             if (p == -1) return true;
-            int x1 = toTwoDimX(v);
-            int y1 = toTwoDimY(v);
-            int x2 = toTwoDimX(u);
-            int y2 = toTwoDimY(u);
-            int x3 = toTwoDimX(p);
-            int y3 = toTwoDimY(p);
+            int x1 = ToTwoDimX(v);
+            int y1 = ToTwoDimY(v);
+            int x2 = ToTwoDimX(u);
+            int y2 = ToTwoDimY(u);
+            int x3 = ToTwoDimX(p);
+            int y3 = ToTwoDimY(p);
             return graph.IsTaut(x1, y1, x2, y2, x3, y3);
         }
     }

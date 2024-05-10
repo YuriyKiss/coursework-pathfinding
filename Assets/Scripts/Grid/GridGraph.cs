@@ -1,14 +1,16 @@
 using System;
-using algorithms.datatypes;
+using Datatypes;
 
-namespace grid
+namespace Grid
 {
-    /**
+    /*
      * Represents the Grid of blocked/unblocked tiles.
      */
     public class GridGraph
     {
-        private bool[] tiles; // Flattened 2D Array
+        // Flattened 2D Array
+        private bool[] tiles;
+
         public readonly int sizeX;
         public readonly int sizeY;
         public readonly int sizeXplusOne;
@@ -34,7 +36,9 @@ namespace grid
         public void TrySetBlocked(int x, int y, bool value)
         {
             if (IsValidBlock(x, y))
+            {
                 tiles[sizeX * y + x] = value;
+            }
         }
 
         public bool IsBlocked(int x, int y)
@@ -51,14 +55,12 @@ namespace grid
 
         public bool IsValidCoordinate(int x, int y)
         {
-            return (x <= sizeX && y <= sizeY &&
-                    x >= 0 && y >= 0);
+            return (x <= sizeX && y <= sizeY && x >= 0 && y >= 0);
         }
 
         public bool IsValidBlock(int x, int y)
         {
-            return (x < sizeX && y < sizeY &&
-                    x >= 0 && y >= 0);
+            return (x < sizeX && y < sizeY && x >= 0 && y >= 0);
         }
 
         public int ToOneDimIndex(int x, int y)
@@ -79,9 +81,9 @@ namespace grid
         public bool IsUnblockedCoordinate(int x, int y)
         {
             return !TopRightOfBlockedTile(x, y) ||
-                    !TopLeftOfBlockedTile(x, y) ||
-                    !BottomRightOfBlockedTile(x, y) ||
-                    !BottomLeftOfBlockedTile(x, y);
+                   !TopLeftOfBlockedTile(x, y) ||
+                   !BottomRightOfBlockedTile(x, y) ||
+                   !BottomLeftOfBlockedTile(x, y);
         }
 
         public bool TopRightOfBlockedTile(int x, int y)
@@ -104,7 +106,7 @@ namespace grid
             return IsBlocked(x, y);
         }
 
-        /**
+        /*
          * x1,y1,x2,y2 refer to the top left corner of the tile.
          * @param x1 Condition: x1 between 0 and sizeX inclusive.
          * @param y1 Condition: y1 between 0 and sizeY inclusive.
@@ -135,7 +137,7 @@ namespace grid
             return (float)Math.Sqrt(squareDistance);
         }
 
-        public double Distance_double(int x1, int y1, int x2, int y2)
+        public double DistanceDouble(int x1, int y1, int x2, int y2)
         {
             int xDiff = x2 - x1;
             int yDiff = y2 - y1;
@@ -158,7 +160,7 @@ namespace grid
             return Math.Sqrt(squareDistance);
         }
 
-        /**
+        /*
          * Octile distance:
          *   min(dx,dy)*sqrt(2) + (max(dx,dy)-min(dx,dy))
          * = min(dx,dy)*(sqrt(2)-1) + max(dx,dy)
@@ -181,7 +183,7 @@ namespace grid
             return min * SQRT_TWO_MINUS_ONE + max;
         }
 
-        /**
+        /*
          * Same as lineOfSight, but only works with a vertex and its 8 immediate neighbours.
          * Also (x1,y1) != (x2,y2)
          */
@@ -194,7 +196,8 @@ namespace grid
                     return !IsBlocked(x1, y2) || !IsBlocked(x1 - 1, y2);
                 }
                 else
-                { // y1 < y2
+                { 
+                    // y1 < y2
                     return !IsBlocked(x1, y1) || !IsBlocked(x1 - 1, y1);
                 }
             }
@@ -209,12 +212,14 @@ namespace grid
                     return !IsBlocked(x1, y1);
                 }
                 else
-                { // y2 < y1
+                { 
+                    // y2 < y1
                     return !IsBlocked(x1, y2);
                 }
             }
             else
-            { // x2 < x1
+            { 
+                // x2 < x1
                 if (y1 == y2)
                 {
                     return !IsBlocked(x2, y1) || !IsBlocked(x2, y1 - 1);
@@ -224,14 +229,15 @@ namespace grid
                     return !IsBlocked(x2, y1);
                 }
                 else
-                { // y2 < y1
+                { 
+                    // y2 < y1
                     return !IsBlocked(x2, y2);
                 }
             }
         }
 
 
-        /**
+        /*
          * @return true iff there is line-of-sight from (x1,y1) to (x2,y2).
          */
         public bool LineOfSight(int x1, int y1, int x2, int y2)
@@ -369,7 +375,7 @@ namespace grid
         }
 
 
-        /**
+        /*
          * Used by Accelerated A* and MazeAnalysis.
          * leftRange is the number of blocks you can move left before hitting a blocked tile.
          * downRange is the number of blocks you can move down before hitting a blocked tile.
@@ -463,7 +469,7 @@ namespace grid
             return maxRanges;
         }
 
-        /**
+        /*
          * @return the percentage of blocked tiles as compared to the total grid size.
          */
         public float GetPercentageBlocked()
@@ -471,7 +477,7 @@ namespace grid
             return (float)GetNumBlocked() / (sizeX * sizeY);
         }
 
-        /**
+        /*
          * @return the number of blocked tiles in the grid.
          */
         public int GetNumBlocked()
@@ -532,7 +538,8 @@ namespace grid
                     return IsTautFromTopLeft(x1, y1, x2, y2, x3, y3);
                 }
                 else
-                { // y1 == y2
+                { 
+                    // y1 == y2
                     return IsTautFromLeft(x1, y1, x2, y2, x3, y3);
                 }
             }
@@ -547,12 +554,14 @@ namespace grid
                     return IsTautFromTopRight(x1, y1, x2, y2, x3, y3);
                 }
                 else
-                { // y1 == y2
+                { 
+                    // y1 == y2
                     return IsTautFromRight(x1, y1, x2, y2, x3, y3);
                 }
             }
             else
-            { // x2 == x1
+            { 
+                // x2 == x1
                 if (y1 < y2)
                 {
                     return IsTautFromBottom(x1, y1, x2, y2, x3, y3);
@@ -562,117 +571,131 @@ namespace grid
                     return IsTautFromTop(x1, y1, x2, y2, x3, y3);
                 }
                 else
-                { // y1 == y2
+                { 
+                    // y1 == y2
                     throw new NotSupportedException("v == u?");
                 }
             }
         }
 
 
-        private bool IsTautFromBottomLeft(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromBottomLeft(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 < x2 || y3 < y2) return false;
 
             int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1); // m1 - m2
             if (compareGradients < 0)
-            { // m1 < m2
+            { 
+                // m1 < m2
                 return BottomRightOfBlockedTile(x2, y2);
             }
             else if (compareGradients > 0)
-            { // m1 > m2
+            { 
+                // m1 > m2
                 return TopLeftOfBlockedTile(x2, y2);
             }
             else
-            { // m1 == m2
+            { 
+                // m1 == m2
                 return true;
             }
         }
 
 
-        private bool IsTautFromTopLeft(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromTopLeft(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 < x2 || y3 > y2) return false;
 
-            int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1); // m1 - m2
+            // m1 - m2
+            int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1);
             if (compareGradients < 0)
-            { // m1 < m2
+            { 
+                // m1 < m2
                 return BottomLeftOfBlockedTile(x2, y2);
             }
             else if (compareGradients > 0)
-            { // m1 > m2
+            { 
+                // m1 > m2
                 return TopRightOfBlockedTile(x2, y2);
             }
             else
-            { // m1 == m2
+            { 
+                // m1 == m2
                 return true;
             }
         }
 
-        private bool IsTautFromBottomRight(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromBottomRight(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 > x2 || y3 < y2) return false;
-            int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1); // m1 - m2
+
+            // m1 - m2
+            int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1); 
             if (compareGradients < 0)
-            { // m1 < m2
+            { 
+                // m1 < m2
                 return TopRightOfBlockedTile(x2, y2);
             }
             else if (compareGradients > 0)
-            { // m1 > m2
+            { 
+                // m1 > m2
                 return BottomLeftOfBlockedTile(x2, y2);
             }
             else
-            { // m1 == m2
+            { 
+                // m1 == m2
                 return true;
             }
         }
 
 
-        private bool IsTautFromTopRight(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromTopRight(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 > x2 || y3 > y2) return false;
 
-            int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1); // m1 - m2
+            // m1 - m2
+            int compareGradients = (y2 - y1) * (x3 - x2) - (y3 - y2) * (x2 - x1); 
             if (compareGradients < 0)
-            { // m1 < m2
+            { 
+                // m1 < m2
                 return TopLeftOfBlockedTile(x2, y2);
             }
             else if (compareGradients > 0)
-            { // m1 > m2
+            { 
+                // m1 > m2
                 return BottomRightOfBlockedTile(x2, y2);
             }
             else
-            { // m1 == m2
+            { 
+                // m1 == m2
                 return true;
             }
         }
 
 
-        private bool IsTautFromLeft(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromLeft(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 < x2) return false;
 
             int dy = y3 - y2;
             if (dy < 0)
-            { // y3 < y2
+            { 
+                // y3 < y2
                 return TopRightOfBlockedTile(x2, y2);
             }
             else if (dy > 0)
-            { // y3 > y2
+            { 
+                // y3 > y2
                 return BottomRightOfBlockedTile(x2, y2);
             }
             else
-            { // y3 == y2
+            { 
+                // y3 == y2
                 return true;
             }
         }
 
-        private bool IsTautFromRight(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromRight(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 > x2) return false;
 
@@ -691,42 +714,46 @@ namespace grid
             }
         }
 
-        private bool IsTautFromBottom(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromBottom(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (y3 < y2) return false;
 
             int dx = x3 - x2;
             if (dx < 0)
-            { // x3 < x2
+            { 
+                // x3 < x2
                 return TopRightOfBlockedTile(x2, y2);
             }
             else if (dx > 0)
-            { // x3 > x2
+            { 
+                // x3 > x2
                 return TopLeftOfBlockedTile(x2, y2);
             }
             else
-            { // x3 == x2
+            { 
+                // x3 == x2
                 return true;
             }
         }
 
-        private bool IsTautFromTop(int x1, int y1, int x2, int y2, int x3,
-                int y3)
+        private bool IsTautFromTop(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (y3 > y2) return false;
 
             int dx = x3 - x2;
             if (dx < 0)
-            { // x3 < x2
+            { 
+                // x3 < x2
                 return BottomRightOfBlockedTile(x2, y2);
             }
             else if (dx > 0)
-            { // x3 > x2
+            { 
+                // x3 > x2
                 return BottomLeftOfBlockedTile(x2, y2);
             }
             else
-            { // x3 == x2
+            { 
+                // x3 == x2
                 return true;
             }
         }

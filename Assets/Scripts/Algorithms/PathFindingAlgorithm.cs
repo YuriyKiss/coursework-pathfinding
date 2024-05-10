@@ -1,10 +1,10 @@
-using algorithms.datatypes;
-using grid;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using Datatypes;
+using Grid;
 
-namespace algorithms
+namespace Algorithms
 {
     public abstract class PathFindingAlgorithm
     {
@@ -42,74 +42,72 @@ namespace algorithms
             snapshotList = new List<List<SnapshotItem>>();
         }
 
-        protected void initialiseMemory(int size, float defaultDistance, int defaultParent, bool defaultVisited)
+        protected void InitialiseMemory(int size, float defaultDistance, int defaultParent, bool defaultVisited)
         {
             usingStaticMemory = true;
             ticketNumber = Memory.Initialise(size, defaultDistance, defaultParent, defaultVisited);
         }
 
-        public void startRecording()
+        public void StartRecording()
         {
             recordingMode = true;
         }
 
-        public void stopRecording()
+        public void StopRecording()
         {
             recordingMode = false;
         }
 
-        public List<List<SnapshotItem>> retrieveSnapshotList()
+        public List<List<SnapshotItem>> RetrieveSnapshotList()
         {
             return snapshotList;
         }
 
-        public abstract void computePath();
+        public abstract void ComputePath();
 
-        public abstract int[][] getPath();
+        public abstract int[][] GetPath();
 
-        public abstract float getPathLength();
+        public abstract float GetPathLength();
 
-        public virtual void printStatistics()
-        {
-        }
+        public virtual void PrintStatistics() { }
 
-        protected int toOneDimIndex(int x, int y)
+        protected int ToOneDimIndex(int x, int y)
         {
             return graph.ToOneDimIndex(x, y);
         }
 
-        protected int toTwoDimX(int index)
+        protected int ToTwoDimX(int index)
         {
             return graph.ToTwoDimX(index);
         }
 
-        protected int toTwoDimY(int index)
+        protected int ToTwoDimY(int index)
         {
             return graph.ToTwoDimY(index);
         }
 
-        protected void maybeSaveSearchSnapshot()
+        protected void MaybeSaveSearchSnapshot()
         {
             if (recordingMode)
             {
                 if (usingStaticMemory && ticketNumber != Memory.CurrentTicket())
                     throw new Exception("Ticket does not match!");
 
-                saveSearchSnapshot();
+                SaveSearchSnapshot();
             }
         }
 
-        public List<SnapshotItem> getCurrentSearchSnapshot()
+        public List<SnapshotItem> GetCurrentSearchSnapshot()
         {
-            return computeSearchSnapshot();
+            return ComputeSearchSnapshot();
         }
 
-        protected bool isRecording()
+        protected bool IsRecording()
         {
             return recordingMode;
         }
 
-        private void saveSearchSnapshot()
+        private void SaveSearchSnapshot()
         {
             if (snapshotCountdown > 0)
             {
@@ -118,67 +116,67 @@ namespace algorithms
             }
             snapshotCountdown = SNAPSHOT_INTERVAL;
 
-            snapshotList.Add(computeSearchSnapshot());
+            snapshotList.Add(ComputeSearchSnapshot());
         }
 
-        protected void addSnapshot(List<SnapshotItem> snapshotItemList)
+        protected void AddSnapshot(List<SnapshotItem> snapshotItemList)
         {
             snapshotList.Add(snapshotItemList);
         }
 
-        protected int goalParentIndex()
+        protected int GoalParentIndex()
         {
-            return toOneDimIndex(ex, ey);
+            return ToOneDimIndex(ex, ey);
         }
 
-        private int getParent(int index)
+        private int GetParent(int index)
         {
             if (usingStaticMemory) return Memory.Parent(index);
             else return parent[index];
         }
 
-        private void setParent(int index, int value)
+        private void SetParent(int index, int value)
         {
             if (usingStaticMemory) Memory.SetParent(index, value);
             else parent[index] = value;
         }
 
-        protected int getSize()
+        protected int GetSize()
         {
             if (usingStaticMemory) return Memory.Size();
             else return parent.Length;
         }
 
-        protected List<SnapshotItem> computeSearchSnapshot()
+        protected List<SnapshotItem> ComputeSearchSnapshot()
         {
             List<SnapshotItem> list = new List<SnapshotItem>();
-            int current = goalParentIndex();
+            int current = GoalParentIndex();
             HashSet<int> finalPathSet = null;
-            if (getParent(current) >= 0)
+            if (GetParent(current) >= 0)
             {
                 finalPathSet = new HashSet<int>();
                 while (current >= 0)
                 {
                     finalPathSet.Add(current);
-                    current = getParent(current);
+                    current = GetParent(current);
                 }
             }
 
-            int size = getSize();
+            int size = GetSize();
             for (int i = 0; i < size; i++)
             {
-                if (getParent(i) != -1)
+                if (GetParent(i) != -1)
                 {
                     if (finalPathSet != null && finalPathSet.Contains(i))
                     {
-                        list.Add(SnapshotItem.Generate(snapshotEdge(i), Color.Blue));
+                        list.Add(SnapshotItem.Generate(SnapshotEdge(i), Color.Blue));
                     }
                     else
                     {
-                        list.Add(SnapshotItem.Generate(snapshotEdge(i)));
+                        list.Add(SnapshotItem.Generate(SnapshotEdge(i)));
                     }
                 }
-                int[] vertexSnapshot = snapshotVertex(i);
+                int[] vertexSnapshot = SnapshotVertex(i);
                 if (vertexSnapshot != null)
                 {
                     list.Add(SnapshotItem.Generate(vertexSnapshot));
@@ -188,12 +186,12 @@ namespace algorithms
             return list;
         }
 
-        protected int[] snapshotEdge(int endIndex)
+        protected int[] SnapshotEdge(int endIndex)
         {
             int[] edge = new int[4];
-            int startIndex = getParent(endIndex);
-            edge[2] = toTwoDimX(endIndex);
-            edge[3] = toTwoDimY(endIndex);
+            int startIndex = GetParent(endIndex);
+            edge[2] = ToTwoDimX(endIndex);
+            edge[3] = ToTwoDimY(endIndex);
             if (startIndex < 0)
             {
                 edge[0] = edge[2];
@@ -201,31 +199,31 @@ namespace algorithms
             }
             else
             {
-                edge[0] = toTwoDimX(startIndex);
-                edge[1] = toTwoDimY(startIndex);
+                edge[0] = ToTwoDimX(startIndex);
+                edge[1] = ToTwoDimY(startIndex);
             }
 
             return edge;
         }
 
-        protected int[] snapshotVertex(int index)
+        protected int[] SnapshotVertex(int index)
         {
-            if (selected(index))
+            if (Selected(index))
             {
                 int[] edge = new int[2];
-                edge[0] = toTwoDimX(index);
-                edge[1] = toTwoDimY(index);
+                edge[0] = ToTwoDimX(index);
+                edge[1] = ToTwoDimY(index);
                 return edge;
             }
             return null;
         }
 
-        protected virtual bool selected(int index)
+        protected virtual bool Selected(int index)
         {
             return false;
         }
 
-        protected void inheritSnapshotListFrom(PathFindingAlgorithm algo)
+        protected void InheritSnapshotListFrom(PathFindingAlgorithm algo)
         {
             this.snapshotList = algo.snapshotList;
         }

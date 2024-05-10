@@ -1,4 +1,4 @@
-namespace algorithms.datatypes
+namespace Datatypes
 {
     public sealed class Point
     {
@@ -15,8 +15,10 @@ namespace algorithms.datatypes
         {
             int prime = 31;
             int result = 1;
+
             result = prime * result + x;
             result = prime * result + y;
+
             return result;
         }
 
@@ -26,6 +28,7 @@ namespace algorithms.datatypes
             {
                 return x == other.x && y == other.y;
             }
+
             return false;
         }
 

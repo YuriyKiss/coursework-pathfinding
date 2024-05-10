@@ -1,6 +1,6 @@
-using grid;
+using Grid;
 
-namespace algorithms
+namespace Algorithms.Theta
 {
     public class RecursiveThetaStar : BasicThetaStar
     {
@@ -33,10 +33,10 @@ namespace algorithms
 
         protected void SetParentGranular(int v, int u)
         {
-            int x1 = toTwoDimX(u);
-            int y1 = toTwoDimY(u);
-            int x2 = toTwoDimX(v);
-            int y2 = toTwoDimY(v);
+            int x1 = ToTwoDimX(u);
+            int y1 = ToTwoDimY(u);
+            int x2 = ToTwoDimX(v);
+            int y2 = ToTwoDimY(v);
 
             int dx = x2 - x1;
             int dy = y2 - y1;
@@ -49,7 +49,7 @@ namespace algorithms
             {
                 x1 += dx;
                 y1 += dy;
-                int curr = toOneDimIndex(x1, y1);
+                int curr = ToOneDimIndex(x1, y1);
 
                 SetParent(curr, par);
                 par = curr;

@@ -1,7 +1,7 @@
-using grid;
-using priorityqueue;
+using Grid;
+using PriorityQueue;
 
-namespace Algorithms
+namespace Algorithms.Theta
 {
     public class LazyThetaStar : BasicThetaStar
     {
@@ -9,29 +9,29 @@ namespace Algorithms
         {
         }
 
-        public override void computePath()
+        public override void ComputePath()
         {
             int totalSize = (graph.sizeX + 1) * (graph.sizeY + 1);
 
-            int start = toOneDimIndex(sx, sy);
-            finish = toOneDimIndex(ex, ey);
+            int start = ToOneDimIndex(sx, sy);
+            finish = ToOneDimIndex(ex, ey);
 
             pq = new ReusableIndirectHeap(totalSize);
-            this.initialiseMemory(totalSize, float.PositiveInfinity, -1, false);
+            this.InitialiseMemory(totalSize, float.PositiveInfinity, -1, false);
 
             Initialise(start);
 
-            while (!pq.isEmpty())
+            while (!pq.IsEmpty())
             {
-                int current = pq.popMinIndex();
-                int x = toTwoDimX(current);
-                int y = toTwoDimY(current);
+                int current = pq.PopMinIndex();
+                int x = ToTwoDimX(current);
+                int y = ToTwoDimY(current);
 
                 int parentIndex = Parent(current);
                 if (parentIndex != -1)
                 {
-                    int parX = toTwoDimX(parentIndex);
-                    int parY = toTwoDimY(parentIndex);
+                    int parX = ToTwoDimX(parentIndex);
+                    int parY = ToTwoDimY(parentIndex);
 
                     if (!graph.LineOfSight(x, y, parX, parY))
                     {
@@ -41,7 +41,7 @@ namespace Algorithms
 
                 if (current == finish || Distance(current) == float.PositiveInfinity)
                 {
-                    maybeSaveSearchSnapshot();
+                    MaybeSaveSearchSnapshot();
                     break;
                 }
                 SetVisited(current, true);
@@ -57,7 +57,7 @@ namespace Algorithms
                 TryRelaxNeighbour(current, x, y, x, y + 1);
                 TryRelaxNeighbour(current, x, y, x + 1, y + 1);
 
-                maybeSaveSearchSnapshot();
+                MaybeSaveSearchSnapshot();
             }
 
             MaybePostSmooth();
