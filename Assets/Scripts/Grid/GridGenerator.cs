@@ -43,7 +43,7 @@ namespace ThetaStar.Grid.Generator
                     float tilePosX = posX - sizeX / 2 + tileSize * (0.5f + j);
                     float tilePosZ = posZ - sizeZ / 2 + tileSize * (0.5f + i);
 
-                    Vector3 origin = new Vector3(tilePosX, posY + sizeY / 2, tilePosZ);
+                    Vector3 origin = new Vector3(tilePosX, posY + sizeY, tilePosZ);
 
                     bool isHit = Physics.Raycast(origin, RAY_DIRECTION, out RaycastHit hitInfo, 
                         MAX_DISTANCE, LAYER_MASK, TRIGGER_INTERACTION);
@@ -51,19 +51,19 @@ namespace ThetaStar.Grid.Generator
                     if (!isHit)
                     {
                         Vector3 position = new Vector3(tilePosX, Mathf.Infinity, tilePosZ);
-                        Tile currentTile = new Tile(position, false, i, j);
+                        Tile currentTile = new Tile(position, true, i, j);
                         grid.AddTile(currentTile);
                     }
                     else if (!hitInfo.collider.CompareTag(WALKABLE_TAG))
                     {
                         Vector3 position = new Vector3(tilePosX, hitInfo.point.y, tilePosZ);
-                        Tile currentTile = new Tile(position, false, i, j);
+                        Tile currentTile = new Tile(position, true, i, j);
                         grid.AddTile(currentTile);
                     }
                     else
                     {
                         Vector3 position = new Vector3(tilePosX, hitInfo.point.y, tilePosZ);
-                        Tile currentTile = new Tile(position, true, i, j);
+                        Tile currentTile = new Tile(position, false, i, j);
                         grid.AddTile(currentTile);
                     }
                 }
@@ -90,7 +90,7 @@ namespace ThetaStar.Grid.Generator
 
             foreach (Tile tile in tiles)
             {
-                Gizmos.color = tile.IsWalkable ? Color.green : Color.red;
+                Gizmos.color = tile.IsBlocked ? Color.red : Color.green;
 
                 Vector3 tileScale = new Vector3(tileSize * 0.8f, 0.05f, tileSize * 0.8f);
 

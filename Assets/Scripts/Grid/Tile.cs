@@ -7,14 +7,14 @@ namespace ThetaStar.Grid
     public struct Tile
     {
         public Vector3 Position;
-        public bool IsWalkable;
+        public bool IsBlocked;
         public int PosX;
         public int PosZ;
 
         public Tile(Vector3 position, bool isWalkable, int posX, int posZ)
         {
             Position = position;
-            IsWalkable = isWalkable;
+            IsBlocked = isWalkable;
             PosX = posX;
             PosZ = posZ;
         }

@@ -51,7 +51,7 @@ namespace ThetaStar.Grid
                 {
                     Vector3 newPosition = new Vector3(tiles[i].Position.x, yMinHeight, tiles[i].Position.z);
 
-                    tiles[i] = new Tile(newPosition, tiles[i].IsWalkable, tiles[i].PosX, tiles[i].PosZ);
+                    tiles[i] = new Tile(newPosition, tiles[i].IsBlocked, tiles[i].PosX, tiles[i].PosZ);
                 }
             }
         }
