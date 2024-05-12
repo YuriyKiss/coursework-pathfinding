@@ -1,7 +1,7 @@
-using Grid;
-using PriorityQueue;
+using ThetaStar.Grid;
+using ThetaStar.PriorityQueue;
 
-namespace Algorithms.Theta
+namespace ThetaStar.Algorithms.Theta
 {
     public class RecursiveStrictThetaStar : BasicThetaStar
     {

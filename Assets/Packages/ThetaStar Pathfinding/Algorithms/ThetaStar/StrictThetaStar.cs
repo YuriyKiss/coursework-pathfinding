@@ -1,8 +1,8 @@
-using Grid;
-using PriorityQueue;
+using ThetaStar.Grid;
+using ThetaStar.PriorityQueue;
 
 // Assuming you have the necessary classes like GridGraph, ReusableIndirectHeap, etc.
-namespace Algorithms.Theta
+namespace ThetaStar.Algorithms.Theta
 {
     /// <summary>
     /// An modification of Theta* that I am experimenting with. -Oh

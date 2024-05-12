@@ -1,7 +1,7 @@
 using System;
-using Datatypes;
+using ThetaStar.Datatypes;
 
-namespace Grid
+namespace ThetaStar.Grid
 {
     /*
      * Represents the Grid of blocked/unblocked tiles.

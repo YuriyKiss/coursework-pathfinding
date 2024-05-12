@@ -1,8 +1,8 @@
-using Datatypes;
-using Grid;
-using PriorityQueue;
+using ThetaStar.Datatypes;
+using ThetaStar.Grid;
+using ThetaStar.PriorityQueue;
 
-namespace Algorithms
+namespace ThetaStar.Algorithms
 {
     public class AStarStaticMemory : PathFindingAlgorithm
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace PriorityQueue
+namespace ThetaStar.PriorityQueue
 {
     /*
      * Indirect binary heap. Used for O(lgn) deleteMin and O(lgn) decreaseKey.

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Datatypes
+namespace ThetaStar.Datatypes
 {
     /*
      * Contains a [x1,y1,x2,y2] or [x,y] and a colour.

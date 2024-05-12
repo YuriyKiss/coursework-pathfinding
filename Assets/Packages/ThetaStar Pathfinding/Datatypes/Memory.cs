@@ -1,6 +1,6 @@
 using System;
 
-namespace Datatypes
+namespace ThetaStar.Datatypes
 {
     public static class Memory
     {

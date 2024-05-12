@@ -1,6 +1,6 @@
-using Grid;
+using ThetaStar.Grid;
 
-namespace Algorithms.Theta
+namespace ThetaStar.Algorithms.Theta
 {
     public class BasicThetaStar : AStarStaticMemory
     {

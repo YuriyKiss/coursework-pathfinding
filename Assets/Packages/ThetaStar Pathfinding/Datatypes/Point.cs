@@ -1,4 +1,4 @@
-namespace Datatypes
+namespace ThetaStar.Datatypes
 {
     public sealed class Point
     {
