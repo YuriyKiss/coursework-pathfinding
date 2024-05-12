@@ -360,83 +360,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 0
       PosZ: 0
-    - Position: {x: -4.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 1
-    - Position: {x: -4.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 2
-    - Position: {x: -4.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 3
-    - Position: {x: -4.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 4
-    - Position: {x: -4.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 5
-    - Position: {x: -4.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 6
-    - Position: {x: -4.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 7
-    - Position: {x: -4.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 8
-    - Position: {x: -4.75, y: 0.05, z: -0.25}
+    - Position: {x: -0.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 9
-    - Position: {x: -4.75, y: 0.05, z: 0.25}
+    - Position: {x: 0.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 10
-    - Position: {x: -4.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 11
-    - Position: {x: -4.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 12
-    - Position: {x: -4.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 13
-    - Position: {x: -4.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 14
-    - Position: {x: -4.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 15
-    - Position: {x: -4.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 16
-    - Position: {x: -4.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 17
-    - Position: {x: -4.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 18
-    - Position: {x: -4.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -4.75}
       IsWalkable: 1
       PosX: 0
       PosZ: 19
-    - Position: {x: -4.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 0
@@ -444,83 +444,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 1
       PosZ: 1
-    - Position: {x: -4.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 2
-    - Position: {x: -4.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 3
-    - Position: {x: -4.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 4
-    - Position: {x: -4.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 5
-    - Position: {x: -4.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 6
-    - Position: {x: -4.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 7
-    - Position: {x: -4.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 8
-    - Position: {x: -4.25, y: 0.05, z: -0.25}
+    - Position: {x: -0.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 9
-    - Position: {x: -4.25, y: 0.05, z: 0.25}
+    - Position: {x: 0.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 10
-    - Position: {x: -4.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 11
-    - Position: {x: -4.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 12
-    - Position: {x: -4.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 13
-    - Position: {x: -4.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 14
-    - Position: {x: -4.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 15
-    - Position: {x: -4.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 16
-    - Position: {x: -4.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 17
-    - Position: {x: -4.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 18
-    - Position: {x: -4.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -4.25}
       IsWalkable: 1
       PosX: 1
       PosZ: 19
-    - Position: {x: -3.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 0
-    - Position: {x: -3.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 1
@@ -528,83 +528,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 2
       PosZ: 2
-    - Position: {x: -3.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 3
-    - Position: {x: -3.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 4
-    - Position: {x: -3.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 5
-    - Position: {x: -3.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 6
-    - Position: {x: -3.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 7
-    - Position: {x: -3.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 8
-    - Position: {x: -3.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -3.75}
+      IsWalkable: 0
       PosX: 2
       PosZ: 9
-    - Position: {x: -3.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -3.75}
+      IsWalkable: 0
       PosX: 2
       PosZ: 10
-    - Position: {x: -3.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 11
-    - Position: {x: -3.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 12
-    - Position: {x: -3.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 13
-    - Position: {x: -3.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 14
-    - Position: {x: -3.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 15
-    - Position: {x: -3.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 16
-    - Position: {x: -3.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 17
-    - Position: {x: -3.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 18
-    - Position: {x: -3.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -3.75}
       IsWalkable: 1
       PosX: 2
       PosZ: 19
-    - Position: {x: -3.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 0
-    - Position: {x: -3.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 1
-    - Position: {x: -3.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 2
@@ -612,83 +612,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 3
       PosZ: 3
-    - Position: {x: -3.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 4
-    - Position: {x: -3.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 5
-    - Position: {x: -3.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 6
-    - Position: {x: -3.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 7
-    - Position: {x: -3.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 8
-    - Position: {x: -3.25, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -3.25}
+      IsWalkable: 0
       PosX: 3
       PosZ: 9
-    - Position: {x: -3.25, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -3.25}
+      IsWalkable: 0
       PosX: 3
       PosZ: 10
-    - Position: {x: -3.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 11
-    - Position: {x: -3.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 12
-    - Position: {x: -3.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 13
-    - Position: {x: -3.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 14
-    - Position: {x: -3.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 15
-    - Position: {x: -3.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 16
-    - Position: {x: -3.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 17
-    - Position: {x: -3.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 18
-    - Position: {x: -3.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -3.25}
       IsWalkable: 1
       PosX: 3
       PosZ: 19
-    - Position: {x: -2.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 0
-    - Position: {x: -2.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 1
-    - Position: {x: -2.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 2
-    - Position: {x: -2.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 3
@@ -696,83 +696,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 4
       PosZ: 4
-    - Position: {x: -2.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 5
-    - Position: {x: -2.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 6
-    - Position: {x: -2.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 7
-    - Position: {x: -2.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 8
-    - Position: {x: -2.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -2.75}
+      IsWalkable: 0
       PosX: 4
       PosZ: 9
-    - Position: {x: -2.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -2.75}
+      IsWalkable: 0
       PosX: 4
       PosZ: 10
-    - Position: {x: -2.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 11
-    - Position: {x: -2.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 12
-    - Position: {x: -2.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 13
-    - Position: {x: -2.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 14
-    - Position: {x: -2.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 15
-    - Position: {x: -2.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 16
-    - Position: {x: -2.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 17
-    - Position: {x: -2.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 18
-    - Position: {x: -2.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -2.75}
       IsWalkable: 1
       PosX: 4
       PosZ: 19
-    - Position: {x: -2.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 0
-    - Position: {x: -2.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 1
-    - Position: {x: -2.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 2
-    - Position: {x: -2.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 3
-    - Position: {x: -2.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 4
@@ -780,83 +780,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 5
       PosZ: 5
-    - Position: {x: -2.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 6
-    - Position: {x: -2.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 7
-    - Position: {x: -2.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 8
-    - Position: {x: -2.25, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -2.25}
+      IsWalkable: 0
       PosX: 5
       PosZ: 9
-    - Position: {x: -2.25, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -2.25}
+      IsWalkable: 0
       PosX: 5
       PosZ: 10
-    - Position: {x: -2.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 11
-    - Position: {x: -2.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 12
-    - Position: {x: -2.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 13
-    - Position: {x: -2.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 14
-    - Position: {x: -2.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 15
-    - Position: {x: -2.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 16
-    - Position: {x: -2.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 17
-    - Position: {x: -2.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 18
-    - Position: {x: -2.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -2.25}
       IsWalkable: 1
       PosX: 5
       PosZ: 19
-    - Position: {x: -1.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 0
-    - Position: {x: -1.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 1
-    - Position: {x: -1.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 2
-    - Position: {x: -1.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 3
-    - Position: {x: -1.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 4
-    - Position: {x: -1.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 5
@@ -864,83 +864,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 6
       PosZ: 6
-    - Position: {x: -1.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 7
-    - Position: {x: -1.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 8
-    - Position: {x: -1.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -1.75}
+      IsWalkable: 0
       PosX: 6
       PosZ: 9
-    - Position: {x: -1.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -1.75}
+      IsWalkable: 0
       PosX: 6
       PosZ: 10
-    - Position: {x: -1.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 11
-    - Position: {x: -1.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 12
-    - Position: {x: -1.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 13
-    - Position: {x: -1.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 14
-    - Position: {x: -1.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 15
-    - Position: {x: -1.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 16
-    - Position: {x: -1.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 17
-    - Position: {x: -1.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 18
-    - Position: {x: -1.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -1.75}
       IsWalkable: 1
       PosX: 6
       PosZ: 19
-    - Position: {x: -1.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 0
-    - Position: {x: -1.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 1
-    - Position: {x: -1.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 2
-    - Position: {x: -1.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 3
-    - Position: {x: -1.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 4
-    - Position: {x: -1.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 5
-    - Position: {x: -1.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 6
@@ -948,83 +948,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 7
       PosZ: 7
-    - Position: {x: -1.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 8
-    - Position: {x: -1.25, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -1.25}
+      IsWalkable: 0
       PosX: 7
       PosZ: 9
-    - Position: {x: -1.25, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -1.25}
+      IsWalkable: 0
       PosX: 7
       PosZ: 10
-    - Position: {x: -1.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 11
-    - Position: {x: -1.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 12
-    - Position: {x: -1.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 13
-    - Position: {x: -1.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 14
-    - Position: {x: -1.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 15
-    - Position: {x: -1.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 16
-    - Position: {x: -1.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 17
-    - Position: {x: -1.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 18
-    - Position: {x: -1.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -1.25}
       IsWalkable: 1
       PosX: 7
       PosZ: 19
-    - Position: {x: -0.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 0
-    - Position: {x: -0.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 1
-    - Position: {x: -0.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 2
-    - Position: {x: -0.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 3
-    - Position: {x: -0.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 4
-    - Position: {x: -0.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 5
-    - Position: {x: -0.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 6
-    - Position: {x: -0.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 7
@@ -1032,83 +1032,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 8
       PosZ: 8
-    - Position: {x: -0.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: -0.75}
+      IsWalkable: 0
       PosX: 8
       PosZ: 9
-    - Position: {x: -0.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: -0.75}
+      IsWalkable: 0
       PosX: 8
       PosZ: 10
-    - Position: {x: -0.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 11
-    - Position: {x: -0.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 12
-    - Position: {x: -0.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 13
-    - Position: {x: -0.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 14
-    - Position: {x: -0.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 15
-    - Position: {x: -0.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 16
-    - Position: {x: -0.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 17
-    - Position: {x: -0.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 18
-    - Position: {x: -0.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -0.75}
       IsWalkable: 1
       PosX: 8
       PosZ: 19
-    - Position: {x: -0.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 0
-    - Position: {x: -0.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 1
-    - Position: {x: -0.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 2
-    - Position: {x: -0.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 3
-    - Position: {x: -0.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 4
-    - Position: {x: -0.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 5
-    - Position: {x: -0.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 6
-    - Position: {x: -0.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 7
-    - Position: {x: -0.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 8
@@ -1116,83 +1116,83 @@ MonoBehaviour:
       IsWalkable: 0
       PosX: 9
       PosZ: 9
-    - Position: {x: -0.25, y: 0.5, z: 0.25}
+    - Position: {x: 0.25, y: 0.5, z: -0.25}
       IsWalkable: 0
       PosX: 9
       PosZ: 10
-    - Position: {x: -0.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 11
-    - Position: {x: -0.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 12
-    - Position: {x: -0.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 13
-    - Position: {x: -0.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 14
-    - Position: {x: -0.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 15
-    - Position: {x: -0.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 16
-    - Position: {x: -0.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 17
-    - Position: {x: -0.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 18
-    - Position: {x: -0.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: -0.25}
       IsWalkable: 1
       PosX: 9
       PosZ: 19
-    - Position: {x: 0.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 0
-    - Position: {x: 0.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 1
-    - Position: {x: 0.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 2
-    - Position: {x: 0.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 3
-    - Position: {x: 0.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 4
-    - Position: {x: 0.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 5
-    - Position: {x: 0.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 6
-    - Position: {x: 0.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 7
-    - Position: {x: 0.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 8
-    - Position: {x: 0.25, y: 0.5, z: -0.25}
+    - Position: {x: -0.25, y: 0.5, z: 0.25}
       IsWalkable: 0
       PosX: 10
       PosZ: 9
@@ -1200,167 +1200,167 @@ MonoBehaviour:
       IsWalkable: 0
       PosX: 10
       PosZ: 10
-    - Position: {x: 0.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 11
-    - Position: {x: 0.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 12
-    - Position: {x: 0.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 13
-    - Position: {x: 0.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 14
-    - Position: {x: 0.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 15
-    - Position: {x: 0.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 16
-    - Position: {x: 0.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 17
-    - Position: {x: 0.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 18
-    - Position: {x: 0.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 0.25}
       IsWalkable: 1
       PosX: 10
       PosZ: 19
-    - Position: {x: 0.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 0
-    - Position: {x: 0.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 1
-    - Position: {x: 0.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 2
-    - Position: {x: 0.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 3
-    - Position: {x: 0.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 4
-    - Position: {x: 0.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 5
-    - Position: {x: 0.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 6
-    - Position: {x: 0.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 7
-    - Position: {x: 0.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 8
-    - Position: {x: 0.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 0.75}
+      IsWalkable: 0
       PosX: 11
       PosZ: 9
-    - Position: {x: 0.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 0.75}
+      IsWalkable: 0
       PosX: 11
       PosZ: 10
     - Position: {x: 0.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 11
-    - Position: {x: 0.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 12
-    - Position: {x: 0.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 13
-    - Position: {x: 0.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 14
-    - Position: {x: 0.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 15
-    - Position: {x: 0.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 16
-    - Position: {x: 0.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 17
-    - Position: {x: 0.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 18
-    - Position: {x: 0.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 0.75}
       IsWalkable: 1
       PosX: 11
       PosZ: 19
-    - Position: {x: 1.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 0
-    - Position: {x: 1.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 1
-    - Position: {x: 1.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 2
-    - Position: {x: 1.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 3
-    - Position: {x: 1.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 4
-    - Position: {x: 1.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 5
-    - Position: {x: 1.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 6
-    - Position: {x: 1.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 7
-    - Position: {x: 1.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 8
-    - Position: {x: 1.25, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 1.25}
+      IsWalkable: 0
       PosX: 12
       PosZ: 9
-    - Position: {x: 1.25, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 1.25}
+      IsWalkable: 0
       PosX: 12
       PosZ: 10
-    - Position: {x: 1.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 11
@@ -1368,83 +1368,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 12
       PosZ: 12
-    - Position: {x: 1.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 13
-    - Position: {x: 1.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 14
-    - Position: {x: 1.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 15
-    - Position: {x: 1.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 16
-    - Position: {x: 1.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 17
-    - Position: {x: 1.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 18
-    - Position: {x: 1.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 1.25}
       IsWalkable: 1
       PosX: 12
       PosZ: 19
-    - Position: {x: 1.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 0
-    - Position: {x: 1.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 1
-    - Position: {x: 1.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 2
-    - Position: {x: 1.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 3
-    - Position: {x: 1.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 4
-    - Position: {x: 1.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 5
-    - Position: {x: 1.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 6
-    - Position: {x: 1.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 7
-    - Position: {x: 1.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 8
-    - Position: {x: 1.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 1.75}
+      IsWalkable: 0
       PosX: 13
       PosZ: 9
-    - Position: {x: 1.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 1.75}
+      IsWalkable: 0
       PosX: 13
       PosZ: 10
-    - Position: {x: 1.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 11
-    - Position: {x: 1.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 12
@@ -1452,83 +1452,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 13
       PosZ: 13
-    - Position: {x: 1.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 14
-    - Position: {x: 1.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 15
-    - Position: {x: 1.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 16
-    - Position: {x: 1.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 17
-    - Position: {x: 1.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 18
-    - Position: {x: 1.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 1.75}
       IsWalkable: 1
       PosX: 13
       PosZ: 19
-    - Position: {x: 2.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 0
-    - Position: {x: 2.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 1
-    - Position: {x: 2.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 2
-    - Position: {x: 2.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 3
-    - Position: {x: 2.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 4
-    - Position: {x: 2.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 5
-    - Position: {x: 2.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 6
-    - Position: {x: 2.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 7
-    - Position: {x: 2.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 8
-    - Position: {x: 2.25, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 2.25}
+      IsWalkable: 0
       PosX: 14
       PosZ: 9
-    - Position: {x: 2.25, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 2.25}
+      IsWalkable: 0
       PosX: 14
       PosZ: 10
-    - Position: {x: 2.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 11
-    - Position: {x: 2.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 12
-    - Position: {x: 2.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 13
@@ -1536,83 +1536,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 14
       PosZ: 14
-    - Position: {x: 2.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 15
-    - Position: {x: 2.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 16
-    - Position: {x: 2.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 17
-    - Position: {x: 2.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 18
-    - Position: {x: 2.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 2.25}
       IsWalkable: 1
       PosX: 14
       PosZ: 19
-    - Position: {x: 2.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 0
-    - Position: {x: 2.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 1
-    - Position: {x: 2.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 2
-    - Position: {x: 2.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 3
-    - Position: {x: 2.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 4
-    - Position: {x: 2.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 5
-    - Position: {x: 2.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 6
-    - Position: {x: 2.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 7
-    - Position: {x: 2.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 8
-    - Position: {x: 2.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 2.75}
+      IsWalkable: 0
       PosX: 15
       PosZ: 9
-    - Position: {x: 2.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 2.75}
+      IsWalkable: 0
       PosX: 15
       PosZ: 10
-    - Position: {x: 2.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 11
-    - Position: {x: 2.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 12
-    - Position: {x: 2.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 13
-    - Position: {x: 2.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 14
@@ -1620,83 +1620,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 15
       PosZ: 15
-    - Position: {x: 2.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 16
-    - Position: {x: 2.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 17
-    - Position: {x: 2.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 18
-    - Position: {x: 2.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 2.75}
       IsWalkable: 1
       PosX: 15
       PosZ: 19
-    - Position: {x: 3.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 0
-    - Position: {x: 3.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 1
-    - Position: {x: 3.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 2
-    - Position: {x: 3.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 3
-    - Position: {x: 3.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 4
-    - Position: {x: 3.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 5
-    - Position: {x: 3.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 6
-    - Position: {x: 3.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 7
-    - Position: {x: 3.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 8
-    - Position: {x: 3.25, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 3.25}
+      IsWalkable: 0
       PosX: 16
       PosZ: 9
-    - Position: {x: 3.25, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 3.25}
+      IsWalkable: 0
       PosX: 16
       PosZ: 10
-    - Position: {x: 3.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 11
-    - Position: {x: 3.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 12
-    - Position: {x: 3.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 13
-    - Position: {x: 3.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 14
-    - Position: {x: 3.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 15
@@ -1704,83 +1704,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 16
       PosZ: 16
-    - Position: {x: 3.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 17
-    - Position: {x: 3.25, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 18
-    - Position: {x: 3.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 3.25}
       IsWalkable: 1
       PosX: 16
       PosZ: 19
-    - Position: {x: 3.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 0
-    - Position: {x: 3.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 1
-    - Position: {x: 3.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 2
-    - Position: {x: 3.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 3
-    - Position: {x: 3.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 4
-    - Position: {x: 3.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 5
-    - Position: {x: 3.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 6
-    - Position: {x: 3.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 7
-    - Position: {x: 3.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 8
-    - Position: {x: 3.75, y: 0.05, z: -0.25}
-      IsWalkable: 1
+    - Position: {x: -0.25, y: 0.5, z: 3.75}
+      IsWalkable: 0
       PosX: 17
       PosZ: 9
-    - Position: {x: 3.75, y: 0.05, z: 0.25}
-      IsWalkable: 1
+    - Position: {x: 0.25, y: 0.5, z: 3.75}
+      IsWalkable: 0
       PosX: 17
       PosZ: 10
-    - Position: {x: 3.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 11
-    - Position: {x: 3.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 12
-    - Position: {x: 3.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 13
-    - Position: {x: 3.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 14
-    - Position: {x: 3.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 15
-    - Position: {x: 3.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 16
@@ -1788,83 +1788,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 17
       PosZ: 17
-    - Position: {x: 3.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 18
-    - Position: {x: 3.75, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 3.75}
       IsWalkable: 1
       PosX: 17
       PosZ: 19
-    - Position: {x: 4.25, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 0
-    - Position: {x: 4.25, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 1
-    - Position: {x: 4.25, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 2
-    - Position: {x: 4.25, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 3
-    - Position: {x: 4.25, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 4
-    - Position: {x: 4.25, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 5
-    - Position: {x: 4.25, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 6
-    - Position: {x: 4.25, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 7
-    - Position: {x: 4.25, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 8
-    - Position: {x: 4.25, y: 0.05, z: -0.25}
+    - Position: {x: -0.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 9
-    - Position: {x: 4.25, y: 0.05, z: 0.25}
+    - Position: {x: 0.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 10
-    - Position: {x: 4.25, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 11
-    - Position: {x: 4.25, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 12
-    - Position: {x: 4.25, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 13
-    - Position: {x: 4.25, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 14
-    - Position: {x: 4.25, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 15
-    - Position: {x: 4.25, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 16
-    - Position: {x: 4.25, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 17
@@ -1872,83 +1872,83 @@ MonoBehaviour:
       IsWalkable: 1
       PosX: 18
       PosZ: 18
-    - Position: {x: 4.25, y: 0.05, z: 4.75}
+    - Position: {x: 4.75, y: 0.05, z: 4.25}
       IsWalkable: 1
       PosX: 18
       PosZ: 19
-    - Position: {x: 4.75, y: 0.05, z: -4.75}
+    - Position: {x: -4.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 0
-    - Position: {x: 4.75, y: 0.05, z: -4.25}
+    - Position: {x: -4.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 1
-    - Position: {x: 4.75, y: 0.05, z: -3.75}
+    - Position: {x: -3.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 2
-    - Position: {x: 4.75, y: 0.05, z: -3.25}
+    - Position: {x: -3.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 3
-    - Position: {x: 4.75, y: 0.05, z: -2.75}
+    - Position: {x: -2.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 4
-    - Position: {x: 4.75, y: 0.05, z: -2.25}
+    - Position: {x: -2.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 5
-    - Position: {x: 4.75, y: 0.05, z: -1.75}
+    - Position: {x: -1.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 6
-    - Position: {x: 4.75, y: 0.05, z: -1.25}
+    - Position: {x: -1.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 7
-    - Position: {x: 4.75, y: 0.05, z: -0.75}
+    - Position: {x: -0.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 8
-    - Position: {x: 4.75, y: 0.05, z: -0.25}
+    - Position: {x: -0.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 9
-    - Position: {x: 4.75, y: 0.05, z: 0.25}
+    - Position: {x: 0.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 10
-    - Position: {x: 4.75, y: 0.05, z: 0.75}
+    - Position: {x: 0.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 11
-    - Position: {x: 4.75, y: 0.05, z: 1.25}
+    - Position: {x: 1.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 12
-    - Position: {x: 4.75, y: 0.05, z: 1.75}
+    - Position: {x: 1.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 13
-    - Position: {x: 4.75, y: 0.05, z: 2.25}
+    - Position: {x: 2.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 14
-    - Position: {x: 4.75, y: 0.05, z: 2.75}
+    - Position: {x: 2.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 15
-    - Position: {x: 4.75, y: 0.05, z: 3.25}
+    - Position: {x: 3.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 16
-    - Position: {x: 4.75, y: 0.05, z: 3.75}
+    - Position: {x: 3.75, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 17
-    - Position: {x: 4.75, y: 0.05, z: 4.25}
+    - Position: {x: 4.25, y: 0.05, z: 4.75}
       IsWalkable: 1
       PosX: 19
       PosZ: 18
@@ -2169,8 +2169,8 @@ Transform:
   m_GameObject: {fileID: 1860952013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1434279602}

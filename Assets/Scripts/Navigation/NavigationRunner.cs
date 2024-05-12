@@ -29,25 +29,14 @@ namespace ThetaStar.Navigation
             }
 
             // Preparing algorithm
-            PathFindingAlgorithm algorithm = new AStarStaticMemory(graph, 5, 5, 15, 15);
+            PathFindingAlgorithm algorithm = new AStarStaticMemory(graph, 0, 9, 19, 9);
             algorithm.ComputePath();
             int[][] path = algorithm.GetPath();
-            float pathLength = algorithm.GetPathLength();
 
-            // Output
-            string pathString = "";
-            for (int i = 0; i < path.Length; ++i)
+            for (int i = 0; i < path.Length - 1; i++)
             {
-                pathString += "[";
-                for (int j = 0; j < path[i].Length; ++j)
-                {
-                    pathString += path[i][j].ToString() + " ";
-                }
-                pathString += "]";
+                print($"{path[i][0]}, {path[i][1]}, {path[i + 1][0]}, {path[i + 1][1]}");
             }
-
-            print(pathString);
-            print($"Length: {pathLength}");
         }
     }
 }
