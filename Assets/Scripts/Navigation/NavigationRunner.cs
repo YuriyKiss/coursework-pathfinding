@@ -1,49 +1,90 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using ThetaStar.Grid;
-using ThetaStar.Grid.Generator;
 using ThetaStar.Algorithms;
-using System.Collections.Generic;
 
 namespace ThetaStar.Navigation 
 { 
     public class NavigationRunner : MonoBehaviour
     {
-        [SerializeField] private GridGenerator gridGenerator;
-        [SerializeField] private LineRenderer lineRenderer;
-
-        private UnityGrid _grid;
-
-        private void Awake()
+        [Serializable]
+        private struct GridTarget
         {
-            _grid = gridGenerator.Grid;
+            public int Row;
+            public int Col;
         }
 
-        [ContextMenu("Compute Path")]
+        [SerializeField] private UnityGrid grid;
+        [SerializeField] private LineRenderer lineRenderer;
+        [Space]
+        [SerializeField] private GridTarget startIndices;
+        [SerializeField] private GridTarget endIndices;
+
         public void ComputePath()
         {
-            // Preparing graph
-            GridGraph graph = new GridGraph(_grid.TilesInCol, _grid.TilesInRow);
-            List<Tile> tiles = _grid.GetTiles();
+            PathFindingAlgorithm.ClearStaticData();
+
+            List<Tile> tiles = grid.GetTiles();
+
+            GridGraph graph = GenerateInternalGraph(tiles);
+
+            PathFindingAlgorithm algorithm = PrepareAlgorithm(graph);
+
+            int[][] path = algorithm.GetPath();
+            List<GridTarget> pathConverted = ConvertPath(path);
+            DisplayPath(tiles, pathConverted);
+        }
+
+        private GridGraph GenerateInternalGraph(List<Tile> tiles)
+        {
+            GridGraph graph = new GridGraph(grid.TilesInRow, grid.TilesInCol);
+
             foreach (Tile tile in tiles)
             {
-                graph.SetBlocked(tile.PosZ, tile.PosX, tile.IsBlocked);
+                graph.SetBlocked(tile.ColIdx, tile.RowIdx, tile.IsBlocked);
             }
 
-            // Preparing algorithm
-            PathFindingAlgorithm algorithm = new AStarStaticMemory(graph, 0, 0, 19, 19);
+            return graph;
+        }
+
+        private PathFindingAlgorithm PrepareAlgorithm(GridGraph graph)
+        {
+            PathFindingAlgorithm algorithm = new AStarStaticMemory(graph,
+                                                                   startIndices.Col, startIndices.Row,
+                                                                   endIndices.Col, endIndices.Row);
             algorithm.ComputePath();
-            int[][] path = algorithm.GetPath();
 
-            List<Vector3> points = new List<Vector3>();
+            return algorithm;
+        }
 
-            Tile firstTile = tiles[_grid.TilesInCol * path[0][1] + path[0][0]];
-            points.Add(firstTile.Position + Vector3.up * 0.3f);
+        private List<GridTarget> ConvertPath(int[][] path)
+        {
+            List<GridTarget> points = new List<GridTarget>
+            {
+                new GridTarget() { Row = path[0][1], Col = path[0][0] }
+            };
 
             for (int i = 0; i < path.Length - 1; i++)
             {
-                print($"{path[i][0]}, {path[i][1]}, {path[i + 1][0]}, {path[i + 1][1]}");
-                Tile nextTile = tiles[_grid.TilesInCol * path[i + 1][1] + path[i + 1][0]];
-                points.Add(nextTile.Position + Vector3.up * 0.3f);
+                points.Add(new GridTarget() { Row = path[i + 1][1], Col = path[i + 1][0] });
+            }
+
+            return points;
+        }
+
+        private void DisplayPath(List<Tile> tiles, List<GridTarget> path)
+        {
+            List<Vector3> points = new List<Vector3>();
+
+            for (int i = 0; i < path.Count; i++)
+            {
+                int row = path[i].Row;
+                int col = path[i].Col;
+                print($"[{row}; {col}]");
+
+                Tile currentTile = tiles[row * grid.TilesInRow + col];
+                points.Add(currentTile.Position + Vector3.up * 0.2f);
             }
 
             lineRenderer.positionCount = points.Count;

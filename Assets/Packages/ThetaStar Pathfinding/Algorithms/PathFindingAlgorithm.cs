@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using ThetaStar.Datatypes;
 using ThetaStar.Grid;
+using ThetaStar.PriorityQueue;
 
 namespace ThetaStar.Algorithms
 {
@@ -40,6 +41,13 @@ namespace ThetaStar.Algorithms
             this.ex = ex;
             this.ey = ey;
             snapshotList = new List<List<SnapshotItem>>();
+        }
+
+        public static void ClearStaticData()
+        {
+            Memory.ClearMemory();
+            SnapshotItem.ClearCached();
+            ReusableIndirectHeap.ClearMemory();
         }
 
         protected void InitialiseMemory(int size, float defaultDistance, int defaultParent, bool defaultVisited)

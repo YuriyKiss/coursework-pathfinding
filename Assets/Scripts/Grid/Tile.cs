@@ -8,15 +8,15 @@ namespace ThetaStar.Grid
     {
         public Vector3 Position;
         public bool IsBlocked;
-        public int PosX;
-        public int PosZ;
+        public int RowIdx;
+        public int ColIdx;
 
-        public Tile(Vector3 position, bool isWalkable, int posX, int posZ)
+        public Tile(Vector3 position, bool isBlocked, int row, int col)
         {
             Position = position;
-            IsBlocked = isWalkable;
-            PosX = posX;
-            PosZ = posZ;
+            IsBlocked = isBlocked;
+            RowIdx = row;
+            ColIdx = col;
         }
     }
 }

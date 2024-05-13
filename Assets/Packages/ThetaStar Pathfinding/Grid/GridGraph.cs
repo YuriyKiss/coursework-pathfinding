@@ -236,7 +236,6 @@ namespace ThetaStar.Grid
             }
         }
 
-
         /*
          * @return true iff there is line-of-sight from (x1,y1) to (x2,y2).
          */
@@ -373,7 +372,6 @@ namespace ThetaStar.Grid
             }
             //return null;
         }
-
 
         /*
          * Used by Accelerated A* and MazeAnalysis.
@@ -578,7 +576,6 @@ namespace ThetaStar.Grid
             }
         }
 
-
         private bool IsTautFromBottomLeft(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 < x2 || y3 < y2) return false;
@@ -600,7 +597,6 @@ namespace ThetaStar.Grid
                 return true;
             }
         }
-
 
         private bool IsTautFromTopLeft(int x1, int y1, int x2, int y2, int x3, int y3)
         {
@@ -648,7 +644,6 @@ namespace ThetaStar.Grid
             }
         }
 
-
         private bool IsTautFromTopRight(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             if (x3 > x2 || y3 > y2) return false;
@@ -671,7 +666,6 @@ namespace ThetaStar.Grid
                 return true;
             }
         }
-
 
         private bool IsTautFromLeft(int x1, int y1, int x2, int y2, int x3, int y3)
         {

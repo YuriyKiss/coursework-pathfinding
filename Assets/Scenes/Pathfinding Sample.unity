@@ -123,6 +123,274 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &51503855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51503856}
+  - component: {fileID: 51503859}
+  - component: {fileID: 51503858}
+  - component: {fileID: 51503857}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51503856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434279602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &51503857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &51503858
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &51503859
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &178758570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178758571}
+  - component: {fileID: 178758572}
+  m_Layer: 0
+  m_Name: Path Renderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &178758571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178758570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!120 &178758572
+LineRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178758570}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d6def1a26eb9fd449bad0f9c70331fb7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 4.75, y: 0.25, z: -4.75}
+  - {x: 4.25, y: 0.25, z: -4.25}
+  - {x: 3.75, y: 0.25, z: -4.25}
+  - {x: 3.25, y: 0.25, z: -4.25}
+  - {x: 2.75, y: 0.25, z: -4.25}
+  - {x: 2.25, y: 0.25, z: -4.25}
+  - {x: 1.75, y: 0.25, z: -4.25}
+  - {x: 1.25, y: 0.25, z: -4.25}
+  - {x: 0.75, y: 0.25, z: -4.25}
+  - {x: 0.25, y: 1.25, z: -3.75}
+  - {x: -0.25, y: 1.25, z: -3.75}
+  - {x: -0.75, y: 0.25, z: -3.25}
+  - {x: -1.25, y: 0.25, z: -2.75}
+  - {x: -1.25, y: 0.25, z: -2.25}
+  - {x: -1.75, y: 0.25, z: -1.75}
+  - {x: -1.75, y: 0.25, z: -1.25}
+  - {x: -2.25, y: 0.25, z: -0.75}
+  - {x: -2.25, y: 0.25, z: -0.25}
+  - {x: -2.25, y: 0.25, z: 0.25}
+  - {x: -2.75, y: 0.25, z: 0.75}
+  - {x: -2.75, y: 0.25, z: 1.25}
+  - {x: -3.25, y: 0.25, z: 1.75}
+  - {x: -3.25, y: 0.25, z: 2.25}
+  - {x: -3.75, y: 0.25, z: 2.75}
+  - {x: -3.75, y: 0.25, z: 3.25}
+  - {x: -4.25, y: 0.25, z: 3.75}
+  - {x: -4.25, y: 0.25, z: 4.25}
+  - {x: -4.75, y: 0.25, z: 4.75}
+  - {x: -4.75, y: 0.25, z: 5.25}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.039369583
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MaskInteraction: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
+  m_ApplyActiveColorSpace: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,13 +570,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!1 &1328793254
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,8 +587,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1328793255}
   - component: {fileID: 1328793258}
+  - component: {fileID: 1328793259}
   - component: {fileID: 1328793256}
-  - component: {fileID: 1328793257}
   m_Layer: 0
   m_Name: Navigation Runner
   m_TagString: Untagged
@@ -337,8 +605,8 @@ Transform:
   m_GameObject: {fileID: 1328793254}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0.25}
+  m_LocalScale: {x: 10, y: 1, z: 10.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -355,110 +623,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a400b8bac363a2949a0b416b6e0bc5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridGenerator: {fileID: 1328793258}
-  lineRenderer: {fileID: 1328793257}
---- !u!120 &1328793257
-LineRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328793254}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d6def1a26eb9fd449bad0f9c70331fb7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Positions: []
-  m_Parameters:
-    serializedVersion: 3
-    widthMultiplier: 1
-    widthCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.039369583
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    colorGradient:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_ColorSpace: -1
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
-    alignment: 0
-    textureMode: 0
-    textureScale: {x: 1, y: 1}
-    shadowBias: 0.5
-    generateLightingData: 0
-  m_MaskInteraction: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
-  m_ApplyActiveColorSpace: 1
+  grid: {fileID: 1328793259}
+  lineRenderer: {fileID: 178758572}
+  startIndices:
+    Row: 19
+    Col: 0
+  endIndices:
+    Row: 0
+    Col: 20
 --- !u!114 &1328793258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,1610 +644,1703 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileSize: 0.5
-  grid:
-    tiles:
-    - Position: {x: -4.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 8
-    - Position: {x: -0.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 9
-    - Position: {x: 0.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -4.75}
-      IsBlocked: 0
-      PosX: 0
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 8
-    - Position: {x: -0.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 9
-    - Position: {x: 0.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -4.25}
-      IsBlocked: 0
-      PosX: 1
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -3.75}
-      IsBlocked: 1
-      PosX: 2
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -3.75}
-      IsBlocked: 1
-      PosX: 2
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -3.75}
-      IsBlocked: 0
-      PosX: 2
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -3.25}
-      IsBlocked: 1
-      PosX: 3
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -3.25}
-      IsBlocked: 1
-      PosX: 3
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -3.25}
-      IsBlocked: 0
-      PosX: 3
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -2.75}
-      IsBlocked: 1
-      PosX: 4
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -2.75}
-      IsBlocked: 1
-      PosX: 4
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -2.75}
-      IsBlocked: 0
-      PosX: 4
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -2.25}
-      IsBlocked: 1
-      PosX: 5
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -2.25}
-      IsBlocked: 1
-      PosX: 5
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -2.25}
-      IsBlocked: 0
-      PosX: 5
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -1.75}
-      IsBlocked: 1
-      PosX: 6
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -1.75}
-      IsBlocked: 1
-      PosX: 6
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -1.75}
-      IsBlocked: 0
-      PosX: 6
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -1.25}
-      IsBlocked: 1
-      PosX: 7
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -1.25}
-      IsBlocked: 1
-      PosX: 7
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -1.25}
-      IsBlocked: 0
-      PosX: 7
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -0.75}
-      IsBlocked: 1
-      PosX: 8
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -0.75}
-      IsBlocked: 1
-      PosX: 8
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -0.75}
-      IsBlocked: 0
-      PosX: 8
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: -0.25}
-      IsBlocked: 1
-      PosX: 9
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: -0.25}
-      IsBlocked: 1
-      PosX: 9
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: -0.25}
-      IsBlocked: 0
-      PosX: 9
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 0.25}
-      IsBlocked: 1
-      PosX: 10
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 0.25}
-      IsBlocked: 1
-      PosX: 10
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 0.25}
-      IsBlocked: 0
-      PosX: 10
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 0.75}
-      IsBlocked: 1
-      PosX: 11
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 0.75}
-      IsBlocked: 1
-      PosX: 11
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 0.75}
-      IsBlocked: 0
-      PosX: 11
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 1.25}
-      IsBlocked: 1
-      PosX: 12
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 1.25}
-      IsBlocked: 1
-      PosX: 12
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 1.25}
-      IsBlocked: 0
-      PosX: 12
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 1.75}
-      IsBlocked: 1
-      PosX: 13
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 1.75}
-      IsBlocked: 1
-      PosX: 13
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 1.75}
-      IsBlocked: 0
-      PosX: 13
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 2.25}
-      IsBlocked: 1
-      PosX: 14
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 2.25}
-      IsBlocked: 1
-      PosX: 14
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 2.25}
-      IsBlocked: 0
-      PosX: 14
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 2.75}
-      IsBlocked: 1
-      PosX: 15
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 2.75}
-      IsBlocked: 1
-      PosX: 15
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 2.75}
-      IsBlocked: 0
-      PosX: 15
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 3.25}
-      IsBlocked: 1
-      PosX: 16
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 3.25}
-      IsBlocked: 1
-      PosX: 16
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 3.25}
-      IsBlocked: 0
-      PosX: 16
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 8
-    - Position: {x: -0.25, y: 1.05, z: 3.75}
-      IsBlocked: 1
-      PosX: 17
-      PosZ: 9
-    - Position: {x: 0.25, y: 1.05, z: 3.75}
-      IsBlocked: 1
-      PosX: 17
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 3.75}
-      IsBlocked: 0
-      PosX: 17
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 8
-    - Position: {x: -0.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 9
-    - Position: {x: 0.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 4.25}
-      IsBlocked: 0
-      PosX: 18
-      PosZ: 19
-    - Position: {x: -4.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 0
-    - Position: {x: -4.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 1
-    - Position: {x: -3.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 2
-    - Position: {x: -3.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 3
-    - Position: {x: -2.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 4
-    - Position: {x: -2.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 5
-    - Position: {x: -1.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 6
-    - Position: {x: -1.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 7
-    - Position: {x: -0.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 8
-    - Position: {x: -0.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 9
-    - Position: {x: 0.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 10
-    - Position: {x: 0.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 11
-    - Position: {x: 1.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 12
-    - Position: {x: 1.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 13
-    - Position: {x: 2.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 14
-    - Position: {x: 2.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 15
-    - Position: {x: 3.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 16
-    - Position: {x: 3.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 17
-    - Position: {x: 4.25, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 18
-    - Position: {x: 4.75, y: 0.05, z: 4.75}
-      IsBlocked: 0
-      PosX: 19
-      PosZ: 19
-    tilesInRow: 20
-    tilesInCol: 20
+  grid: {fileID: 1328793259}
+--- !u!114 &1328793259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328793254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d948c98ecca4af48a9ccefea9ea353a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - Position: {x: -4.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 0
+  - Position: {x: -4.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 1
+  - Position: {x: -4.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 2
+  - Position: {x: -4.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 3
+  - Position: {x: -4.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 4
+  - Position: {x: -4.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 5
+  - Position: {x: -4.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 6
+  - Position: {x: -4.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 7
+  - Position: {x: -4.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 8
+  - Position: {x: -4.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 9
+  - Position: {x: -4.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 10
+  - Position: {x: -4.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 11
+  - Position: {x: -4.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 12
+  - Position: {x: -4.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 13
+  - Position: {x: -4.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 14
+  - Position: {x: -4.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 15
+  - Position: {x: -4.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 16
+  - Position: {x: -4.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 17
+  - Position: {x: -4.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 18
+  - Position: {x: -4.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 0
+    ColIdx: 19
+  - Position: {x: -4.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 0
+    ColIdx: 20
+  - Position: {x: -4.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 0
+  - Position: {x: -4.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 1
+  - Position: {x: -4.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 2
+  - Position: {x: -4.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 3
+  - Position: {x: -4.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 4
+  - Position: {x: -4.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 5
+  - Position: {x: -4.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 6
+  - Position: {x: -4.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 7
+  - Position: {x: -4.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 8
+  - Position: {x: -4.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 9
+  - Position: {x: -4.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 10
+  - Position: {x: -4.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 11
+  - Position: {x: -4.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 12
+  - Position: {x: -4.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 13
+  - Position: {x: -4.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 14
+  - Position: {x: -4.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 15
+  - Position: {x: -4.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 16
+  - Position: {x: -4.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 17
+  - Position: {x: -4.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 18
+  - Position: {x: -4.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 1
+    ColIdx: 19
+  - Position: {x: -4.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 1
+    ColIdx: 20
+  - Position: {x: -3.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 0
+  - Position: {x: -3.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 1
+  - Position: {x: -3.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 2
+  - Position: {x: -3.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 3
+  - Position: {x: -3.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 4
+  - Position: {x: -3.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 5
+  - Position: {x: -3.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 6
+  - Position: {x: -3.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 7
+  - Position: {x: -3.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 8
+  - Position: {x: -3.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 9
+  - Position: {x: -3.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 10
+  - Position: {x: -3.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 11
+  - Position: {x: -3.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 12
+  - Position: {x: -3.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 13
+  - Position: {x: -3.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 14
+  - Position: {x: -3.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 15
+  - Position: {x: -3.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 16
+  - Position: {x: -3.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 17
+  - Position: {x: -3.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 18
+  - Position: {x: -3.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 2
+    ColIdx: 19
+  - Position: {x: -3.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 2
+    ColIdx: 20
+  - Position: {x: -3.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 0
+  - Position: {x: -3.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 1
+  - Position: {x: -3.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 2
+  - Position: {x: -3.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 3
+  - Position: {x: -3.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 4
+  - Position: {x: -3.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 5
+  - Position: {x: -3.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 6
+  - Position: {x: -3.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 7
+  - Position: {x: -3.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 8
+  - Position: {x: -3.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 9
+  - Position: {x: -3.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 10
+  - Position: {x: -3.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 11
+  - Position: {x: -3.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 12
+  - Position: {x: -3.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 13
+  - Position: {x: -3.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 14
+  - Position: {x: -3.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 15
+  - Position: {x: -3.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 16
+  - Position: {x: -3.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 17
+  - Position: {x: -3.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 18
+  - Position: {x: -3.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 3
+    ColIdx: 19
+  - Position: {x: -3.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 3
+    ColIdx: 20
+  - Position: {x: -2.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 0
+  - Position: {x: -2.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 1
+  - Position: {x: -2.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 2
+  - Position: {x: -2.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 3
+  - Position: {x: -2.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 4
+  - Position: {x: -2.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 5
+  - Position: {x: -2.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 6
+  - Position: {x: -2.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 7
+  - Position: {x: -2.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 8
+  - Position: {x: -2.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 9
+  - Position: {x: -2.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 10
+  - Position: {x: -2.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 11
+  - Position: {x: -2.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 12
+  - Position: {x: -2.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 13
+  - Position: {x: -2.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 14
+  - Position: {x: -2.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 15
+  - Position: {x: -2.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 16
+  - Position: {x: -2.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 17
+  - Position: {x: -2.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 18
+  - Position: {x: -2.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 4
+    ColIdx: 19
+  - Position: {x: -2.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 4
+    ColIdx: 20
+  - Position: {x: -2.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 0
+  - Position: {x: -2.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 1
+  - Position: {x: -2.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 2
+  - Position: {x: -2.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 3
+  - Position: {x: -2.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 4
+  - Position: {x: -2.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 5
+  - Position: {x: -2.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 6
+  - Position: {x: -2.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 7
+  - Position: {x: -2.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 8
+  - Position: {x: -2.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 9
+  - Position: {x: -2.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 10
+  - Position: {x: -2.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 11
+  - Position: {x: -2.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 12
+  - Position: {x: -2.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 13
+  - Position: {x: -2.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 14
+  - Position: {x: -2.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 15
+  - Position: {x: -2.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 16
+  - Position: {x: -2.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 17
+  - Position: {x: -2.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 18
+  - Position: {x: -2.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 5
+    ColIdx: 19
+  - Position: {x: -2.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 5
+    ColIdx: 20
+  - Position: {x: -1.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 0
+  - Position: {x: -1.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 1
+  - Position: {x: -1.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 2
+  - Position: {x: -1.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 3
+  - Position: {x: -1.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 4
+  - Position: {x: -1.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 5
+  - Position: {x: -1.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 6
+  - Position: {x: -1.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 7
+  - Position: {x: -1.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 8
+  - Position: {x: -1.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 9
+  - Position: {x: -1.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 10
+  - Position: {x: -1.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 11
+  - Position: {x: -1.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 12
+  - Position: {x: -1.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 13
+  - Position: {x: -1.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 14
+  - Position: {x: -1.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 15
+  - Position: {x: -1.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 16
+  - Position: {x: -1.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 17
+  - Position: {x: -1.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 18
+  - Position: {x: -1.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 6
+    ColIdx: 19
+  - Position: {x: -1.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 6
+    ColIdx: 20
+  - Position: {x: -1.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 0
+  - Position: {x: -1.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 1
+  - Position: {x: -1.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 2
+  - Position: {x: -1.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 3
+  - Position: {x: -1.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 4
+  - Position: {x: -1.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 5
+  - Position: {x: -1.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 6
+  - Position: {x: -1.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 7
+  - Position: {x: -1.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 8
+  - Position: {x: -1.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 9
+  - Position: {x: -1.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 10
+  - Position: {x: -1.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 11
+  - Position: {x: -1.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 12
+  - Position: {x: -1.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 13
+  - Position: {x: -1.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 14
+  - Position: {x: -1.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 15
+  - Position: {x: -1.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 16
+  - Position: {x: -1.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 17
+  - Position: {x: -1.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 18
+  - Position: {x: -1.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 7
+    ColIdx: 19
+  - Position: {x: -1.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 7
+    ColIdx: 20
+  - Position: {x: -0.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 0
+  - Position: {x: -0.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 1
+  - Position: {x: -0.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 2
+  - Position: {x: -0.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 3
+  - Position: {x: -0.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 4
+  - Position: {x: -0.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 5
+  - Position: {x: -0.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 6
+  - Position: {x: -0.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 7
+  - Position: {x: -0.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 8
+  - Position: {x: -0.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 9
+  - Position: {x: -0.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 10
+  - Position: {x: -0.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 11
+  - Position: {x: -0.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 12
+  - Position: {x: -0.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 13
+  - Position: {x: -0.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 14
+  - Position: {x: -0.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 15
+  - Position: {x: -0.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 16
+  - Position: {x: -0.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 17
+  - Position: {x: -0.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 18
+  - Position: {x: -0.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 8
+    ColIdx: 19
+  - Position: {x: -0.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 8
+    ColIdx: 20
+  - Position: {x: -0.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 9
+    ColIdx: 0
+  - Position: {x: -0.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 9
+    ColIdx: 1
+  - Position: {x: -0.25, y: 1.05, z: -3.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 2
+  - Position: {x: -0.25, y: 1.05, z: -3.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 3
+  - Position: {x: -0.25, y: 1.05, z: -2.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 4
+  - Position: {x: -0.25, y: 1.05, z: -2.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 5
+  - Position: {x: -0.25, y: 1.05, z: -1.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 6
+  - Position: {x: -0.25, y: 1.05, z: -1.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 7
+  - Position: {x: -0.25, y: 1.05, z: -0.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 8
+  - Position: {x: -0.25, y: 1.05, z: -0.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 9
+  - Position: {x: -0.25, y: 1.05, z: 0.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 10
+  - Position: {x: -0.25, y: 1.05, z: 0.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 11
+  - Position: {x: -0.25, y: 1.05, z: 1.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 12
+  - Position: {x: -0.25, y: 1.05, z: 1.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 13
+  - Position: {x: -0.25, y: 1.05, z: 2.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 14
+  - Position: {x: -0.25, y: 1.05, z: 2.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 15
+  - Position: {x: -0.25, y: 1.05, z: 3.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 16
+  - Position: {x: -0.25, y: 1.05, z: 3.75}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 17
+  - Position: {x: -0.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 9
+    ColIdx: 18
+  - Position: {x: -0.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 9
+    ColIdx: 19
+  - Position: {x: -0.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 9
+    ColIdx: 20
+  - Position: {x: 0.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 10
+    ColIdx: 0
+  - Position: {x: 0.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 10
+    ColIdx: 1
+  - Position: {x: 0.25, y: 1.05, z: -3.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 2
+  - Position: {x: 0.25, y: 1.05, z: -3.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 3
+  - Position: {x: 0.25, y: 1.05, z: -2.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 4
+  - Position: {x: 0.25, y: 1.05, z: -2.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 5
+  - Position: {x: 0.25, y: 1.05, z: -1.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 6
+  - Position: {x: 0.25, y: 1.05, z: -1.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 7
+  - Position: {x: 0.25, y: 1.05, z: -0.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 8
+  - Position: {x: 0.25, y: 1.05, z: -0.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 9
+  - Position: {x: 0.25, y: 1.05, z: 0.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 10
+  - Position: {x: 0.25, y: 1.05, z: 0.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 11
+  - Position: {x: 0.25, y: 1.05, z: 1.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 12
+  - Position: {x: 0.25, y: 1.05, z: 1.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 13
+  - Position: {x: 0.25, y: 1.05, z: 2.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 14
+  - Position: {x: 0.25, y: 1.05, z: 2.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 15
+  - Position: {x: 0.25, y: 1.05, z: 3.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 16
+  - Position: {x: 0.25, y: 1.05, z: 3.75}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 17
+  - Position: {x: 0.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 10
+    ColIdx: 18
+  - Position: {x: 0.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 10
+    ColIdx: 19
+  - Position: {x: 0.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 10
+    ColIdx: 20
+  - Position: {x: 0.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 0
+  - Position: {x: 0.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 1
+  - Position: {x: 0.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 2
+  - Position: {x: 0.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 3
+  - Position: {x: 0.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 4
+  - Position: {x: 0.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 5
+  - Position: {x: 0.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 6
+  - Position: {x: 0.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 7
+  - Position: {x: 0.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 8
+  - Position: {x: 0.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 9
+  - Position: {x: 0.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 10
+  - Position: {x: 0.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 11
+  - Position: {x: 0.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 12
+  - Position: {x: 0.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 13
+  - Position: {x: 0.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 14
+  - Position: {x: 0.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 15
+  - Position: {x: 0.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 16
+  - Position: {x: 0.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 17
+  - Position: {x: 0.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 18
+  - Position: {x: 0.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 11
+    ColIdx: 19
+  - Position: {x: 0.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 11
+    ColIdx: 20
+  - Position: {x: 1.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 0
+  - Position: {x: 1.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 1
+  - Position: {x: 1.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 2
+  - Position: {x: 1.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 3
+  - Position: {x: 1.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 4
+  - Position: {x: 1.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 5
+  - Position: {x: 1.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 6
+  - Position: {x: 1.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 7
+  - Position: {x: 1.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 8
+  - Position: {x: 1.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 9
+  - Position: {x: 1.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 10
+  - Position: {x: 1.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 11
+  - Position: {x: 1.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 12
+  - Position: {x: 1.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 13
+  - Position: {x: 1.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 14
+  - Position: {x: 1.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 15
+  - Position: {x: 1.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 16
+  - Position: {x: 1.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 17
+  - Position: {x: 1.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 18
+  - Position: {x: 1.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 12
+    ColIdx: 19
+  - Position: {x: 1.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 12
+    ColIdx: 20
+  - Position: {x: 1.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 0
+  - Position: {x: 1.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 1
+  - Position: {x: 1.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 2
+  - Position: {x: 1.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 3
+  - Position: {x: 1.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 4
+  - Position: {x: 1.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 5
+  - Position: {x: 1.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 6
+  - Position: {x: 1.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 7
+  - Position: {x: 1.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 8
+  - Position: {x: 1.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 9
+  - Position: {x: 1.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 10
+  - Position: {x: 1.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 11
+  - Position: {x: 1.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 12
+  - Position: {x: 1.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 13
+  - Position: {x: 1.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 14
+  - Position: {x: 1.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 15
+  - Position: {x: 1.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 16
+  - Position: {x: 1.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 17
+  - Position: {x: 1.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 18
+  - Position: {x: 1.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 13
+    ColIdx: 19
+  - Position: {x: 1.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 13
+    ColIdx: 20
+  - Position: {x: 2.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 0
+  - Position: {x: 2.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 1
+  - Position: {x: 2.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 2
+  - Position: {x: 2.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 3
+  - Position: {x: 2.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 4
+  - Position: {x: 2.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 5
+  - Position: {x: 2.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 6
+  - Position: {x: 2.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 7
+  - Position: {x: 2.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 8
+  - Position: {x: 2.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 9
+  - Position: {x: 2.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 10
+  - Position: {x: 2.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 11
+  - Position: {x: 2.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 12
+  - Position: {x: 2.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 13
+  - Position: {x: 2.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 14
+  - Position: {x: 2.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 15
+  - Position: {x: 2.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 16
+  - Position: {x: 2.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 17
+  - Position: {x: 2.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 18
+  - Position: {x: 2.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 14
+    ColIdx: 19
+  - Position: {x: 2.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 14
+    ColIdx: 20
+  - Position: {x: 2.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 0
+  - Position: {x: 2.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 1
+  - Position: {x: 2.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 2
+  - Position: {x: 2.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 3
+  - Position: {x: 2.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 4
+  - Position: {x: 2.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 5
+  - Position: {x: 2.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 6
+  - Position: {x: 2.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 7
+  - Position: {x: 2.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 8
+  - Position: {x: 2.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 9
+  - Position: {x: 2.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 10
+  - Position: {x: 2.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 11
+  - Position: {x: 2.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 12
+  - Position: {x: 2.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 13
+  - Position: {x: 2.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 14
+  - Position: {x: 2.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 15
+  - Position: {x: 2.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 16
+  - Position: {x: 2.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 17
+  - Position: {x: 2.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 18
+  - Position: {x: 2.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 15
+    ColIdx: 19
+  - Position: {x: 2.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 15
+    ColIdx: 20
+  - Position: {x: 3.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 0
+  - Position: {x: 3.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 1
+  - Position: {x: 3.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 2
+  - Position: {x: 3.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 3
+  - Position: {x: 3.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 4
+  - Position: {x: 3.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 5
+  - Position: {x: 3.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 6
+  - Position: {x: 3.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 7
+  - Position: {x: 3.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 8
+  - Position: {x: 3.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 9
+  - Position: {x: 3.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 10
+  - Position: {x: 3.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 11
+  - Position: {x: 3.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 12
+  - Position: {x: 3.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 13
+  - Position: {x: 3.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 14
+  - Position: {x: 3.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 15
+  - Position: {x: 3.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 16
+  - Position: {x: 3.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 17
+  - Position: {x: 3.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 18
+  - Position: {x: 3.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 16
+    ColIdx: 19
+  - Position: {x: 3.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 16
+    ColIdx: 20
+  - Position: {x: 3.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 0
+  - Position: {x: 3.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 1
+  - Position: {x: 3.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 2
+  - Position: {x: 3.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 3
+  - Position: {x: 3.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 4
+  - Position: {x: 3.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 5
+  - Position: {x: 3.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 6
+  - Position: {x: 3.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 7
+  - Position: {x: 3.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 8
+  - Position: {x: 3.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 9
+  - Position: {x: 3.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 10
+  - Position: {x: 3.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 11
+  - Position: {x: 3.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 12
+  - Position: {x: 3.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 13
+  - Position: {x: 3.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 14
+  - Position: {x: 3.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 15
+  - Position: {x: 3.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 16
+  - Position: {x: 3.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 17
+  - Position: {x: 3.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 18
+  - Position: {x: 3.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 17
+    ColIdx: 19
+  - Position: {x: 3.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 17
+    ColIdx: 20
+  - Position: {x: 4.25, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 0
+  - Position: {x: 4.25, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 1
+  - Position: {x: 4.25, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 2
+  - Position: {x: 4.25, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 3
+  - Position: {x: 4.25, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 4
+  - Position: {x: 4.25, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 5
+  - Position: {x: 4.25, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 6
+  - Position: {x: 4.25, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 7
+  - Position: {x: 4.25, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 8
+  - Position: {x: 4.25, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 9
+  - Position: {x: 4.25, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 10
+  - Position: {x: 4.25, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 11
+  - Position: {x: 4.25, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 12
+  - Position: {x: 4.25, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 13
+  - Position: {x: 4.25, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 14
+  - Position: {x: 4.25, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 15
+  - Position: {x: 4.25, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 16
+  - Position: {x: 4.25, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 17
+  - Position: {x: 4.25, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 18
+  - Position: {x: 4.25, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 18
+    ColIdx: 19
+  - Position: {x: 4.25, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 18
+    ColIdx: 20
+  - Position: {x: 4.75, y: 0.05, z: -4.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 0
+  - Position: {x: 4.75, y: 0.05, z: -4.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 1
+  - Position: {x: 4.75, y: 0.05, z: -3.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 2
+  - Position: {x: 4.75, y: 0.05, z: -3.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 3
+  - Position: {x: 4.75, y: 0.05, z: -2.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 4
+  - Position: {x: 4.75, y: 0.05, z: -2.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 5
+  - Position: {x: 4.75, y: 0.05, z: -1.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 6
+  - Position: {x: 4.75, y: 0.05, z: -1.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 7
+  - Position: {x: 4.75, y: 0.05, z: -0.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 8
+  - Position: {x: 4.75, y: 0.05, z: -0.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 9
+  - Position: {x: 4.75, y: 0.05, z: 0.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 10
+  - Position: {x: 4.75, y: 0.05, z: 0.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 11
+  - Position: {x: 4.75, y: 0.05, z: 1.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 12
+  - Position: {x: 4.75, y: 0.05, z: 1.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 13
+  - Position: {x: 4.75, y: 0.05, z: 2.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 14
+  - Position: {x: 4.75, y: 0.05, z: 2.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 15
+  - Position: {x: 4.75, y: 0.05, z: 3.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 16
+  - Position: {x: 4.75, y: 0.05, z: 3.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 17
+  - Position: {x: 4.75, y: 0.05, z: 4.25}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 18
+  - Position: {x: 4.75, y: 0.05, z: 4.75}
+    IsBlocked: 0
+    RowIdx: 19
+    ColIdx: 19
+  - Position: {x: 4.75, y: 0.05, z: 5.25}
+    IsBlocked: 1
+    RowIdx: 19
+    ColIdx: 20
+  tilesInRow: 21
+  tilesInCol: 20
+  tileSize: 0.5
 --- !u!1 &1372752900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,6 +2477,7 @@ Transform:
   m_Children:
   - {fileID: 1372752901}
   - {fileID: 1860952014}
+  - {fileID: 51503856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1860952013
@@ -2327,3 +2593,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1434279602}
   - {fileID: 1328793255}
+  - {fileID: 178758571}

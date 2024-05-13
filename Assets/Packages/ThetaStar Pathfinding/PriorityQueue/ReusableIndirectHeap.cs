@@ -287,6 +287,20 @@ namespace ThetaStar.PriorityQueue
             return GetIn(1) + " / " + sb.ToString();
         }
 
+        /*
+        private static final int parent(int index) {
+            return (index-1)/2;
+        }
+    
+        private static final int leftChild(int index) {
+            return 2*index+1;
+        }
+    
+        private static final int rightChild(int index) {
+            return 2*index+2;
+        }
+        */
+
         public int Size()
         {
             return heapSize;

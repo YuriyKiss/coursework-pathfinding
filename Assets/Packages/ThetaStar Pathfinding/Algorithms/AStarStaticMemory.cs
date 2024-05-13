@@ -120,13 +120,14 @@ namespace ThetaStar.Algorithms
 
         protected virtual bool Relax(int u, int v, float weightUV)
         {
-            // return true iff relaxation is done.
+            // return true if relaxation is done.
 
             float newWeight = Distance(u) + weightUV;
             if (newWeight < Distance(v))
             {
                 SetDistance(v, newWeight);
                 SetParent(v, u);
+                //maybeSaveSearchSnapshot();
                 return true;
             }
             return false;
