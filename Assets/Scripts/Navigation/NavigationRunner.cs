@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using ThetaStar.Grid;
 using ThetaStar.Algorithms;
+using ThetaStar.Grid.Generator;
 
 namespace ThetaStar.Navigation 
 { 
     public class NavigationRunner : MonoBehaviour
     {
+        [Serializable]
+        private struct StartEnd
+        {
+            public GridTarget Start;
+            public GridTarget End;
+        }
+
         [Serializable]
         private struct GridTarget
         {
@@ -16,10 +24,11 @@ namespace ThetaStar.Navigation
         }
 
         [SerializeField] private UnityGrid grid;
+        [SerializeField] private GridGenerator generator;
         [SerializeField] private LineRenderer lineRenderer;
-        [Space]
-        [SerializeField] private GridTarget startIndices;
-        [SerializeField] private GridTarget endIndices;
+        [SerializeField] private StartEnd goals;
+        [Header("Debug Options")]
+        [SerializeField] private bool displayPathString = false;
 
         public void ComputePath()
         {
@@ -33,7 +42,7 @@ namespace ThetaStar.Navigation
 
             int[][] path = algorithm.GetPath();
             List<GridTarget> pathConverted = ConvertPath(path);
-            DisplayPath(tiles, pathConverted);
+            DisplayPath(pathConverted);
         }
 
         private GridGraph GenerateInternalGraph(List<Tile> tiles)
@@ -51,8 +60,8 @@ namespace ThetaStar.Navigation
         private PathFindingAlgorithm PrepareAlgorithm(GridGraph graph)
         {
             PathFindingAlgorithm algorithm = new AStarStaticMemory(graph,
-                                                                   startIndices.Col, startIndices.Row,
-                                                                   endIndices.Col, endIndices.Row);
+                                                                   goals.Start.Col, goals.Start.Row,
+                                                                   goals.End.Col, goals.End.Row);
             algorithm.ComputePath();
 
             return algorithm;
@@ -73,18 +82,26 @@ namespace ThetaStar.Navigation
             return points;
         }
 
-        private void DisplayPath(List<Tile> tiles, List<GridTarget> path)
+        private void DisplayPath(List<GridTarget> path)
         {
             List<Vector3> points = new List<Vector3>();
 
+            string debug = "";
             for (int i = 0; i < path.Count; i++)
             {
                 int row = path[i].Row;
                 int col = path[i].Col;
-                print($"[{row}; {col}]");
 
-                Tile currentTile = tiles[row * grid.TilesInRow + col];
-                points.Add(currentTile.Position + Vector3.up * 0.2f + new Vector3(-1f, 0f, -1f) * grid.TileSize / 2f);
+                Vector3 tilePosition = generator.GetTilePosition(row, col);
+                points.Add(grid.TileTopLeftPosition(tilePosition));
+
+                debug += $"[{row}; {col}] ->";
+            }
+
+            if (displayPathString)
+            {
+                debug = debug.Substring(0, debug.Length - 3);
+                print(debug);
             }
 
             lineRenderer.positionCount = points.Count;

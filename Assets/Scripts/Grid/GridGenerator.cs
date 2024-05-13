@@ -7,6 +7,8 @@ namespace ThetaStar.Grid.Generator
         // Theta Star algorithms work with uniform tiles only
         [SerializeField] private float tileSize = 0.5f;
         [SerializeField] private UnityGrid grid;
+        [Header("Display Settings")]
+        [SerializeField] private bool displayGrid;
 
         private readonly Vector3 RAY_DIRECTION = Vector3.down;
         private const float MAX_DISTANCE = Mathf.Infinity;
@@ -16,8 +18,8 @@ namespace ThetaStar.Grid.Generator
 
         public void RegenerateGrid()
         {
-            float posX = transform.localPosition.x; float posY = transform.localPosition.y; float posZ = transform.localPosition.z;
-            float sizeX = transform.localScale.x;   float sizeY = transform.localScale.y;   float sizeZ = transform.localScale.z;
+            float posY = transform.localPosition.y; float sizeY = transform.localScale.y;
+            float sizeX = transform.localScale.x;   float sizeZ = transform.localScale.z;
 
             int tilesInRow = (int)Mathf.Floor(sizeZ / tileSize);
             int tilesInCol = (int)Mathf.Floor(sizeX / tileSize);
@@ -34,29 +36,27 @@ namespace ThetaStar.Grid.Generator
             {
                 for (int col = 0; col < tilesInRow; col++)
                 {
-                    float tilePosX = posX - sizeX / 2 + tileSize * (0.5f + row);
-                    float tilePosZ = posZ - sizeZ / 2 + tileSize * (0.5f + col);
-
-                    Vector3 origin = new Vector3(tilePosX, posY + sizeY, tilePosZ);
+                    Vector3 tilePos = GetTilePosition(row, col);
+                    Vector3 origin = new Vector3(tilePos.x, posY + sizeY, tilePos.z);
 
                     bool isHit = Physics.Raycast(origin, RAY_DIRECTION, out RaycastHit hitInfo, 
                         MAX_DISTANCE, LAYER_MASK, TRIGGER_INTERACTION);
 
                     if (!isHit)
                     {
-                        Vector3 tilePosition = new Vector3(tilePosX, Mathf.Infinity, tilePosZ);
+                        Vector3 tilePosition = new Vector3(tilePos.x, Mathf.Infinity, tilePos.z);
                         Tile currentTile = new Tile(tilePosition, true, row, col);
                         grid.AddTile(currentTile);
                     }
                     else if (!hitInfo.collider.CompareTag(WALKABLE_TAG))
                     {
-                        Vector3 tilePosition = new Vector3(tilePosX, hitInfo.point.y, tilePosZ);
+                        Vector3 tilePosition = new Vector3(tilePos.x, hitInfo.point.y, tilePos.z);
                         Tile currentTile = new Tile(tilePosition, true, row, col);
                         grid.AddTile(currentTile);
                     }
                     else
                     {
-                        Vector3 tilePosition = new Vector3(tilePosX, hitInfo.point.y, tilePosZ);
+                        Vector3 tilePosition = new Vector3(tilePos.x, hitInfo.point.y, tilePos.z);
                         Tile currentTile = new Tile(tilePosition, false, row, col);
                         grid.AddTile(currentTile);
                     }
@@ -66,8 +66,21 @@ namespace ThetaStar.Grid.Generator
             grid.CleanupNotFoundTiles();
         }
 
+        public Vector3 GetTilePosition(int row, int col)
+        {
+            float posX = transform.localPosition.x; float posZ = transform.localPosition.z;
+            float sizeX = transform.localScale.x; float sizeZ = transform.localScale.z;
+
+            float tilePosX = posX - sizeX / 2 + tileSize * (0.5f + row);
+            float tilePosZ = posZ - sizeZ / 2 + tileSize * (0.5f + col);
+
+            return new Vector3(tilePosX, grid.MinYHeight, tilePosZ);
+        }
+
         private void OnDrawGizmosSelected()
         {
+            if (!displayGrid) return;
+
             Gizmos.color = Color.black;
 
             Vector3 position = transform.localPosition;
