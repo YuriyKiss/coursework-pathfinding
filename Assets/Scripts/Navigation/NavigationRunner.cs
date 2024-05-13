@@ -84,7 +84,7 @@ namespace ThetaStar.Navigation
                 print($"[{row}; {col}]");
 
                 Tile currentTile = tiles[row * grid.TilesInRow + col];
-                points.Add(currentTile.Position + Vector3.up * 0.2f);
+                points.Add(currentTile.Position + Vector3.up * 0.2f + new Vector3(-1f, 0f, -1f) * grid.TileSize / 2f);
             }
 
             lineRenderer.positionCount = points.Count;

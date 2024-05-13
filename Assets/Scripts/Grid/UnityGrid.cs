@@ -10,6 +10,7 @@ namespace ThetaStar.Grid
         [SerializeField] private int tilesInRow = 0;
         [SerializeField] private int tilesInCol = 0;
         [SerializeField] private float tileSize = 0.5f;
+        [SerializeField] private float minYHeight = 0.05f;
 
         private const float TILE_HEIGHT = 0.05f;
         private const float TILE_SIZE_MODIFIER = 0.8f;
@@ -17,6 +18,7 @@ namespace ThetaStar.Grid
         public List<Tile> GetTiles() => tiles;
         public int TilesInRow => tilesInRow;
         public int TilesInCol => tilesInCol;
+        public float TileSize => tileSize;
 
         public void Clear()
         {
@@ -50,18 +52,20 @@ namespace ThetaStar.Grid
 
         public void CleanupNotFoundTiles()
         {
-            float yMinHeight = tiles.Min(tile => tile.Position.y);
+            minYHeight = tiles.Min(tile => tile.Position.y);
 
             for (int i = 0; i < tiles.Count; i++)
             {
                 Vector3 currentPosition = tiles[i].Position;
 
-                if (currentPosition.y == Mathf.Infinity)
-                {
-                    Vector3 newPosition = new Vector3(currentPosition.x, yMinHeight, currentPosition.z);
-
-                    tiles[i] = new Tile(newPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
-                }
+                //if (currentPosition.y == Mathf.Infinity)
+                //{
+                //    Vector3 newPosition = new Vector3(currentPosition.x, minYHeight, currentPosition.z);
+                //
+                //    tiles[i] = new Tile(newPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
+                //}
+                Vector3 newPosition = new Vector3(currentPosition.x, minYHeight, currentPosition.z);
+                tiles[i] = new Tile(newPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
             }
         }
 
@@ -76,6 +80,10 @@ namespace ThetaStar.Grid
                 Vector3 tileScale = new Vector3(tileSize * TILE_SIZE_MODIFIER, TILE_HEIGHT, tileSize * TILE_SIZE_MODIFIER);
 
                 Gizmos.DrawWireCube(tile.Position, tileScale);
+
+                Gizmos.color = new Color(0, 0.2f, 1, 0.5f);
+
+                Gizmos.DrawSphere(tile.Position + Vector3.up * 0.2f + new Vector3(-1f, 0f, -1f) * TileSize / 2f, 0.05f);
             }
         }
     }

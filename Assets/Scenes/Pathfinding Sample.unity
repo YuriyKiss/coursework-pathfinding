@@ -303,35 +303,25 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 4.75, y: 0.25, z: -4.75}
-  - {x: 4.25, y: 0.25, z: -4.25}
-  - {x: 3.75, y: 0.25, z: -4.25}
-  - {x: 3.25, y: 0.25, z: -4.25}
-  - {x: 2.75, y: 0.25, z: -4.25}
-  - {x: 2.25, y: 0.25, z: -4.25}
-  - {x: 1.75, y: 0.25, z: -4.25}
-  - {x: 1.25, y: 0.25, z: -4.25}
-  - {x: 0.75, y: 0.25, z: -4.25}
-  - {x: 0.25, y: 1.25, z: -3.75}
-  - {x: -0.25, y: 1.25, z: -3.75}
-  - {x: -0.75, y: 0.25, z: -3.25}
-  - {x: -1.25, y: 0.25, z: -2.75}
-  - {x: -1.25, y: 0.25, z: -2.25}
-  - {x: -1.75, y: 0.25, z: -1.75}
-  - {x: -1.75, y: 0.25, z: -1.25}
-  - {x: -2.25, y: 0.25, z: -0.75}
-  - {x: -2.25, y: 0.25, z: -0.25}
-  - {x: -2.25, y: 0.25, z: 0.25}
-  - {x: -2.75, y: 0.25, z: 0.75}
-  - {x: -2.75, y: 0.25, z: 1.25}
-  - {x: -3.25, y: 0.25, z: 1.75}
-  - {x: -3.25, y: 0.25, z: 2.25}
-  - {x: -3.75, y: 0.25, z: 2.75}
-  - {x: -3.75, y: 0.25, z: 3.25}
-  - {x: -4.25, y: 0.25, z: 3.75}
-  - {x: -4.25, y: 0.25, z: 4.25}
-  - {x: -4.75, y: 0.25, z: 4.75}
-  - {x: -4.75, y: 0.25, z: 5.25}
+  - {x: 4.5, y: 0.25, z: -3.5}
+  - {x: 4, y: 0.25, z: -3.5}
+  - {x: 3.5, y: 0.25, z: -3.5}
+  - {x: 3, y: 0.25, z: -3.5}
+  - {x: 2.5, y: 0.25, z: -3.5}
+  - {x: 2, y: 0.25, z: -3.5}
+  - {x: 1.5, y: 0.25, z: -3.5}
+  - {x: 1, y: 0.25, z: -3.5}
+  - {x: 0.5, y: 0.25, z: -4}
+  - {x: 0, y: 0.25, z: -4}
+  - {x: -0.5, y: 0.25, z: -4}
+  - {x: -1, y: 0.25, z: -3.5}
+  - {x: -1, y: 0.25, z: -3}
+  - {x: -1.5, y: 0.25, z: -2.5}
+  - {x: -1.5, y: 0.25, z: -2}
+  - {x: -2, y: 0.25, z: -1.5}
+  - {x: -2, y: 0.25, z: -1}
+  - {x: -2.5, y: 0.25, z: -0.5}
+  - {x: -2.5, y: 0.25, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -627,10 +617,10 @@ MonoBehaviour:
   lineRenderer: {fileID: 178758572}
   startIndices:
     Row: 19
-    Col: 0
+    Col: 3
   endIndices:
-    Row: 0
-    Col: 20
+    Row: 5
+    Col: 10
 --- !u!114 &1328793258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,11 +1105,11 @@ MonoBehaviour:
     RowIdx: 5
     ColIdx: 8
   - Position: {x: -2.25, y: 0.05, z: -0.25}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 5
     ColIdx: 9
   - Position: {x: -2.25, y: 0.05, z: 0.25}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 5
     ColIdx: 10
   - Position: {x: -2.25, y: 0.05, z: 0.75}
@@ -1199,11 +1189,11 @@ MonoBehaviour:
     RowIdx: 6
     ColIdx: 8
   - Position: {x: -1.75, y: 0.05, z: -0.25}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 6
     ColIdx: 9
   - Position: {x: -1.75, y: 0.05, z: 0.25}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 6
     ColIdx: 10
   - Position: {x: -1.75, y: 0.05, z: 0.75}
@@ -1422,67 +1412,67 @@ MonoBehaviour:
     IsBlocked: 0
     RowIdx: 9
     ColIdx: 1
-  - Position: {x: -0.25, y: 1.05, z: -3.75}
+  - Position: {x: -0.25, y: 0.05, z: -3.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 2
-  - Position: {x: -0.25, y: 1.05, z: -3.25}
+  - Position: {x: -0.25, y: 0.05, z: -3.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 3
-  - Position: {x: -0.25, y: 1.05, z: -2.75}
+  - Position: {x: -0.25, y: 0.05, z: -2.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 4
-  - Position: {x: -0.25, y: 1.05, z: -2.25}
+  - Position: {x: -0.25, y: 0.05, z: -2.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 5
-  - Position: {x: -0.25, y: 1.05, z: -1.75}
+  - Position: {x: -0.25, y: 0.05, z: -1.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 6
-  - Position: {x: -0.25, y: 1.05, z: -1.25}
+  - Position: {x: -0.25, y: 0.05, z: -1.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 7
-  - Position: {x: -0.25, y: 1.05, z: -0.75}
+  - Position: {x: -0.25, y: 0.05, z: -0.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 8
-  - Position: {x: -0.25, y: 1.05, z: -0.25}
+  - Position: {x: -0.25, y: 0.05, z: -0.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 9
-  - Position: {x: -0.25, y: 1.05, z: 0.25}
+  - Position: {x: -0.25, y: 0.05, z: 0.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 10
-  - Position: {x: -0.25, y: 1.05, z: 0.75}
+  - Position: {x: -0.25, y: 0.05, z: 0.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 11
-  - Position: {x: -0.25, y: 1.05, z: 1.25}
+  - Position: {x: -0.25, y: 0.05, z: 1.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 12
-  - Position: {x: -0.25, y: 1.05, z: 1.75}
+  - Position: {x: -0.25, y: 0.05, z: 1.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 13
-  - Position: {x: -0.25, y: 1.05, z: 2.25}
+  - Position: {x: -0.25, y: 0.05, z: 2.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 14
-  - Position: {x: -0.25, y: 1.05, z: 2.75}
+  - Position: {x: -0.25, y: 0.05, z: 2.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 15
-  - Position: {x: -0.25, y: 1.05, z: 3.25}
+  - Position: {x: -0.25, y: 0.05, z: 3.25}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 16
-  - Position: {x: -0.25, y: 1.05, z: 3.75}
+  - Position: {x: -0.25, y: 0.05, z: 3.75}
     IsBlocked: 1
     RowIdx: 9
     ColIdx: 17
@@ -1506,67 +1496,67 @@ MonoBehaviour:
     IsBlocked: 0
     RowIdx: 10
     ColIdx: 1
-  - Position: {x: 0.25, y: 1.05, z: -3.75}
+  - Position: {x: 0.25, y: 0.05, z: -3.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 2
-  - Position: {x: 0.25, y: 1.05, z: -3.25}
+  - Position: {x: 0.25, y: 0.05, z: -3.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 3
-  - Position: {x: 0.25, y: 1.05, z: -2.75}
+  - Position: {x: 0.25, y: 0.05, z: -2.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 4
-  - Position: {x: 0.25, y: 1.05, z: -2.25}
+  - Position: {x: 0.25, y: 0.05, z: -2.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 5
-  - Position: {x: 0.25, y: 1.05, z: -1.75}
+  - Position: {x: 0.25, y: 0.05, z: -1.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 6
-  - Position: {x: 0.25, y: 1.05, z: -1.25}
+  - Position: {x: 0.25, y: 0.05, z: -1.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 7
-  - Position: {x: 0.25, y: 1.05, z: -0.75}
+  - Position: {x: 0.25, y: 0.05, z: -0.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 8
-  - Position: {x: 0.25, y: 1.05, z: -0.25}
+  - Position: {x: 0.25, y: 0.05, z: -0.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 9
-  - Position: {x: 0.25, y: 1.05, z: 0.25}
+  - Position: {x: 0.25, y: 0.05, z: 0.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 10
-  - Position: {x: 0.25, y: 1.05, z: 0.75}
+  - Position: {x: 0.25, y: 0.05, z: 0.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 11
-  - Position: {x: 0.25, y: 1.05, z: 1.25}
+  - Position: {x: 0.25, y: 0.05, z: 1.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 12
-  - Position: {x: 0.25, y: 1.05, z: 1.75}
+  - Position: {x: 0.25, y: 0.05, z: 1.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 13
-  - Position: {x: 0.25, y: 1.05, z: 2.25}
+  - Position: {x: 0.25, y: 0.05, z: 2.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 14
-  - Position: {x: 0.25, y: 1.05, z: 2.75}
+  - Position: {x: 0.25, y: 0.05, z: 2.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 15
-  - Position: {x: 0.25, y: 1.05, z: 3.25}
+  - Position: {x: 0.25, y: 0.05, z: 3.25}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 16
-  - Position: {x: 0.25, y: 1.05, z: 3.75}
+  - Position: {x: 0.25, y: 0.05, z: 3.75}
     IsBlocked: 1
     RowIdx: 10
     ColIdx: 17
@@ -2341,6 +2331,7 @@ MonoBehaviour:
   tilesInRow: 21
   tilesInCol: 20
   tileSize: 0.5
+  minYHeight: 0.05
 --- !u!1 &1372752900
 GameObject:
   m_ObjectHideFlags: 0
