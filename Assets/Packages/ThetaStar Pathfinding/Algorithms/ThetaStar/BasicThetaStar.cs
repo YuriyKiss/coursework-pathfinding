@@ -1,6 +1,6 @@
-using ThetaStar.Grid;
+using ThetaStar.Pathfinding.Grid;
 
-namespace ThetaStar.Algorithms.Theta
+namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
     public class BasicThetaStar : AStarStaticMemory
     {

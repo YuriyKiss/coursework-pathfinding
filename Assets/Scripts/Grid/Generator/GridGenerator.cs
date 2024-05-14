@@ -45,19 +45,19 @@ namespace ThetaStar.Grid.Generator
                     if (!isHit)
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, Mathf.Infinity, tilePos.z);
-                        Tile currentTile = new Tile(tilePosition, true, row, col);
+                        Tile currentTile = new Tile(tilePosition, Vector3.zero, true, row, col);
                         grid.AddTile(currentTile);
                     }
                     else if (!hitInfo.collider.CompareTag(WALKABLE_TAG))
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, hitInfo.point.y, tilePos.z);
-                        Tile currentTile = new Tile(tilePosition, true, row, col);
+                        Tile currentTile = new Tile(tilePosition, Vector3.zero, true, row, col);
                         grid.AddTile(currentTile);
                     }
                     else
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, hitInfo.point.y, tilePos.z);
-                        Tile currentTile = new Tile(tilePosition, false, row, col);
+                        Tile currentTile = new Tile(tilePosition, Vector3.zero, false, row, col);
                         grid.AddTile(currentTile);
                     }
                 }

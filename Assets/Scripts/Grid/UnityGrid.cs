@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using System.Linq;
-using ThetaStar.Grid.Generator;
+using System.Collections.Generic;
 using UnityEngine;
+using ThetaStar.Grid.Generator;
 
 namespace ThetaStar.Grid
 {
@@ -64,7 +64,8 @@ namespace ThetaStar.Grid
             {
                 Vector3 currentPosition = tiles[i].Position;
                 Vector3 newPosition = new Vector3(currentPosition.x, minYHeight, currentPosition.z);
-                tiles[i] = new Tile(newPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
+                Vector3 topLeftCornerPosition = TileTopLeftPosition(newPosition);
+                tiles[i] = new Tile(newPosition, topLeftCornerPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
             }
         }
 

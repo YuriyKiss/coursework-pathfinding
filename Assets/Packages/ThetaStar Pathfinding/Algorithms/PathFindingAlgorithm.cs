@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using ThetaStar.Datatypes;
-using ThetaStar.Grid;
-using ThetaStar.PriorityQueue;
+using ThetaStar.Pathfinding.Datatypes;
+using ThetaStar.Pathfinding.Grid;
+using ThetaStar.Pathfinding.PriorityQueue;
 
-namespace ThetaStar.Algorithms
+namespace ThetaStar.Pathfinding.Algorithms
 {
     public abstract class PathFindingAlgorithm
     {

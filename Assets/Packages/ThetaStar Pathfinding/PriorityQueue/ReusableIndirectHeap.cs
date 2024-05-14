@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace ThetaStar.PriorityQueue
+namespace ThetaStar.Pathfinding.PriorityQueue
 {
     /*
      * Indirect binary heap. Used for O(lgn) deleteMin and O(lgn) decreaseKey.

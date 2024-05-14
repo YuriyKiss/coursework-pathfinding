@@ -1,8 +1,8 @@
-using ThetaStar.Grid;
-using ThetaStar.PriorityQueue;
+using ThetaStar.Pathfinding.Grid;
+using ThetaStar.Pathfinding.PriorityQueue;
 
 // Assuming you have the necessary classes like GridGraph, ReusableIndirectHeap, etc.
-namespace ThetaStar.Algorithms.Theta
+namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
     /// <summary>
     /// An modification of Theta* that I am experimenting with. -Oh

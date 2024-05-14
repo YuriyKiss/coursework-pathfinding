@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace ThetaStar.Grid.Generator
+namespace ThetaStar.Grid
 {
     [CustomEditor(typeof(UnityGrid))]
     public class UnityGridEditor : Editor

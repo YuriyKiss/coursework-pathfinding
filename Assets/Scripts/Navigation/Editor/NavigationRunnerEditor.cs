@@ -1,26 +1,28 @@
 using UnityEditor;
-using ThetaStar.Navigation;
 using UnityEngine;
 
-[CustomEditor(typeof(NavigationRunner))]
-public class NavigationRunnerEditor : Editor
+namespace ThetaStar.Navigation
 {
-    private NavigationRunner _runner;
-
-    private void Awake()
+    [CustomEditor(typeof(NavigationRunner))]
+    public class NavigationRunnerEditor : Editor
     {
-        _runner = (NavigationRunner)target;
-    }
+        private NavigationRunner _runner;
 
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-        GUILayout.Space(10);
-
-        if (GUILayout.Button("Compute Path"))
+        private void Awake()
         {
-            _runner.ComputePath();
+            _runner = (NavigationRunner)target;
+        }
+
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+
+            GUILayout.Space(10);
+
+            if (GUILayout.Button("Compute Path"))
+            {
+                _runner.ComputePath();
+            }
         }
     }
 }

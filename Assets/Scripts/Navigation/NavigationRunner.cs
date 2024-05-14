@@ -1,29 +1,21 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using ThetaStar.Grid;
-using ThetaStar.Algorithms;
+using ThetaStar.Grid.Data;
 using ThetaStar.Grid.Generator;
+using ThetaStar.Navigation.Data;
+using ThetaStar.Pathfinding.Grid;
+using ThetaStar.Pathfinding.Algorithms;
+using ThetaStar.Pathfinding.Algorithms.Enums;
+using ThetaStar.Pathfinding.Algorithms.Theta;
 
-namespace ThetaStar.Navigation 
-{ 
+namespace ThetaStar.Navigation
+{
     public class NavigationRunner : MonoBehaviour
     {
-        [Serializable]
-        private struct StartEnd
-        {
-            public GridTarget Start;
-            public GridTarget End;
-        }
+        [SerializeField] private AlgorithmType algorithmType;
 
-        [Serializable]
-        private struct GridTarget
-        {
-            public int Row;
-            public int Col;
-        }
-
-        [SerializeField] private UnityGrid grid;
+        [Space, SerializeField] private UnityGrid grid;
         [SerializeField] private GridGenerator generator;
         [SerializeField] private LineRenderer lineRenderer;
         [SerializeField] private StartEnd goals;
@@ -32,8 +24,6 @@ namespace ThetaStar.Navigation
 
         public void ComputePath()
         {
-            PathFindingAlgorithm.ClearStaticData();
-
             List<Tile> tiles = grid.GetTiles();
 
             GridGraph graph = GenerateInternalGraph(tiles);
@@ -59,9 +49,66 @@ namespace ThetaStar.Navigation
 
         private PathFindingAlgorithm PrepareAlgorithm(GridGraph graph)
         {
-            PathFindingAlgorithm algorithm = new AStarStaticMemory(graph,
-                                                                   goals.Start.Col, goals.Start.Row,
-                                                                   goals.End.Col, goals.End.Row);
+            PathFindingAlgorithm algorithm = null;
+
+            switch (algorithmType)
+            {
+                case AlgorithmType.Dijkstra:
+                    algorithm = AStarStaticMemory.Dijkstra(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.AStar:
+                    algorithm = new AStarStaticMemory(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.AStarPostSmooth:
+                    algorithm = AStarStaticMemory.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.AStarRepeatedPostSmooth:
+                    algorithm = AStarStaticMemory.RepeatedPostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.ThetaStar:
+                    algorithm = new BasicThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.ThetaStarNoHeuristic:
+                    algorithm = BasicThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.ThetaStarPostSmooth:
+                    algorithm = BasicThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.ThetaStarRecursive:
+                    algorithm = new RecursiveThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.LazyThetaStar:
+                    algorithm = new LazyThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStar:
+                    algorithm = new StrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStarNoHeuristic:
+                    algorithm = StrictThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStarPostSmooth:
+                    algorithm = StrictThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStarCustomBuffer:
+                    algorithm = StrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.6f);
+                    break;
+                case AlgorithmType.StrictThetaStarRecursive:
+                    algorithm = new RecursiveStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStarRecursiveCustomBuffer:
+                    algorithm = RecursiveStrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.6f);
+                    break;
+                case AlgorithmType.StrictThetaStarRecursiveNoHeuristic:
+                    algorithm = RecursiveStrictThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStarRecursiveCustomDepth:
+                    algorithm = RecursiveStrictThetaStar.DepthLimit(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0);
+                    break;
+                case AlgorithmType.StrictThetaStarRecursivePostSmooth:
+                    algorithm = RecursiveStrictThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+            }
+
             algorithm.ComputePath();
 
             return algorithm;
@@ -95,7 +142,7 @@ namespace ThetaStar.Navigation
                 Vector3 tilePosition = generator.GetTilePosition(row, col);
                 points.Add(grid.TileTopLeftPosition(tilePosition));
 
-                debug += $"[{row}; {col}] ->";
+                if (displayPathString) debug += $"[{row}; {col}] ->";
             }
 
             if (displayPathString)

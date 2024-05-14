@@ -1,4 +1,4 @@
-namespace ThetaStar.Datatypes
+namespace ThetaStar.Pathfinding.Datatypes
 {
     public sealed class Point
     {

@@ -1,7 +1,7 @@
-using ThetaStar.Grid;
-using ThetaStar.PriorityQueue;
+using ThetaStar.Pathfinding.Grid;
+using ThetaStar.Pathfinding.PriorityQueue;
 
-namespace ThetaStar.Algorithms.Theta
+namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
     public class RecursiveStrictThetaStar : BasicThetaStar
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace ThetaStar.Datatypes
+namespace ThetaStar.Pathfinding.Datatypes
 {
     public static class Memory
     {
