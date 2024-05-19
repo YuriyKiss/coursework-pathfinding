@@ -1,53 +1,73 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using ThetaStar.Grid.Generator;
+using ThetaStar.Grid.Data;
 
 namespace ThetaStar.Grid
 {
     public class UnityGrid : MonoBehaviour
     {
-        [SerializeField] private GridGenerator generator;
+        [Header("Grid Data")]
         [SerializeField] private List<Tile> tiles = new List<Tile>();
-        [SerializeField] private int tilesInRow = 0;
-        [SerializeField] private int tilesInCol = 0;
-        [SerializeField] private float tileSize = 0.5f;
-        [SerializeField] private float minYHeight = 0.05f;
-        [Header("Display Settings")]
+        [SerializeField] private GridSettings settings = new GridSettings();
+        [Header("Debug Settings")]
         [SerializeField] private bool displayNodes = false;
-        [SerializeField] private bool displayTiles = false;
+        [SerializeField] private float nodeRadius = 0.05f;
+        [SerializeField] private Color nodeColor = new Color(0, 0.2f, 1, 0.5f);
+        [Space, SerializeField] private bool displayTiles = false;
+        [SerializeField] private Color walkableTileColor = Color.green;
+        [SerializeField] private Color blockedTileColor = Color.red;
 
         private const float TILE_HEIGHT = 0.05f;
         private const float TILE_SIZE_MODIFIER = 0.8f;
 
         public List<Tile> GetTiles() => tiles;
-        public int TilesInRow => tilesInRow;
-        public int TilesInCol => tilesInCol;
-        public float TileSize => tileSize;
-        public float MinYHeight => minYHeight;
+        public int TilesInRow => settings.TilesInRow;
+        public int TilesInCol => settings.TilesInCol;
+        public float TileSize => settings.TileSize;
+        public float MinYHeight => settings.MinYHeight;
+
+        #region Initialization
 
         public void Clear()
         {
             tiles.Clear();
-            tilesInRow = 0;
-            tilesInCol = 0;
-            tileSize = 0.5f;
+            settings.Clear();
         }
 
         public void SetTilesInRowAndCol(int rowAmount, int colAmount)
         {
-            tilesInRow = rowAmount;
-            tilesInCol = colAmount;
+            settings.TilesInRow = rowAmount;
+            settings.TilesInCol = colAmount;
         }
 
         public void SetTileSize(float size)
         {
-            tileSize = size;
+            settings.TileSize = size;
+        }
+
+        public void SetGridPositionAndScale(Vector3 position, Vector3 scale)
+        {
+            transform.position = position;
+            transform.localScale = scale;
+        }
+
+        #endregion
+
+        public Vector3 GetTilePosition(int row, int col)
+        {
+            float posX = transform.localPosition.x; float posZ = transform.localPosition.z;
+            float sizeX = transform.localScale.x; float sizeZ = transform.localScale.z;
+
+            float tilePosX = posX - sizeX / 2 + TileSize * (0.5f + row);
+            float tilePosZ = posZ - sizeZ / 2 + TileSize * (0.5f + col);
+
+            return new Vector3(tilePosX, MinYHeight, tilePosZ);
         }
 
         public void AddTile(Tile tile)
         {
-            if (tiles.Count >= tilesInRow * tilesInCol) 
+            if (tiles.Count >= TilesInRow * TilesInCol)
             {
                 Debug.LogError("[GridGenerator] Too many tiles spawned. Stopping GridGenerator");
                 return;
@@ -56,14 +76,14 @@ namespace ThetaStar.Grid
             tiles.Add(tile);
         }
 
-        public void CleanupNotFoundTiles()
+        public void CleanupTiles()
         {
-            minYHeight = tiles.Min(tile => tile.Position.y);
+            settings.MinYHeight = tiles.Min(tile => tile.Position.y);
 
             for (int i = 0; i < tiles.Count; i++)
             {
                 Vector3 currentPosition = tiles[i].Position;
-                Vector3 newPosition = new Vector3(currentPosition.x, minYHeight, currentPosition.z);
+                Vector3 newPosition = new Vector3(currentPosition.x, MinYHeight, currentPosition.z);
                 Vector3 topLeftCornerPosition = TileTopLeftPosition(newPosition);
                 tiles[i] = new Tile(newPosition, topLeftCornerPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
             }
@@ -71,8 +91,12 @@ namespace ThetaStar.Grid
 
         public Vector3 TileTopLeftPosition(Vector3 tileCenterPosition)
         {
-            return tileCenterPosition + Vector3.up * 0.2f + new Vector3(-1f, 0f, -1f) * TileSize / 2f;
+            return tileCenterPosition +
+                   Vector3.up * 0.2f +
+                   new Vector3(-1f, 0f, -1f) * TileSize / 2f;
         }
+
+        #region Visualization
 
         private void OnDrawGizmosSelected()
         {
@@ -80,28 +104,43 @@ namespace ThetaStar.Grid
 
             if (displayTiles)
             {
-                foreach (Tile tile in tiles)
-                {
-                    Gizmos.color = tile.IsBlocked ? Color.red : Color.green;
-
-                    Vector3 tileScale = new Vector3(tileSize * TILE_SIZE_MODIFIER, TILE_HEIGHT, tileSize * TILE_SIZE_MODIFIER);
-
-                    Gizmos.DrawWireCube(tile.Position, tileScale);
-                }
+                DisplayTiles();
             }
 
             if (displayNodes)
             {
-                for (int row = 0; row <= tilesInCol; row++)
-                {
-                    for (int col = 0; col <= tilesInRow; col++)
-                    {
-                        Gizmos.color = new Color(0, 0.2f, 1, 0.5f);
+                DisplayNodes();
+            }
+        }
 
-                        Gizmos.DrawSphere(TileTopLeftPosition(generator.GetTilePosition(row, col)), 0.05f);
-                    }
+        private void DisplayTiles()
+        {
+            foreach (Tile tile in tiles)
+            {
+                Gizmos.color = tile.IsBlocked ? blockedTileColor : walkableTileColor;
+
+                Vector3 tileScale = new Vector3(TileSize * TILE_SIZE_MODIFIER, TILE_HEIGHT, TileSize * TILE_SIZE_MODIFIER);
+
+                Gizmos.DrawWireCube(tile.Position, tileScale);
+            }
+        }
+
+        private void DisplayNodes()
+        {
+            for (int row = 0; row <= TilesInCol; row++)
+            {
+                for (int col = 0; col <= TilesInRow; col++)
+                {
+                    Gizmos.color = nodeColor;
+
+                    Vector3 tilePosition = GetTilePosition(row, col);
+                    Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
+
+                    Gizmos.DrawSphere(tileTopLeftPosition, nodeRadius);
                 }
             }
         }
+
+        #endregion
     }
 }

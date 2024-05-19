@@ -1,8 +1,8 @@
+using System.Diagnostics;
 using System.Collections.Generic;
 using UnityEngine;
 using ThetaStar.Grid;
 using ThetaStar.Grid.Data;
-using ThetaStar.Grid.Generator;
 using ThetaStar.Navigation.Data;
 using ThetaStar.Pathfinding.Grid;
 using ThetaStar.Pathfinding.Algorithms;
@@ -13,17 +13,32 @@ namespace ThetaStar.Navigation
 {
     public class NavigationRunner : MonoBehaviour
     {
+        [Header("Components")]
+        [SerializeField] private UnityGrid grid;
+
+        [Header("Settings")]
         [SerializeField] private AlgorithmType algorithmType;
-
-        [Space, SerializeField] private UnityGrid grid;
-        [SerializeField] private GridGenerator generator;
-        [SerializeField] private LineRenderer lineRenderer;
         [SerializeField] private StartEnd goals;
-        [Header("Debug Options")]
-        [SerializeField] private bool displayPathString = false;
 
-        public void ComputePath()
+        [Header("Debug Options")]
+        [SerializeField] private bool drawPath = false;
+        [SerializeField] private LineRenderer lineRenderer;
+        [Space, SerializeField] private bool displayPathString = false;
+        [SerializeField] private bool printAlgorithmRuntime = false;
+        [SerializeField] private bool printPathLength = false;
+
+        public List<GridTarget> ComputePath(GridTarget start, GridTarget end)
         {
+            goals.Start = start;
+            goals.End = end;
+
+            return ComputePath();
+        }
+
+        public List<GridTarget> ComputePath()
+        {
+            lineRenderer.positionCount = 0;
+
             List<Tile> tiles = grid.GetTiles();
 
             GridGraph graph = GenerateInternalGraph(tiles);
@@ -31,8 +46,13 @@ namespace ThetaStar.Navigation
             PathFindingAlgorithm algorithm = PrepareAlgorithm(graph);
 
             int[][] path = algorithm.GetPath();
+
+            if (printPathLength) print(algorithm.GetPathLength());
+
             List<GridTarget> pathConverted = ConvertPath(path);
             DisplayPath(pathConverted);
+
+            return pathConverted;
         }
 
         private GridGraph GenerateInternalGraph(List<Tile> tiles)
@@ -90,26 +110,38 @@ namespace ThetaStar.Navigation
                     algorithm = StrictThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
                 case AlgorithmType.StrictThetaStarCustomBuffer:
-                    algorithm = StrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.6f);
+                    algorithm = StrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.5f);
                     break;
                 case AlgorithmType.StrictThetaStarRecursive:
                     algorithm = new RecursiveStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
                 case AlgorithmType.StrictThetaStarRecursiveCustomBuffer:
-                    algorithm = RecursiveStrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.6f);
+                    algorithm = RecursiveStrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.5f);
                     break;
                 case AlgorithmType.StrictThetaStarRecursiveNoHeuristic:
                     algorithm = RecursiveStrictThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
                 case AlgorithmType.StrictThetaStarRecursiveCustomDepth:
-                    algorithm = RecursiveStrictThetaStar.DepthLimit(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0);
+                    algorithm = RecursiveStrictThetaStar.DepthLimit(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, -2);
                     break;
                 case AlgorithmType.StrictThetaStarRecursivePostSmooth:
                     algorithm = RecursiveStrictThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
             }
 
-            algorithm.ComputePath();
+            if (printAlgorithmRuntime)
+            {
+                Stopwatch watch = Stopwatch.StartNew();
+
+                algorithm.ComputePath();
+
+                watch.Stop();
+                print(watch.Elapsed);
+            }
+            else
+            {
+                algorithm.ComputePath();
+            }
 
             return algorithm;
         }
@@ -136,10 +168,9 @@ namespace ThetaStar.Navigation
             string debug = "";
             for (int i = 0; i < path.Count; i++)
             {
-                int row = path[i].Row;
-                int col = path[i].Col;
+                int row = path[i].Row; int col = path[i].Col;
 
-                Vector3 tilePosition = generator.GetTilePosition(row, col);
+                Vector3 tilePosition = grid.GetTilePosition(row, col);
                 points.Add(grid.TileTopLeftPosition(tilePosition));
 
                 if (displayPathString) debug += $"[{row}; {col}] ->";
@@ -151,8 +182,11 @@ namespace ThetaStar.Navigation
                 print(debug);
             }
 
-            lineRenderer.positionCount = points.Count;
-            lineRenderer.SetPositions(points.ToArray());
+            if (drawPath)
+            {
+                lineRenderer.positionCount = points.Count;
+                lineRenderer.SetPositions(points.ToArray());
+            }
         }
     }
 }
