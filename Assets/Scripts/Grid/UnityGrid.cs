@@ -92,7 +92,7 @@ namespace ThetaStar.Grid
         public Vector3 TileTopLeftPosition(Vector3 tileCenterPosition)
         {
             return tileCenterPosition +
-                   Vector3.up * 0.2f +
+                   Vector3.up * 0.05f +
                    new Vector3(-1f, 0f, -1f) * TileSize / 2f;
         }
 

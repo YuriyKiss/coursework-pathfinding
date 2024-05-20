@@ -1,4 +1,5 @@
 using UnityEngine;
+using ThetaStar.Grid.Generator.Enum;
 
 namespace ThetaStar.Grid.Generator
 {
@@ -9,6 +10,7 @@ namespace ThetaStar.Grid.Generator
         [Header("Settings")]
         // Theta Star algorithms work with uniform tiles only
         [SerializeField] private float tileSize = 0.4f;
+        [SerializeField] private PhysicsMode physicsMode = PhysicsMode.Physics3D;
         [SerializeField, ReadOnly] private Vector3 generationRayDirection = Vector3.down;
         [SerializeField, ReadOnly] private string walkableObjectTag = "Walkable";
         [SerializeField, ReadOnly] private LayerMask raycastLayerMask = 1 << 0;
@@ -29,10 +31,6 @@ namespace ThetaStar.Grid.Generator
             int tilesInRow = (int)Mathf.Floor(sizeZ / tileSize);
             int tilesInCol = (int)Mathf.Floor(sizeX / tileSize);
 
-            // TODO: compute spacing
-            // float leftoverRowLength = sizeZ % tileSize;
-            // float leftoverColLength = sizeX % tileSize;
-
             grid.Clear();
             grid.SetTilesInRowAndCol(tilesInRow, tilesInCol);
             grid.SetTileSize(tileSize);
@@ -45,8 +43,23 @@ namespace ThetaStar.Grid.Generator
                     Vector3 tilePos = grid.GetTilePosition(row, col);
                     Vector3 origin = new Vector3(tilePos.x, posY + sizeY / 2, tilePos.z);
 
-                    bool isHit = Physics.Raycast(origin, generationRayDirection, out RaycastHit hitInfo, 
-                        MAX_DISTANCE, raycastLayerMask, TRIGGER_INTERACTION);
+                    bool isHit = false; string colliderTag = null; Vector3 hitPoint = Vector3.zero;
+
+                    if (physicsMode == PhysicsMode.Physics3D)
+                    {
+                        isHit = Physics.Raycast(origin, generationRayDirection, out RaycastHit hitInfo,
+                            MAX_DISTANCE, raycastLayerMask, TRIGGER_INTERACTION);
+
+                        colliderTag = hitInfo.collider.tag;
+                        hitPoint = hitInfo.point;
+                    }
+                    else if (physicsMode == PhysicsMode.Physics2D)
+                    {
+                        RaycastHit2D hitInfo = Physics2D.Raycast(origin, generationRayDirection, MAX_DISTANCE, raycastLayerMask);
+
+                        colliderTag = hitInfo.collider.tag;
+                        hitPoint = hitInfo.point;
+                    }
 
                     Tile currentTile;
                     if (!isHit)
@@ -54,14 +67,14 @@ namespace ThetaStar.Grid.Generator
                         Vector3 tilePosition = new Vector3(tilePos.x, Mathf.Infinity, tilePos.z);
                         currentTile = new Tile(tilePosition, Vector3.zero, true, row, col);
                     }
-                    else if (!hitInfo.collider.CompareTag(walkableObjectTag))
+                    else if (colliderTag != walkableObjectTag)
                     {
-                        Vector3 tilePosition = new Vector3(tilePos.x, hitInfo.point.y, tilePos.z);
+                        Vector3 tilePosition = new Vector3(tilePos.x, hitPoint.y, tilePos.z);
                         currentTile = new Tile(tilePosition, Vector3.zero, true, row, col);
                     }
                     else
                     {
-                        Vector3 tilePosition = new Vector3(tilePos.x, hitInfo.point.y, tilePos.z);
+                        Vector3 tilePosition = new Vector3(tilePos.x, hitPoint.y, tilePos.z);
                         currentTile = new Tile(tilePosition, Vector3.zero, false, row, col);
                     }
 

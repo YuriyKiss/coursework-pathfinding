@@ -47,7 +47,7 @@ namespace ThetaStar.Navigation
 
             int[][] path = algorithm.GetPath();
 
-            if (printPathLength) print(algorithm.GetPathLength());
+            if (printPathLength) print("Path length: " + algorithm.GetPathLength());
 
             List<GridTarget> pathConverted = ConvertPath(path);
             DisplayPath(pathConverted);
@@ -136,7 +136,7 @@ namespace ThetaStar.Navigation
                 algorithm.ComputePath();
 
                 watch.Stop();
-                print(watch.Elapsed);
+                print("Algorithm computation time: " + watch.Elapsed);
             }
             else
             {
@@ -165,7 +165,7 @@ namespace ThetaStar.Navigation
         {
             List<Vector3> points = new List<Vector3>();
 
-            string debug = "";
+            string debug = "Path: ";
             for (int i = 0; i < path.Count; i++)
             {
                 int row = path[i].Row; int col = path[i].Col;
