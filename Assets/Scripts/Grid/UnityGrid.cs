@@ -96,6 +96,32 @@ namespace ThetaStar.Grid
                    new Vector3(-1f, 0f, -1f) * TileSize / 2f;
         }
 
+        public (int, int) FindClosestTile(Vector3 position)
+        {
+            int c = 0, r = 0;
+            float minDistance = Mathf.Infinity;
+
+            for (int row = 0; row <= TilesInCol; row++)
+            {
+                for (int col = 0; col <= TilesInRow; col++)
+                {
+                    Vector3 tilePosition = GetTilePosition(row, col);
+                    Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
+
+                    float distance = Vector3.Distance(new Vector3(position.x, tileTopLeftPosition.y, position.z), tileTopLeftPosition);
+
+                    if (distance < minDistance)
+                    {
+                        minDistance = distance;
+                        c = col;
+                        r = row;
+                    }
+                }
+            }
+
+            return (r, c);
+        }
+
         #region Visualization
 
         private void OnDrawGizmosSelected()

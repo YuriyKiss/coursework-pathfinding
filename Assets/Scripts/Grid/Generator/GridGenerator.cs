@@ -44,7 +44,6 @@ namespace ThetaStar.Grid.Generator
                     Vector3 origin = new Vector3(tilePos.x, posY + sizeY / 2, tilePos.z);
 
                     bool isHit = false; string colliderTag = null; Vector3 hitPoint = Vector3.zero;
-
                     if (physicsMode == PhysicsMode.Physics3D)
                     {
                         isHit = Physics.Raycast(origin, generationRayDirection, out RaycastHit hitInfo,
