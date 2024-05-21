@@ -23,6 +23,11 @@ namespace ThetaStar.Navigation
             {
                 _runner.ComputePath();
             }
+
+            if (GUILayout.Button("Perform Multiple Tests"))
+            {
+                _runner.TestMultipleTimes();
+            }
         }
     }
 }

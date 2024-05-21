@@ -617,27 +617,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: -10, y: 0.1, z: -10}
-  - {x: -6.7999997, y: 0.1, z: -7.6}
-  - {x: -6.7999997, y: 0.1, z: -6.3999996}
-  - {x: -7.2, y: 0.1, z: -5.9999995}
-  - {x: -7.6, y: 0.1, z: -5.6}
-  - {x: -8.4, y: 0.1, z: 0.80000013}
-  - {x: -8.4, y: 0.1, z: 2.0000002}
-  - {x: -7.6, y: 0.1, z: 3.6000001}
-  - {x: -6.3999996, y: 0.1, z: 3.6000001}
-  - {x: -5.2, y: 0.1, z: 0.00000014901161}
-  - {x: -0.39999986, y: 0.1, z: -1.1999999}
-  - {x: 0.40000015, y: 0.1, z: -1.1999999}
-  - {x: 2.4, y: 0.1, z: 0.00000014901161}
-  - {x: 2.8000002, y: 0.1, z: 0.00000014901161}
-  - {x: 5.6000004, y: 0.1, z: 0.40000015}
-  - {x: 8, y: 0.1, z: 2.8000002}
-  - {x: 8, y: 0.1, z: 5.2000003}
-  - {x: 6.8000007, y: 0.1, z: 6.0000005}
-  - {x: 6.8000007, y: 0.1, z: 7.2000003}
-  - {x: 10.000001, y: 0.1, z: 10.000001}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -725,8 +705,8 @@ Transform:
   m_GameObject: {fileID: 216407190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.55, z: -7.5}
-  m_LocalScale: {x: 1, y: 1, z: 3}
+  m_LocalPosition: {x: 7.5, y: 0.55, z: 0.5}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1434279602}
@@ -935,7 +915,7 @@ Transform:
   m_GameObject: {fileID: 603390922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0.55, z: 1.5}
+  m_LocalPosition: {x: -8, y: 0.55, z: -8.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1355,8 +1335,8 @@ Transform:
   m_GameObject: {fileID: 672125877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0.55, z: 1.5}
-  m_LocalScale: {x: 3, y: 1, z: 3}
+  m_LocalPosition: {x: -3.5, y: 0.55, z: 0.5}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1434279602}
@@ -3521,17 +3501,17 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: -8.2, y: 0.05, z: -9}
     PositionTopLeftCorner: {x: -8.4, y: 0.1, z: -9.2}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 4
     ColIdx: 2
   - Position: {x: -8.2, y: 0.05, z: -8.6}
     PositionTopLeftCorner: {x: -8.4, y: 0.1, z: -8.8}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 4
     ColIdx: 3
   - Position: {x: -8.2, y: 0.05, z: -8.2}
     PositionTopLeftCorner: {x: -8.4, y: 0.1, z: -8.4}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 4
     ColIdx: 4
   - Position: {x: -8.2, y: 0.05, z: -7.8}
@@ -3646,17 +3626,17 @@ MonoBehaviour:
     ColIdx: 26
   - Position: {x: -8.2, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: -8.4, y: 0.1, z: 0.80000013}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 4
     ColIdx: 27
   - Position: {x: -8.2, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: -8.4, y: 0.1, z: 1.2000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 4
     ColIdx: 28
   - Position: {x: -8.2, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -8.4, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 4
     ColIdx: 29
   - Position: {x: -8.2, y: 0.05, z: 2.2000003}
@@ -3771,17 +3751,17 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: -7.8, y: 0.05, z: -9}
     PositionTopLeftCorner: {x: -8, y: 0.1, z: -9.2}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 5
     ColIdx: 2
   - Position: {x: -7.8, y: 0.05, z: -8.6}
     PositionTopLeftCorner: {x: -8, y: 0.1, z: -8.8}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 5
     ColIdx: 3
   - Position: {x: -7.8, y: 0.05, z: -8.2}
     PositionTopLeftCorner: {x: -8, y: 0.1, z: -8.4}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 5
     ColIdx: 4
   - Position: {x: -7.8, y: 0.05, z: -7.8}
@@ -3896,17 +3876,17 @@ MonoBehaviour:
     ColIdx: 26
   - Position: {x: -7.8, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: -8, y: 0.1, z: 0.80000013}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 5
     ColIdx: 27
   - Position: {x: -7.8, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: -8, y: 0.1, z: 1.2000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 5
     ColIdx: 28
   - Position: {x: -7.8, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -8, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 5
     ColIdx: 29
   - Position: {x: -7.8, y: 0.05, z: 2.2000003}
@@ -5636,37 +5616,37 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: -5, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 25
   - Position: {x: -5, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 0.40000015}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 26
   - Position: {x: -5, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 0.80000013}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 27
   - Position: {x: -5, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 1.2000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 28
   - Position: {x: -5, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 29
   - Position: {x: -5, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 30
   - Position: {x: -5, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -5.2, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 12
     ColIdx: 31
   - Position: {x: -5, y: 0.05, z: 3.0000002}
@@ -5886,37 +5866,37 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: -4.6, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 25
   - Position: {x: -4.6, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 0.40000015}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 26
   - Position: {x: -4.6, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 0.80000013}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 27
   - Position: {x: -4.6, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 1.2000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 28
   - Position: {x: -4.6, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 29
   - Position: {x: -4.6, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 30
   - Position: {x: -4.6, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -4.7999997, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 13
     ColIdx: 31
   - Position: {x: -4.6, y: 0.05, z: 3.0000002}
@@ -6131,7 +6111,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -4.2, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: -4.3999996, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 14
     ColIdx: 24
   - Position: {x: -4.2, y: 0.05, z: 0.20000015}
@@ -6156,17 +6136,17 @@ MonoBehaviour:
     ColIdx: 28
   - Position: {x: -4.2, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -4.3999996, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 14
     ColIdx: 29
   - Position: {x: -4.2, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -4.3999996, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 14
     ColIdx: 30
   - Position: {x: -4.2, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -4.3999996, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 14
     ColIdx: 31
   - Position: {x: -4.2, y: 0.05, z: 3.0000002}
@@ -6381,7 +6361,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -3.8, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: -4, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 15
     ColIdx: 24
   - Position: {x: -3.8, y: 0.05, z: 0.20000015}
@@ -6406,17 +6386,17 @@ MonoBehaviour:
     ColIdx: 28
   - Position: {x: -3.8, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -4, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 15
     ColIdx: 29
   - Position: {x: -3.8, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -4, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 15
     ColIdx: 30
   - Position: {x: -3.8, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -4, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 15
     ColIdx: 31
   - Position: {x: -3.8, y: 0.05, z: 3.0000002}
@@ -6631,7 +6611,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -3.3999999, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: -3.6, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 16
     ColIdx: 24
   - Position: {x: -3.3999999, y: 0.05, z: 0.20000015}
@@ -6656,17 +6636,17 @@ MonoBehaviour:
     ColIdx: 28
   - Position: {x: -3.3999999, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -3.6, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 16
     ColIdx: 29
   - Position: {x: -3.3999999, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -3.6, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 16
     ColIdx: 30
   - Position: {x: -3.3999999, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -3.6, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 16
     ColIdx: 31
   - Position: {x: -3.3999999, y: 0.05, z: 3.0000002}
@@ -6881,7 +6861,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -3, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: -3.2, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 17
     ColIdx: 24
   - Position: {x: -3, y: 0.05, z: 0.20000015}
@@ -6906,17 +6886,17 @@ MonoBehaviour:
     ColIdx: 28
   - Position: {x: -3, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -3.2, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 17
     ColIdx: 29
   - Position: {x: -3, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -3.2, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 17
     ColIdx: 30
   - Position: {x: -3, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -3.2, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 17
     ColIdx: 31
   - Position: {x: -3, y: 0.05, z: 3.0000002}
@@ -7131,7 +7111,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -2.6, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: -2.8, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 18
     ColIdx: 24
   - Position: {x: -2.6, y: 0.05, z: 0.20000015}
@@ -7156,17 +7136,17 @@ MonoBehaviour:
     ColIdx: 28
   - Position: {x: -2.6, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -2.8, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 18
     ColIdx: 29
   - Position: {x: -2.6, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -2.8, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 18
     ColIdx: 30
   - Position: {x: -2.6, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -2.8, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 18
     ColIdx: 31
   - Position: {x: -2.6, y: 0.05, z: 3.0000002}
@@ -7386,37 +7366,37 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: -2.1999998, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 25
   - Position: {x: -2.1999998, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 0.40000015}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 26
   - Position: {x: -2.1999998, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 0.80000013}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 27
   - Position: {x: -2.1999998, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 1.2000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 28
   - Position: {x: -2.1999998, y: 0.05, z: 1.8000002}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 1.6000001}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 29
   - Position: {x: -2.1999998, y: 0.05, z: 2.2000003}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 2.0000002}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 30
   - Position: {x: -2.1999998, y: 0.05, z: 2.6000001}
     PositionTopLeftCorner: {x: -2.3999999, y: 0.1, z: 2.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 19
     ColIdx: 31
   - Position: {x: -2.1999998, y: 0.05, z: 3.0000002}
@@ -9021,42 +9001,42 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: 0.60000014, y: 0.05, z: -9}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -9.2}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 2
   - Position: {x: 0.60000014, y: 0.05, z: -8.6}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -8.8}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 3
   - Position: {x: 0.60000014, y: 0.05, z: -8.2}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -8.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 4
   - Position: {x: 0.60000014, y: 0.05, z: -7.8}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -8}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 5
   - Position: {x: 0.60000014, y: 0.05, z: -7.4}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -7.6}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 6
   - Position: {x: 0.60000014, y: 0.05, z: -7}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -7.2}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 7
   - Position: {x: 0.60000014, y: 0.05, z: -6.6}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -6.7999997}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 8
   - Position: {x: 0.60000014, y: 0.05, z: -6.2}
     PositionTopLeftCorner: {x: 0.40000015, y: 0.1, z: -6.3999996}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 26
     ColIdx: 9
   - Position: {x: 0.60000014, y: 0.05, z: -5.7999997}
@@ -9271,42 +9251,42 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: 1.0000001, y: 0.05, z: -9}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -9.2}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 2
   - Position: {x: 1.0000001, y: 0.05, z: -8.6}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -8.8}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 3
   - Position: {x: 1.0000001, y: 0.05, z: -8.2}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -8.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 4
   - Position: {x: 1.0000001, y: 0.05, z: -7.8}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -8}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 5
   - Position: {x: 1.0000001, y: 0.05, z: -7.4}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -7.6}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 6
   - Position: {x: 1.0000001, y: 0.05, z: -7}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -7.2}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 7
   - Position: {x: 1.0000001, y: 0.05, z: -6.6}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -6.7999997}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 8
   - Position: {x: 1.0000001, y: 0.05, z: -6.2}
     PositionTopLeftCorner: {x: 0.80000013, y: 0.1, z: -6.3999996}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 27
     ColIdx: 9
   - Position: {x: 1.0000001, y: 0.05, z: -5.7999997}
@@ -9521,42 +9501,42 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: 1.4000002, y: 0.05, z: -9}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -9.2}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 2
   - Position: {x: 1.4000002, y: 0.05, z: -8.6}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -8.8}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 3
   - Position: {x: 1.4000002, y: 0.05, z: -8.2}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -8.4}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 4
   - Position: {x: 1.4000002, y: 0.05, z: -7.8}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -8}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 5
   - Position: {x: 1.4000002, y: 0.05, z: -7.4}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -7.6}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 6
   - Position: {x: 1.4000002, y: 0.05, z: -7}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -7.2}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 7
   - Position: {x: 1.4000002, y: 0.05, z: -6.6}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -6.7999997}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 8
   - Position: {x: 1.4000002, y: 0.05, z: -6.2}
     PositionTopLeftCorner: {x: 1.2000002, y: 0.1, z: -6.3999996}
-    IsBlocked: 1
+    IsBlocked: 0
     RowIdx: 28
     ColIdx: 9
   - Position: {x: 1.4000002, y: 0.05, z: -5.7999997}
@@ -12881,27 +12861,27 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 6.6000004, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: 6.4000006, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 41
     ColIdx: 24
   - Position: {x: 6.6000004, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: 6.4000006, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 41
     ColIdx: 25
   - Position: {x: 6.6000004, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: 6.4000006, y: 0.1, z: 0.40000015}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 41
     ColIdx: 26
   - Position: {x: 6.6000004, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: 6.4000006, y: 0.1, z: 0.80000013}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 41
     ColIdx: 27
   - Position: {x: 6.6000004, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: 6.4000006, y: 0.1, z: 1.2000002}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 41
     ColIdx: 28
   - Position: {x: 6.6000004, y: 0.05, z: 1.8000002}
@@ -13131,27 +13111,27 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 7.0000005, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: 6.8000007, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 42
     ColIdx: 24
   - Position: {x: 7.0000005, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: 6.8000007, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 42
     ColIdx: 25
   - Position: {x: 7.0000005, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: 6.8000007, y: 0.1, z: 0.40000015}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 42
     ColIdx: 26
   - Position: {x: 7.0000005, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: 6.8000007, y: 0.1, z: 0.80000013}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 42
     ColIdx: 27
   - Position: {x: 7.0000005, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: 6.8000007, y: 0.1, z: 1.2000002}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 42
     ColIdx: 28
   - Position: {x: 7.0000005, y: 0.05, z: 1.8000002}
@@ -13381,27 +13361,27 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 7.4, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: 7.2000003, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 43
     ColIdx: 24
   - Position: {x: 7.4, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: 7.2000003, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 43
     ColIdx: 25
   - Position: {x: 7.4, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: 7.2000003, y: 0.1, z: 0.40000015}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 43
     ColIdx: 26
   - Position: {x: 7.4, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: 7.2000003, y: 0.1, z: 0.80000013}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 43
     ColIdx: 27
   - Position: {x: 7.4, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: 7.2000003, y: 0.1, z: 1.2000002}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 43
     ColIdx: 28
   - Position: {x: 7.4, y: 0.05, z: 1.8000002}
@@ -13631,27 +13611,27 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 7.8, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: 7.6000004, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 44
     ColIdx: 24
   - Position: {x: 7.8, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: 7.6000004, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 44
     ColIdx: 25
   - Position: {x: 7.8, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: 7.6000004, y: 0.1, z: 0.40000015}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 44
     ColIdx: 26
   - Position: {x: 7.8, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: 7.6000004, y: 0.1, z: 0.80000013}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 44
     ColIdx: 27
   - Position: {x: 7.8, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: 7.6000004, y: 0.1, z: 1.2000002}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 44
     ColIdx: 28
   - Position: {x: 7.8, y: 0.05, z: 1.8000002}
@@ -13881,27 +13861,27 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 8.2, y: 0.05, z: -0.19999985}
     PositionTopLeftCorner: {x: 8, y: 0.1, z: -0.39999986}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 45
     ColIdx: 24
   - Position: {x: 8.2, y: 0.05, z: 0.20000015}
     PositionTopLeftCorner: {x: 8, y: 0.1, z: 0.00000014901161}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 45
     ColIdx: 25
   - Position: {x: 8.2, y: 0.05, z: 0.60000014}
     PositionTopLeftCorner: {x: 8, y: 0.1, z: 0.40000015}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 45
     ColIdx: 26
   - Position: {x: 8.2, y: 0.05, z: 1.0000001}
     PositionTopLeftCorner: {x: 8, y: 0.1, z: 0.80000013}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 45
     ColIdx: 27
   - Position: {x: 8.2, y: 0.05, z: 1.4000002}
     PositionTopLeftCorner: {x: 8, y: 0.1, z: 1.2000002}
-    IsBlocked: 0
+    IsBlocked: 1
     RowIdx: 45
     ColIdx: 28
   - Position: {x: 8.2, y: 0.05, z: 1.8000002}
@@ -15657,11 +15637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 1515440836}
-  algorithmType: 8
+  algorithmType: 13
   goals:
     Start:
       Row: 0
-      Col: 0
+      Col: 3
     End:
       Row: 50
       Col: 50
@@ -15670,6 +15650,7 @@ MonoBehaviour:
   displayPathString: 1
   printAlgorithmRuntime: 1
   printPathLength: 1
+  multipleTestsAmount: 1000
 --- !u!114 &2045078622
 MonoBehaviour:
   m_ObjectHideFlags: 0

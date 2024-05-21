@@ -8,6 +8,7 @@ using ThetaStar.Pathfinding.Grid;
 using ThetaStar.Pathfinding.Algorithms;
 using ThetaStar.Pathfinding.Algorithms.Enums;
 using ThetaStar.Pathfinding.Algorithms.Theta;
+using System;
 
 namespace ThetaStar.Navigation
 {
@@ -26,6 +27,7 @@ namespace ThetaStar.Navigation
         [Space, SerializeField] private bool displayPathString = false;
         [SerializeField] private bool printAlgorithmRuntime = false;
         [SerializeField] private bool printPathLength = false;
+        [SerializeField] private int multipleTestsAmount = 100;
 
         public List<GridTarget> ComputePath(GridTarget start, GridTarget end)
         {
@@ -33,6 +35,29 @@ namespace ThetaStar.Navigation
             goals.End = end;
 
             return ComputePath();
+        }
+
+        public void TestMultipleTimes()
+        {
+            lineRenderer.positionCount = 0;
+
+            List<Tile> tiles = grid.GetTiles();
+
+            GridGraph graph = GenerateInternalGraph(tiles);
+
+            long counter = 0;
+            PathFindingAlgorithm algorithm = null; TimeSpan timeSpan = TimeSpan.Zero;
+            for (int i = 0; i < multipleTestsAmount; ++i)
+            {
+                (algorithm, timeSpan) = PrepareAlgorithm(graph, true);
+
+                counter += timeSpan.Ticks;
+            }
+
+            counter /= multipleTestsAmount;
+
+            print("Algorithm computation time: " + counter);
+            print("Path length: " + algorithm.GetPathLength());
         }
 
         public List<GridTarget> ComputePath()
@@ -43,7 +68,9 @@ namespace ThetaStar.Navigation
 
             GridGraph graph = GenerateInternalGraph(tiles);
 
-            PathFindingAlgorithm algorithm = PrepareAlgorithm(graph);
+            (PathFindingAlgorithm algorithm, TimeSpan time) = PrepareAlgorithm(graph, printAlgorithmRuntime);
+
+            if (printAlgorithmRuntime) { print("Algorithm computation time: " + time); }
 
             int[][] path = algorithm.GetPath();
 
@@ -67,7 +94,7 @@ namespace ThetaStar.Navigation
             return graph;
         }
 
-        private PathFindingAlgorithm PrepareAlgorithm(GridGraph graph)
+        private (PathFindingAlgorithm, TimeSpan) PrepareAlgorithm(GridGraph graph, bool returnTimeSpan)
         {
             PathFindingAlgorithm algorithm = null;
 
@@ -129,21 +156,22 @@ namespace ThetaStar.Navigation
                     break;
             }
 
-            if (printAlgorithmRuntime)
+            if (returnTimeSpan)
             {
                 Stopwatch watch = Stopwatch.StartNew();
 
                 algorithm.ComputePath();
 
                 watch.Stop();
-                print("Algorithm computation time: " + watch.Elapsed);
+
+                return (algorithm, watch.Elapsed);
             }
             else
             {
                 algorithm.ComputePath();
-            }
 
-            return algorithm;
+                return (algorithm, new TimeSpan(0));
+            }
         }
 
         private List<GridTarget> ConvertPath(int[][] path)
