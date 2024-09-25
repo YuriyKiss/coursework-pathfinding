@@ -64,17 +64,17 @@ namespace ThetaStar.Grid.Generator
                     if (!isHit)
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, Mathf.Infinity, tilePos.z);
-                        currentTile = new Tile(tilePosition, Vector3.zero, true, row, col);
+                        currentTile = new Tile(tilePosition, Vector3.zero, -1, row, col);
                     }
                     else if (colliderTag != walkableObjectTag)
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, hitPoint.y, tilePos.z);
-                        currentTile = new Tile(tilePosition, Vector3.zero, true, row, col);
+                        currentTile = new Tile(tilePosition, Vector3.zero, -1, row, col);
                     }
                     else
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, hitPoint.y, tilePos.z);
-                        currentTile = new Tile(tilePosition, Vector3.zero, false, row, col);
+                        currentTile = new Tile(tilePosition, Vector3.zero, 1, row, col);
                     }
 
                     grid.AddTile(currentTile);

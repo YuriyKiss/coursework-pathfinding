@@ -85,7 +85,7 @@ namespace ThetaStar.Grid
                 Vector3 currentPosition = tiles[i].Position;
                 Vector3 newPosition = new Vector3(currentPosition.x, MinYHeight, currentPosition.z);
                 Vector3 topLeftCornerPosition = TileTopLeftPosition(newPosition);
-                tiles[i] = new Tile(newPosition, topLeftCornerPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
+                tiles[i] = new Tile(newPosition, topLeftCornerPosition, tiles[i].Weight, tiles[i].RowIdx, tiles[i].ColIdx);
             }
         }
 
@@ -143,7 +143,7 @@ namespace ThetaStar.Grid
         {
             foreach (Tile tile in tiles)
             {
-                Gizmos.color = tile.IsBlocked ? blockedTileColor : walkableTileColor;
+                Gizmos.color = tile.Weight == -1 ? blockedTileColor : walkableTileColor;
 
                 Vector3 tileScale = new Vector3(TileSize * TILE_SIZE_MODIFIER, TILE_HEIGHT, TileSize * TILE_SIZE_MODIFIER);
 

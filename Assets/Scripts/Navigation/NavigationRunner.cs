@@ -88,7 +88,7 @@ namespace ThetaStar.Navigation
 
             foreach (Tile tile in tiles)
             {
-                graph.SetBlocked(tile.ColIdx, tile.RowIdx, tile.IsBlocked);
+                graph.SetBlocked(tile.ColIdx, tile.RowIdx, tile.Weight);
             }
 
             return graph;
