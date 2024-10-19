@@ -4,7 +4,6 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
     public class BasicThetaStar : AStarStaticMemory
     {
-
         public BasicThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
         {
         }
@@ -72,6 +71,5 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
                 return false;
             }
         }
-
     }
 }

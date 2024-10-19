@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -304,42 +303,47 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: -5, y: 0.1, z: -5}
-  - {x: -4.6, y: 0.1, z: -4.6}
-  - {x: -4.2, y: 0.1, z: -4.6}
-  - {x: -3.8, y: 0.1, z: -4.6}
+  - {x: -4.6, y: 0.1, z: -5}
+  - {x: -4.2, y: 0.1, z: -5}
+  - {x: -3.8, y: 0.1, z: -5}
   - {x: -3.4, y: 0.1, z: -4.6}
-  - {x: -3, y: 0.1, z: -4.6}
-  - {x: -2.6, y: 0.1, z: -4.6}
-  - {x: -2.2, y: 0.1, z: -4.6}
-  - {x: -1.8, y: 0.1, z: -4.6}
-  - {x: -1.4, y: 0.1, z: -4.2}
-  - {x: -0.99999994, y: 0.1, z: -4.2}
-  - {x: -0.5999999, y: 0.1, z: -4.2}
-  - {x: -0.19999993, y: 0.1, z: -4.2}
-  - {x: 0.20000009, y: 0.1, z: -4.2}
-  - {x: 0.6000001, y: 0.1, z: -4.2}
-  - {x: 1, y: 0.1, z: -3.8}
-  - {x: 1, y: 0.1, z: -3.4}
-  - {x: 1.4000001, y: 0.1, z: -3}
-  - {x: 1.4000001, y: 0.1, z: -2.6}
-  - {x: 1.8, y: 0.1, z: -2.2}
-  - {x: 1.8, y: 0.1, z: -1.8}
-  - {x: 2.2, y: 0.1, z: -1.4}
-  - {x: 2.2, y: 0.1, z: -0.99999994}
-  - {x: 2.6000001, y: 0.1, z: -0.5999999}
-  - {x: 3, y: 0.1, z: -0.19999993}
-  - {x: 3.4, y: 0.1, z: 0.20000009}
-  - {x: 3.8, y: 0.1, z: 0.6000001}
-  - {x: 4.2000003, y: 0.1, z: 1}
-  - {x: 4.2000003, y: 0.1, z: 1.4000001}
-  - {x: 4.2000003, y: 0.1, z: 1.8}
-  - {x: 4.2000003, y: 0.1, z: 2.2}
-  - {x: 4.2000003, y: 0.1, z: 2.6000001}
-  - {x: 4.2000003, y: 0.1, z: 3}
-  - {x: 4.2000003, y: 0.1, z: 3.4}
-  - {x: 4.6000004, y: 0.1, z: 3.8}
-  - {x: 4.6000004, y: 0.1, z: 4.2000003}
-  - {x: 5.0000005, y: 0.1, z: 4.6000004}
+  - {x: -3, y: 0.1, z: -4.2}
+  - {x: -2.6, y: 0.1, z: -3.8}
+  - {x: -2.2, y: 0.1, z: -3.4}
+  - {x: -1.8, y: 0.1, z: -3}
+  - {x: -1.4, y: 0.1, z: -3}
+  - {x: -0.99999994, y: 0.1, z: -3}
+  - {x: -0.5999999, y: 0.1, z: -2.6}
+  - {x: -0.5999999, y: 0.1, z: -2.2}
+  - {x: -0.5999999, y: 0.1, z: -1.8}
+  - {x: -0.5999999, y: 0.1, z: -1.4}
+  - {x: -0.5999999, y: 0.1, z: -0.99999994}
+  - {x: -0.5999999, y: 0.1, z: -0.5999999}
+  - {x: -0.5999999, y: 0.1, z: -0.19999993}
+  - {x: -0.5999999, y: 0.1, z: 0.20000009}
+  - {x: -0.5999999, y: 0.1, z: 0.6000001}
+  - {x: -0.5999999, y: 0.1, z: 1}
+  - {x: -0.5999999, y: 0.1, z: 1.4000001}
+  - {x: -0.5999999, y: 0.1, z: 1.8}
+  - {x: -0.5999999, y: 0.1, z: 2.2}
+  - {x: -0.5999999, y: 0.1, z: 2.6000001}
+  - {x: -0.5999999, y: 0.1, z: 3}
+  - {x: -0.5999999, y: 0.1, z: 3.4}
+  - {x: -0.5999999, y: 0.1, z: 3.8}
+  - {x: -0.5999999, y: 0.1, z: 4.2000003}
+  - {x: -0.19999993, y: 0.1, z: 4.2000003}
+  - {x: 0.20000009, y: 0.1, z: 4.2000003}
+  - {x: 0.6000001, y: 0.1, z: 4.2000003}
+  - {x: 1, y: 0.1, z: 4.2000003}
+  - {x: 1.4000001, y: 0.1, z: 4.6000004}
+  - {x: 1.8, y: 0.1, z: 4.2000003}
+  - {x: 2.2, y: 0.1, z: 3.8}
+  - {x: 2.6000001, y: 0.1, z: 3.8}
+  - {x: 3, y: 0.1, z: 4.2000003}
+  - {x: 3.4, y: 0.1, z: 4.2000003}
+  - {x: 3.8, y: 0.1, z: 4.2000003}
+  - {x: 4.2000003, y: 0.1, z: 4.6000004}
+  - {x: 4.6000004, y: 0.1, z: 5.0000005}
   - {x: 5.0000005, y: 0.1, z: 5.0000005}
   m_Parameters:
     serializedVersion: 3
@@ -633,6 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1515440836}
   tileSize: 0.4
+  addRandomWeights: 1
   physicsMode: 2
   generationRayDirection: {x: 0, y: -1, z: 0}
   walkableObjectTag: Walkable
@@ -834,17 +839,17 @@ MonoBehaviour:
     ColIdx: 0
   - Position: {x: -4.8, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.35
     RowIdx: 0
     ColIdx: 1
   - Position: {x: -4.8, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 1.77
     RowIdx: 0
     ColIdx: 2
   - Position: {x: -4.8, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.04
     RowIdx: 0
     ColIdx: 3
   - Position: {x: -4.8, y: 0.05, z: -3.2}
@@ -859,12 +864,12 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: -4.8, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.33
     RowIdx: 0
     ColIdx: 6
   - Position: {x: -4.8, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.1
     RowIdx: 0
     ColIdx: 7
   - Position: {x: -4.8, y: 0.05, z: -1.5999999}
@@ -874,22 +879,22 @@ MonoBehaviour:
     ColIdx: 8
   - Position: {x: -4.8, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.4099998
     RowIdx: 0
     ColIdx: 9
   - Position: {x: -4.8, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.28
     RowIdx: 0
     ColIdx: 10
   - Position: {x: -4.8, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 1.78
     RowIdx: 0
     ColIdx: 11
   - Position: {x: -4.8, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.8899999
     RowIdx: 0
     ColIdx: 12
   - Position: {x: -4.8, y: 0.05, z: 0.4000001}
@@ -899,22 +904,22 @@ MonoBehaviour:
     ColIdx: 13
   - Position: {x: -4.8, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.03
     RowIdx: 0
     ColIdx: 14
   - Position: {x: -4.8, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 1.87
     RowIdx: 0
     ColIdx: 15
   - Position: {x: -4.8, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 1.9100001
     RowIdx: 0
     ColIdx: 16
   - Position: {x: -4.8, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.87
     RowIdx: 0
     ColIdx: 17
   - Position: {x: -4.8, y: 0.05, z: 2.4}
@@ -934,7 +939,7 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: -4.8, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.1
     RowIdx: 0
     ColIdx: 21
   - Position: {x: -4.8, y: 0.05, z: 4}
@@ -949,7 +954,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -4.8, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -5, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.79
     RowIdx: 0
     ColIdx: 24
   - Position: {x: -4.4, y: 0.05, z: -4.8}
@@ -959,12 +964,12 @@ MonoBehaviour:
     ColIdx: 0
   - Position: {x: -4.4, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.5700002
     RowIdx: 1
     ColIdx: 1
   - Position: {x: -4.4, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 1.6800001
     RowIdx: 1
     ColIdx: 2
   - Position: {x: -4.4, y: 0.05, z: -3.6}
@@ -974,22 +979,22 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: -4.4, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 2.65
     RowIdx: 1
     ColIdx: 4
   - Position: {x: -4.4, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 2.53
     RowIdx: 1
     ColIdx: 5
   - Position: {x: -4.4, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.48
     RowIdx: 1
     ColIdx: 6
   - Position: {x: -4.4, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 1.95
     RowIdx: 1
     ColIdx: 7
   - Position: {x: -4.4, y: 0.05, z: -1.5999999}
@@ -999,22 +1004,22 @@ MonoBehaviour:
     ColIdx: 8
   - Position: {x: -4.4, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.13
     RowIdx: 1
     ColIdx: 9
   - Position: {x: -4.4, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.0900002
     RowIdx: 1
     ColIdx: 10
   - Position: {x: -4.4, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 1.53
     RowIdx: 1
     ColIdx: 11
   - Position: {x: -4.4, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.37
     RowIdx: 1
     ColIdx: 12
   - Position: {x: -4.4, y: 0.05, z: 0.4000001}
@@ -1029,7 +1034,7 @@ MonoBehaviour:
     ColIdx: 14
   - Position: {x: -4.4, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 1.65
     RowIdx: 1
     ColIdx: 15
   - Position: {x: -4.4, y: 0.05, z: 1.6000001}
@@ -1049,7 +1054,7 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: -4.4, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 2.21
     RowIdx: 1
     ColIdx: 19
   - Position: {x: -4.4, y: 0.05, z: 3.2}
@@ -1059,17 +1064,17 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: -4.4, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 1.77
     RowIdx: 1
     ColIdx: 21
   - Position: {x: -4.4, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.45
     RowIdx: 1
     ColIdx: 22
   - Position: {x: -4.4, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.1100001
     RowIdx: 1
     ColIdx: 23
   - Position: {x: -4.4, y: 0.05, z: 4.8}
@@ -1079,22 +1084,22 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: -4, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.22
     RowIdx: 2
     ColIdx: 0
   - Position: {x: -4, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.8
     RowIdx: 2
     ColIdx: 1
   - Position: {x: -4, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 1.8399999
     RowIdx: 2
     ColIdx: 2
   - Position: {x: -4, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.6100001
     RowIdx: 2
     ColIdx: 3
   - Position: {x: -4, y: 0.05, z: -3.2}
@@ -1104,12 +1109,12 @@ MonoBehaviour:
     ColIdx: 4
   - Position: {x: -4, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 2.3200002
     RowIdx: 2
     ColIdx: 5
   - Position: {x: -4, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.74
     RowIdx: 2
     ColIdx: 6
   - Position: {x: -4, y: 0.05, z: -2}
@@ -1119,7 +1124,7 @@ MonoBehaviour:
     ColIdx: 7
   - Position: {x: -4, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.52
     RowIdx: 2
     ColIdx: 8
   - Position: {x: -4, y: 0.05, z: -1.1999999}
@@ -1134,7 +1139,7 @@ MonoBehaviour:
     ColIdx: 10
   - Position: {x: -4, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 2.12
     RowIdx: 2
     ColIdx: 11
   - Position: {x: -4, y: 0.05, z: 0.000000074505806}
@@ -1149,7 +1154,7 @@ MonoBehaviour:
     ColIdx: 13
   - Position: {x: -4, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.79
     RowIdx: 2
     ColIdx: 14
   - Position: {x: -4, y: 0.05, z: 1.2}
@@ -1174,32 +1179,32 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: -4, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 2.76
     RowIdx: 2
     ColIdx: 19
   - Position: {x: -4, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.74
     RowIdx: 2
     ColIdx: 20
   - Position: {x: -4, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 1.69
     RowIdx: 2
     ColIdx: 21
   - Position: {x: -4, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.98
     RowIdx: 2
     ColIdx: 22
   - Position: {x: -4, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.4099998
     RowIdx: 2
     ColIdx: 23
   - Position: {x: -4, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.54
     RowIdx: 2
     ColIdx: 24
   - Position: {x: -3.6, y: 0.05, z: -4.8}
@@ -1219,7 +1224,7 @@ MonoBehaviour:
     ColIdx: 2
   - Position: {x: -3.6, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.9
     RowIdx: 3
     ColIdx: 3
   - Position: {x: -3.6, y: 0.05, z: -3.2}
@@ -1229,7 +1234,7 @@ MonoBehaviour:
     ColIdx: 4
   - Position: {x: -3.6, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 3
     ColIdx: 5
   - Position: {x: -3.6, y: 0.05, z: -2.3999999}
@@ -1239,7 +1244,7 @@ MonoBehaviour:
     ColIdx: 6
   - Position: {x: -3.6, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.53
     RowIdx: 3
     ColIdx: 7
   - Position: {x: -3.6, y: 0.05, z: -1.5999999}
@@ -1254,17 +1259,17 @@ MonoBehaviour:
     ColIdx: 9
   - Position: {x: -3.6, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.75
     RowIdx: 3
     ColIdx: 10
   - Position: {x: -3.6, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 2.38
     RowIdx: 3
     ColIdx: 11
   - Position: {x: -3.6, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 1.95
     RowIdx: 3
     ColIdx: 12
   - Position: {x: -3.6, y: 0.05, z: 0.4000001}
@@ -1279,22 +1284,22 @@ MonoBehaviour:
     ColIdx: 14
   - Position: {x: -3.6, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.5
     RowIdx: 3
     ColIdx: 15
   - Position: {x: -3.6, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.74
     RowIdx: 3
     ColIdx: 16
   - Position: {x: -3.6, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.35
     RowIdx: 3
     ColIdx: 17
   - Position: {x: -3.6, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 1.6600001
     RowIdx: 3
     ColIdx: 18
   - Position: {x: -3.6, y: 0.05, z: 2.8000002}
@@ -1314,12 +1319,12 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: -3.6, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.99
     RowIdx: 3
     ColIdx: 22
   - Position: {x: -3.6, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 1.63
     RowIdx: 3
     ColIdx: 23
   - Position: {x: -3.6, y: 0.05, z: 4.8}
@@ -1329,7 +1334,7 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: -3.2, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 1.85
     RowIdx: 4
     ColIdx: 0
   - Position: {x: -3.2, y: 0.05, z: -4.4}
@@ -1339,12 +1344,12 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: -3.2, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.17
     RowIdx: 4
     ColIdx: 2
   - Position: {x: -3.2, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 4
     ColIdx: 3
   - Position: {x: -3.2, y: 0.05, z: -3.2}
@@ -1354,7 +1359,7 @@ MonoBehaviour:
     ColIdx: 4
   - Position: {x: -3.2, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 2.13
     RowIdx: 4
     ColIdx: 5
   - Position: {x: -3.2, y: 0.05, z: -2.3999999}
@@ -1364,7 +1369,7 @@ MonoBehaviour:
     ColIdx: 6
   - Position: {x: -3.2, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.65
     RowIdx: 4
     ColIdx: 7
   - Position: {x: -3.2, y: 0.05, z: -1.5999999}
@@ -1384,12 +1389,12 @@ MonoBehaviour:
     ColIdx: 10
   - Position: {x: -3.2, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 2.51
     RowIdx: 4
     ColIdx: 11
   - Position: {x: -3.2, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.31
     RowIdx: 4
     ColIdx: 12
   - Position: {x: -3.2, y: 0.05, z: 0.4000001}
@@ -1409,12 +1414,12 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: -3.2, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.92
     RowIdx: 4
     ColIdx: 16
   - Position: {x: -3.2, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 1.79
     RowIdx: 4
     ColIdx: 17
   - Position: {x: -3.2, y: 0.05, z: 2.4}
@@ -1424,27 +1429,27 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: -3.2, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 1.98
     RowIdx: 4
     ColIdx: 19
   - Position: {x: -3.2, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.1
     RowIdx: 4
     ColIdx: 20
   - Position: {x: -3.2, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 1.96
     RowIdx: 4
     ColIdx: 21
   - Position: {x: -3.2, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2
     RowIdx: 4
     ColIdx: 22
   - Position: {x: -3.2, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.6100001
     RowIdx: 4
     ColIdx: 23
   - Position: {x: -3.2, y: 0.05, z: 4.8}
@@ -1469,7 +1474,7 @@ MonoBehaviour:
     ColIdx: 2
   - Position: {x: -2.8, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 1.85
     RowIdx: 5
     ColIdx: 3
   - Position: {x: -2.8, y: 0.05, z: -3.2}
@@ -1484,12 +1489,12 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: -2.8, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.55
     RowIdx: 5
     ColIdx: 6
   - Position: {x: -2.8, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 1.52
     RowIdx: 5
     ColIdx: 7
   - Position: {x: -2.8, y: 0.05, z: -1.5999999}
@@ -1499,17 +1504,17 @@ MonoBehaviour:
     ColIdx: 8
   - Position: {x: -2.8, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.3200002
     RowIdx: 5
     ColIdx: 9
   - Position: {x: -2.8, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 1.95
     RowIdx: 5
     ColIdx: 10
   - Position: {x: -2.8, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 1.73
     RowIdx: 5
     ColIdx: 11
   - Position: {x: -2.8, y: 0.05, z: 0.000000074505806}
@@ -1519,12 +1524,12 @@ MonoBehaviour:
     ColIdx: 12
   - Position: {x: -2.8, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 2.56
     RowIdx: 5
     ColIdx: 13
   - Position: {x: -2.8, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 1.64
     RowIdx: 5
     ColIdx: 14
   - Position: {x: -2.8, y: 0.05, z: 1.2}
@@ -1534,17 +1539,17 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: -2.8, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.44
     RowIdx: 5
     ColIdx: 16
   - Position: {x: -2.8, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.4299998
     RowIdx: 5
     ColIdx: 17
   - Position: {x: -2.8, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 2.8
     RowIdx: 5
     ColIdx: 18
   - Position: {x: -2.8, y: 0.05, z: 2.8000002}
@@ -1554,7 +1559,7 @@ MonoBehaviour:
     ColIdx: 19
   - Position: {x: -2.8, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -3, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 1.98
     RowIdx: 5
     ColIdx: 20
   - Position: {x: -2.8, y: 0.05, z: 3.6000001}
@@ -1589,7 +1594,7 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: -2.3999999, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.48
     RowIdx: 6
     ColIdx: 2
   - Position: {x: -2.3999999, y: 0.05, z: -3.6}
@@ -1599,7 +1604,7 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: -2.3999999, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 2.28
     RowIdx: 6
     ColIdx: 4
   - Position: {x: -2.3999999, y: 0.05, z: -2.8}
@@ -1619,17 +1624,17 @@ MonoBehaviour:
     ColIdx: 7
   - Position: {x: -2.3999999, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.35
     RowIdx: 6
     ColIdx: 8
   - Position: {x: -2.3999999, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.62
     RowIdx: 6
     ColIdx: 9
   - Position: {x: -2.3999999, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.24
     RowIdx: 6
     ColIdx: 10
   - Position: {x: -2.3999999, y: 0.05, z: -0.39999992}
@@ -1649,12 +1654,12 @@ MonoBehaviour:
     ColIdx: 13
   - Position: {x: -2.3999999, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 6
     ColIdx: 14
   - Position: {x: -2.3999999, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.54
     RowIdx: 6
     ColIdx: 15
   - Position: {x: -2.3999999, y: 0.05, z: 1.6000001}
@@ -1669,7 +1674,7 @@ MonoBehaviour:
     ColIdx: 17
   - Position: {x: -2.3999999, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 1.89
     RowIdx: 6
     ColIdx: 18
   - Position: {x: -2.3999999, y: 0.05, z: 2.8000002}
@@ -1679,12 +1684,12 @@ MonoBehaviour:
     ColIdx: 19
   - Position: {x: -2.3999999, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 1.75
     RowIdx: 6
     ColIdx: 20
   - Position: {x: -2.3999999, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.62
     RowIdx: 6
     ColIdx: 21
   - Position: {x: -2.3999999, y: 0.05, z: 4}
@@ -1694,12 +1699,12 @@ MonoBehaviour:
     ColIdx: 22
   - Position: {x: -2.3999999, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 1.89
     RowIdx: 6
     ColIdx: 23
   - Position: {x: -2.3999999, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.1399999
     RowIdx: 6
     ColIdx: 24
   - Position: {x: -2, y: 0.05, z: -4.8}
@@ -1719,7 +1724,7 @@ MonoBehaviour:
     ColIdx: 2
   - Position: {x: -2, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.83
     RowIdx: 7
     ColIdx: 3
   - Position: {x: -2, y: 0.05, z: -3.2}
@@ -1729,32 +1734,32 @@ MonoBehaviour:
     ColIdx: 4
   - Position: {x: -2, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 1.72
     RowIdx: 7
     ColIdx: 5
   - Position: {x: -2, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.1599998
     RowIdx: 7
     ColIdx: 6
   - Position: {x: -2, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.12
     RowIdx: 7
     ColIdx: 7
   - Position: {x: -2, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.26
     RowIdx: 7
     ColIdx: 8
   - Position: {x: -2, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.79
     RowIdx: 7
     ColIdx: 9
   - Position: {x: -2, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.74
     RowIdx: 7
     ColIdx: 10
   - Position: {x: -2, y: 0.05, z: -0.39999992}
@@ -1774,7 +1779,7 @@ MonoBehaviour:
     ColIdx: 13
   - Position: {x: -2, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 1.75
     RowIdx: 7
     ColIdx: 14
   - Position: {x: -2, y: 0.05, z: 1.2}
@@ -1794,7 +1799,7 @@ MonoBehaviour:
     ColIdx: 17
   - Position: {x: -2, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 1.56
     RowIdx: 7
     ColIdx: 18
   - Position: {x: -2, y: 0.05, z: 2.8000002}
@@ -1804,7 +1809,7 @@ MonoBehaviour:
     ColIdx: 19
   - Position: {x: -2, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 1.85
     RowIdx: 7
     ColIdx: 20
   - Position: {x: -2, y: 0.05, z: 3.6000001}
@@ -1814,7 +1819,7 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: -2, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.98
     RowIdx: 7
     ColIdx: 22
   - Position: {x: -2, y: 0.05, z: 4.4}
@@ -1839,7 +1844,7 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: -1.5999999, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 1.7
     RowIdx: 8
     ColIdx: 2
   - Position: {x: -1.5999999, y: 0.05, z: -3.6}
@@ -1859,12 +1864,12 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: -1.5999999, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.26
     RowIdx: 8
     ColIdx: 6
   - Position: {x: -1.5999999, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.87
     RowIdx: 8
     ColIdx: 7
   - Position: {x: -1.5999999, y: 0.05, z: -1.5999999}
@@ -1879,7 +1884,7 @@ MonoBehaviour:
     ColIdx: 9
   - Position: {x: -1.5999999, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.98
     RowIdx: 8
     ColIdx: 10
   - Position: {x: -1.5999999, y: 0.05, z: -0.39999992}
@@ -1909,12 +1914,12 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: -1.5999999, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 1.87
     RowIdx: 8
     ColIdx: 16
   - Position: {x: -1.5999999, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.72
     RowIdx: 8
     ColIdx: 17
   - Position: {x: -1.5999999, y: 0.05, z: 2.4}
@@ -1924,7 +1929,7 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: -1.5999999, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 2.9099998
     RowIdx: 8
     ColIdx: 19
   - Position: {x: -1.5999999, y: 0.05, z: 3.2}
@@ -1934,12 +1939,12 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: -1.5999999, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.8
     RowIdx: 8
     ColIdx: 21
   - Position: {x: -1.5999999, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.6600001
     RowIdx: 8
     ColIdx: 22
   - Position: {x: -1.5999999, y: 0.05, z: 4.4}
@@ -1949,7 +1954,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -1.5999999, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.35
     RowIdx: 8
     ColIdx: 24
   - Position: {x: -1.1999999, y: 0.05, z: -4.8}
@@ -1969,12 +1974,12 @@ MonoBehaviour:
     ColIdx: 2
   - Position: {x: -1.1999999, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.53
     RowIdx: 9
     ColIdx: 3
   - Position: {x: -1.1999999, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 1.72
     RowIdx: 9
     ColIdx: 4
   - Position: {x: -1.1999999, y: 0.05, z: -2.8}
@@ -1984,7 +1989,7 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: -1.1999999, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 3
     RowIdx: 9
     ColIdx: 6
   - Position: {x: -1.1999999, y: 0.05, z: -2}
@@ -2014,7 +2019,7 @@ MonoBehaviour:
     ColIdx: 11
   - Position: {x: -1.1999999, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.67
     RowIdx: 9
     ColIdx: 12
   - Position: {x: -1.1999999, y: 0.05, z: 0.4000001}
@@ -2049,12 +2054,12 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: -1.1999999, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 2.04
     RowIdx: 9
     ColIdx: 19
   - Position: {x: -1.1999999, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.12
     RowIdx: 9
     ColIdx: 20
   - Position: {x: -1.1999999, y: 0.05, z: 3.6000001}
@@ -2064,7 +2069,7 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: -1.1999999, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.96
     RowIdx: 9
     ColIdx: 22
   - Position: {x: -1.1999999, y: 0.05, z: 4.4}
@@ -2074,12 +2079,12 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -1.1999999, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.25
     RowIdx: 9
     ColIdx: 24
   - Position: {x: -0.79999995, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 1.96
     RowIdx: 10
     ColIdx: 0
   - Position: {x: -0.79999995, y: 0.05, z: -4.4}
@@ -2109,12 +2114,12 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: -0.79999995, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.69
     RowIdx: 10
     ColIdx: 6
   - Position: {x: -0.79999995, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 1.72
     RowIdx: 10
     ColIdx: 7
   - Position: {x: -0.79999995, y: 0.05, z: -1.5999999}
@@ -2124,7 +2129,7 @@ MonoBehaviour:
     ColIdx: 8
   - Position: {x: -0.79999995, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 1.54
     RowIdx: 10
     ColIdx: 9
   - Position: {x: -0.79999995, y: 0.05, z: -0.79999995}
@@ -2134,17 +2139,17 @@ MonoBehaviour:
     ColIdx: 10
   - Position: {x: -0.79999995, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 2.74
     RowIdx: 10
     ColIdx: 11
   - Position: {x: -0.79999995, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 1.74
     RowIdx: 10
     ColIdx: 12
   - Position: {x: -0.79999995, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 1.5699999
     RowIdx: 10
     ColIdx: 13
   - Position: {x: -0.79999995, y: 0.05, z: 0.8000001}
@@ -2164,7 +2169,7 @@ MonoBehaviour:
     ColIdx: 16
   - Position: {x: -0.79999995, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.87
     RowIdx: 10
     ColIdx: 17
   - Position: {x: -0.79999995, y: 0.05, z: 2.4}
@@ -2179,32 +2184,32 @@ MonoBehaviour:
     ColIdx: 19
   - Position: {x: -0.79999995, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 1.6800001
     RowIdx: 10
     ColIdx: 20
   - Position: {x: -0.79999995, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 200
     RowIdx: 10
     ColIdx: 21
   - Position: {x: -0.79999995, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 200
     RowIdx: 10
     ColIdx: 22
   - Position: {x: -0.79999995, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 200
     RowIdx: 10
     ColIdx: 23
   - Position: {x: -0.79999995, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 200
     RowIdx: 10
     ColIdx: 24
   - Position: {x: -0.39999992, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 1.53
     RowIdx: 11
     ColIdx: 0
   - Position: {x: -0.39999992, y: 0.05, z: -4.4}
@@ -2324,12 +2329,12 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: -0.39999992, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.76
     RowIdx: 11
     ColIdx: 24
   - Position: {x: 0.000000074505806, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.96
     RowIdx: 12
     ColIdx: 0
   - Position: {x: 0.000000074505806, y: 0.05, z: -4.4}
@@ -2449,7 +2454,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 0.000000074505806, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.53
     RowIdx: 12
     ColIdx: 24
   - Position: {x: 0.4000001, y: 0.05, z: -4.8}
@@ -2459,7 +2464,7 @@ MonoBehaviour:
     ColIdx: 0
   - Position: {x: 0.4000001, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.21
     RowIdx: 13
     ColIdx: 1
   - Position: {x: 0.4000001, y: 0.05, z: -4}
@@ -2569,12 +2574,12 @@ MonoBehaviour:
     ColIdx: 22
   - Position: {x: 0.4000001, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.53
     RowIdx: 13
     ColIdx: 23
   - Position: {x: 0.4000001, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.8600001
     RowIdx: 13
     ColIdx: 24
   - Position: {x: 0.8000001, y: 0.05, z: -4.8}
@@ -2584,12 +2589,12 @@ MonoBehaviour:
     ColIdx: 0
   - Position: {x: 0.8000001, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.69
     RowIdx: 14
     ColIdx: 1
   - Position: {x: 0.8000001, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.48
     RowIdx: 14
     ColIdx: 2
   - Position: {x: 0.8000001, y: 0.05, z: -3.6}
@@ -2599,7 +2604,7 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: 0.8000001, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 1.97
     RowIdx: 14
     ColIdx: 4
   - Position: {x: 0.8000001, y: 0.05, z: -2.8}
@@ -2609,12 +2614,12 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: 0.8000001, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.37
     RowIdx: 14
     ColIdx: 6
   - Position: {x: 0.8000001, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.3200002
     RowIdx: 14
     ColIdx: 7
   - Position: {x: 0.8000001, y: 0.05, z: -1.5999999}
@@ -2664,12 +2669,12 @@ MonoBehaviour:
     ColIdx: 16
   - Position: {x: 0.8000001, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 1.6800001
     RowIdx: 14
     ColIdx: 17
   - Position: {x: 0.8000001, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 1.87
     RowIdx: 14
     ColIdx: 18
   - Position: {x: 0.8000001, y: 0.05, z: 2.8000002}
@@ -2684,7 +2689,7 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: 0.8000001, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 1.51
     RowIdx: 14
     ColIdx: 21
   - Position: {x: 0.8000001, y: 0.05, z: 4}
@@ -2694,17 +2699,17 @@ MonoBehaviour:
     ColIdx: 22
   - Position: {x: 0.8000001, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.92
     RowIdx: 14
     ColIdx: 23
   - Position: {x: 0.8000001, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.3400002
     RowIdx: 14
     ColIdx: 24
   - Position: {x: 1.2, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 1.7
     RowIdx: 15
     ColIdx: 0
   - Position: {x: 1.2, y: 0.05, z: -4.4}
@@ -2714,7 +2719,7 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: 1.2, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.25
     RowIdx: 15
     ColIdx: 2
   - Position: {x: 1.2, y: 0.05, z: -3.6}
@@ -2739,7 +2744,7 @@ MonoBehaviour:
     ColIdx: 6
   - Position: {x: 1.2, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.92
     RowIdx: 15
     ColIdx: 7
   - Position: {x: 1.2, y: 0.05, z: -1.5999999}
@@ -2754,22 +2759,22 @@ MonoBehaviour:
     ColIdx: 9
   - Position: {x: 1.2, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 15
     ColIdx: 10
   - Position: {x: 1.2, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 2.3899999
     RowIdx: 15
     ColIdx: 11
   - Position: {x: 1.2, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.52
     RowIdx: 15
     ColIdx: 12
   - Position: {x: 1.2, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 2.96
     RowIdx: 15
     ColIdx: 13
   - Position: {x: 1.2, y: 0.05, z: 0.8000001}
@@ -2779,7 +2784,7 @@ MonoBehaviour:
     ColIdx: 14
   - Position: {x: 1.2, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.1799998
     RowIdx: 15
     ColIdx: 15
   - Position: {x: 1.2, y: 0.05, z: 1.6000001}
@@ -2799,22 +2804,22 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: 1.2, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 2.78
     RowIdx: 15
     ColIdx: 19
   - Position: {x: 1.2, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 1.53
     RowIdx: 15
     ColIdx: 20
   - Position: {x: 1.2, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.79
     RowIdx: 15
     ColIdx: 21
   - Position: {x: 1.2, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 15
     ColIdx: 22
   - Position: {x: 1.2, y: 0.05, z: 4.4}
@@ -2829,22 +2834,22 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: 1.6000001, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 1.75
     RowIdx: 16
     ColIdx: 0
   - Position: {x: 1.6000001, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 1.96
     RowIdx: 16
     ColIdx: 1
   - Position: {x: 1.6000001, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.55
     RowIdx: 16
     ColIdx: 2
   - Position: {x: 1.6000001, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 1.74
     RowIdx: 16
     ColIdx: 3
   - Position: {x: 1.6000001, y: 0.05, z: -3.2}
@@ -2854,7 +2859,7 @@ MonoBehaviour:
     ColIdx: 4
   - Position: {x: 1.6000001, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 1.95
     RowIdx: 16
     ColIdx: 5
   - Position: {x: 1.6000001, y: 0.05, z: -2.3999999}
@@ -2869,12 +2874,12 @@ MonoBehaviour:
     ColIdx: 7
   - Position: {x: 1.6000001, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 1.63
     RowIdx: 16
     ColIdx: 8
   - Position: {x: 1.6000001, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 16
     ColIdx: 9
   - Position: {x: 1.6000001, y: 0.05, z: -0.79999995}
@@ -2884,57 +2889,57 @@ MonoBehaviour:
     ColIdx: 10
   - Position: {x: 1.6000001, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 2.19
     RowIdx: 16
     ColIdx: 11
   - Position: {x: 1.6000001, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.56
     RowIdx: 16
     ColIdx: 12
   - Position: {x: 1.6000001, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 1.99
     RowIdx: 16
     ColIdx: 13
   - Position: {x: 1.6000001, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.95
     RowIdx: 16
     ColIdx: 14
   - Position: {x: 1.6000001, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.02
     RowIdx: 16
     ColIdx: 15
   - Position: {x: 1.6000001, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.63
     RowIdx: 16
     ColIdx: 16
   - Position: {x: 1.6000001, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.83
     RowIdx: 16
     ColIdx: 17
   - Position: {x: 1.6000001, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 1.76
     RowIdx: 16
     ColIdx: 18
   - Position: {x: 1.6000001, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 1.63
     RowIdx: 16
     ColIdx: 19
   - Position: {x: 1.6000001, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.3899999
     RowIdx: 16
     ColIdx: 20
   - Position: {x: 1.6000001, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 16
     ColIdx: 21
   - Position: {x: 1.6000001, y: 0.05, z: 4}
@@ -2944,7 +2949,7 @@ MonoBehaviour:
     ColIdx: 22
   - Position: {x: 1.6000001, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.4
     RowIdx: 16
     ColIdx: 23
   - Position: {x: 1.6000001, y: 0.05, z: 4.8}
@@ -2959,12 +2964,12 @@ MonoBehaviour:
     ColIdx: 0
   - Position: {x: 2, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.26
     RowIdx: 17
     ColIdx: 1
   - Position: {x: 2, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.24
     RowIdx: 17
     ColIdx: 2
   - Position: {x: 2, y: 0.05, z: -3.6}
@@ -2984,17 +2989,17 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: 2, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 1.54
     RowIdx: 17
     ColIdx: 6
   - Position: {x: 2, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 1.5699999
     RowIdx: 17
     ColIdx: 7
   - Position: {x: 2, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 1.89
     RowIdx: 17
     ColIdx: 8
   - Position: {x: 2, y: 0.05, z: -1.1999999}
@@ -3014,7 +3019,7 @@ MonoBehaviour:
     ColIdx: 11
   - Position: {x: 2, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.65
     RowIdx: 17
     ColIdx: 12
   - Position: {x: 2, y: 0.05, z: 0.4000001}
@@ -3024,12 +3029,12 @@ MonoBehaviour:
     ColIdx: 13
   - Position: {x: 2, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.67
     RowIdx: 17
     ColIdx: 14
   - Position: {x: 2, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.4299998
     RowIdx: 17
     ColIdx: 15
   - Position: {x: 2, y: 0.05, z: 1.6000001}
@@ -3039,12 +3044,12 @@ MonoBehaviour:
     ColIdx: 16
   - Position: {x: 2, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.9099998
     RowIdx: 17
     ColIdx: 17
   - Position: {x: 2, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 2.22
     RowIdx: 17
     ColIdx: 18
   - Position: {x: 2, y: 0.05, z: 2.8000002}
@@ -3059,12 +3064,12 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: 2, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.3
     RowIdx: 17
     ColIdx: 21
   - Position: {x: 2, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.1
     RowIdx: 17
     ColIdx: 22
   - Position: {x: 2, y: 0.05, z: 4.4}
@@ -3074,7 +3079,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 2, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.87
     RowIdx: 17
     ColIdx: 24
   - Position: {x: 2.4, y: 0.05, z: -4.8}
@@ -3089,17 +3094,17 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: 2.4, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 2.79
     RowIdx: 18
     ColIdx: 2
   - Position: {x: 2.4, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 2.15
     RowIdx: 18
     ColIdx: 3
   - Position: {x: 2.4, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 2.3600001
     RowIdx: 18
     ColIdx: 4
   - Position: {x: 2.4, y: 0.05, z: -2.8}
@@ -3109,22 +3114,22 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: 2.4, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.02
     RowIdx: 18
     ColIdx: 6
   - Position: {x: 2.4, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 2.05
     RowIdx: 18
     ColIdx: 7
   - Position: {x: 2.4, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.58
     RowIdx: 18
     ColIdx: 8
   - Position: {x: 2.4, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 1.75
     RowIdx: 18
     ColIdx: 9
   - Position: {x: 2.4, y: 0.05, z: -0.79999995}
@@ -3134,7 +3139,7 @@ MonoBehaviour:
     ColIdx: 10
   - Position: {x: 2.4, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 1.99
     RowIdx: 18
     ColIdx: 11
   - Position: {x: 2.4, y: 0.05, z: 0.000000074505806}
@@ -3154,12 +3159,12 @@ MonoBehaviour:
     ColIdx: 14
   - Position: {x: 2.4, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 1.65
     RowIdx: 18
     ColIdx: 15
   - Position: {x: 2.4, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 1.97
     RowIdx: 18
     ColIdx: 16
   - Position: {x: 2.4, y: 0.05, z: 2}
@@ -3189,12 +3194,12 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: 2.4, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.85
     RowIdx: 18
     ColIdx: 22
   - Position: {x: 2.4, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.92
     RowIdx: 18
     ColIdx: 23
   - Position: {x: 2.4, y: 0.05, z: 4.8}
@@ -3219,7 +3224,7 @@ MonoBehaviour:
     ColIdx: 2
   - Position: {x: 2.8000002, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 1.86
     RowIdx: 19
     ColIdx: 3
   - Position: {x: 2.8000002, y: 0.05, z: -3.2}
@@ -3229,12 +3234,12 @@ MonoBehaviour:
     ColIdx: 4
   - Position: {x: 2.8000002, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 2.1799998
     RowIdx: 19
     ColIdx: 5
   - Position: {x: 2.8000002, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.1
     RowIdx: 19
     ColIdx: 6
   - Position: {x: 2.8000002, y: 0.05, z: -2}
@@ -3264,17 +3269,17 @@ MonoBehaviour:
     ColIdx: 11
   - Position: {x: 2.8000002, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.17
     RowIdx: 19
     ColIdx: 12
   - Position: {x: 2.8000002, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 1.64
     RowIdx: 19
     ColIdx: 13
   - Position: {x: 2.8000002, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 1.9
     RowIdx: 19
     ColIdx: 14
   - Position: {x: 2.8000002, y: 0.05, z: 1.2}
@@ -3284,12 +3289,12 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: 2.8000002, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 1.94
     RowIdx: 19
     ColIdx: 16
   - Position: {x: 2.8000002, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 1.73
     RowIdx: 19
     ColIdx: 17
   - Position: {x: 2.8000002, y: 0.05, z: 2.4}
@@ -3299,7 +3304,7 @@ MonoBehaviour:
     ColIdx: 18
   - Position: {x: 2.8000002, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 2.67
     RowIdx: 19
     ColIdx: 19
   - Position: {x: 2.8000002, y: 0.05, z: 3.2}
@@ -3319,17 +3324,17 @@ MonoBehaviour:
     ColIdx: 22
   - Position: {x: 2.8000002, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.23
     RowIdx: 19
     ColIdx: 23
   - Position: {x: 2.8000002, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.48
     RowIdx: 19
     ColIdx: 24
   - Position: {x: 3.2, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.21
     RowIdx: 20
     ColIdx: 0
   - Position: {x: 3.2, y: 0.05, z: -4.4}
@@ -3349,7 +3354,7 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: 3.2, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 2.5
     RowIdx: 20
     ColIdx: 4
   - Position: {x: 3.2, y: 0.05, z: -2.8}
@@ -3359,7 +3364,7 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: 3.2, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.95
     RowIdx: 20
     ColIdx: 6
   - Position: {x: 3.2, y: 0.05, z: -2}
@@ -3369,7 +3374,7 @@ MonoBehaviour:
     ColIdx: 7
   - Position: {x: 3.2, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.3600001
     RowIdx: 20
     ColIdx: 8
   - Position: {x: 3.2, y: 0.05, z: -1.1999999}
@@ -3389,7 +3394,7 @@ MonoBehaviour:
     ColIdx: 11
   - Position: {x: 3.2, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.24
     RowIdx: 20
     ColIdx: 12
   - Position: {x: 3.2, y: 0.05, z: 0.4000001}
@@ -3404,7 +3409,7 @@ MonoBehaviour:
     ColIdx: 14
   - Position: {x: 3.2, y: 0.05, z: 1.2}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.5
     RowIdx: 20
     ColIdx: 15
   - Position: {x: 3.2, y: 0.05, z: 1.6000001}
@@ -3414,7 +3419,7 @@ MonoBehaviour:
     ColIdx: 16
   - Position: {x: 3.2, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 1.9300001
     RowIdx: 20
     ColIdx: 17
   - Position: {x: 3.2, y: 0.05, z: 2.4}
@@ -3434,12 +3439,12 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: 3.2, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.38
     RowIdx: 20
     ColIdx: 21
   - Position: {x: 3.2, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.53
     RowIdx: 20
     ColIdx: 22
   - Position: {x: 3.2, y: 0.05, z: 4.4}
@@ -3449,7 +3454,7 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 3.2, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 3, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.67
     RowIdx: 20
     ColIdx: 24
   - Position: {x: 3.6000001, y: 0.05, z: -4.8}
@@ -3459,12 +3464,12 @@ MonoBehaviour:
     ColIdx: 0
   - Position: {x: 3.6000001, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.67
     RowIdx: 21
     ColIdx: 1
   - Position: {x: 3.6000001, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 1.99
     RowIdx: 21
     ColIdx: 2
   - Position: {x: 3.6000001, y: 0.05, z: -3.6}
@@ -3474,17 +3479,17 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: 3.6000001, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 2.99
     RowIdx: 21
     ColIdx: 4
   - Position: {x: 3.6000001, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 2.1
     RowIdx: 21
     ColIdx: 5
   - Position: {x: 3.6000001, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 1.77
     RowIdx: 21
     ColIdx: 6
   - Position: {x: 3.6000001, y: 0.05, z: -2}
@@ -3499,7 +3504,7 @@ MonoBehaviour:
     ColIdx: 8
   - Position: {x: 3.6000001, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 1.99
     RowIdx: 21
     ColIdx: 9
   - Position: {x: 3.6000001, y: 0.05, z: -0.79999995}
@@ -3524,7 +3529,7 @@ MonoBehaviour:
     ColIdx: 13
   - Position: {x: 3.6000001, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.99
     RowIdx: 21
     ColIdx: 14
   - Position: {x: 3.6000001, y: 0.05, z: 1.2}
@@ -3534,12 +3539,12 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: 3.6000001, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.29
     RowIdx: 21
     ColIdx: 16
   - Position: {x: 3.6000001, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 1.55
     RowIdx: 21
     ColIdx: 17
   - Position: {x: 3.6000001, y: 0.05, z: 2.4}
@@ -3564,27 +3569,27 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: 3.6000001, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.62
     RowIdx: 21
     ColIdx: 22
   - Position: {x: 3.6000001, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 2.21
     RowIdx: 21
     ColIdx: 23
   - Position: {x: 3.6000001, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.97
     RowIdx: 21
     ColIdx: 24
   - Position: {x: 4, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.33
     RowIdx: 22
     ColIdx: 0
   - Position: {x: 4, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.19
     RowIdx: 22
     ColIdx: 1
   - Position: {x: 4, y: 0.05, z: -4}
@@ -3599,7 +3604,7 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: 4, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 1.54
     RowIdx: 22
     ColIdx: 4
   - Position: {x: 4, y: 0.05, z: -2.8}
@@ -3639,17 +3644,17 @@ MonoBehaviour:
     ColIdx: 11
   - Position: {x: 4, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.67
     RowIdx: 22
     ColIdx: 12
   - Position: {x: 4, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 1.56
     RowIdx: 22
     ColIdx: 13
   - Position: {x: 4, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.8899999
     RowIdx: 22
     ColIdx: 14
   - Position: {x: 4, y: 0.05, z: 1.2}
@@ -3659,12 +3664,12 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: 4, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 1.89
     RowIdx: 22
     ColIdx: 16
   - Position: {x: 4, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.99
     RowIdx: 22
     ColIdx: 17
   - Position: {x: 4, y: 0.05, z: 2.4}
@@ -3679,7 +3684,7 @@ MonoBehaviour:
     ColIdx: 19
   - Position: {x: 4, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.3400002
     RowIdx: 22
     ColIdx: 20
   - Position: {x: 4, y: 0.05, z: 3.6000001}
@@ -3689,7 +3694,7 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: 4, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 1.87
     RowIdx: 22
     ColIdx: 22
   - Position: {x: 4, y: 0.05, z: 4.4}
@@ -3699,17 +3704,17 @@ MonoBehaviour:
     ColIdx: 23
   - Position: {x: 4, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.99
     RowIdx: 22
     ColIdx: 24
   - Position: {x: 4.4, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.24
     RowIdx: 23
     ColIdx: 0
   - Position: {x: 4.4, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.42
     RowIdx: 23
     ColIdx: 1
   - Position: {x: 4.4, y: 0.05, z: -4}
@@ -3719,17 +3724,17 @@ MonoBehaviour:
     ColIdx: 2
   - Position: {x: 4.4, y: 0.05, z: -3.6}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -3.8}
-    Weight: 1
+    Weight: 1.8399999
     RowIdx: 23
     ColIdx: 3
   - Position: {x: 4.4, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 2.26
     RowIdx: 23
     ColIdx: 4
   - Position: {x: 4.4, y: 0.05, z: -2.8}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -3}
-    Weight: 1
+    Weight: 1.97
     RowIdx: 23
     ColIdx: 5
   - Position: {x: 4.4, y: 0.05, z: -2.3999999}
@@ -3739,22 +3744,22 @@ MonoBehaviour:
     ColIdx: 6
   - Position: {x: 4.4, y: 0.05, z: -2}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -2.2}
-    Weight: 1
+    Weight: 1.71
     RowIdx: 23
     ColIdx: 7
   - Position: {x: 4.4, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.49
     RowIdx: 23
     ColIdx: 8
   - Position: {x: 4.4, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 1.52
     RowIdx: 23
     ColIdx: 9
   - Position: {x: 4.4, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.3200002
     RowIdx: 23
     ColIdx: 10
   - Position: {x: 4.4, y: 0.05, z: -0.39999992}
@@ -3764,12 +3769,12 @@ MonoBehaviour:
     ColIdx: 11
   - Position: {x: 4.4, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.0700002
     RowIdx: 23
     ColIdx: 12
   - Position: {x: 4.4, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 2.1799998
     RowIdx: 23
     ColIdx: 13
   - Position: {x: 4.4, y: 0.05, z: 0.8000001}
@@ -3784,7 +3789,7 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: 4.4, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.6399999
     RowIdx: 23
     ColIdx: 16
   - Position: {x: 4.4, y: 0.05, z: 2}
@@ -3794,7 +3799,7 @@ MonoBehaviour:
     ColIdx: 17
   - Position: {x: 4.4, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 1.75
     RowIdx: 23
     ColIdx: 18
   - Position: {x: 4.4, y: 0.05, z: 2.8000002}
@@ -3804,7 +3809,7 @@ MonoBehaviour:
     ColIdx: 19
   - Position: {x: 4.4, y: 0.05, z: 3.2}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.46
     RowIdx: 23
     ColIdx: 20
   - Position: {x: 4.4, y: 0.05, z: 3.6000001}
@@ -3814,12 +3819,12 @@ MonoBehaviour:
     ColIdx: 21
   - Position: {x: 4.4, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.42
     RowIdx: 23
     ColIdx: 22
   - Position: {x: 4.4, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 1.7
     RowIdx: 23
     ColIdx: 23
   - Position: {x: 4.4, y: 0.05, z: 4.8}
@@ -3829,17 +3834,17 @@ MonoBehaviour:
     ColIdx: 24
   - Position: {x: 4.8, y: 0.05, z: -4.8}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.3200002
     RowIdx: 24
     ColIdx: 0
   - Position: {x: 4.8, y: 0.05, z: -4.4}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -4.6}
-    Weight: 1
+    Weight: 2.8600001
     RowIdx: 24
     ColIdx: 1
   - Position: {x: 4.8, y: 0.05, z: -4}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -4.2}
-    Weight: 1
+    Weight: 1.51
     RowIdx: 24
     ColIdx: 2
   - Position: {x: 4.8, y: 0.05, z: -3.6}
@@ -3849,7 +3854,7 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: 4.8, y: 0.05, z: -3.2}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -3.4}
-    Weight: 1
+    Weight: 1.99
     RowIdx: 24
     ColIdx: 4
   - Position: {x: 4.8, y: 0.05, z: -2.8}
@@ -3859,7 +3864,7 @@ MonoBehaviour:
     ColIdx: 5
   - Position: {x: 4.8, y: 0.05, z: -2.3999999}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -2.6}
-    Weight: 1
+    Weight: 2.05
     RowIdx: 24
     ColIdx: 6
   - Position: {x: 4.8, y: 0.05, z: -2}
@@ -3869,37 +3874,37 @@ MonoBehaviour:
     ColIdx: 7
   - Position: {x: 4.8, y: 0.05, z: -1.5999999}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -1.8}
-    Weight: 1
+    Weight: 2.81
     RowIdx: 24
     ColIdx: 8
   - Position: {x: 4.8, y: 0.05, z: -1.1999999}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -1.4}
-    Weight: 1
+    Weight: 2.87
     RowIdx: 24
     ColIdx: 9
   - Position: {x: 4.8, y: 0.05, z: -0.79999995}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -0.99999994}
-    Weight: 1
+    Weight: 2.33
     RowIdx: 24
     ColIdx: 10
   - Position: {x: 4.8, y: 0.05, z: -0.39999992}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -0.5999999}
-    Weight: 1
+    Weight: 1.5699999
     RowIdx: 24
     ColIdx: 11
   - Position: {x: 4.8, y: 0.05, z: 0.000000074505806}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -0.19999993}
-    Weight: 1
+    Weight: 2.81
     RowIdx: 24
     ColIdx: 12
   - Position: {x: 4.8, y: 0.05, z: 0.4000001}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 0.20000009}
-    Weight: 1
+    Weight: 2.25
     RowIdx: 24
     ColIdx: 13
   - Position: {x: 4.8, y: 0.05, z: 0.8000001}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 0.6000001}
-    Weight: 1
+    Weight: 2.52
     RowIdx: 24
     ColIdx: 14
   - Position: {x: 4.8, y: 0.05, z: 1.2}
@@ -3909,22 +3914,22 @@ MonoBehaviour:
     ColIdx: 15
   - Position: {x: 4.8, y: 0.05, z: 1.6000001}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 1.4000001}
-    Weight: 1
+    Weight: 2.76
     RowIdx: 24
     ColIdx: 16
   - Position: {x: 4.8, y: 0.05, z: 2}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 1.8}
-    Weight: 1
+    Weight: 2.97
     RowIdx: 24
     ColIdx: 17
   - Position: {x: 4.8, y: 0.05, z: 2.4}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 2.2}
-    Weight: 1
+    Weight: 2.25
     RowIdx: 24
     ColIdx: 18
   - Position: {x: 4.8, y: 0.05, z: 2.8000002}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 2.6000001}
-    Weight: 1
+    Weight: 1.61
     RowIdx: 24
     ColIdx: 19
   - Position: {x: 4.8, y: 0.05, z: 3.2}
@@ -3934,22 +3939,22 @@ MonoBehaviour:
     ColIdx: 20
   - Position: {x: 4.8, y: 0.05, z: 3.6000001}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 3.4}
-    Weight: 1
+    Weight: 2.1399999
     RowIdx: 24
     ColIdx: 21
   - Position: {x: 4.8, y: 0.05, z: 4}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 3.8}
-    Weight: 1
+    Weight: 2.23
     RowIdx: 24
     ColIdx: 22
   - Position: {x: 4.8, y: 0.05, z: 4.4}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 4.2000003}
-    Weight: 1
+    Weight: 1.76
     RowIdx: 24
     ColIdx: 23
   - Position: {x: 4.8, y: 0.05, z: 4.8}
     PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 4.6000004}
-    Weight: 1
+    Weight: 2.31
     RowIdx: 24
     ColIdx: 24
   settings:
@@ -3957,12 +3962,15 @@ MonoBehaviour:
     TilesInCol: 25
     TileSize: 0.4
     MinYHeight: 0.05
-  displayNodes: 1
+  displayNodes: 0
   nodeRadius: 0.05
   nodeColor: {r: 0, g: 0.17964077, b: 1, a: 0.6392157}
   displayTiles: 1
   walkableTileColor: {r: 0, g: 0.6981132, b: 0, a: 1}
   blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
+  displayWeight: 1
+  weightTextColor: {r: 0, g: 0, b: 0, a: 1}
+  adjustValue: {x: 0.12, y: 0, z: 0.06}
 --- !u!4 &1515440838
 Transform:
   m_ObjectHideFlags: 0

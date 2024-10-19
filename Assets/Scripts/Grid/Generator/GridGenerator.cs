@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using ThetaStar.Grid.Generator.Enum;
+using Random = UnityEngine.Random;
 
 namespace ThetaStar.Grid.Generator
 {
@@ -10,6 +12,7 @@ namespace ThetaStar.Grid.Generator
         [Header("Settings")]
         // Theta Star algorithms work with uniform tiles only
         [SerializeField] private float tileSize = 0.4f;
+        [SerializeField] private bool addRandomWeights = true;
         [SerializeField] private PhysicsMode physicsMode = PhysicsMode.Physics3D;
         [SerializeField, ReadOnly] private Vector3 generationRayDirection = Vector3.down;
         [SerializeField, ReadOnly] private string walkableObjectTag = "Walkable";
@@ -74,7 +77,7 @@ namespace ThetaStar.Grid.Generator
                     else
                     {
                         Vector3 tilePosition = new Vector3(tilePos.x, hitPoint.y, tilePos.z);
-                        currentTile = new Tile(tilePosition, Vector3.zero, 1, row, col);
+                        currentTile = new Tile(tilePosition, Vector3.zero, GenerateRandomWeight(), row, col);
                     }
 
                     grid.AddTile(currentTile);
@@ -82,6 +85,18 @@ namespace ThetaStar.Grid.Generator
             }
 
             grid.CleanupTiles();
+        }
+
+        private float GenerateRandomWeight() 
+        {
+            float weight = 1f;
+
+            if (addRandomWeights && Random.Range(1, 3) == 1) {
+                double value = (double)(new decimal(Random.Range(0.5f, 2f)));
+                weight += (float)Math.Round(value, 2);
+            }
+
+            return weight;
         }
 
         private void OnDrawGizmosSelected()

@@ -9,7 +9,7 @@ namespace ThetaStar.Pathfinding.Grid
     public class GridGraph
     {
         // Flattened 2D Array
-        private short[] tiles;
+        private float[] tiles;
 
         public readonly int sizeX;
         public readonly int sizeY;
@@ -25,15 +25,23 @@ namespace ThetaStar.Pathfinding.Grid
             this.sizeY = sizeY;
             this.sizeXplusOne = sizeX + 1;
 
-            tiles = new short[sizeY * sizeX];
+            tiles = new float[sizeY * sizeX];
         }
 
-        public void SetBlocked(int x, int y, short value)
+        public void SetBlocked(int x, int y, float value)
         {
             tiles[sizeX * y + x] = value;
         }
 
-        public void TrySetBlocked(int x, int y, short value)
+        public float GetWeight(int x, int y) 
+        {
+            if (x >= sizeX) x--;
+            if (y >= sizeY) y--;
+
+            return tiles[sizeX * y + x];
+        }
+
+        public void TrySetBlocked(int x, int y, float value)
         {
             if (IsValidBlock(x, y))
             {
