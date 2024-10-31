@@ -24,6 +24,8 @@ namespace ThetaStar.Grid.Generator
         private const float MAX_DISTANCE = Mathf.Infinity;
         private readonly QueryTriggerInteraction TRIGGER_INTERACTION = QueryTriggerInteraction.Ignore;
 
+        public float TileSize => tileSize;
+
         public void RegenerateGrid()
         {
             if (grid == null) Debug.LogError("UnityGrid component is not set.");

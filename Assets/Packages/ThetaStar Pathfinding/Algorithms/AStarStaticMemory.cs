@@ -115,7 +115,10 @@ namespace ThetaStar.Pathfinding.Algorithms
 
         protected float Weight(int x1, int y1, int x2, int y2)
         {
-            return graph.Distance(x1, y1, x2, y2) * (graph.GetWeight(x1, y1) + graph.GetWeight(x2, y2)) / 2;
+            float weight1 = graph.GetWeight(x1, y1) == -1 ? 1 : graph.GetWeight(x1, y1);
+            float weight2 = graph.GetWeight(x2, y2) == -1 ? 1 : graph.GetWeight(x2, y2);
+
+            return graph.Distance(x1, y1, x2, y2) * (weight1 + weight2) / 2;
         }
 
         protected virtual bool Relax(int u, int v, float weightUV)
@@ -263,7 +266,7 @@ namespace ThetaStar.Pathfinding.Algorithms
                 int x = ToTwoDimX(current);
                 int y = ToTwoDimY(current);
 
-                pathLength += graph.Distance(x, y, prevX, prevY);
+                pathLength += Weight(x, y, prevX, prevY);
 
                 current = Parent(current);
                 prevX = x;

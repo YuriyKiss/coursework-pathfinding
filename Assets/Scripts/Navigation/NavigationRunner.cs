@@ -74,7 +74,7 @@ namespace ThetaStar.Navigation
 
             int[][] path = algorithm.GetPath();
 
-            if (printPathLength) print("Path length: " + algorithm.GetPathLength());
+            if (printPathLength) print("Path length: " + algorithm.GetPathLength() * grid.TileSize);
 
             List<GridTarget> pathConverted = ConvertPath(path);
             DisplayPath(pathConverted);
