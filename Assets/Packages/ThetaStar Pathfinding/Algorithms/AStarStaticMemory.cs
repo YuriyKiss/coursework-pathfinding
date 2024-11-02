@@ -169,7 +169,7 @@ namespace ThetaStar.Pathfinding.Algorithms
             int y1 = ToTwoDimY(node1);
             int x2 = ToTwoDimX(node2);
             int y2 = ToTwoDimY(node2);
-            return graph.Distance(x1, y1, x2, y2);
+            return Weight(x1, y1, x2, y2);
         }
 
         protected float PhysicalDistance(int x1, int y1, int node2)
@@ -261,12 +261,27 @@ namespace ThetaStar.Pathfinding.Algorithms
             int prevY = ToTwoDimY(current);
             current = Parent(current);
 
+            
+            //UnityEngine.Debug.Log($"Partitions amount: {partitions.Count}");
+            //foreach (var partition in partitions) {
+            //    UnityEngine.Debug.Log("Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
+            //}
+
             while (current != -1)
             {
                 int x = ToTwoDimX(current);
                 int y = ToTwoDimY(current);
 
-                pathLength += Weight(x, y, prevX, prevY);
+                float distance = graph.Distance(x, y, prevX, prevY);
+
+                if (this is AStarStaticMemory) {
+                    pathLength += graph.Distance(x, y, prevX, prevY);
+                } else {
+                    var partitions = LineCalculator.Calculate(y, x, prevY, prevX);
+                    foreach (var part in partitions) {
+                        pathLength += distance * (float)part.Percentage * graph.GetWeight(part.Y, part.X);
+                    }
+                }
 
                 current = Parent(current);
                 prevX = x;

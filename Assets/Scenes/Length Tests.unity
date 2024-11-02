@@ -198,8 +198,16 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: -0.5, y: 0.1, z: -5}
-  - {x: 0.5, y: 0.1, z: -4}
-  - {x: 0.5, y: 0.1, z: -3}
+  - {x: -0.5, y: 0.1, z: -4}
+  - {x: -0.5, y: 0.1, z: -3}
+  - {x: -0.5, y: 0.1, z: -2}
+  - {x: -0.5, y: 0.1, z: -1}
+  - {x: -0.5, y: 0.1, z: 0}
+  - {x: -0.5, y: 0.1, z: 1}
+  - {x: -0.5, y: 0.1, z: 2}
+  - {x: -0.5, y: 0.1, z: 3}
+  - {x: 0.5, y: 0.1, z: 4}
+  - {x: 0.5, y: 0.1, z: 5}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -697,7 +705,7 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: 0, y: 0.05, z: -2.5}
     PositionTopLeftCorner: {x: -0.5, y: 0.1, z: -3}
-    Weight: 2.21
+    Weight: 2
     RowIdx: 0
     ColIdx: 2
   - Position: {x: 0, y: 0.05, z: -1.5}
@@ -722,17 +730,17 @@ MonoBehaviour:
     ColIdx: 6
   - Position: {x: 0, y: 0.05, z: 2.5}
     PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 2}
-    Weight: 2.85
+    Weight: 2
     RowIdx: 0
     ColIdx: 7
   - Position: {x: 0, y: 0.05, z: 3.5}
     PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 3}
-    Weight: 2.97
+    Weight: 1
     RowIdx: 0
     ColIdx: 8
   - Position: {x: 0, y: 0.05, z: 4.5}
     PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 4}
-    Weight: 2.7
+    Weight: 1
     RowIdx: 0
     ColIdx: 9
   settings:
@@ -868,7 +876,7 @@ MonoBehaviour:
       Col: 0
     End:
       Row: 1
-      Col: 2
+      Col: 10
   drawPath: 1
   lineRenderer: {fileID: 178758572}
   displayPathString: 0
