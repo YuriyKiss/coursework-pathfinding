@@ -11,26 +11,59 @@ namespace ThetaStar.Pathfinding.Algorithms {
     }
 
     public class LineCalculator {
-
-        public static List<GridPartitions> Calculate(int x1, int y1, int x2, int y2) {
-            if (x1 == x2) {
-                return VerticalPartitions(x1, y1, y2);
+        // Calculates intersection lengths of a grid
+        public static (List<GridPartitions>, bool) Calculate(int x1, int y1, int x2, int y2) {
+            if (y1 == y2) {
+                //UnityEngine.Debug.Log("Vertical");
+                return (VerticalPartitions(y1, x1, x2), true);
             }
             
+            if (x1 == x2) {
+                //UnityEngine.Debug.Log("Horizontal");
+                return (HorizontalPartitions(y1, y2, x1), true);
+            }
+
             var partitions = new List<GridPartitions>();
             var (slope, intercept) = CalculateLineEquation(x1, y1, x2, y2);
 
             int startX = x1 > x2 ? x2 : x1;
-            int endX = x1 > x2 ? x1 - 1 : x2 - 1;
+            int endX = x1 > x2 ? x1 : x2;
             int startY = y1 > y2 ? y2 : y1;
             int endY = y1 > y2 ? y1 : y2;
-            for (int i = startX; i <= endX; ++i) { 
-                for (int j = startY; j <= endY; ++j) {
-                    partitions.Add(new GridPartitions()  {
-                        X = i,
-                        Y = j,
-                        Length = CalculateIntersectionLength(slope, intercept, (i, j)),
-                        Percentage = -1});
+
+            if ((x1 < x2 && y1 > y2) || (x1 > x2 && y1 < y2)) {
+                //UnityEngine.Debug.Log("I and III quarter");
+                for (int i = startX; i <= endX; ++i) {
+                    for (int j = startY; j <= endY; ++j) {
+                        double left = i;
+                        double right = i + 1;
+                        double top = j + 1;
+                        double bottom = j;
+
+                        partitions.Add(new GridPartitions() {
+                            X = i,
+                            Y = j,
+                            Length = CalculateIntersectionLength(slope, intercept, left, right, top, bottom),
+                            Percentage = -1
+                        });
+                    }
+                }
+            } else if ((x1 < x2 && y1 < y2) || (x1 > x2 && y1 > y2)) {
+                //UnityEngine.Debug.Log("II and IV quarter");
+                for (int i = startX; i <= endX; ++i) {
+                    for (int j = startY; j <= endY - 1; ++j) {
+                        double left = i;
+                        double right = i + 1;
+                        double top = j + 1;
+                        double bottom = j;
+
+                        partitions.Add(new GridPartitions() {
+                            X = i,
+                            Y = j,
+                            Length = CalculateIntersectionLength(slope, intercept, left, right, top, bottom),
+                            Percentage = -1
+                        });
+                    }
                 }
             }
 
@@ -41,26 +74,50 @@ namespace ThetaStar.Pathfinding.Algorithms {
                 partitions[i] = partition;
             }
 
-            return partitions;
+            return (partitions, false);
         }
 
         private static List<GridPartitions> VerticalPartitions(int x, int y1, int y2) {
             var partitions = new List<GridPartitions>();
+            float percentage = 1f / MathF.Abs(y1 - y2);
             
             if (y1 > y2) {
-                float percentage = 1f / (y1 - y2);
-
-                for (int i = y1; i > y2; i--) {
+                for (int i = y1; i >= y2; i--) {
                     partitions.Add(new GridPartitions() {
-                        X = x, Y = i, Length = 1, Percentage = percentage
+                        X = i, Y = x, Length = 1, Percentage = percentage
                     });
                 }
             } else {
-                float percentage = 1f / (y2 - y1);
-
-                for (int i = y1 + 1; i <= y2; i++) {
+                for (int i = y1; i <= y2; i++) {
                     partitions.Add(new GridPartitions() {
-                        X = x, Y = i, Length = 1, Percentage = percentage
+                        X = i, Y = x, Length = 1, Percentage = percentage
+                    });
+                }
+            }
+
+            return partitions;
+        }
+
+        private static List<GridPartitions> HorizontalPartitions(int x1, int x2, int y) {
+            var partitions = new List<GridPartitions>();
+            float percentage = 1f / MathF.Abs(x1 - x2);
+
+            if (x1 > x2) {
+                for (int i = x1; i >= x2; i--) {
+                    partitions.Add(new GridPartitions() {
+                        X = y,
+                        Y = i,
+                        Length = 1,
+                        Percentage = percentage
+                    });
+                }
+            } else {
+                for (int i = x1; i <= x2; i++) {
+                    partitions.Add(new GridPartitions() {
+                        X = y,
+                        Y = i,
+                        Length = 1,
+                        Percentage = percentage
                     });
                 }
             }
@@ -82,13 +139,7 @@ namespace ThetaStar.Pathfinding.Algorithms {
             return (slope, intercept);
         }
 
-        static double CalculateIntersectionLength(double slope, double intercept, (int cellX, int cellY) cell) {
-            // Cell boundaries
-            double left = cell.cellX;
-            double right = cell.cellX + 1;
-            double top = cell.cellY;
-            double bottom = cell.cellY - 1;
-
+        static double CalculateIntersectionLength(double slope, double intercept, double left, double right, double top, double bottom) {
             // List to store intersection points
             List<(double x, double y)> intersections = new List<(double x, double y)> {
                 // Check intersection with left edge

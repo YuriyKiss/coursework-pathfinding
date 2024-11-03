@@ -16,14 +16,17 @@ namespace ThetaStar.Grid
         [SerializeField] private float nodeRadius = 0.05f;
         [SerializeField] private Color nodeColor = new Color(0, 0.2f, 1, 0.5f);
         [Space, SerializeField] private bool displayTiles = false;
+        [SerializeField] private float TILE_SIZE_MODIFIER = 0.8f;
         [SerializeField] private Color walkableTileColor = Color.green;
         [SerializeField] private Color blockedTileColor = Color.red;
         [Space, SerializeField] private bool displayWeight = false;
         [SerializeField] private Color weightTextColor = Color.black;
         [SerializeField] private Vector3 adjustValue = Vector3.zero;
+        [Space, SerializeField] private bool displayTileIndex = false;
+        [SerializeField] private Color indexTextColor = Color.black;
+        [SerializeField] private Vector3 indexAdjustValue = Vector3.zero;
 
         private const float TILE_HEIGHT = 0.05f;
-        private const float TILE_SIZE_MODIFIER = 0.8f;
 
         public List<Tile> GetTiles() => tiles;
         public int TilesInRow => settings.TilesInRow;
@@ -146,6 +149,10 @@ namespace ThetaStar.Grid
             {
                 DisplayWeight();
             }
+
+            if (displayTileIndex) {
+                DisplayIndex();
+            }
         }
 
         private void DisplayTiles()
@@ -189,6 +196,21 @@ namespace ThetaStar.Grid
                     Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
 
                     Handles.Label(tileTopLeftPosition + adjustValue, tiles[row * TilesInRow + col].Weight.ToString(), style);
+                }
+            }
+        }
+
+        private void DisplayIndex() {
+            for (int row = 0; row <= TilesInCol - 1; row++) {
+                for (int col = 0; col <= TilesInRow - 1; col++) {
+                    GUIStyle style = new GUIStyle();
+                    style.normal.textColor = indexTextColor;
+
+                    Vector3 tilePosition = GetTilePosition(row, col);
+                    Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
+
+                    Handles.Label(tileTopLeftPosition + indexAdjustValue, "[" + row.ToString() + "; " +
+                        col.ToString() + "]", style);
                 }
             }
         }

@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using ThetaStar.Pathfinding.Datatypes;
 using ThetaStar.Pathfinding.Grid;
 using ThetaStar.Pathfinding.PriorityQueue;
@@ -115,10 +116,35 @@ namespace ThetaStar.Pathfinding.Algorithms
 
         protected float Weight(int x1, int y1, int x2, int y2)
         {
-            float weight1 = graph.GetWeight(x1, y1) == -1 ? 1 : graph.GetWeight(x1, y1);
-            float weight2 = graph.GetWeight(x2, y2) == -1 ? 1 : graph.GetWeight(x2, y2);
+            float weight = 1f;
 
-            return graph.Distance(x1, y1, x2, y2) * (weight1 + weight2) / 2;
+            if (x1 > x2 && y1 > y2) {
+                weight = graph.GetWeight(x2, y2);
+            } else if (x1 > x2 && y1 == y2) {
+                var secondWeight = y2 - 1 >= 0 ? graph.GetWeight(x2, y2 - 1) : graph.GetWeight(x2, y2);
+                if (secondWeight == -1) secondWeight = graph.GetWeight(x2, y2);
+                weight = (graph.GetWeight(x2, y2) + secondWeight) / 2; 
+            } else if (x1 > x2 && y1 < y2) {
+                weight = graph.GetWeight(x2, y1);
+            } else if (x1 == x2 && y1 > y2) {
+                var secondWeight = x2 - 1 >= 0 ? graph.GetWeight(x2 - 1, y2) : graph.GetWeight(x2, y2);
+                if (secondWeight == -1) secondWeight = graph.GetWeight(x2, y2);
+                weight = (graph.GetWeight(x2, y2) + secondWeight) / 2;
+            } else if (x1 == x2 && y1 < y2) {
+                var secondWeight = x1 - 1 >= 0 ? graph.GetWeight(x1 - 1, y1) : graph.GetWeight(x1, y1);
+                if (secondWeight == -1) secondWeight = graph.GetWeight(x1, y1);
+                weight = (graph.GetWeight(x1, y1) + secondWeight) / 2;
+            } else if (x1 < x2 && y1 > y2) {
+                weight = graph.GetWeight(x1, y2);
+            } else if (x1 < x2 && y1 == y2) {
+                var secondWeight = y1 - 1 >= 0 ? graph.GetWeight(x1, y1 - 1) : graph.GetWeight(x1, y1);
+                if (secondWeight == -1) secondWeight = graph.GetWeight(x1, y1);
+                weight = (graph.GetWeight(x1, y1) + secondWeight) / 2;
+            } else if (x1 < x2 && y1 < y2) {
+                weight = graph.GetWeight(x1, y1);
+            }
+
+            return graph.Distance(x1, y1, x2, y2) * weight;
         }
 
         protected virtual bool Relax(int u, int v, float weightUV)
@@ -261,12 +287,7 @@ namespace ThetaStar.Pathfinding.Algorithms
             int prevY = ToTwoDimY(current);
             current = Parent(current);
 
-            
-            //UnityEngine.Debug.Log($"Partitions amount: {partitions.Count}");
-            //foreach (var partition in partitions) {
-            //    UnityEngine.Debug.Log("Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
-            //}
-
+            int iter = 1;
             while (current != -1)
             {
                 int x = ToTwoDimX(current);
@@ -274,23 +295,27 @@ namespace ThetaStar.Pathfinding.Algorithms
 
                 float distance = graph.Distance(x, y, prevX, prevY);
 
-                if (this is AStarStaticMemory) {
-                    pathLength += graph.Distance(x, y, prevX, prevY);
+                (var partitions, var isPrimeLine) = LineCalculator.Calculate(y, x, prevY, prevX);
+                foreach (var partition in partitions) {
+                    UnityEngine.Debug.Log(iter + ". Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
+                }
+                if (isPrimeLine) {
+                    for (int i = 0; i < partitions.Count - 1; ++i) {
+                        pathLength += Weight(partitions[i].Y, partitions[i].X, partitions[i + 1].Y, partitions[i + 1].X);
+                    }
                 } else {
-                    var partitions = LineCalculator.Calculate(y, x, prevY, prevX);
-                    foreach (var part in partitions) {
-                        pathLength += distance * (float)part.Percentage * graph.GetWeight(part.Y, part.X);
+                    for (int i = 0; i < partitions.Count; ++i) {
+                        pathLength += distance * (float)partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
                     }
                 }
 
                 current = Parent(current);
                 prevX = x;
                 prevY = y;
+                iter++;
             }
-
             return pathLength;
         }
-
         protected override bool Selected(int index)
         {
             return Visited(index);
