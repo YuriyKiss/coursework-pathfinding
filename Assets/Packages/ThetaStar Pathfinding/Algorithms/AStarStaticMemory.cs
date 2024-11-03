@@ -123,23 +123,31 @@ namespace ThetaStar.Pathfinding.Algorithms
             } else if (x1 > x2 && y1 == y2) {
                 var secondWeight = y2 - 1 >= 0 ? graph.GetWeight(x2, y2 - 1) : graph.GetWeight(x2, y2);
                 if (secondWeight == -1) secondWeight = graph.GetWeight(x2, y2);
-                weight = (graph.GetWeight(x2, y2) + secondWeight) / 2; 
+                var firstWeight = graph.GetWeight(x2, y2);
+                if (firstWeight == -1) firstWeight = secondWeight;
+                weight = (firstWeight + secondWeight) / 2; 
             } else if (x1 > x2 && y1 < y2) {
                 weight = graph.GetWeight(x2, y1);
             } else if (x1 == x2 && y1 > y2) {
                 var secondWeight = x2 - 1 >= 0 ? graph.GetWeight(x2 - 1, y2) : graph.GetWeight(x2, y2);
                 if (secondWeight == -1) secondWeight = graph.GetWeight(x2, y2);
-                weight = (graph.GetWeight(x2, y2) + secondWeight) / 2;
+                var firstWeight = graph.GetWeight(x2, y2);
+                if (firstWeight == -1) firstWeight = secondWeight;
+                weight = (firstWeight + secondWeight) / 2;
             } else if (x1 == x2 && y1 < y2) {
                 var secondWeight = x1 - 1 >= 0 ? graph.GetWeight(x1 - 1, y1) : graph.GetWeight(x1, y1);
                 if (secondWeight == -1) secondWeight = graph.GetWeight(x1, y1);
-                weight = (graph.GetWeight(x1, y1) + secondWeight) / 2;
+                var firstWeight = graph.GetWeight(x1, y1);
+                if (firstWeight == -1) firstWeight = secondWeight;
+                weight = (firstWeight + secondWeight) / 2;
             } else if (x1 < x2 && y1 > y2) {
                 weight = graph.GetWeight(x1, y2);
             } else if (x1 < x2 && y1 == y2) {
                 var secondWeight = y1 - 1 >= 0 ? graph.GetWeight(x1, y1 - 1) : graph.GetWeight(x1, y1);
                 if (secondWeight == -1) secondWeight = graph.GetWeight(x1, y1);
-                weight = (graph.GetWeight(x1, y1) + secondWeight) / 2;
+                var firstWeight = graph.GetWeight(x1, y1);
+                if (firstWeight == -1) firstWeight = secondWeight;
+                weight = (firstWeight + secondWeight) / 2;
             } else if (x1 < x2 && y1 < y2) {
                 weight = graph.GetWeight(x1, y1);
             }
@@ -195,7 +203,7 @@ namespace ThetaStar.Pathfinding.Algorithms
             int y1 = ToTwoDimY(node1);
             int x2 = ToTwoDimX(node2);
             int y2 = ToTwoDimY(node2);
-            return Weight(x1, y1, x2, y2);
+            return graph.Distance(x1, y1, x2, y2);
         }
 
         protected float PhysicalDistance(int x1, int y1, int node2)
@@ -287,7 +295,7 @@ namespace ThetaStar.Pathfinding.Algorithms
             int prevY = ToTwoDimY(current);
             current = Parent(current);
 
-            int iter = 1;
+            //int iter = 1;
             while (current != -1)
             {
                 int x = ToTwoDimX(current);
@@ -296,9 +304,9 @@ namespace ThetaStar.Pathfinding.Algorithms
                 float distance = graph.Distance(x, y, prevX, prevY);
 
                 (var partitions, var isPrimeLine) = LineCalculator.Calculate(y, x, prevY, prevX);
-                foreach (var partition in partitions) {
-                    UnityEngine.Debug.Log(iter + ". Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
-                }
+                //foreach (var partition in partitions) {
+                    //UnityEngine.Debug.Log(iter + ". Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
+                //}
                 if (isPrimeLine) {
                     for (int i = 0; i < partitions.Count - 1; ++i) {
                         pathLength += Weight(partitions[i].Y, partitions[i].X, partitions[i + 1].Y, partitions[i + 1].X);
@@ -312,7 +320,7 @@ namespace ThetaStar.Pathfinding.Algorithms
                 current = Parent(current);
                 prevX = x;
                 prevY = y;
-                iter++;
+                //iter++;
             }
             return pathLength;
         }
