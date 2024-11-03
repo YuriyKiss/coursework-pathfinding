@@ -196,18 +196,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: -0.5, y: 0.1, z: -5}
-  - {x: -0.5, y: 0.1, z: -4}
-  - {x: -0.5, y: 0.1, z: -3}
-  - {x: -0.5, y: 0.1, z: -2}
-  - {x: -0.5, y: 0.1, z: -1}
-  - {x: -0.5, y: 0.1, z: 0}
-  - {x: -0.5, y: 0.1, z: 1}
-  - {x: -0.5, y: 0.1, z: 2}
-  - {x: -0.5, y: 0.1, z: 3}
-  - {x: 0.5, y: 0.1, z: 4}
-  - {x: 0.5, y: 0.1, z: 5}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -464,6 +453,8 @@ GameObject:
   - component: {fileID: 1328793255}
   - component: {fileID: 1328793260}
   - component: {fileID: 1328793258}
+  - component: {fileID: 1328793262}
+  - component: {fileID: 1328793261}
   m_Layer: 0
   m_Name: Grid Generator
   m_TagString: Untagged
@@ -481,7 +472,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 10}
+  m_LocalScale: {x: 4, y: 2, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1965162176}
@@ -498,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a410ec354ed2e49bab281438d3c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 1515440836}
+  grid: {fileID: 1328793262}
   tileSize: 1
   addRandomWeights: 1
   physicsMode: 2
@@ -525,6 +516,264 @@ MonoBehaviour:
   TextInfo: Grid Generator will use this object's transform information (position
     and scale) to create grid.
   spaceMessage: 
+--- !u!114 &1328793261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328793254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a400b8bac363a2949a0b416b6e0bc5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1328793262}
+  algorithmType: 4
+  goals:
+    Start:
+      Row: 2
+      Col: 4
+    End:
+      Row: 0
+      Col: 0
+  drawPath: 1
+  lineRenderer: {fileID: 178758572}
+  displayPathString: 0
+  printAlgorithmRuntime: 0
+  printPathLength: 1
+  multipleTestsAmount: 100
+--- !u!114 &1328793262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328793254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d948c98ecca4af48a9ccefea9ea353a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - Position: {x: -1.5, y: 0.05, z: -4.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 0
+  - Position: {x: -1.5, y: 0.05, z: -3.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: -4}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 1
+  - Position: {x: -1.5, y: 0.05, z: -2.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: -3}
+    Weight: 2.47
+    RowIdx: 0
+    ColIdx: 2
+  - Position: {x: -1.5, y: 0.05, z: -1.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: -2}
+    Weight: 1.81
+    RowIdx: 0
+    ColIdx: 3
+  - Position: {x: -1.5, y: 0.05, z: -0.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: -1}
+    Weight: 2.52
+    RowIdx: 0
+    ColIdx: 4
+  - Position: {x: -1.5, y: 0.05, z: 0.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: 0}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 5
+  - Position: {x: -1.5, y: 0.05, z: 1.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 6
+  - Position: {x: -1.5, y: 0.05, z: 2.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: 2}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 7
+  - Position: {x: -1.5, y: 0.05, z: 3.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 8
+  - Position: {x: -1.5, y: 0.05, z: 4.5}
+    PositionTopLeftCorner: {x: -2, y: 0.1, z: 4}
+    Weight: 2.98
+    RowIdx: 0
+    ColIdx: 9
+  - Position: {x: -0.5, y: 0.05, z: -4.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: -5}
+    Weight: 2.9
+    RowIdx: 1
+    ColIdx: 0
+  - Position: {x: -0.5, y: 0.05, z: -3.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: -4}
+    Weight: 2.1799998
+    RowIdx: 1
+    ColIdx: 1
+  - Position: {x: -0.5, y: 0.05, z: -2.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: -3}
+    Weight: 1.56
+    RowIdx: 1
+    ColIdx: 2
+  - Position: {x: -0.5, y: 0.05, z: -1.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: -2}
+    Weight: 2.31
+    RowIdx: 1
+    ColIdx: 3
+  - Position: {x: -0.5, y: 0.05, z: -0.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: -1}
+    Weight: 2.3
+    RowIdx: 1
+    ColIdx: 4
+  - Position: {x: -0.5, y: 0.05, z: 0.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: 0}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 5
+  - Position: {x: -0.5, y: 0.05, z: 1.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 6
+  - Position: {x: -0.5, y: 0.05, z: 2.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: 2}
+    Weight: 1.55
+    RowIdx: 1
+    ColIdx: 7
+  - Position: {x: -0.5, y: 0.05, z: 3.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 8
+  - Position: {x: -0.5, y: 0.05, z: 4.5}
+    PositionTopLeftCorner: {x: -1, y: 0.1, z: 4}
+    Weight: 2.8600001
+    RowIdx: 1
+    ColIdx: 9
+  - Position: {x: 0.5, y: 0.05, z: -4.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: -5}
+    Weight: 1.8
+    RowIdx: 2
+    ColIdx: 0
+  - Position: {x: 0.5, y: 0.05, z: -3.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: -4}
+    Weight: 2.8200002
+    RowIdx: 2
+    ColIdx: 1
+  - Position: {x: 0.5, y: 0.05, z: -2.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: -3}
+    Weight: 2.1599998
+    RowIdx: 2
+    ColIdx: 2
+  - Position: {x: 0.5, y: 0.05, z: -1.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: -2}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 3
+  - Position: {x: 0.5, y: 0.05, z: -0.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: -1}
+    Weight: 2.76
+    RowIdx: 2
+    ColIdx: 4
+  - Position: {x: 0.5, y: 0.05, z: 0.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: 0}
+    Weight: 2.0900002
+    RowIdx: 2
+    ColIdx: 5
+  - Position: {x: 0.5, y: 0.05, z: 1.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 6
+  - Position: {x: 0.5, y: 0.05, z: 2.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: 2}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 7
+  - Position: {x: 0.5, y: 0.05, z: 3.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: 3}
+    Weight: 2.9
+    RowIdx: 2
+    ColIdx: 8
+  - Position: {x: 0.5, y: 0.05, z: 4.5}
+    PositionTopLeftCorner: {x: 0, y: 0.1, z: 4}
+    Weight: 2.29
+    RowIdx: 2
+    ColIdx: 9
+  - Position: {x: 1.5, y: 0.05, z: -4.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -5}
+    Weight: 2.1
+    RowIdx: 3
+    ColIdx: 0
+  - Position: {x: 1.5, y: 0.05, z: -3.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -4}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 1
+  - Position: {x: 1.5, y: 0.05, z: -2.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 2
+  - Position: {x: 1.5, y: 0.05, z: -1.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -2}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 3
+  - Position: {x: 1.5, y: 0.05, z: -0.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -1}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 4
+  - Position: {x: 1.5, y: 0.05, z: 0.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 0}
+    Weight: 2.3400002
+    RowIdx: 3
+    ColIdx: 5
+  - Position: {x: 1.5, y: 0.05, z: 1.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 6
+  - Position: {x: 1.5, y: 0.05, z: 2.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 2}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 7
+  - Position: {x: 1.5, y: 0.05, z: 3.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 3}
+    Weight: 1.8399999
+    RowIdx: 3
+    ColIdx: 8
+  - Position: {x: 1.5, y: 0.05, z: 4.5}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 4}
+    Weight: 1.9300001
+    RowIdx: 3
+    ColIdx: 9
+  settings:
+    TilesInRow: 10
+    TilesInCol: 4
+    TileSize: 1
+    MinYHeight: 0.05
+  displayNodes: 0
+  nodeRadius: 0.05
+  nodeColor: {r: 0, g: 0.17964077, b: 1, a: 0.6392157}
+  displayTiles: 1
+  TILE_SIZE_MODIFIER: 0.8
+  walkableTileColor: {r: 0, g: 0.6981132, b: 0, a: 1}
+  blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
+  displayWeight: 1
+  weightTextColor: {r: 0, g: 0, b: 0, a: 1}
+  adjustValue: {x: 0.38, y: 0, z: 0.43}
+  displayTileIndex: 0
+  indexTextColor: {r: 0, g: 0, b: 0, a: 1}
+  indexAdjustValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1372752900
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +803,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 10}
+  m_LocalScale: {x: 4, y: 0.1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1434279602}
@@ -662,132 +911,6 @@ Transform:
   - {fileID: 1372752901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1515440835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1515440838}
-  - component: {fileID: 1515440839}
-  - component: {fileID: 1515440836}
-  m_Layer: 0
-  m_Name: Unity Grid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1515440836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515440835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d948c98ecca4af48a9ccefea9ea353a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiles:
-  - Position: {x: 0, y: 0.05, z: -4.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: -5}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 0
-  - Position: {x: 0, y: 0.05, z: -3.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: -4}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 1
-  - Position: {x: 0, y: 0.05, z: -2.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: -3}
-    Weight: 2
-    RowIdx: 0
-    ColIdx: 2
-  - Position: {x: 0, y: 0.05, z: -1.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: -2}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 3
-  - Position: {x: 0, y: 0.05, z: -0.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: -1}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 4
-  - Position: {x: 0, y: 0.05, z: 0.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 0}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 5
-  - Position: {x: 0, y: 0.05, z: 1.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 1}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 6
-  - Position: {x: 0, y: 0.05, z: 2.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 2}
-    Weight: 2
-    RowIdx: 0
-    ColIdx: 7
-  - Position: {x: 0, y: 0.05, z: 3.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 3}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 8
-  - Position: {x: 0, y: 0.05, z: 4.5}
-    PositionTopLeftCorner: {x: -0.5, y: 0.1, z: 4}
-    Weight: 1
-    RowIdx: 0
-    ColIdx: 9
-  settings:
-    TilesInRow: 10
-    TilesInCol: 1
-    TileSize: 1
-    MinYHeight: 0.05
-  displayNodes: 0
-  nodeRadius: 0.05
-  nodeColor: {r: 0, g: 0.17964077, b: 1, a: 0.6392157}
-  displayTiles: 1
-  walkableTileColor: {r: 0, g: 0.6981132, b: 0, a: 1}
-  blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
-  displayWeight: 1
-  weightTextColor: {r: 0, g: 0, b: 0, a: 1}
-  adjustValue: {x: 0.38, y: 0, z: 0.43}
---- !u!4 &1515440838
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515440835}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1965162176}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1515440839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515440835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de656c0cead6a9e498152dc53bb3da27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isReady: 0
-  TextInfo: This script will save all unity grid related data. It also allows to
-    work with the data properly.
-  spaceMessage: 
 --- !u!1 &1965162175
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,87 +941,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1328793255}
-  - {fileID: 1515440838}
-  - {fileID: 2045078620}
   - {fileID: 178758571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2045078619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045078620}
-  - component: {fileID: 2045078622}
-  - component: {fileID: 2045078621}
-  m_Layer: 0
-  m_Name: Navigation Runner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2045078620
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045078619}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1965162176}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2045078621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045078619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a400b8bac363a2949a0b416b6e0bc5c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 1515440836}
-  algorithmType: 1
-  goals:
-    Start:
-      Row: 0
-      Col: 0
-    End:
-      Row: 1
-      Col: 10
-  drawPath: 1
-  lineRenderer: {fileID: 178758572}
-  displayPathString: 0
-  printAlgorithmRuntime: 0
-  printPathLength: 1
-  multipleTestsAmount: 100
---- !u!114 &2045078622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045078619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de656c0cead6a9e498152dc53bb3da27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isReady: 0
-  TextInfo: Select algoirithm, set goals and press compute path after Unity Grid
-    was prepared.
-  spaceMessage: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -301,10 +301,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: -5, y: 0.1, z: -5}
-  - {x: 0.6000001, y: 0.1, z: -4.2}
-  - {x: 5.0000005, y: 0.1, z: 5.0000005}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3926,11 +3923,15 @@ MonoBehaviour:
   nodeRadius: 0.05
   nodeColor: {r: 0, g: 0.17964077, b: 1, a: 0.6392157}
   displayTiles: 1
+  TILE_SIZE_MODIFIER: 0.8
   walkableTileColor: {r: 0, g: 0.6981132, b: 0, a: 1}
   blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
   displayWeight: 1
   weightTextColor: {r: 0, g: 0, b: 0, a: 1}
   adjustValue: {x: 0.12, y: 0, z: 0.06}
+  displayTileIndex: 0
+  indexTextColor: {r: 0, g: 0, b: 0, a: 1}
+  indexAdjustValue: {x: 0, y: 0, z: 0}
 --- !u!4 &1515440838
 Transform:
   m_ObjectHideFlags: 0
@@ -4148,7 +4149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 1515440836}
-  algorithmType: 4
+  algorithmType: 1
   goals:
     Start:
       Row: 0
@@ -4159,7 +4160,7 @@ MonoBehaviour:
   drawPath: 1
   lineRenderer: {fileID: 178758572}
   displayPathString: 0
-  printAlgorithmRuntime: 0
+  printAlgorithmRuntime: 1
   printPathLength: 1
   multipleTestsAmount: 100
 --- !u!114 &2045078622
