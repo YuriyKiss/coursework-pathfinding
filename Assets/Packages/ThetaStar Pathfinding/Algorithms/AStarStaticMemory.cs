@@ -102,10 +102,11 @@ namespace ThetaStar.Pathfinding.Algorithms
             if (!graph.NeighbourLineOfSight(currentX, currentY, x, y))
                 return;
 
-            if (Relax(current, destination, Weight(currentX, currentY, x, y)))
+            float weight = Weight(currentX, currentY, x, y);
+            if (Relax(current, destination, weight))
             {
                 // If relaxation is done.
-                pq.DecreaseKey(destination, Distance(destination) + Heuristic(x, y));
+                pq.DecreaseKey(destination, Distance(destination) + weight);
             }
         }
 
@@ -117,39 +118,47 @@ namespace ThetaStar.Pathfinding.Algorithms
         protected float Weight(int x1, int y1, int x2, int y2)
         {
             float weight = 1f;
+            float secondWeight = 1f;
 
-            if (x1 > x2 && y1 > y2) {
-                weight = graph.GetWeight(x2, y2);
-            } else if (x1 > x2 && y1 == y2) {
-                var secondWeight = y2 - 1 >= 0 ? graph.GetWeight(x2, y2 - 1) : graph.GetWeight(x2, y2);
-                if (secondWeight == -1) secondWeight = graph.GetWeight(x2, y2);
-                var firstWeight = graph.GetWeight(x2, y2);
-                if (firstWeight == -1) firstWeight = secondWeight;
-                weight = (firstWeight + secondWeight) / 2; 
-            } else if (x1 > x2 && y1 < y2) {
-                weight = graph.GetWeight(x2, y1);
-            } else if (x1 == x2 && y1 > y2) {
-                var secondWeight = x2 - 1 >= 0 ? graph.GetWeight(x2 - 1, y2) : graph.GetWeight(x2, y2);
-                if (secondWeight == -1) secondWeight = graph.GetWeight(x2, y2);
-                var firstWeight = graph.GetWeight(x2, y2);
-                if (firstWeight == -1) firstWeight = secondWeight;
-                weight = (firstWeight + secondWeight) / 2;
-            } else if (x1 == x2 && y1 < y2) {
-                var secondWeight = x1 - 1 >= 0 ? graph.GetWeight(x1 - 1, y1) : graph.GetWeight(x1, y1);
-                if (secondWeight == -1) secondWeight = graph.GetWeight(x1, y1);
-                var firstWeight = graph.GetWeight(x1, y1);
-                if (firstWeight == -1) firstWeight = secondWeight;
-                weight = (firstWeight + secondWeight) / 2;
-            } else if (x1 < x2 && y1 > y2) {
-                weight = graph.GetWeight(x1, y2);
-            } else if (x1 < x2 && y1 == y2) {
-                var secondWeight = y1 - 1 >= 0 ? graph.GetWeight(x1, y1 - 1) : graph.GetWeight(x1, y1);
-                if (secondWeight == -1) secondWeight = graph.GetWeight(x1, y1);
-                var firstWeight = graph.GetWeight(x1, y1);
-                if (firstWeight == -1) firstWeight = secondWeight;
-                weight = (firstWeight + secondWeight) / 2;
-            } else if (x1 < x2 && y1 < y2) {
-                weight = graph.GetWeight(x1, y1);
+            bool isCorner = false;
+            if (x1 > x2) {
+                if (y1 > y2) {
+                    weight = graph.GetWeight(x2, y2);
+                } else if (y1 == y2) {
+                    isCorner = true;
+                    weight = graph.GetWeight(x2, y2);
+                    secondWeight = graph.GetWeight(x2, y2 - 1);
+                } else {
+                    weight = graph.GetWeight(x2, y1);
+                }
+            } else if (x1 == x2) {
+                if (y1 > y2) {
+                    isCorner = true;
+                    weight = graph.GetWeight(x2, y2);
+                    secondWeight = graph.GetWeight(x2 - 1, y2);
+                } else if (y1 == y2) {
+                    // pass
+                } else {
+                    isCorner = true;
+                    weight = graph.GetWeight(x1, y1);
+                    secondWeight = graph.GetWeight(x1 - 1, y1);
+                }
+            } else {
+                if (y1 > y2) {
+                    weight = graph.GetWeight(x1, y2);
+                } else if (y1 == y2) {
+                    isCorner = true;
+                    weight = graph.GetWeight(x1, y1);
+                    secondWeight = graph.GetWeight(x1, y1 - 1);
+                } else {
+                    weight = graph.GetWeight(x1, y1);
+                }
+            }
+
+            if (isCorner) {
+                if (weight == -1) weight = secondWeight;
+                else if (secondWeight == -1) weight = weight;
+                else weight = (weight + secondWeight) / 2;
             }
 
             return graph.Distance(x1, y1, x2, y2) * weight;
@@ -199,11 +208,27 @@ namespace ThetaStar.Pathfinding.Algorithms
 
         protected float PhysicalDistance(int node1, int node2)
         {
+            float pathLength = 0;
+
             int x1 = ToTwoDimX(node1);
             int y1 = ToTwoDimY(node1);
             int x2 = ToTwoDimX(node2);
             int y2 = ToTwoDimY(node2);
-            return graph.Distance(x1, y1, x2, y2);
+
+            (var partitions, var isPrimeLine) = LineCalculator.Calculate(y1, x1, y2, x2);
+            if (isPrimeLine) {
+                for (int i = 0; i < partitions.Count - 1; ++i) {
+                    pathLength += Weight(partitions[i].Y, partitions[i].X, partitions[i + 1].Y, partitions[i + 1].X);
+                }
+            } else {
+                float distance = graph.Distance(x1, y1, x2, y2);
+
+                for (int i = 0; i < partitions.Count; ++i) {
+                    pathLength += distance * (float)partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
+                }
+            }
+
+            return pathLength;
         }
 
         protected float PhysicalDistance(int x1, int y1, int node2)
@@ -301,8 +326,6 @@ namespace ThetaStar.Pathfinding.Algorithms
                 int x = ToTwoDimX(current);
                 int y = ToTwoDimY(current);
 
-                float distance = graph.Distance(x, y, prevX, prevY);
-
                 (var partitions, var isPrimeLine) = LineCalculator.Calculate(y, x, prevY, prevX);
                 //foreach (var partition in partitions) {
                     //UnityEngine.Debug.Log(iter + ". Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
@@ -312,6 +335,8 @@ namespace ThetaStar.Pathfinding.Algorithms
                         pathLength += Weight(partitions[i].Y, partitions[i].X, partitions[i + 1].Y, partitions[i + 1].X);
                     }
                 } else {
+                    float distance = graph.Distance(x, y, prevX, prevY);
+
                     for (int i = 0; i < partitions.Count; ++i) {
                         pathLength += distance * (float)partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
                     }
@@ -324,6 +349,7 @@ namespace ThetaStar.Pathfinding.Algorithms
             }
             return pathLength;
         }
+
         protected override bool Selected(int index)
         {
             return Visited(index);

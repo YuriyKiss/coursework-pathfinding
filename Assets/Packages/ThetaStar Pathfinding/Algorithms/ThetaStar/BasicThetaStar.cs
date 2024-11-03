@@ -30,46 +30,43 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
             int destination = ToOneDimIndex(x, y);
             if (Visited(destination))
                 return;
-            if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
-                return; // Idea: don't bother trying to relax if parents are equal. using triangle inequality.
+            //if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
+            //    return; // Idea: don't bother trying to relax if parents are equal. using triangle inequality.
             if (!graph.NeighbourLineOfSight(currentX, currentY, x, y))
                 return;
 
+            float weight = Weight(currentX, currentY, x, y);
             if (Relax(current, destination, 0))
             {
                 // If relaxation is done.
-                pq.DecreaseKey(destination, Distance(destination) + Heuristic(x, y));
+                pq.DecreaseKey(destination, Distance(destination) + weight);
             }
         }
 
         protected override bool Relax(int u, int v, float weightUV)
         {
-            // return true iff relaxation is done.
+            // return true if relaxation is done.
 
             if (LineOfSight(Parent(u), v))
             {
-                u = Parent(u);
+                int pu = Parent(u);
 
-                float newWeight = Distance(u) + PhysicalDistance(u, v);
-                if (newWeight < Distance(v))
+                float newWeight1 = Distance(pu) + PhysicalDistance(pu, v);
+                if (newWeight1 < Distance(v))
                 {
-                    SetDistance(v, newWeight);
-                    SetParent(v, u);
+                    SetDistance(v, newWeight1);
+                    SetParent(v, pu);
                     return true;
                 }
-                return false;
             }
-            else
-            {
-                float newWeight = Distance(u) + PhysicalDistance(u, v);
-                if (newWeight < Distance(v))
-                {
-                    SetDistance(v, newWeight);
-                    SetParent(v, u);
-                    return true;
-                }
-                return false;
+
+            float newWeight = Distance(u) + PhysicalDistance(u, v);
+            if (newWeight < Distance(v)) {
+                SetDistance(v, newWeight);
+                SetParent(v, u);
+                return true;
             }
+            return false;
         }
     }
 }

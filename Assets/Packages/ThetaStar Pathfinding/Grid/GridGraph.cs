@@ -35,8 +35,8 @@ namespace ThetaStar.Pathfinding.Grid
 
         public float GetWeight(int x, int y) 
         {
-            if (x >= sizeX) x--;
-            if (y >= sizeY) y--;
+            if (x >= sizeX) x--; if (x < 0) x++;
+            if (y >= sizeY) y--; if (y < 0) y++;
 
             return tiles[sizeX * y + x];
         }
