@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Concurrent;
 using ThetaStar.Pathfinding.Datatypes;
 using ThetaStar.Pathfinding.Grid;
@@ -115,50 +116,37 @@ namespace ThetaStar.Pathfinding.Algorithms
             return heuristicWeight * graph.Distance(x, y, ex, ey);
         }
 
-        protected float Weight(int x1, int y1, int x2, int y2)
-        {
-            float weight = 1f;
-            float secondWeight = 1f;
-
+        protected float Weight(int x1, int y1, int x2, int y2) {
+            float weight, secondWeight = -1f;
             bool isCorner = false;
-            if (x1 > x2) {
+
+            if (x1 == x2) {
                 if (y1 > y2) {
-                    weight = graph.GetWeight(x2, y2);
-                } else if (y1 == y2) {
-                    isCorner = true;
-                    weight = graph.GetWeight(x2, y2);
-                    secondWeight = graph.GetWeight(x2, y2 - 1);
-                } else {
-                    weight = graph.GetWeight(x2, y1);
-                }
-            } else if (x1 == x2) {
-                if (y1 > y2) {
-                    isCorner = true;
                     weight = graph.GetWeight(x2, y2);
                     secondWeight = graph.GetWeight(x2 - 1, y2);
-                } else if (y1 == y2) {
-                    // pass
-                } else {
                     isCorner = true;
+                } else {
                     weight = graph.GetWeight(x1, y1);
                     secondWeight = graph.GetWeight(x1 - 1, y1);
-                }
-            } else {
-                if (y1 > y2) {
-                    weight = graph.GetWeight(x1, y2);
-                } else if (y1 == y2) {
                     isCorner = true;
-                    weight = graph.GetWeight(x1, y1);
-                    secondWeight = graph.GetWeight(x1, y1 - 1);
+                }
+            } else if (y1 == y2) {
+                if (x1 > x2) {
+                    weight = graph.GetWeight(x2, y2);
+                    secondWeight = graph.GetWeight(x2, y2 - 1);
+                    isCorner = true;
                 } else {
                     weight = graph.GetWeight(x1, y1);
+                    secondWeight = graph.GetWeight(x1, y1 - 1);
+                    isCorner = true;
                 }
+            } else {
+                weight = graph.GetWeight(Math.Min(x1, x2), Math.Min(y1, y2));
             }
 
             if (isCorner) {
                 if (weight == -1) weight = secondWeight;
-                else if (secondWeight == -1) weight = weight;
-                else weight = (weight + secondWeight) / 2;
+                else if (secondWeight != -1) weight = (weight + secondWeight) / 2;
             }
 
             return graph.Distance(x1, y1, x2, y2) * weight;
