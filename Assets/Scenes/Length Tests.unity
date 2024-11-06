@@ -196,7 +196,11 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions: []
+  m_Positions:
+  - {x: 0, y: 0.1, z: 0}
+  - {x: 1, y: 0.1, z: -1}
+  - {x: 2, y: 0.1, z: -4}
+  - {x: 2, y: 0.1, z: -5}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -456,7 +460,7 @@ GameObject:
   - component: {fileID: 1328793262}
   - component: {fileID: 1328793261}
   m_Layer: 0
-  m_Name: Grid Generator
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,9 +537,9 @@ MonoBehaviour:
   goals:
     Start:
       Row: 2
-      Col: 4
+      Col: 5
     End:
-      Row: 0
+      Row: 4
       Col: 0
   drawPath: 1
   lineRenderer: {fileID: 178758572}
@@ -558,7 +562,7 @@ MonoBehaviour:
   tiles:
   - Position: {x: -1.5, y: 0.05, z: -4.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: -5}
-    Weight: 1
+    Weight: 2.23
     RowIdx: 0
     ColIdx: 0
   - Position: {x: -1.5, y: 0.05, z: -3.5}
@@ -568,32 +572,32 @@ MonoBehaviour:
     ColIdx: 1
   - Position: {x: -1.5, y: 0.05, z: -2.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: -3}
-    Weight: 2.47
+    Weight: 1
     RowIdx: 0
     ColIdx: 2
   - Position: {x: -1.5, y: 0.05, z: -1.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: -2}
-    Weight: 1.81
+    Weight: 2.45
     RowIdx: 0
     ColIdx: 3
   - Position: {x: -1.5, y: 0.05, z: -0.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: -1}
-    Weight: 2.52
+    Weight: 1.94
     RowIdx: 0
     ColIdx: 4
   - Position: {x: -1.5, y: 0.05, z: 0.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: 0}
-    Weight: 1
+    Weight: 1.81
     RowIdx: 0
     ColIdx: 5
   - Position: {x: -1.5, y: 0.05, z: 1.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.04
     RowIdx: 0
     ColIdx: 6
   - Position: {x: -1.5, y: 0.05, z: 2.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: 2}
-    Weight: 1
+    Weight: 2.38
     RowIdx: 0
     ColIdx: 7
   - Position: {x: -1.5, y: 0.05, z: 3.5}
@@ -603,112 +607,112 @@ MonoBehaviour:
     ColIdx: 8
   - Position: {x: -1.5, y: 0.05, z: 4.5}
     PositionTopLeftCorner: {x: -2, y: 0.1, z: 4}
-    Weight: 2.98
+    Weight: 1.6
     RowIdx: 0
     ColIdx: 9
   - Position: {x: -0.5, y: 0.05, z: -4.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: -5}
-    Weight: 2.9
+    Weight: 1
     RowIdx: 1
     ColIdx: 0
   - Position: {x: -0.5, y: 0.05, z: -3.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: -4}
-    Weight: 2.1799998
+    Weight: 2.5900002
     RowIdx: 1
     ColIdx: 1
   - Position: {x: -0.5, y: 0.05, z: -2.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: -3}
-    Weight: 1.56
+    Weight: 2.52
     RowIdx: 1
     ColIdx: 2
   - Position: {x: -0.5, y: 0.05, z: -1.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: -2}
-    Weight: 2.31
+    Weight: 2.3200002
     RowIdx: 1
     ColIdx: 3
   - Position: {x: -0.5, y: 0.05, z: -0.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: -1}
-    Weight: 2.3
+    Weight: 1.6600001
     RowIdx: 1
     ColIdx: 4
   - Position: {x: -0.5, y: 0.05, z: 0.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: 0}
-    Weight: 1
+    Weight: 2.54
     RowIdx: 1
     ColIdx: 5
   - Position: {x: -0.5, y: 0.05, z: 1.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.81
     RowIdx: 1
     ColIdx: 6
   - Position: {x: -0.5, y: 0.05, z: 2.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: 2}
-    Weight: 1.55
+    Weight: 2.81
     RowIdx: 1
     ColIdx: 7
   - Position: {x: -0.5, y: 0.05, z: 3.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: 3}
-    Weight: 1
+    Weight: 2.56
     RowIdx: 1
     ColIdx: 8
   - Position: {x: -0.5, y: 0.05, z: 4.5}
     PositionTopLeftCorner: {x: -1, y: 0.1, z: 4}
-    Weight: 2.8600001
+    Weight: 1
     RowIdx: 1
     ColIdx: 9
   - Position: {x: 0.5, y: 0.05, z: -4.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: -5}
-    Weight: 1.8
+    Weight: 1
     RowIdx: 2
     ColIdx: 0
   - Position: {x: 0.5, y: 0.05, z: -3.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: -4}
-    Weight: 2.8200002
+    Weight: 1
     RowIdx: 2
     ColIdx: 1
   - Position: {x: 0.5, y: 0.05, z: -2.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: -3}
-    Weight: 2.1599998
+    Weight: 1
     RowIdx: 2
     ColIdx: 2
   - Position: {x: 0.5, y: 0.05, z: -1.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: -2}
-    Weight: 1
+    Weight: 2.01
     RowIdx: 2
     ColIdx: 3
   - Position: {x: 0.5, y: 0.05, z: -0.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: -1}
-    Weight: 2.76
+    Weight: 1
     RowIdx: 2
     ColIdx: 4
   - Position: {x: 0.5, y: 0.05, z: 0.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: 0}
-    Weight: 2.0900002
+    Weight: 1
     RowIdx: 2
     ColIdx: 5
   - Position: {x: 0.5, y: 0.05, z: 1.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: 1}
-    Weight: 1
+    Weight: 2.22
     RowIdx: 2
     ColIdx: 6
   - Position: {x: 0.5, y: 0.05, z: 2.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: 2}
-    Weight: 1
+    Weight: 2.4
     RowIdx: 2
     ColIdx: 7
   - Position: {x: 0.5, y: 0.05, z: 3.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: 3}
-    Weight: 2.9
+    Weight: 1
     RowIdx: 2
     ColIdx: 8
   - Position: {x: 0.5, y: 0.05, z: 4.5}
     PositionTopLeftCorner: {x: 0, y: 0.1, z: 4}
-    Weight: 2.29
+    Weight: 1
     RowIdx: 2
     ColIdx: 9
   - Position: {x: 1.5, y: 0.05, z: -4.5}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -5}
-    Weight: 2.1
+    Weight: 2.8899999
     RowIdx: 3
     ColIdx: 0
   - Position: {x: 1.5, y: 0.05, z: -3.5}
@@ -728,12 +732,12 @@ MonoBehaviour:
     ColIdx: 3
   - Position: {x: 1.5, y: 0.05, z: -0.5}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: -1}
-    Weight: 1
+    Weight: 2.6599998
     RowIdx: 3
     ColIdx: 4
   - Position: {x: 1.5, y: 0.05, z: 0.5}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 0}
-    Weight: 2.3400002
+    Weight: 1
     RowIdx: 3
     ColIdx: 5
   - Position: {x: 1.5, y: 0.05, z: 1.5}
@@ -748,12 +752,12 @@ MonoBehaviour:
     ColIdx: 7
   - Position: {x: 1.5, y: 0.05, z: 3.5}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 3}
-    Weight: 1.8399999
+    Weight: 1
     RowIdx: 3
     ColIdx: 8
   - Position: {x: 1.5, y: 0.05, z: 4.5}
     PositionTopLeftCorner: {x: 1, y: 0.1, z: 4}
-    Weight: 1.9300001
+    Weight: 1
     RowIdx: 3
     ColIdx: 9
   settings:
@@ -765,15 +769,15 @@ MonoBehaviour:
   nodeRadius: 0.05
   nodeColor: {r: 0, g: 0.17964077, b: 1, a: 0.6392157}
   displayTiles: 1
-  TILE_SIZE_MODIFIER: 0.8
+  TILE_SIZE_MODIFIER: 1
   walkableTileColor: {r: 0, g: 0.6981132, b: 0, a: 1}
   blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
   displayWeight: 1
   weightTextColor: {r: 0, g: 0, b: 0, a: 1}
   adjustValue: {x: 0.38, y: 0, z: 0.43}
-  displayTileIndex: 0
+  displayTileIndex: 1
   indexTextColor: {r: 0, g: 0, b: 0, a: 1}
-  indexAdjustValue: {x: 0, y: 0, z: 0}
+  indexAdjustValue: {x: 0.2, y: 0, z: 0.28}
 --- !u!1 &1372752900
 GameObject:
   m_ObjectHideFlags: 0
