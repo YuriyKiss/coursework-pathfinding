@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using System.Threading.Tasks;
 using ThetaStar.Pathfinding.Datatypes;
 using ThetaStar.Pathfinding.Grid;
 using ThetaStar.Pathfinding.PriorityQueue;
@@ -75,16 +76,16 @@ namespace ThetaStar.Pathfinding.Algorithms
                 int x = ToTwoDimX(current);
                 int y = ToTwoDimY(current);
 
-                TryRelaxNeighbour(current, x, y, x - 1, y - 1);
-                TryRelaxNeighbour(current, x, y, x, y - 1);
-                TryRelaxNeighbour(current, x, y, x + 1, y - 1);
-
-                TryRelaxNeighbour(current, x, y, x - 1, y);
-                TryRelaxNeighbour(current, x, y, x + 1, y);
-
-                TryRelaxNeighbour(current, x, y, x - 1, y + 1);
-                TryRelaxNeighbour(current, x, y, x, y + 1);
-                TryRelaxNeighbour(current, x, y, x + 1, y + 1);
+                Parallel.Invoke(
+                    () => TryRelaxNeighbour(current, x, y, x - 1, y - 1),
+                    () => TryRelaxNeighbour(current, x, y, x, y - 1),
+                    () => TryRelaxNeighbour(current, x, y, x + 1, y - 1),
+                    () => TryRelaxNeighbour(current, x, y, x - 1, y),
+                    () => TryRelaxNeighbour(current, x, y, x + 1, y),
+                    () => TryRelaxNeighbour(current, x, y, x - 1, y + 1),
+                    () => TryRelaxNeighbour(current, x, y, x, y + 1),
+                    () => TryRelaxNeighbour(current, x, y, x + 1, y + 1)
+                );
 
                 //maybeSaveSearchSnapshot();
             }
