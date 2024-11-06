@@ -5,7 +5,6 @@ namespace ThetaStar.Pathfinding.Algorithms {
     public class GridPartition {
         public int X;
         public int Y;
-        public double Length;
         public double Percentage;
     }
 
@@ -22,7 +21,7 @@ namespace ThetaStar.Pathfinding.Algorithms {
             var partitions = new List<GridPartition>();
             double dx = x2 - x1;
             double dy = y2 - y1;
-            double length = Math.Sqrt(dx * dx + dy * dy);
+            double length = dx * dx + dy * dy;
 
             int stepX = dx > 0 ? 1 : -1;
             int stepY = dy > 0 ? 1 : -1;
@@ -45,14 +44,12 @@ namespace ThetaStar.Pathfinding.Algorithms {
             // Loop with bounds and maxSteps check
             while ((currentX != x2 || currentY != y2) &&
                    currentX >= minX && currentY >= minY) {
-
                 double tMin = Math.Min(tMaxX, tMaxY);
-                double segmentLength = tMin - totalLength;
 
                 partitions.Add(new GridPartition {
                     X = currentX,
                     Y = currentY,
-                    Length = segmentLength
+                    Percentage = (tMin - totalLength) / length
                 });
                 totalLength = tMin;
 
@@ -65,26 +62,11 @@ namespace ThetaStar.Pathfinding.Algorithms {
                 }
             }
 
-            // Ensure the final cell is added if necessary
-            if (currentX == x2 && currentY == y2) {
-                partitions.Add(new GridPartition {
-                    X = x2,
-                    Y = y2,
-                    Length = length - totalLength
-                });
-            } else {
-                // Add the final cell to avoid missing the endpoint
-                partitions.Add(new GridPartition {
-                    X = x2,
-                    Y = y2,
-                    Length = Math.Max(0, length - totalLength)
-                });
-            }
-
-            foreach (var partition in partitions) {
-                partition.Percentage = partition.Length / length;
-                //UnityEngine.Debug.Log($"[{partition.X}, {partition.Y}] with (len/perc) {partition.Length}/{partition.Percentage}");
-            }
+            partitions.Add(new GridPartition {
+                X = x2,
+                Y = y2,
+                Percentage = (length - totalLength) / length
+            });
 
             return (partitions, false);
         }
