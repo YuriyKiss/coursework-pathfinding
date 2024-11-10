@@ -200,10 +200,12 @@ namespace ThetaStar.Pathfinding.Algorithms
             int x2 = ToTwoDimX(node2);
             int y2 = ToTwoDimY(node2);
 
-            return ApplyPhysicalWeight(x1, y1, x2, y2, 0);
+            return ApplyPhysicalWeight(x1, y1, x2, y2);
         }
 
-        private float ApplyPhysicalWeight(int x1, int y1, int x2, int y2, float pathLength) {
+        private float ApplyPhysicalWeight(int x1, int y1, int x2, int y2) {
+            float pathLength = 0;
+
             (var partitions, var partitionType) = LineCalculator.Calculate(y1, x1, y2, x2);
             if (partitionType == PartitionType.Vertical) {
                 int startY = Math.Min(y1, y2);
@@ -247,7 +249,10 @@ namespace ThetaStar.Pathfinding.Algorithms
                 }
                 else
                 {
-                    PostSmooth();
+                    // Optimal post-smoothing passes
+                    for (int i = 0; i < 50; ++i) {
+                        PostSmooth();
+                    }
                 }
             }
         }
@@ -259,18 +264,20 @@ namespace ThetaStar.Pathfinding.Algorithms
             int current = finish;
             while (current != -1)
             {
-                int next = Parent(current); // we can skip checking this one as it always has LoS to current.
-                int thisIterationMiddle = next;
-                if (next != -1)
-                {
+                int next = Parent(current);
+                float distanceJagged = PhysicalDistance(current, next);
+                if (next != -1 && LineOfSight(current, next))
+                { 
+                    int prev = next;
                     next = Parent(next);
-                    int thisIterationEnd = next;
                     while (next != -1)
                     {
-                        bool isShorter = PhysicalDistance(current, thisIterationMiddle) + PhysicalDistance(thisIterationEnd, thisIterationMiddle) < PhysicalDistance(current, next);
+                        distanceJagged += PhysicalDistance(prev, next);
+                        bool isShorter = distanceJagged <= PhysicalDistance(next, current);
                         if (LineOfSight(current, next) && isShorter)
                         {
                             SetParent(current, next);
+                            prev = next;
                             next = Parent(next);
                             didSomething = true;
                             MaybeSaveSearchSnapshot();
@@ -327,7 +334,7 @@ namespace ThetaStar.Pathfinding.Algorithms
                 int x2 = ToTwoDimX(current);
                 int y2 = ToTwoDimY(current);
 
-                pathLength += ApplyPhysicalWeight(x1, y1, x2, y2, 0);
+                pathLength += ApplyPhysicalWeight(x1, y1, x2, y2);
 
                 current = Parent(current);
                 x1 = x2;
