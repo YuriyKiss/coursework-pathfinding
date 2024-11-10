@@ -2,6 +2,12 @@ using System;
 using System.Collections.Generic;
 
 namespace ThetaStar.Pathfinding.Algorithms {
+    public enum PartitionType {
+        Diagonal,
+        Vertical,
+        Horizontal
+    }
+
     public struct GridPartition {
         public int X;
         public int Y;
@@ -11,15 +17,15 @@ namespace ThetaStar.Pathfinding.Algorithms {
     public class LineCalculator {
         private static List<GridPartition> _partitions = new List<GridPartition>(9);
 
-        public static (List<GridPartition>, bool) Calculate(int x1, int y1, int x2, int y2) {
+        public static (List<GridPartition>, PartitionType) Calculate(int x1, int y1, int x2, int y2) {
             _partitions.Clear();
 
             if (y1 == y2) {
-                return (VerticalPartitions(y1, x1, x2), true);
+                return (null, PartitionType.Vertical);
             }
 
             if (x1 == x2) {
-                return (HorizontalPartitions(y1, y2, x1), true);
+                return (null, PartitionType.Horizontal);
             }
 
             float dx = x2 - x1;
@@ -71,41 +77,7 @@ namespace ThetaStar.Pathfinding.Algorithms {
                 Percentage = (length - totalLength) * invertLength
             });
 
-            return (_partitions, false);
-        }
-
-        private static List<GridPartition> VerticalPartitions(int x, int y1, int y2) {
-            float percentage = 1f / Math.Abs(y1 - y2);
-
-            int startY = Math.Min(y1, y2);
-            int endY = Math.Max(y1, y2);
-
-            for (int i = startY; i <= endY; ++i) {
-                _partitions.Add(new GridPartition() {
-                    X = i,
-                    Y = x,
-                    Percentage = percentage
-                });
-            }
-
-            return _partitions;
-        }
-
-        private static List<GridPartition> HorizontalPartitions(int x1, int x2, int y) {
-            float percentage = 1f / Math.Abs(x1 - x2);
-
-            int startX = Math.Min(x1, x2);
-            int endX = Math.Max(x1, x2);
-
-            for (int i = startX; i <= endX; ++i) {
-                _partitions.Add(new GridPartition() {
-                    X = y,
-                    Y = i,
-                    Percentage = percentage
-                });
-            }
-
-            return _partitions;
+            return (_partitions, PartitionType.Diagonal);
         }
     }
 }

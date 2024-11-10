@@ -116,7 +116,7 @@ namespace ThetaStar.Pathfinding.Algorithms
         }
 
         protected float Weight(int x1, int y1, int x2, int y2) {
-            float weight, secondWeight = -1f;
+            float weight = -1f, secondWeight = -1f;
             bool isCorner = false;
 
             if (x1 == x2) {
@@ -195,23 +195,35 @@ namespace ThetaStar.Pathfinding.Algorithms
 
         protected float PhysicalDistance(int node1, int node2)
         {
-            float pathLength = 0;
-
             int x1 = ToTwoDimX(node1);
             int y1 = ToTwoDimY(node1);
             int x2 = ToTwoDimX(node2);
             int y2 = ToTwoDimY(node2);
 
-            (var partitions, var isPrimeLine) = LineCalculator.Calculate(y1, x1, y2, x2);
-            if (isPrimeLine) {
-                for (int i = 0; i < partitions.Count - 1; ++i) {
-                    pathLength += Weight(partitions[i].Y, partitions[i].X, partitions[i + 1].Y, partitions[i + 1].X);
+            return ApplyPhysicalWeight(x1, y1, x2, y2, 0);
+        }
+
+        private float ApplyPhysicalWeight(int x1, int y1, int x2, int y2, float pathLength) {
+            (var partitions, var partitionType) = LineCalculator.Calculate(y1, x1, y2, x2);
+            if (partitionType == PartitionType.Vertical) {
+                int startY = Math.Min(y1, y2);
+                int endY = Math.Max(y1, y2);
+
+                for (int i = startY; i <= endY - 1; ++i) {
+                    pathLength += Weight(x1, i, x2, i + 1);
+                }
+            } else if (partitionType == PartitionType.Horizontal) {
+                int startX = Math.Min(x1, x2);
+                int endX = Math.Max(x1, x2);
+
+                for (int i = startX; i <= endX - 1; ++i) {
+                    pathLength += Weight(i, y1, i + 1, y2);
                 }
             } else {
                 float distance = graph.Distance(x1, y1, x2, y2);
 
                 for (int i = 0; i < partitions.Count; ++i) {
-                    pathLength += distance * (float)partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
+                    pathLength += distance * partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
                 }
             }
 
@@ -306,36 +318,20 @@ namespace ThetaStar.Pathfinding.Algorithms
 
             float pathLength = 0;
 
-            int prevX = ToTwoDimX(current);
-            int prevY = ToTwoDimY(current);
+            int x1 = ToTwoDimX(current);
+            int y1 = ToTwoDimY(current);
             current = Parent(current);
 
-            //int iter = 1;
             while (current != -1)
             {
-                int x = ToTwoDimX(current);
-                int y = ToTwoDimY(current);
+                int x2 = ToTwoDimX(current);
+                int y2 = ToTwoDimY(current);
 
-                (var partitions, var isPrimeLine) = LineCalculator.Calculate(y, x, prevY, prevX);
-                //foreach (var partition in partitions) {
-                    //UnityEngine.Debug.Log(iter + ". Partition [" + partition.X + "; " + partition.Y + "] = " + partition.Percentage + " | " + partition.Length);
-                //}
-                if (isPrimeLine) {
-                    for (int i = 0; i < partitions.Count - 1; ++i) {
-                        pathLength += Weight(partitions[i].Y, partitions[i].X, partitions[i + 1].Y, partitions[i + 1].X);
-                    }
-                } else {
-                    float distance = graph.Distance(x, y, prevX, prevY);
-
-                    for (int i = 0; i < partitions.Count; ++i) {
-                        pathLength += distance * (float)partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
-                    }
-                }
+                pathLength += ApplyPhysicalWeight(x1, y1, x2, y2, 0);
 
                 current = Parent(current);
-                prevX = x;
-                prevY = y;
-                //iter++;
+                x1 = x2;
+                y1 = y2;
             }
             return pathLength;
         }
