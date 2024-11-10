@@ -76,16 +76,14 @@ namespace ThetaStar.Pathfinding.Algorithms
                 int x = ToTwoDimX(current);
                 int y = ToTwoDimY(current);
 
-                Parallel.Invoke(
-                    () => TryRelaxNeighbour(current, x, y, x - 1, y - 1),
-                    () => TryRelaxNeighbour(current, x, y, x, y - 1),
-                    () => TryRelaxNeighbour(current, x, y, x + 1, y - 1),
-                    () => TryRelaxNeighbour(current, x, y, x - 1, y),
-                    () => TryRelaxNeighbour(current, x, y, x + 1, y),
-                    () => TryRelaxNeighbour(current, x, y, x - 1, y + 1),
-                    () => TryRelaxNeighbour(current, x, y, x, y + 1),
-                    () => TryRelaxNeighbour(current, x, y, x + 1, y + 1)
-                );
+                TryRelaxNeighbour(current, x, y, x - 1, y - 1);
+                TryRelaxNeighbour(current, x, y, x, y - 1);
+                TryRelaxNeighbour(current, x, y, x + 1, y - 1);
+                TryRelaxNeighbour(current, x, y, x - 1, y);
+                TryRelaxNeighbour(current, x, y, x + 1, y);
+                TryRelaxNeighbour(current, x, y, x - 1, y + 1);
+                TryRelaxNeighbour(current, x, y, x, y + 1);
+                TryRelaxNeighbour(current, x, y, x + 1, y + 1);
 
                 //maybeSaveSearchSnapshot();
             }
@@ -250,12 +248,15 @@ namespace ThetaStar.Pathfinding.Algorithms
             while (current != -1)
             {
                 int next = Parent(current); // we can skip checking this one as it always has LoS to current.
+                int thisIterationMiddle = next;
                 if (next != -1)
                 {
                     next = Parent(next);
+                    int thisIterationEnd = next;
                     while (next != -1)
                     {
-                        if (LineOfSight(current, next))
+                        bool isShorter = PhysicalDistance(current, thisIterationMiddle) + PhysicalDistance(thisIterationEnd, thisIterationMiddle) < PhysicalDistance(current, next);
+                        if (LineOfSight(current, next) && isShorter)
                         {
                             SetParent(current, next);
                             next = Parent(next);

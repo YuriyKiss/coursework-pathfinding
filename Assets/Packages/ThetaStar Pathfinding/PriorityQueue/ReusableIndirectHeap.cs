@@ -8,8 +8,6 @@ namespace ThetaStar.Pathfinding.PriorityQueue
      */
     public class ReusableIndirectHeap
     {
-        private static readonly object lockObject = new object();
-
         private static float[] keyList;
         private static int[] inList;
         private static int[] outList;
@@ -219,22 +217,20 @@ namespace ThetaStar.Pathfinding.PriorityQueue
          */
         public void DecreaseKey(int outIndex, float newKey)
         {
-            lock (lockObject) {
-                // Assume newKey < old key
-                int inIndex = GetIn(outIndex);
+            // Assume newKey < old key
+            int inIndex = GetIn(outIndex);
 
-                // Optimisation: Jump the newly set value to the bottom of the heap.
-                // Faster if there are a lot of POSITIVE_INFINITY values.
-                // This is equivalent to an insert operation.
-                if (GetKey(inIndex) == float.PositiveInfinity) {
-                    SwapData(inIndex, heapSize);
-                    inIndex = heapSize;
-                    ++heapSize;
-                }
-                SetKey(inIndex, newKey);
-
-                BubbleUp(inIndex);
+            // Optimisation: Jump the newly set value to the bottom of the heap.
+            // Faster if there are a lot of POSITIVE_INFINITY values.
+            // This is equivalent to an insert operation.
+            if (GetKey(inIndex) == float.PositiveInfinity) {
+                SwapData(inIndex, heapSize);
+                inIndex = heapSize;
+                ++heapSize;
             }
+            SetKey(inIndex, newKey);
+
+            BubbleUp(inIndex);
         }
 
         public float GetMinValue()

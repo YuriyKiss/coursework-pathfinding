@@ -2,14 +2,18 @@ using System;
 using System.Collections.Generic;
 
 namespace ThetaStar.Pathfinding.Algorithms {
-    public class GridPartition {
+    public struct GridPartition {
         public int X;
         public int Y;
-        public double Percentage;
+        public float Percentage;
     }
 
     public class LineCalculator {
+        private static List<GridPartition> _partitions = new List<GridPartition>(9);
+
         public static (List<GridPartition>, bool) Calculate(int x1, int y1, int x2, int y2) {
+            _partitions.Clear();
+
             if (y1 == y2) {
                 return (VerticalPartitions(y1, x1, x2), true);
             }
@@ -18,10 +22,10 @@ namespace ThetaStar.Pathfinding.Algorithms {
                 return (HorizontalPartitions(y1, y2, x1), true);
             }
 
-            var partitions = new List<GridPartition>();
-            double dx = x2 - x1;
-            double dy = y2 - y1;
-            double length = dx * dx + dy * dy;
+            float dx = x2 - x1;
+            float dy = y2 - y1;
+            float length = dx * dx + dy * dy;
+            float invertLength = 1 / length;
 
             int stepX = dx > 0 ? 1 : -1;
             int stepY = dy > 0 ? 1 : -1;
@@ -29,31 +33,30 @@ namespace ThetaStar.Pathfinding.Algorithms {
             dx = Math.Abs(dx);
             dy = Math.Abs(dy);
 
-            // Adjust tMaxX and tMaxY based on top-left corner positioning
-            double tMaxX = (stepX > 0 ? 1 - (x1 % 1) : x1 % 1) * length / dx;
-            double tMaxY = (stepY > 0 ? 1 - (y1 % 1) : y1 % 1) * length / dy;
+            float tDeltaX = length / dx;
+            float tDeltaY = length / dy;
 
-            double tDeltaX = length / dx;
-            double tDeltaY = length / dy;
+            float tMaxX = (stepX > 0 ? 1 - (x1 % 1) : x1 % 1) * tDeltaX;
+            float tMaxY = (stepY > 0 ? 1 - (y1 % 1) : y1 % 1) * tDeltaY;
 
             int currentX = x1;
             int currentY = y1;
-            double totalLength = 0.0;
+            float totalLength = 0f;
 
             int minX = Math.Min(x1, x2), minY = Math.Min(y1, y2);
-            // Loop with bounds and maxSteps check
             while ((currentX != x2 || currentY != y2) &&
                    currentX >= minX && currentY >= minY) {
-                double tMin = Math.Min(tMaxX, tMaxY);
+                bool xIsMin = tMaxX < tMaxY;
+                float tMin = xIsMin ? tMaxX : tMaxY;
 
-                partitions.Add(new GridPartition {
+                _partitions.Add(new GridPartition {
                     X = currentX,
                     Y = currentY,
-                    Percentage = (tMin - totalLength) / length
+                    Percentage = (tMin - totalLength) * invertLength
                 });
                 totalLength = tMin;
 
-                if (tMaxX < tMaxY) {
+                if (xIsMin) {
                     currentX += stepX;
                     tMaxX += tDeltaX;
                 } else {
@@ -62,49 +65,47 @@ namespace ThetaStar.Pathfinding.Algorithms {
                 }
             }
 
-            partitions.Add(new GridPartition {
+            _partitions.Add(new GridPartition {
                 X = x2,
                 Y = y2,
-                Percentage = (length - totalLength) / length
+                Percentage = (length - totalLength) * invertLength
             });
 
-            return (partitions, false);
+            return (_partitions, false);
         }
 
         private static List<GridPartition> VerticalPartitions(int x, int y1, int y2) {
-            var partitions = new List<GridPartition>();
-            float percentage = 1f / MathF.Abs(y1 - y2);
+            float percentage = 1f / Math.Abs(y1 - y2);
 
             int startY = Math.Min(y1, y2);
             int endY = Math.Max(y1, y2);
 
             for (int i = startY; i <= endY; ++i) {
-                partitions.Add(new GridPartition() {
+                _partitions.Add(new GridPartition() {
                     X = i,
                     Y = x,
                     Percentage = percentage
                 });
             }
 
-            return partitions;
+            return _partitions;
         }
 
         private static List<GridPartition> HorizontalPartitions(int x1, int x2, int y) {
-            var partitions = new List<GridPartition>();
-            float percentage = 1f / MathF.Abs(x1 - x2);
+            float percentage = 1f / Math.Abs(x1 - x2);
 
             int startX = Math.Min(x1, x2);
             int endX = Math.Max(x1, x2);
 
             for (int i = startX; i <= endX; ++i) {
-                partitions.Add(new GridPartition() {
+                _partitions.Add(new GridPartition() {
                     X = y,
                     Y = i,
                     Percentage = percentage
                 });
             }
 
-            return partitions;
+            return _partitions;
         }
     }
 }
