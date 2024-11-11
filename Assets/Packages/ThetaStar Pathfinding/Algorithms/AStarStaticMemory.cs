@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using ThetaStar.Pathfinding.Datatypes;
 using ThetaStar.Pathfinding.Grid;
 using ThetaStar.Pathfinding.PriorityQueue;
@@ -219,13 +220,53 @@ namespace ThetaStar.Pathfinding.Algorithms
                     pathLength += Weight(i, y1, i + 1, y2);
                 }
             } else {
-                var partitions = LineCalculator.Calculate(y1, x1, y2, x2);
-
                 float distance = graph.Distance(x1, y1, x2, y2);
+                return CalculatePhysicalLine(y1, x1, y2, x2, distance);
+            }
 
-                for (int i = 0; i < partitions.Count; ++i) {
-                    pathLength += distance * partitions[i].Percentage * graph.GetWeight(partitions[i].Y, partitions[i].X);
+            return pathLength;
+        }
+
+        public float CalculatePhysicalLine(int x1, int y1, int x2, int y2, float distance) {
+            float pathLength = 0;
+
+            float dx = Math.Abs(x2 - x1);
+            float dy = Math.Abs(y2 - y1);
+            float length = dx * dx + dy * dy;
+            float invertLength = 1 / length;
+
+            int stepX = x2 > x1 ? 1 : -1;
+            int stepY = y2 > y1 ? 1 : -1;
+
+            float tDeltaX = length / dx;
+            float tDeltaY = length / dy;
+
+            float tMaxX = (stepX > 0 ? 1 - (x1 % 1) : x1 % 1) * tDeltaX;
+            float tMaxY = (stepY > 0 ? 1 - (y1 % 1) : y1 % 1) * tDeltaY;
+
+            float totalLength = 0f;
+            int minX = Math.Min(x1, x2), minY = Math.Min(y1, y2);
+            while ((x1 != x2 || y1 != y2) &&
+                   x1 >= minX && y1 >= minY) {
+                bool xIsMin = tMaxX < tMaxY;
+                float tMin = xIsMin ? tMaxX : tMaxY;
+
+                if (tMin != totalLength) {
+                    pathLength += (tMin - totalLength) * invertLength * distance * graph.GetWeight(y1, x1);
                 }
+                totalLength = tMin;
+
+                if (xIsMin) {
+                    x1 += stepX;
+                    tMaxX += tDeltaX;
+                } else {
+                    y1 += stepY;
+                    tMaxY += tDeltaY;
+                }
+            }
+
+            if (length != totalLength) {
+                pathLength += (length - totalLength) * invertLength * distance * graph.GetWeight(y2, x2);
             }
 
             return pathLength;
