@@ -57,7 +57,11 @@ namespace ThetaStar.Navigation
             counter /= multipleTestsAmount;
 
             print("Algorithm computation time: " + counter);
-            print("Path length: " + algorithm.GetPathLength());
+            print("Path length: " + algorithm.GetPathLength() * grid.TileSize);
+
+            int[][] path = algorithm.GetPath();
+            List<GridTarget> pathConverted = ConvertPath(path);
+            DisplayPath(pathConverted);
         }
 
         public List<GridTarget> ComputePath()

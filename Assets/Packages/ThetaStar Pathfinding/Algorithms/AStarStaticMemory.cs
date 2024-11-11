@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Concurrent;
-using System.Threading.Tasks;
 using ThetaStar.Pathfinding.Datatypes;
 using ThetaStar.Pathfinding.Grid;
 using ThetaStar.Pathfinding.PriorityQueue;
@@ -206,15 +204,14 @@ namespace ThetaStar.Pathfinding.Algorithms
         private float ApplyPhysicalWeight(int x1, int y1, int x2, int y2) {
             float pathLength = 0;
 
-            (var partitions, var partitionType) = LineCalculator.Calculate(y1, x1, y2, x2);
-            if (partitionType == PartitionType.Vertical) {
+            if (x1 == x2) {
                 int startY = Math.Min(y1, y2);
                 int endY = Math.Max(y1, y2);
 
                 for (int i = startY; i <= endY - 1; ++i) {
                     pathLength += Weight(x1, i, x2, i + 1);
                 }
-            } else if (partitionType == PartitionType.Horizontal) {
+            } else if (y1 == y2) {
                 int startX = Math.Min(x1, x2);
                 int endX = Math.Max(x1, x2);
 
@@ -222,6 +219,8 @@ namespace ThetaStar.Pathfinding.Algorithms
                     pathLength += Weight(i, y1, i + 1, y2);
                 }
             } else {
+                var partitions = LineCalculator.Calculate(y1, x1, y2, x2);
+
                 float distance = graph.Distance(x1, y1, x2, y2);
 
                 for (int i = 0; i < partitions.Count; ++i) {
