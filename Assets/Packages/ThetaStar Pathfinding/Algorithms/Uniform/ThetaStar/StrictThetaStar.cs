@@ -7,31 +7,31 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
     /// <summary>
     /// An modification of Theta* that I am experimenting with. -Oh
     /// </summary>
-    public class WeightedStrictThetaStar : WeightedBasicThetaStar
+    public class StrictThetaStar : BasicThetaStar
     {
         private float BUFFER_VALUE = 0.42f;
 
-        public WeightedStrictThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
+        public StrictThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
         {
         }
 
-        public static WeightedStrictThetaStar SetBuffer(GridGraph graph, int sx, int sy, int ex, int ey, float bufferValue)
+        public static StrictThetaStar SetBuffer(GridGraph graph, int sx, int sy, int ex, int ey, float bufferValue)
         {
-            WeightedStrictThetaStar algo = new WeightedStrictThetaStar(graph, sx, sy, ex, ey);
+            StrictThetaStar algo = new StrictThetaStar(graph, sx, sy, ex, ey);
             algo.BUFFER_VALUE = bufferValue;
             return algo;
         }
 
-        public new static WeightedStrictThetaStar NoHeuristic(GridGraph graph, int sx, int sy, int ex, int ey)
+        public new static StrictThetaStar NoHeuristic(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            WeightedStrictThetaStar algo = new WeightedStrictThetaStar(graph, sx, sy, ex, ey);
+            StrictThetaStar algo = new StrictThetaStar(graph, sx, sy, ex, ey);
             algo.heuristicWeight = 0f;
             return algo;
         }
 
-        public new static WeightedStrictThetaStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
+        public new static StrictThetaStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            WeightedStrictThetaStar algo = new WeightedStrictThetaStar(graph, sx, sy, ex, ey);
+            StrictThetaStar algo = new StrictThetaStar(graph, sx, sy, ex, ey);
             algo.postSmoothingOn = true;
             return algo;
         }
@@ -112,8 +112,8 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
             int destination = ToOneDimIndex(x, y);
             if (Visited(destination))
                 return;
-            //if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
-            //    return; // Idea: don't bother trying to relax if parents are equal. using triangle inequality.
+            if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
+                return; // Idea: don't bother trying to relax if parents are equal. using triangle inequality.
             if (!graph.NeighbourLineOfSight(currentX, currentY, x, y))
                 return;
 

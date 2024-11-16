@@ -122,6 +122,24 @@ namespace ThetaStar.Navigation
                 case AlgorithmType.WeightedStrictThetaStarRecursive:
                     algorithm = new WeightedRecursiveStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
+                case AlgorithmType.AStar:
+                    algorithm = new AStarStaticMemory(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.AStarPostSmooth:
+                    algorithm = AStarStaticMemory.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.ThetaStar:
+                    algorithm = new BasicThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.LazyThetaStar:
+                    algorithm = new LazyThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStar:
+                    algorithm = new StrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.StrictThetaStarRecursive:
+                    algorithm = new RecursiveStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
             }
 
             if (returnTimeSpan)
