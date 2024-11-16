@@ -16,12 +16,14 @@ namespace ThetaStar.Grid
         [SerializeField] private float nodeRadius = 0.05f;
         [SerializeField] private Color nodeColor = new Color(0, 0.2f, 1, 0.5f);
         [Space, SerializeField] private bool displayTiles = false;
+        [SerializeField] private bool drawWireCubes = true;
         [SerializeField] private float TILE_SIZE_MODIFIER = 0.8f;
         [SerializeField] private Color walkableTileColor = Color.green;
+        [SerializeField] private Color maxWeightTileColor = Color.yellow;
         [SerializeField] private Color blockedTileColor = Color.red;
         [Space, SerializeField] private bool displayWeight = false;
         [SerializeField] private Color weightTextColor = Color.black;
-        [SerializeField] private Vector3 adjustValue = Vector3.zero;
+        [SerializeField] private Vector3 weightAdjustValue = Vector3.zero;
         [Space, SerializeField] private bool displayTileIndex = false;
         [SerializeField] private Color indexTextColor = Color.black;
         [SerializeField] private Vector3 indexAdjustValue = Vector3.zero;
@@ -57,6 +59,11 @@ namespace ThetaStar.Grid
         {
             transform.position = position;
             transform.localScale = scale;
+        }
+
+        public void SetMaxWeight(float weight) 
+        {
+            settings.MaxWeight = weight;
         }
 
         #endregion
@@ -159,11 +166,17 @@ namespace ThetaStar.Grid
         {
             foreach (Tile tile in tiles)
             {
-                Gizmos.color = tile.Weight == -1 ? blockedTileColor : walkableTileColor;
+                Color tileColor = Color.Lerp(walkableTileColor, maxWeightTileColor, 1 - (settings.MaxWeight - tile.Weight) / (settings.MaxWeight - 1));
+
+                Gizmos.color = tile.Weight == -1 ? blockedTileColor : tileColor;
 
                 Vector3 tileScale = new Vector3(TileSize * TILE_SIZE_MODIFIER, TILE_HEIGHT, TileSize * TILE_SIZE_MODIFIER);
 
-                Gizmos.DrawWireCube(tile.Position, tileScale);
+                if (drawWireCubes) {
+                    Gizmos.DrawWireCube(tile.Position, tileScale);
+                } else {
+                    Gizmos.DrawCube(tile.Position, tileScale);
+                }
             }
         }
 
@@ -195,7 +208,7 @@ namespace ThetaStar.Grid
                     Vector3 tilePosition = GetTilePosition(row, col);
                     Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
 
-                    Handles.Label(tileTopLeftPosition + adjustValue, tiles[row * TilesInRow + col].Weight.ToString(), style);
+                    Handles.Label(tileTopLeftPosition + weightAdjustValue, tiles[row * TilesInRow + col].Weight.ToString(), style);
                 }
             }
         }

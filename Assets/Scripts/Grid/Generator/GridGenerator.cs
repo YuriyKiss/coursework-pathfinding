@@ -12,11 +12,14 @@ namespace ThetaStar.Grid.Generator
         [Header("Settings")]
         // Theta Star algorithms work with uniform tiles only
         [SerializeField] private float tileSize = 0.4f;
-        [SerializeField] private bool addRandomWeights = true;
         [SerializeField] private PhysicsMode physicsMode = PhysicsMode.Physics3D;
         [SerializeField, ReadOnly] private Vector3 generationRayDirection = Vector3.down;
         [SerializeField, ReadOnly] private string walkableObjectTag = "Walkable";
         [SerializeField, ReadOnly] private LayerMask raycastLayerMask = 1 << 0;
+        [Header("Weight Settings")]
+        [SerializeField] private bool addRandomWeights = true;
+        [SerializeField] private float weightAddChance = 50f;
+        [SerializeField] private Vector2 additionalWeightRange = new Vector2(0, 3);
         [Header("Debug Settings")]
         [SerializeField] private bool displayGenerationZone;
         [SerializeField] private Color generationZoneColor = Color.black;
@@ -40,6 +43,7 @@ namespace ThetaStar.Grid.Generator
             grid.SetTilesInRowAndCol(tilesInRow, tilesInCol);
             grid.SetTileSize(tileSize);
             grid.SetGridPositionAndScale(transform.position, transform.localScale);
+            grid.SetMaxWeight(additionalWeightRange.y + 1);
 
             for (int row = 0; row < tilesInCol; row++)
             {
@@ -93,8 +97,8 @@ namespace ThetaStar.Grid.Generator
         {
             float weight = 1f;
 
-            if (addRandomWeights && Random.Range(1, 3) == 1) {
-                double value = (double)(new decimal(Random.Range(0f, 3f)));
+            if (addRandomWeights && Random.Range(0f, 1f) * 100f < weightAddChance) {
+                double value = (double)(new decimal(Random.Range(additionalWeightRange.x, additionalWeightRange.y)));
                 weight += (float)Math.Round(value, 2);
             }
 

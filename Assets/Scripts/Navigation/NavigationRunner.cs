@@ -56,7 +56,7 @@ namespace ThetaStar.Navigation
 
             counter /= multipleTestsAmount;
 
-            print("Algorithm computation time: " + counter);
+            print($"{algorithmType.ToString()} computation time: " + counter);
             print("Path length: " + algorithm.GetPathLength() * grid.TileSize);
 
             int[][] path = algorithm.GetPath();
@@ -74,7 +74,7 @@ namespace ThetaStar.Navigation
 
             (PathFindingAlgorithm algorithm, TimeSpan time) = PrepareAlgorithm(graph, printAlgorithmRuntime);
 
-            if (printAlgorithmRuntime) { print("Algorithm computation time: " + time); }
+            if (printAlgorithmRuntime) { print($"{algorithmType.ToString()} computation time: " + time); }
 
             int[][] path = algorithm.GetPath();
 

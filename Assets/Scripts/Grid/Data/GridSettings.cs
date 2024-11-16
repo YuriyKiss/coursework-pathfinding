@@ -10,6 +10,7 @@ namespace ThetaStar.Grid.Data
         public int TilesInCol;
         public float TileSize;
         public float MinYHeight;
+        public float MaxWeight;
 
         public void Clear()
         {
@@ -17,6 +18,7 @@ namespace ThetaStar.Grid.Data
             TilesInCol = 0;
             TileSize = 0;
             MinYHeight = Mathf.Infinity;
+            MaxWeight = 0;
         }
     }
 }
