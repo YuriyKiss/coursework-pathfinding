@@ -106,8 +106,8 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
             int destination = ToOneDimIndex(x, y);
             if (Visited(destination))
                 return;
-            if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
-                return; // Idea: don't bother trying to relax if parents are equal. using triangle inequality.
+            //if (Parent(current) != -1 && Parent(current) == Parent(destination)) // OPTIMISATION: [TI]
+            //    return; // Idea: don't bother trying to relax if parents are equal. using triangle inequality.
             if (!graph.NeighbourLineOfSight(currentX, currentY, x, y))
                 return;
 

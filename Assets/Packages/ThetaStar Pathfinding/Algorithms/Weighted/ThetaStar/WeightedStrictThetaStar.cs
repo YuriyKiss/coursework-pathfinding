@@ -126,31 +126,31 @@ namespace ThetaStar.Pathfinding.Algorithms.Theta
 
         protected override bool Relax(int u, int v, float weightUV)
         {
-            // return true iff relaxation is done.
+            float path1Weight = Distance(u) + PhysicalDistance(u, v);
+
+            // return true if relaxation is done.
             int par = Parent(u);
             if (LineOfSight(Parent(u), v))
             {
-                float newWeight = Distance(par) + PhysicalDistance(par, v);
-                return RelaxTarget(v, par, newWeight);
-            }
-            else
-            {
-                float newWeight = Distance(u) + PhysicalDistance(u, v);
-                return RelaxTarget(v, u, newWeight);
-            }
-        }
-
-        private bool RelaxTarget(int v, int par, float newWeight)
-        {
-            if (newWeight < Distance(v))
-            {
-                if (!IsTaut(v, par))
-                {
-                    newWeight += BUFFER_VALUE;
-                    par += int.MinValue;
+                float path2Weight = Distance(par) + PhysicalDistance(par, v);
+                if (path1Weight > path2Weight && path2Weight < Distance(v)) {
+                    if (!IsTaut(v, par)) {
+                        path2Weight += BUFFER_VALUE;
+                        par += int.MinValue;
+                    }
+                    SetDistance(v, path2Weight);
+                    SetParent(v, par);
+                    return true;
                 }
-                SetDistance(v, newWeight);
-                SetParent(v, par);
+            }
+            
+            if (path1Weight < Distance(v)) {
+                if (!IsTaut(v, u)) {
+                    path1Weight += BUFFER_VALUE;
+                    u += int.MinValue;
+                }
+                SetDistance(v, path1Weight);
+                SetParent(v, u);
                 return true;
             }
             return false;
