@@ -6,7 +6,7 @@ using ThetaStar.Pathfinding.PriorityQueue;
 
 namespace ThetaStar.Pathfinding.Algorithms
 {
-    public class AStarStaticMemory : PathFindingAlgorithm
+    public class WeightedAStar : PathFindingAlgorithm
     {
         protected bool postSmoothingOn = false;
         protected bool repeatedPostSmooth = false;
@@ -16,29 +16,29 @@ namespace ThetaStar.Pathfinding.Algorithms
 
         protected int finish;
 
-        public AStarStaticMemory(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, graph.sizeX, graph.sizeY, sx, sy, ex, ey)
+        public WeightedAStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, graph.sizeX, graph.sizeY, sx, sy, ex, ey)
         {
         }
 
-        public static AStarStaticMemory PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
+        public static WeightedAStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            AStarStaticMemory aStar = new AStarStaticMemory(graph, sx, sy, ex, ey);
+            WeightedAStar aStar = new WeightedAStar(graph, sx, sy, ex, ey);
             aStar.postSmoothingOn = true;
             aStar.repeatedPostSmooth = false;
             return aStar;
         }
 
-        public static AStarStaticMemory RepeatedPostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
+        public static WeightedAStar RepeatedPostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            AStarStaticMemory aStar = new AStarStaticMemory(graph, sx, sy, ex, ey);
+            WeightedAStar aStar = new WeightedAStar(graph, sx, sy, ex, ey);
             aStar.postSmoothingOn = true;
             aStar.repeatedPostSmooth = true;
             return aStar;
         }
 
-        public static AStarStaticMemory Dijkstra(GridGraph graph, int sx, int sy, int ex, int ey)
+        public static WeightedAStar Dijkstra(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            AStarStaticMemory aStar = new AStarStaticMemory(graph, sx, sy, ex, ey);
+            WeightedAStar aStar = new WeightedAStar(graph, sx, sy, ex, ey);
             aStar.heuristicWeight = 0;
             return aStar;
         }
@@ -289,10 +289,7 @@ namespace ThetaStar.Pathfinding.Algorithms
                 }
                 else
                 {
-                    // Optimal post-smoothing passes
-                    for (int i = 0; i < 50; ++i) {
-                        PostSmooth();
-                    }
+                    PostSmooth();
                 }
             }
         }

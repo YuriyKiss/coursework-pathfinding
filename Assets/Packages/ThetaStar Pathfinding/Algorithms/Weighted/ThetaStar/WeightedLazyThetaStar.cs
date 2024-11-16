@@ -3,9 +3,9 @@ using ThetaStar.Pathfinding.PriorityQueue;
 
 namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
-    public class LazyThetaStar : BasicThetaStar
+    public class WeightedLazyThetaStar : WeightedBasicThetaStar
     {
-        public LazyThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
+        public WeightedLazyThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
         {
         }
 

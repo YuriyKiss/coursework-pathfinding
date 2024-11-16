@@ -3,39 +3,39 @@ using ThetaStar.Pathfinding.PriorityQueue;
 
 namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
-    public class RecursiveStrictThetaStar : BasicThetaStar
+    public class WeightedRecursiveStrictThetaStar : WeightedBasicThetaStar
     {
         private int DEPTH_LIMIT = -1;
         private float BUFFER_VALUE = 0.42f;
 
-        public RecursiveStrictThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
+        public WeightedRecursiveStrictThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
         {
         }
 
-        public static RecursiveStrictThetaStar SetBuffer(GridGraph graph, int sx, int sy, int ex, int ey, float bufferValue)
+        public static WeightedRecursiveStrictThetaStar SetBuffer(GridGraph graph, int sx, int sy, int ex, int ey, float bufferValue)
         {
-            RecursiveStrictThetaStar algo = new RecursiveStrictThetaStar(graph, sx, sy, ex, ey);
+            WeightedRecursiveStrictThetaStar algo = new WeightedRecursiveStrictThetaStar(graph, sx, sy, ex, ey);
             algo.BUFFER_VALUE = bufferValue;
             return algo;
         }
 
-        public new static RecursiveStrictThetaStar NoHeuristic(GridGraph graph, int sx, int sy, int ex, int ey)
+        public new static WeightedRecursiveStrictThetaStar NoHeuristic(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            RecursiveStrictThetaStar algo = new RecursiveStrictThetaStar(graph, sx, sy, ex, ey);
+            WeightedRecursiveStrictThetaStar algo = new WeightedRecursiveStrictThetaStar(graph, sx, sy, ex, ey);
             algo.heuristicWeight = 0f;
             return algo;
         }
 
-        public static RecursiveStrictThetaStar DepthLimit(GridGraph graph, int sx, int sy, int ex, int ey, int depthLimit)
+        public static WeightedRecursiveStrictThetaStar DepthLimit(GridGraph graph, int sx, int sy, int ex, int ey, int depthLimit)
         {
-            RecursiveStrictThetaStar algo = new RecursiveStrictThetaStar(graph, sx, sy, ex, ey);
+            WeightedRecursiveStrictThetaStar algo = new WeightedRecursiveStrictThetaStar(graph, sx, sy, ex, ey);
             algo.DEPTH_LIMIT = depthLimit;
             return algo;
         }
 
-        public new static RecursiveStrictThetaStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
+        public new static WeightedRecursiveStrictThetaStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            RecursiveStrictThetaStar algo = new RecursiveStrictThetaStar(graph, sx, sy, ex, ey);
+            WeightedRecursiveStrictThetaStar algo = new WeightedRecursiveStrictThetaStar(graph, sx, sy, ex, ey);
             algo.postSmoothingOn = true;
             return algo;
         }

@@ -94,7 +94,7 @@ namespace ThetaStar.Grid.Generator
             float weight = 1f;
 
             if (addRandomWeights && Random.Range(1, 3) == 1) {
-                double value = (double)(new decimal(Random.Range(0.5f, 2f)));
+                double value = (double)(new decimal(Random.Range(0f, 3f)));
                 weight += (float)Math.Round(value, 2);
             }
 

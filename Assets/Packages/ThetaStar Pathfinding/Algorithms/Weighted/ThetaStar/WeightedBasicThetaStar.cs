@@ -2,22 +2,22 @@ using ThetaStar.Pathfinding.Grid;
 
 namespace ThetaStar.Pathfinding.Algorithms.Theta
 {
-    public class BasicThetaStar : AStarStaticMemory
+    public class WeightedBasicThetaStar : WeightedAStar
     {
-        public BasicThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
+        public WeightedBasicThetaStar(GridGraph graph, int sx, int sy, int ex, int ey) : base(graph, sx, sy, ex, ey)
         {
         }
 
-        public new static BasicThetaStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
+        public new static WeightedBasicThetaStar PostSmooth(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            BasicThetaStar bts = new BasicThetaStar(graph, sx, sy, ex, ey);
+            WeightedBasicThetaStar bts = new WeightedBasicThetaStar(graph, sx, sy, ex, ey);
             bts.postSmoothingOn = true;
             return bts;
         }
 
-        public static BasicThetaStar NoHeuristic(GridGraph graph, int sx, int sy, int ex, int ey)
+        public static WeightedBasicThetaStar NoHeuristic(GridGraph graph, int sx, int sy, int ex, int ey)
         {
-            BasicThetaStar bts = new BasicThetaStar(graph, sx, sy, ex, ey);
+            WeightedBasicThetaStar bts = new WeightedBasicThetaStar(graph, sx, sy, ex, ey);
             bts.heuristicWeight = 0;
             return bts;
         }
