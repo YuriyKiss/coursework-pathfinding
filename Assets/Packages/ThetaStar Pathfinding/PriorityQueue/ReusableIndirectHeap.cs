@@ -223,8 +223,7 @@ namespace ThetaStar.Pathfinding.PriorityQueue
             // Optimisation: Jump the newly set value to the bottom of the heap.
             // Faster if there are a lot of POSITIVE_INFINITY values.
             // This is equivalent to an insert operation.
-            if (GetKey(inIndex) == float.PositiveInfinity)
-            {
+            if (GetKey(inIndex) == float.PositiveInfinity) {
                 SwapData(inIndex, heapSize);
                 inIndex = heapSize;
                 ++heapSize;

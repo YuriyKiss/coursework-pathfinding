@@ -57,7 +57,11 @@ namespace ThetaStar.Navigation
             counter /= multipleTestsAmount;
 
             print("Algorithm computation time: " + counter);
-            print("Path length: " + algorithm.GetPathLength());
+            print("Path length: " + algorithm.GetPathLength() * grid.TileSize);
+
+            int[][] path = algorithm.GetPath();
+            List<GridTarget> pathConverted = ConvertPath(path);
+            DisplayPath(pathConverted);
         }
 
         public List<GridTarget> ComputePath()
@@ -74,7 +78,7 @@ namespace ThetaStar.Navigation
 
             int[][] path = algorithm.GetPath();
 
-            if (printPathLength) print("Path length: " + algorithm.GetPathLength());
+            if (printPathLength) print("Path length: " + algorithm.GetPathLength() * grid.TileSize);
 
             List<GridTarget> pathConverted = ConvertPath(path);
             DisplayPath(pathConverted);
@@ -88,7 +92,7 @@ namespace ThetaStar.Navigation
 
             foreach (Tile tile in tiles)
             {
-                graph.SetBlocked(tile.ColIdx, tile.RowIdx, tile.IsBlocked);
+                graph.SetBlocked(tile.ColIdx, tile.RowIdx, tile.Weight);
             }
 
             return graph;
@@ -100,8 +104,23 @@ namespace ThetaStar.Navigation
 
             switch (algorithmType)
             {
-                case AlgorithmType.Dijkstra:
-                    algorithm = AStarStaticMemory.Dijkstra(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                case AlgorithmType.WeightedAStar:
+                    algorithm = new WeightedAStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.WeightedAStarPostSmooth:
+                    algorithm = WeightedAStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.WeightedThetaStar:
+                    algorithm = new WeightedBasicThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.WeightedLazyThetaStar:
+                    algorithm = new WeightedLazyThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.WeightedStrictThetaStar:
+                    algorithm = new WeightedStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
+                    break;
+                case AlgorithmType.WeightedStrictThetaStarRecursive:
+                    algorithm = new WeightedRecursiveStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
                 case AlgorithmType.AStar:
                     algorithm = new AStarStaticMemory(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
@@ -109,20 +128,8 @@ namespace ThetaStar.Navigation
                 case AlgorithmType.AStarPostSmooth:
                     algorithm = AStarStaticMemory.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
-                case AlgorithmType.AStarRepeatedPostSmooth:
-                    algorithm = AStarStaticMemory.RepeatedPostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
                 case AlgorithmType.ThetaStar:
                     algorithm = new BasicThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.ThetaStarNoHeuristic:
-                    algorithm = BasicThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.ThetaStarPostSmooth:
-                    algorithm = BasicThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.ThetaStarRecursive:
-                    algorithm = new RecursiveThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
                 case AlgorithmType.LazyThetaStar:
                     algorithm = new LazyThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
@@ -130,29 +137,8 @@ namespace ThetaStar.Navigation
                 case AlgorithmType.StrictThetaStar:
                     algorithm = new StrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
-                case AlgorithmType.StrictThetaStarNoHeuristic:
-                    algorithm = StrictThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.StrictThetaStarPostSmooth:
-                    algorithm = StrictThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.StrictThetaStarCustomBuffer:
-                    algorithm = StrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.5f);
-                    break;
                 case AlgorithmType.StrictThetaStarRecursive:
                     algorithm = new RecursiveStrictThetaStar(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.StrictThetaStarRecursiveCustomBuffer:
-                    algorithm = RecursiveStrictThetaStar.SetBuffer(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, 0.5f);
-                    break;
-                case AlgorithmType.StrictThetaStarRecursiveNoHeuristic:
-                    algorithm = RecursiveStrictThetaStar.NoHeuristic(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
-                    break;
-                case AlgorithmType.StrictThetaStarRecursiveCustomDepth:
-                    algorithm = RecursiveStrictThetaStar.DepthLimit(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row, -2);
-                    break;
-                case AlgorithmType.StrictThetaStarRecursivePostSmooth:
-                    algorithm = RecursiveStrictThetaStar.PostSmooth(graph, goals.Start.Col, goals.Start.Row, goals.End.Col, goals.End.Row);
                     break;
             }
 

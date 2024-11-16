@@ -2,6 +2,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using ThetaStar.Grid.Data;
+using UnityEditor;
 
 namespace ThetaStar.Grid
 {
@@ -15,11 +16,17 @@ namespace ThetaStar.Grid
         [SerializeField] private float nodeRadius = 0.05f;
         [SerializeField] private Color nodeColor = new Color(0, 0.2f, 1, 0.5f);
         [Space, SerializeField] private bool displayTiles = false;
+        [SerializeField] private float TILE_SIZE_MODIFIER = 0.8f;
         [SerializeField] private Color walkableTileColor = Color.green;
         [SerializeField] private Color blockedTileColor = Color.red;
+        [Space, SerializeField] private bool displayWeight = false;
+        [SerializeField] private Color weightTextColor = Color.black;
+        [SerializeField] private Vector3 adjustValue = Vector3.zero;
+        [Space, SerializeField] private bool displayTileIndex = false;
+        [SerializeField] private Color indexTextColor = Color.black;
+        [SerializeField] private Vector3 indexAdjustValue = Vector3.zero;
 
         private const float TILE_HEIGHT = 0.05f;
-        private const float TILE_SIZE_MODIFIER = 0.8f;
 
         public List<Tile> GetTiles() => tiles;
         public int TilesInRow => settings.TilesInRow;
@@ -85,7 +92,7 @@ namespace ThetaStar.Grid
                 Vector3 currentPosition = tiles[i].Position;
                 Vector3 newPosition = new Vector3(currentPosition.x, MinYHeight, currentPosition.z);
                 Vector3 topLeftCornerPosition = TileTopLeftPosition(newPosition);
-                tiles[i] = new Tile(newPosition, topLeftCornerPosition, tiles[i].IsBlocked, tiles[i].RowIdx, tiles[i].ColIdx);
+                tiles[i] = new Tile(newPosition, topLeftCornerPosition, tiles[i].Weight, tiles[i].RowIdx, tiles[i].ColIdx);
             }
         }
 
@@ -137,13 +144,22 @@ namespace ThetaStar.Grid
             {
                 DisplayNodes();
             }
+
+            if (displayWeight) 
+            {
+                DisplayWeight();
+            }
+
+            if (displayTileIndex) {
+                DisplayIndex();
+            }
         }
 
         private void DisplayTiles()
         {
             foreach (Tile tile in tiles)
             {
-                Gizmos.color = tile.IsBlocked ? blockedTileColor : walkableTileColor;
+                Gizmos.color = tile.Weight == -1 ? blockedTileColor : walkableTileColor;
 
                 Vector3 tileScale = new Vector3(TileSize * TILE_SIZE_MODIFIER, TILE_HEIGHT, TileSize * TILE_SIZE_MODIFIER);
 
@@ -163,6 +179,38 @@ namespace ThetaStar.Grid
                     Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
 
                     Gizmos.DrawSphere(tileTopLeftPosition, nodeRadius);
+                }
+            }
+        }
+
+        private void DisplayWeight() 
+        {
+            for (int row = 0; row <= TilesInCol - 1; row++) 
+            {
+                for (int col = 0; col <= TilesInRow - 1; col++) 
+                {
+                    GUIStyle style = new GUIStyle();
+                    style.normal.textColor = weightTextColor;
+
+                    Vector3 tilePosition = GetTilePosition(row, col);
+                    Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
+
+                    Handles.Label(tileTopLeftPosition + adjustValue, tiles[row * TilesInRow + col].Weight.ToString(), style);
+                }
+            }
+        }
+
+        private void DisplayIndex() {
+            for (int row = 0; row <= TilesInCol - 1; row++) {
+                for (int col = 0; col <= TilesInRow - 1; col++) {
+                    GUIStyle style = new GUIStyle();
+                    style.normal.textColor = indexTextColor;
+
+                    Vector3 tilePosition = GetTilePosition(row, col);
+                    Vector3 tileTopLeftPosition = TileTopLeftPosition(tilePosition);
+
+                    Handles.Label(tileTopLeftPosition + indexAdjustValue, "[" + row.ToString() + "; " +
+                        col.ToString() + "]", style);
                 }
             }
         }
