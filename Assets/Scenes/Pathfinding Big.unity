@@ -617,30 +617,19 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 5.2000003, y: 0.1, z: 22.2}
-  - {x: 5.6000004, y: 0.1, z: 22.2}
-  - {x: 5.6000004, y: 0.1, z: 18.6}
-  - {x: 3.6000001, y: 0.1, z: 13.800001}
+  - {x: 9.6, y: 0.1, z: 12.200001}
+  - {x: 1.6000001, y: 0.1, z: 13.000001}
   - {x: 0.40000015, y: 0.1, z: 13.000001}
   - {x: -3.6, y: 0.1, z: 11.000001}
-  - {x: -4, y: 0.1, z: 0.20000039}
-  - {x: -5.9999995, y: 0.1, z: -2.1999996}
+  - {x: -4, y: 0.1, z: 1.0000004}
+  - {x: -5.2, y: 0.1, z: -1.7999997}
   - {x: -5.2, y: 0.1, z: -2.9999998}
   - {x: 1.2000002, y: 0.1, z: -2.9999998}
   - {x: 5.6000004, y: 0.1, z: -0.5999996}
   - {x: 8.400001, y: 0.1, z: -0.5999996}
   - {x: 8.400001, y: 0.1, z: -8.599999}
-  - {x: 2.4, y: 0.1, z: -12.2}
-  - {x: 0.40000015, y: 0.1, z: -15.4}
-  - {x: -0.39999986, y: 0.1, z: -15.4}
-  - {x: -2.3999999, y: 0.1, z: -13}
-  - {x: -5.9999995, y: 0.1, z: -11}
-  - {x: -7.6, y: 0.1, z: -11}
-  - {x: -7.6, y: 0.1, z: -20.2}
-  - {x: -6.7999997, y: 0.1, z: -21}
-  - {x: -6.7999997, y: 0.1, z: -22.2}
-  - {x: -8.4, y: 0.1, z: -22.6}
-  - {x: -10, y: 0.1, z: -23.800001}
+  - {x: 6.4000006, y: 0.1, z: -13}
+  - {x: 6.0000005, y: 0.1, z: -19.400002}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2745,7 +2734,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.77
+  orthographic size: 12.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4083,13 +4072,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1515440836}
   tileSize: 0.4
-  addRandomWeights: 1
   physicsMode: 2
   generationRayDirection: {x: 0, y: -1, z: 0}
   walkableObjectTag: Walkable
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  addRandomWeights: 1
+  weightAddChance: 50
+  additionalWeightRange: {x: 0, y: 3}
   displayGenerationZone: 1
   generationZoneColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &1328793260
@@ -36002,16 +35993,19 @@ MonoBehaviour:
     TilesInCol: 50
     TileSize: 0.4
     MinYHeight: 0.05
+    MaxWeight: 0
   displayNodes: 0
   nodeRadius: 0.05
   nodeColor: {r: 0, g: 0.17964077, b: 1, a: 0.6392157}
   displayTiles: 1
+  drawWireCubes: 1
   TILE_SIZE_MODIFIER: 1
   walkableTileColor: {r: 0, g: 0.6981132, b: 0, a: 1}
+  maxWeightTileColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
   displayWeight: 1
   weightTextColor: {r: 0, g: 0, b: 0, a: 1}
-  adjustValue: {x: 0.15, y: 0, z: 0.11}
+  weightAdjustValue: {x: 0, y: 0, z: 0}
   displayTileIndex: 0
   indexTextColor: {r: 0, g: 0, b: 0, a: 1}
   indexAdjustValue: {x: 0, y: 0, z: 0}
@@ -37492,7 +37486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 1515440836}
-  algorithmType: 12
+  algorithmType: 6
   goals:
     Start:
       Row: 38
@@ -37505,7 +37499,7 @@ MonoBehaviour:
   displayPathString: 0
   printAlgorithmRuntime: 1
   printPathLength: 1
-  multipleTestsAmount: 50
+  multipleTestsAmount: 2500
 --- !u!114 &2045078622
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ using ThetaStar.Pathfinding.Algorithms;
 using ThetaStar.Pathfinding.Algorithms.Enums;
 using ThetaStar.Pathfinding.Algorithms.Theta;
 using System;
+using Random = UnityEngine.Random;
 
 namespace ThetaStar.Navigation
 {
@@ -46,18 +47,28 @@ namespace ThetaStar.Navigation
             GridGraph graph = GenerateInternalGraph(tiles);
 
             long counter = 0;
+            float distance = 0;
+            var rnd = new System.Random(2222);
             PathFindingAlgorithm algorithm = null; TimeSpan timeSpan = TimeSpan.Zero;
             for (int i = 0; i < multipleTestsAmount; ++i)
             {
-                (algorithm, timeSpan) = PrepareAlgorithm(graph, true);
+                (algorithm, timeSpan) = PrepareAlgorithm(graph, GetRandomGoals(rnd), true);
 
+                if (algorithm.GetPathLength() == 0)
+                {
+                    i--;
+                    continue;
+                }
+                
+                distance += algorithm.GetPathLength();
                 counter += timeSpan.Ticks;
             }
 
             counter /= multipleTestsAmount;
+            distance /= multipleTestsAmount;
 
-            print($"{algorithmType.ToString()} computation time: " + counter);
-            print("Path length: " + algorithm.GetPathLength() * grid.TileSize);
+            print($"{algorithmType.ToString()} computation time: " + counter / 10000f);
+            print("Path length: " + distance * grid.TileSize);
 
             int[][] path = algorithm.GetPath();
             List<GridTarget> pathConverted = ConvertPath(path);
@@ -72,7 +83,7 @@ namespace ThetaStar.Navigation
 
             GridGraph graph = GenerateInternalGraph(tiles);
 
-            (PathFindingAlgorithm algorithm, TimeSpan time) = PrepareAlgorithm(graph, printAlgorithmRuntime);
+            (PathFindingAlgorithm algorithm, TimeSpan time) = PrepareAlgorithm(graph, goals,  printAlgorithmRuntime);
 
             if (printAlgorithmRuntime) { print($"{algorithmType.ToString()} computation time: " + time); }
 
@@ -98,7 +109,7 @@ namespace ThetaStar.Navigation
             return graph;
         }
 
-        private (PathFindingAlgorithm, TimeSpan) PrepareAlgorithm(GridGraph graph, bool returnTimeSpan)
+        private (PathFindingAlgorithm, TimeSpan) PrepareAlgorithm(GridGraph graph, StartEnd goals, bool returnTimeSpan)
         {
             PathFindingAlgorithm algorithm = null;
 
@@ -201,6 +212,23 @@ namespace ThetaStar.Navigation
                 lineRenderer.positionCount = points.Count;
                 lineRenderer.SetPositions(points.ToArray());
             }
+        }
+
+        private StartEnd GetRandomGoals(System.Random rnd)
+        {
+            return new StartEnd()
+            {
+                Start = new GridTarget()
+                {
+                    Row = rnd.Next(0, grid.TilesInCol),
+                    Col = rnd.Next(0, grid.TilesInRow)
+                },
+                End = new GridTarget()
+                {
+                    Row = rnd.Next(0, grid.TilesInCol),
+                    Col = rnd.Next(0, grid.TilesInRow)
+                }
+            };
         }
     }
 }
