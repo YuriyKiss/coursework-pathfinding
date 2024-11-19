@@ -311,7 +311,7 @@ namespace ThetaStar.Pathfinding.Algorithms
                     {
                         distanceJagged += PhysicalDistance(prev, next);
                         bool isShorter = distanceJagged <= PhysicalDistance(next, current);
-                        if (LineOfSight(current, next) && isShorter)
+                        if (LineOfSight(current, next))
                         {
                             SetParent(current, next);
                             prev = next;
