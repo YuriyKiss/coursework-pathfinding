@@ -1,0 +1,4232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 705507994}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &51503855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51503856}
+  - component: {fileID: 51503859}
+  - component: {fileID: 51503858}
+  - component: {fileID: 51503857}
+  m_Layer: 0
+  m_Name: Obstacle 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51503856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434279602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &51503857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &51503858
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &51503859
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51503855}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &178758570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178758571}
+  - component: {fileID: 178758572}
+  m_Layer: 0
+  m_Name: Path Renderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &178758571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178758570}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1965162176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!120 &178758572
+LineRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178758570}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d6def1a26eb9fd449bad0f9c70331fb7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: -5, y: 0.1, z: -5}
+  - {x: -4.6, y: 0.1, z: -4.6}
+  - {x: -4.2, y: 0.1, z: -4.2}
+  - {x: -3.8, y: 0.1, z: -3.8}
+  - {x: -3.4, y: 0.1, z: -3.8}
+  - {x: -3, y: 0.1, z: -3.8}
+  - {x: -2.6, y: 0.1, z: -3.4}
+  - {x: -2.2, y: 0.1, z: -3.8}
+  - {x: -1.8, y: 0.1, z: -4.2}
+  - {x: -1.4, y: 0.1, z: -4.6}
+  - {x: -0.99999994, y: 0.1, z: -4.6}
+  - {x: -0.5999999, y: 0.1, z: -4.6}
+  - {x: -0.19999993, y: 0.1, z: -4.6}
+  - {x: 0.20000009, y: 0.1, z: -4.6}
+  - {x: 0.6000001, y: 0.1, z: -4.2}
+  - {x: 1, y: 0.1, z: -3.8}
+  - {x: 1, y: 0.1, z: -3.4}
+  - {x: 1.4000001, y: 0.1, z: -3}
+  - {x: 1.8, y: 0.1, z: -2.6}
+  - {x: 1.8, y: 0.1, z: -2.2}
+  - {x: 1.8, y: 0.1, z: -1.8}
+  - {x: 1.8, y: 0.1, z: -1.4}
+  - {x: 2.2, y: 0.1, z: -0.99999994}
+  - {x: 2.6000001, y: 0.1, z: -0.5999999}
+  - {x: 3, y: 0.1, z: -0.19999993}
+  - {x: 3.4, y: 0.1, z: 0.20000009}
+  - {x: 3.8, y: 0.1, z: 0.6000001}
+  - {x: 3.8, y: 0.1, z: 1}
+  - {x: 4.2000003, y: 0.1, z: 1.4000001}
+  - {x: 4.6000004, y: 0.1, z: 1.8}
+  - {x: 4.2000003, y: 0.1, z: 2.2}
+  - {x: 4.6000004, y: 0.1, z: 2.6000001}
+  - {x: 5.0000005, y: 0.1, z: 3}
+  - {x: 5.0000005, y: 0.1, z: 3.4}
+  - {x: 5.0000005, y: 0.1, z: 3.8}
+  - {x: 5.0000005, y: 0.1, z: 4.2000003}
+  - {x: 5.0000005, y: 0.1, z: 4.6000004}
+  - {x: 5.0000005, y: 0.1, z: 5.0000005}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.039369583
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MaskInteraction: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
+  m_ApplyActiveColorSpace: 1
+--- !u!1 &705507993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705507995}
+  - component: {fileID: 705507994}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &705507994
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &705507995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &963194225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963194228}
+  - component: {fileID: 963194227}
+  - component: {fileID: 963194226}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &963194226
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+--- !u!20 &963194227
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &963194228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
+--- !u!1 &1328793254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328793255}
+  - component: {fileID: 1328793260}
+  - component: {fileID: 1328793258}
+  m_Layer: 0
+  m_Name: Grid Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1328793255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328793254}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalScale: {x: 10, y: 2, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1965162176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1328793258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328793254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a410ec354ed2e49bab281438d3c270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1515440836}
+  tileSize: 0.4
+  physicsMode: 2
+  generationRayDirection: {x: 0, y: -1, z: 0}
+  walkableObjectTag: Walkable
+  raycastLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  addRandomWeights: 1
+  weightAddChance: 50
+  additionalWeightRange: {x: 0, y: 3}
+  displayGenerationZone: 1
+  generationZoneColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &1328793260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328793254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de656c0cead6a9e498152dc53bb3da27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReady: 0
+  TextInfo: Grid Generator will use this object's transform information (position
+    and scale) to create grid.
+  spaceMessage: 
+--- !u!1 &1372752900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372752901}
+  - component: {fileID: 1372752903}
+  - component: {fileID: 1372752902}
+  - component: {fileID: 1372752904}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Walkable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1372752901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372752900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 0.1, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434279602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1372752902
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372752900}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fa783d37fad203d4bb1667f51f75831f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1372752903
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372752900}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1372752904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372752900}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1434279601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1434279602}
+  m_Layer: 0
+  m_Name: Scene Geometry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1434279602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434279601}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1372752901}
+  - {fileID: 1860952014}
+  - {fileID: 51503856}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1515440835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515440838}
+  - component: {fileID: 1515440839}
+  - component: {fileID: 1515440836}
+  m_Layer: 0
+  m_Name: Unity Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1515440836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515440835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d948c98ecca4af48a9ccefea9ea353a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - Position: {x: -4.8, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 0
+  - Position: {x: -4.8, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 1
+  - Position: {x: -4.8, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 2
+  - Position: {x: -4.8, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 3
+  - Position: {x: -4.8, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 4
+  - Position: {x: -4.8, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 5
+  - Position: {x: -4.8, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 6
+  - Position: {x: -4.8, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -2.2}
+    Weight: 2.45
+    RowIdx: 0
+    ColIdx: 7
+  - Position: {x: -4.8, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -1.8}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 8
+  - Position: {x: -4.8, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -1.4}
+    Weight: 3.84
+    RowIdx: 0
+    ColIdx: 9
+  - Position: {x: -4.8, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -0.99999994}
+    Weight: 2.2
+    RowIdx: 0
+    ColIdx: 10
+  - Position: {x: -4.8, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -0.5999999}
+    Weight: 1.33
+    RowIdx: 0
+    ColIdx: 11
+  - Position: {x: -4.8, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 12
+  - Position: {x: -4.8, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 13
+  - Position: {x: -4.8, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 0.6000001}
+    Weight: 3.97
+    RowIdx: 0
+    ColIdx: 14
+  - Position: {x: -4.8, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 1}
+    Weight: 1.87
+    RowIdx: 0
+    ColIdx: 15
+  - Position: {x: -4.8, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 1.4000001}
+    Weight: 1.31
+    RowIdx: 0
+    ColIdx: 16
+  - Position: {x: -4.8, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 1.8}
+    Weight: 2.44
+    RowIdx: 0
+    ColIdx: 17
+  - Position: {x: -4.8, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 18
+  - Position: {x: -4.8, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 19
+  - Position: {x: -4.8, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 0
+    ColIdx: 20
+  - Position: {x: -4.8, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 3.4}
+    Weight: 2.26
+    RowIdx: 0
+    ColIdx: 21
+  - Position: {x: -4.8, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 3.8}
+    Weight: 1.9200001
+    RowIdx: 0
+    ColIdx: 22
+  - Position: {x: -4.8, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 4.2000003}
+    Weight: 3.92
+    RowIdx: 0
+    ColIdx: 23
+  - Position: {x: -4.8, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -5, y: 0.1, z: 4.6000004}
+    Weight: 2.45
+    RowIdx: 0
+    ColIdx: 24
+  - Position: {x: -4.4, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 0
+  - Position: {x: -4.4, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -4.6}
+    Weight: 1.33
+    RowIdx: 1
+    ColIdx: 1
+  - Position: {x: -4.4, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -4.2}
+    Weight: 3.3
+    RowIdx: 1
+    ColIdx: 2
+  - Position: {x: -4.4, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -3.8}
+    Weight: 3.89
+    RowIdx: 1
+    ColIdx: 3
+  - Position: {x: -4.4, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -3.4}
+    Weight: 2.08
+    RowIdx: 1
+    ColIdx: 4
+  - Position: {x: -4.4, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 5
+  - Position: {x: -4.4, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -2.6}
+    Weight: 2.5900002
+    RowIdx: 1
+    ColIdx: 6
+  - Position: {x: -4.4, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -2.2}
+    Weight: 1.87
+    RowIdx: 1
+    ColIdx: 7
+  - Position: {x: -4.4, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -1.8}
+    Weight: 3.4
+    RowIdx: 1
+    ColIdx: 8
+  - Position: {x: -4.4, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 9
+  - Position: {x: -4.4, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -0.99999994}
+    Weight: 1.31
+    RowIdx: 1
+    ColIdx: 10
+  - Position: {x: -4.4, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -0.5999999}
+    Weight: 2.96
+    RowIdx: 1
+    ColIdx: 11
+  - Position: {x: -4.4, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 12
+  - Position: {x: -4.4, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 0.20000009}
+    Weight: 1.26
+    RowIdx: 1
+    ColIdx: 13
+  - Position: {x: -4.4, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 0.6000001}
+    Weight: 2.5700002
+    RowIdx: 1
+    ColIdx: 14
+  - Position: {x: -4.4, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 15
+  - Position: {x: -4.4, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 1.4000001}
+    Weight: 1.8299999
+    RowIdx: 1
+    ColIdx: 16
+  - Position: {x: -4.4, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 17
+  - Position: {x: -4.4, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 18
+  - Position: {x: -4.4, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 2.6000001}
+    Weight: 2.88
+    RowIdx: 1
+    ColIdx: 19
+  - Position: {x: -4.4, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 20
+  - Position: {x: -4.4, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 21
+  - Position: {x: -4.4, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 22
+  - Position: {x: -4.4, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 23
+  - Position: {x: -4.4, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -4.6, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 1
+    ColIdx: 24
+  - Position: {x: -4, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -5}
+    Weight: 2.48
+    RowIdx: 2
+    ColIdx: 0
+  - Position: {x: -4, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -4.6}
+    Weight: 3.32
+    RowIdx: 2
+    ColIdx: 1
+  - Position: {x: -4, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 2
+  - Position: {x: -4, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 3
+  - Position: {x: -4, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 4
+  - Position: {x: -4, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 5
+  - Position: {x: -4, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -2.6}
+    Weight: 2.31
+    RowIdx: 2
+    ColIdx: 6
+  - Position: {x: -4, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -2.2}
+    Weight: 1.42
+    RowIdx: 2
+    ColIdx: 7
+  - Position: {x: -4, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -1.8}
+    Weight: 2.62
+    RowIdx: 2
+    ColIdx: 8
+  - Position: {x: -4, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 9
+  - Position: {x: -4, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -0.99999994}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 10
+  - Position: {x: -4, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -0.5999999}
+    Weight: 2.9099998
+    RowIdx: 2
+    ColIdx: 11
+  - Position: {x: -4, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 12
+  - Position: {x: -4, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 0.20000009}
+    Weight: 3.89
+    RowIdx: 2
+    ColIdx: 13
+  - Position: {x: -4, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 14
+  - Position: {x: -4, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 15
+  - Position: {x: -4, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 16
+  - Position: {x: -4, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 17
+  - Position: {x: -4, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 2.2}
+    Weight: 1.21
+    RowIdx: 2
+    ColIdx: 18
+  - Position: {x: -4, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 2.6000001}
+    Weight: 3.32
+    RowIdx: 2
+    ColIdx: 19
+  - Position: {x: -4, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 20
+  - Position: {x: -4, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 21
+  - Position: {x: -4, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 22
+  - Position: {x: -4, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 2
+    ColIdx: 23
+  - Position: {x: -4, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -4.2, y: 0.1, z: 4.6000004}
+    Weight: 2.8899999
+    RowIdx: 2
+    ColIdx: 24
+  - Position: {x: -3.6, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -5}
+    Weight: 3.93
+    RowIdx: 3
+    ColIdx: 0
+  - Position: {x: -3.6, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 1
+  - Position: {x: -3.6, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 2
+  - Position: {x: -3.6, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 3
+  - Position: {x: -3.6, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 4
+  - Position: {x: -3.6, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 5
+  - Position: {x: -3.6, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -2.6}
+    Weight: 3.43
+    RowIdx: 3
+    ColIdx: 6
+  - Position: {x: -3.6, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -2.2}
+    Weight: 3.81
+    RowIdx: 3
+    ColIdx: 7
+  - Position: {x: -3.6, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -1.8}
+    Weight: 1.85
+    RowIdx: 3
+    ColIdx: 8
+  - Position: {x: -3.6, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -1.4}
+    Weight: 2.35
+    RowIdx: 3
+    ColIdx: 9
+  - Position: {x: -3.6, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -0.99999994}
+    Weight: 3.63
+    RowIdx: 3
+    ColIdx: 10
+  - Position: {x: -3.6, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 11
+  - Position: {x: -3.6, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: -0.19999993}
+    Weight: 1.85
+    RowIdx: 3
+    ColIdx: 12
+  - Position: {x: -3.6, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 0.20000009}
+    Weight: 3.34
+    RowIdx: 3
+    ColIdx: 13
+  - Position: {x: -3.6, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 0.6000001}
+    Weight: 3.89
+    RowIdx: 3
+    ColIdx: 14
+  - Position: {x: -3.6, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 15
+  - Position: {x: -3.6, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 16
+  - Position: {x: -3.6, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 1.8}
+    Weight: 2.05
+    RowIdx: 3
+    ColIdx: 17
+  - Position: {x: -3.6, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 18
+  - Position: {x: -3.6, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 19
+  - Position: {x: -3.6, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 3}
+    Weight: 2.01
+    RowIdx: 3
+    ColIdx: 20
+  - Position: {x: -3.6, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 21
+  - Position: {x: -3.6, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 3
+    ColIdx: 22
+  - Position: {x: -3.6, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 4.2000003}
+    Weight: 2.95
+    RowIdx: 3
+    ColIdx: 23
+  - Position: {x: -3.6, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -3.8, y: 0.1, z: 4.6000004}
+    Weight: 3.9
+    RowIdx: 3
+    ColIdx: 24
+  - Position: {x: -3.2, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -5}
+    Weight: 2.1
+    RowIdx: 4
+    ColIdx: 0
+  - Position: {x: -3.2, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 1
+  - Position: {x: -3.2, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 2
+  - Position: {x: -3.2, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -3.8}
+    Weight: 1.12
+    RowIdx: 4
+    ColIdx: 3
+  - Position: {x: -3.2, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -3.4}
+    Weight: 1.22
+    RowIdx: 4
+    ColIdx: 4
+  - Position: {x: -3.2, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 5
+  - Position: {x: -3.2, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 6
+  - Position: {x: -3.2, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -2.2}
+    Weight: 1.78
+    RowIdx: 4
+    ColIdx: 7
+  - Position: {x: -3.2, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -1.8}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 8
+  - Position: {x: -3.2, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -1.4}
+    Weight: 1.69
+    RowIdx: 4
+    ColIdx: 9
+  - Position: {x: -3.2, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -0.99999994}
+    Weight: 2.4
+    RowIdx: 4
+    ColIdx: 10
+  - Position: {x: -3.2, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -0.5999999}
+    Weight: 2.85
+    RowIdx: 4
+    ColIdx: 11
+  - Position: {x: -3.2, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: -0.19999993}
+    Weight: 2.8600001
+    RowIdx: 4
+    ColIdx: 12
+  - Position: {x: -3.2, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 13
+  - Position: {x: -3.2, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 0.6000001}
+    Weight: 1.9300001
+    RowIdx: 4
+    ColIdx: 14
+  - Position: {x: -3.2, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 1}
+    Weight: 1.64
+    RowIdx: 4
+    ColIdx: 15
+  - Position: {x: -3.2, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 16
+  - Position: {x: -3.2, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 1.8}
+    Weight: 2.4099998
+    RowIdx: 4
+    ColIdx: 17
+  - Position: {x: -3.2, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 2.2}
+    Weight: 3.35
+    RowIdx: 4
+    ColIdx: 18
+  - Position: {x: -3.2, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 19
+  - Position: {x: -3.2, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 3}
+    Weight: 1.55
+    RowIdx: 4
+    ColIdx: 20
+  - Position: {x: -3.2, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 3.4}
+    Weight: 3.13
+    RowIdx: 4
+    ColIdx: 21
+  - Position: {x: -3.2, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 22
+  - Position: {x: -3.2, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 23
+  - Position: {x: -3.2, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -3.4, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 4
+    ColIdx: 24
+  - Position: {x: -2.8, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 0
+  - Position: {x: -2.8, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -4.6}
+    Weight: 3.2
+    RowIdx: 5
+    ColIdx: 1
+  - Position: {x: -2.8, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -4.2}
+    Weight: 3.69
+    RowIdx: 5
+    ColIdx: 2
+  - Position: {x: -2.8, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -3.8}
+    Weight: 1.61
+    RowIdx: 5
+    ColIdx: 3
+  - Position: {x: -2.8, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -3.4}
+    Weight: 3.98
+    RowIdx: 5
+    ColIdx: 4
+  - Position: {x: -2.8, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -3}
+    Weight: 1.4
+    RowIdx: 5
+    ColIdx: 5
+  - Position: {x: -2.8, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 6
+  - Position: {x: -2.8, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -2.2}
+    Weight: 3.37
+    RowIdx: 5
+    ColIdx: 7
+  - Position: {x: -2.8, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -1.8}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 8
+  - Position: {x: -2.8, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -1.4}
+    Weight: 3.09
+    RowIdx: 5
+    ColIdx: 9
+  - Position: {x: -2.8, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -0.99999994}
+    Weight: 1.1800001
+    RowIdx: 5
+    ColIdx: 10
+  - Position: {x: -2.8, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -0.5999999}
+    Weight: 3.52
+    RowIdx: 5
+    ColIdx: 11
+  - Position: {x: -2.8, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 12
+  - Position: {x: -2.8, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 13
+  - Position: {x: -2.8, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 0.6000001}
+    Weight: 3.75
+    RowIdx: 5
+    ColIdx: 14
+  - Position: {x: -2.8, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 15
+  - Position: {x: -2.8, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 1.4000001}
+    Weight: 2.6599998
+    RowIdx: 5
+    ColIdx: 16
+  - Position: {x: -2.8, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 1.8}
+    Weight: 3.13
+    RowIdx: 5
+    ColIdx: 17
+  - Position: {x: -2.8, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 18
+  - Position: {x: -2.8, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 19
+  - Position: {x: -2.8, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 20
+  - Position: {x: -2.8, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 3.4}
+    Weight: 2.1599998
+    RowIdx: 5
+    ColIdx: 21
+  - Position: {x: -2.8, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 5
+    ColIdx: 22
+  - Position: {x: -2.8, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 4.2000003}
+    Weight: 2.98
+    RowIdx: 5
+    ColIdx: 23
+  - Position: {x: -2.8, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -3, y: 0.1, z: 4.6000004}
+    Weight: 1.02
+    RowIdx: 5
+    ColIdx: 24
+  - Position: {x: -2.3999999, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -5}
+    Weight: 2.81
+    RowIdx: 6
+    ColIdx: 0
+  - Position: {x: -2.3999999, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 1
+  - Position: {x: -2.3999999, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 2
+  - Position: {x: -2.3999999, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 3
+  - Position: {x: -2.3999999, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 4
+  - Position: {x: -2.3999999, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 5
+  - Position: {x: -2.3999999, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 6
+  - Position: {x: -2.3999999, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 7
+  - Position: {x: -2.3999999, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -1.8}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 8
+  - Position: {x: -2.3999999, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -1.4}
+    Weight: 2.6100001
+    RowIdx: 6
+    ColIdx: 9
+  - Position: {x: -2.3999999, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -0.99999994}
+    Weight: 3.19
+    RowIdx: 6
+    ColIdx: 10
+  - Position: {x: -2.3999999, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -0.5999999}
+    Weight: -1
+    RowIdx: 6
+    ColIdx: 11
+  - Position: {x: -2.3999999, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: -0.19999993}
+    Weight: -1
+    RowIdx: 6
+    ColIdx: 12
+  - Position: {x: -2.3999999, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 0.20000009}
+    Weight: -1
+    RowIdx: 6
+    ColIdx: 13
+  - Position: {x: -2.3999999, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 0.6000001}
+    Weight: 3.04
+    RowIdx: 6
+    ColIdx: 14
+  - Position: {x: -2.3999999, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 1}
+    Weight: 1.47
+    RowIdx: 6
+    ColIdx: 15
+  - Position: {x: -2.3999999, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 1.4000001}
+    Weight: 1.95
+    RowIdx: 6
+    ColIdx: 16
+  - Position: {x: -2.3999999, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 1.8}
+    Weight: 2.4299998
+    RowIdx: 6
+    ColIdx: 17
+  - Position: {x: -2.3999999, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 18
+  - Position: {x: -2.3999999, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 2.6000001}
+    Weight: 2.73
+    RowIdx: 6
+    ColIdx: 19
+  - Position: {x: -2.3999999, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 3}
+    Weight: 2.6399999
+    RowIdx: 6
+    ColIdx: 20
+  - Position: {x: -2.3999999, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 21
+  - Position: {x: -2.3999999, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 3.8}
+    Weight: 2.45
+    RowIdx: 6
+    ColIdx: 22
+  - Position: {x: -2.3999999, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 4.2000003}
+    Weight: 2.54
+    RowIdx: 6
+    ColIdx: 23
+  - Position: {x: -2.3999999, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -2.6, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 6
+    ColIdx: 24
+  - Position: {x: -2, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -5}
+    Weight: 1.69
+    RowIdx: 7
+    ColIdx: 0
+  - Position: {x: -2, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -4.6}
+    Weight: 3.74
+    RowIdx: 7
+    ColIdx: 1
+  - Position: {x: -2, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 2
+  - Position: {x: -2, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 3
+  - Position: {x: -2, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -3.4}
+    Weight: 1.61
+    RowIdx: 7
+    ColIdx: 4
+  - Position: {x: -2, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 5
+  - Position: {x: -2, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 6
+  - Position: {x: -2, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -2.2}
+    Weight: 2.37
+    RowIdx: 7
+    ColIdx: 7
+  - Position: {x: -2, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -1.8}
+    Weight: 1.71
+    RowIdx: 7
+    ColIdx: 8
+  - Position: {x: -2, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 9
+  - Position: {x: -2, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -0.99999994}
+    Weight: 3.69
+    RowIdx: 7
+    ColIdx: 10
+  - Position: {x: -2, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -0.5999999}
+    Weight: -1
+    RowIdx: 7
+    ColIdx: 11
+  - Position: {x: -2, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: -0.19999993}
+    Weight: -1
+    RowIdx: 7
+    ColIdx: 12
+  - Position: {x: -2, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 0.20000009}
+    Weight: -1
+    RowIdx: 7
+    ColIdx: 13
+  - Position: {x: -2, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 14
+  - Position: {x: -2, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 1}
+    Weight: 2.27
+    RowIdx: 7
+    ColIdx: 15
+  - Position: {x: -2, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 1.4000001}
+    Weight: 1.04
+    RowIdx: 7
+    ColIdx: 16
+  - Position: {x: -2, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 17
+  - Position: {x: -2, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 18
+  - Position: {x: -2, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 19
+  - Position: {x: -2, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 3}
+    Weight: 3.52
+    RowIdx: 7
+    ColIdx: 20
+  - Position: {x: -2, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 3.4}
+    Weight: 1.72
+    RowIdx: 7
+    ColIdx: 21
+  - Position: {x: -2, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 3.8}
+    Weight: 1.47
+    RowIdx: 7
+    ColIdx: 22
+  - Position: {x: -2, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 23
+  - Position: {x: -2, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -2.2, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 7
+    ColIdx: 24
+  - Position: {x: -1.5999999, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 0
+  - Position: {x: -1.5999999, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 1
+  - Position: {x: -1.5999999, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -4.2}
+    Weight: 1.71
+    RowIdx: 8
+    ColIdx: 2
+  - Position: {x: -1.5999999, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 3
+  - Position: {x: -1.5999999, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 4
+  - Position: {x: -1.5999999, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 5
+  - Position: {x: -1.5999999, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -2.6}
+    Weight: 2.6
+    RowIdx: 8
+    ColIdx: 6
+  - Position: {x: -1.5999999, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 7
+  - Position: {x: -1.5999999, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -1.8}
+    Weight: 3.54
+    RowIdx: 8
+    ColIdx: 8
+  - Position: {x: -1.5999999, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -1.4}
+    Weight: 2.49
+    RowIdx: 8
+    ColIdx: 9
+  - Position: {x: -1.5999999, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -0.99999994}
+    Weight: 2.75
+    RowIdx: 8
+    ColIdx: 10
+  - Position: {x: -1.5999999, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -0.5999999}
+    Weight: -1
+    RowIdx: 8
+    ColIdx: 11
+  - Position: {x: -1.5999999, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: -0.19999993}
+    Weight: -1
+    RowIdx: 8
+    ColIdx: 12
+  - Position: {x: -1.5999999, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 0.20000009}
+    Weight: -1
+    RowIdx: 8
+    ColIdx: 13
+  - Position: {x: -1.5999999, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 14
+  - Position: {x: -1.5999999, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 1}
+    Weight: 3.5
+    RowIdx: 8
+    ColIdx: 15
+  - Position: {x: -1.5999999, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 16
+  - Position: {x: -1.5999999, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 17
+  - Position: {x: -1.5999999, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 2.2}
+    Weight: 2.99
+    RowIdx: 8
+    ColIdx: 18
+  - Position: {x: -1.5999999, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 19
+  - Position: {x: -1.5999999, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 20
+  - Position: {x: -1.5999999, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 3.4}
+    Weight: 3.2
+    RowIdx: 8
+    ColIdx: 21
+  - Position: {x: -1.5999999, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 3.8}
+    Weight: 2.28
+    RowIdx: 8
+    ColIdx: 22
+  - Position: {x: -1.5999999, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 4.2000003}
+    Weight: 1.23
+    RowIdx: 8
+    ColIdx: 23
+  - Position: {x: -1.5999999, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -1.8, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 8
+    ColIdx: 24
+  - Position: {x: -1.1999999, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -5}
+    Weight: 1.69
+    RowIdx: 9
+    ColIdx: 0
+  - Position: {x: -1.1999999, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -4.6}
+    Weight: 2.26
+    RowIdx: 9
+    ColIdx: 1
+  - Position: {x: -1.1999999, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -4.2}
+    Weight: 3.56
+    RowIdx: 9
+    ColIdx: 2
+  - Position: {x: -1.1999999, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 3
+  - Position: {x: -1.1999999, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 4
+  - Position: {x: -1.1999999, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 5
+  - Position: {x: -1.1999999, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -2.6}
+    Weight: 3.96
+    RowIdx: 9
+    ColIdx: 6
+  - Position: {x: -1.1999999, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -2.2}
+    Weight: 1.54
+    RowIdx: 9
+    ColIdx: 7
+  - Position: {x: -1.1999999, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -1.8}
+    Weight: 2.28
+    RowIdx: 9
+    ColIdx: 8
+  - Position: {x: -1.1999999, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -1.4}
+    Weight: 1.87
+    RowIdx: 9
+    ColIdx: 9
+  - Position: {x: -1.1999999, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -0.99999994}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 10
+  - Position: {x: -1.1999999, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 11
+  - Position: {x: -1.1999999, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: -0.19999993}
+    Weight: 1.15
+    RowIdx: 9
+    ColIdx: 12
+  - Position: {x: -1.1999999, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 13
+  - Position: {x: -1.1999999, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 14
+  - Position: {x: -1.1999999, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 1}
+    Weight: 2.96
+    RowIdx: 9
+    ColIdx: 15
+  - Position: {x: -1.1999999, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 16
+  - Position: {x: -1.1999999, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 1.8}
+    Weight: 3.76
+    RowIdx: 9
+    ColIdx: 17
+  - Position: {x: -1.1999999, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 2.2}
+    Weight: 1.85
+    RowIdx: 9
+    ColIdx: 18
+  - Position: {x: -1.1999999, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 2.6000001}
+    Weight: 1.49
+    RowIdx: 9
+    ColIdx: 19
+  - Position: {x: -1.1999999, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 20
+  - Position: {x: -1.1999999, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 9
+    ColIdx: 21
+  - Position: {x: -1.1999999, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 3.8}
+    Weight: 1.34
+    RowIdx: 9
+    ColIdx: 22
+  - Position: {x: -1.1999999, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 4.2000003}
+    Weight: 3.06
+    RowIdx: 9
+    ColIdx: 23
+  - Position: {x: -1.1999999, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -1.4, y: 0.1, z: 4.6000004}
+    Weight: 1.8199999
+    RowIdx: 9
+    ColIdx: 24
+  - Position: {x: -0.79999995, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -5}
+    Weight: 2.56
+    RowIdx: 10
+    ColIdx: 0
+  - Position: {x: -0.79999995, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -4.6}
+    Weight: 1.37
+    RowIdx: 10
+    ColIdx: 1
+  - Position: {x: -0.79999995, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -4.2}
+    Weight: 2.55
+    RowIdx: 10
+    ColIdx: 2
+  - Position: {x: -0.79999995, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -3.8}
+    Weight: 1.25
+    RowIdx: 10
+    ColIdx: 3
+  - Position: {x: -0.79999995, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 4
+  - Position: {x: -0.79999995, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 5
+  - Position: {x: -0.79999995, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -2.6}
+    Weight: 3.07
+    RowIdx: 10
+    ColIdx: 6
+  - Position: {x: -0.79999995, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -2.2}
+    Weight: 4
+    RowIdx: 10
+    ColIdx: 7
+  - Position: {x: -0.79999995, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -1.8}
+    Weight: 2.17
+    RowIdx: 10
+    ColIdx: 8
+  - Position: {x: -0.79999995, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -1.4}
+    Weight: 3.91
+    RowIdx: 10
+    ColIdx: 9
+  - Position: {x: -0.79999995, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -0.99999994}
+    Weight: 1.44
+    RowIdx: 10
+    ColIdx: 10
+  - Position: {x: -0.79999995, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -0.5999999}
+    Weight: 3.48
+    RowIdx: 10
+    ColIdx: 11
+  - Position: {x: -0.79999995, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 12
+  - Position: {x: -0.79999995, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 0.20000009}
+    Weight: 3.74
+    RowIdx: 10
+    ColIdx: 13
+  - Position: {x: -0.79999995, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 14
+  - Position: {x: -0.79999995, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 15
+  - Position: {x: -0.79999995, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 16
+  - Position: {x: -0.79999995, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 1.8}
+    Weight: 2.19
+    RowIdx: 10
+    ColIdx: 17
+  - Position: {x: -0.79999995, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 18
+  - Position: {x: -0.79999995, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 2.6000001}
+    Weight: 3.88
+    RowIdx: 10
+    ColIdx: 19
+  - Position: {x: -0.79999995, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 3}
+    Weight: 2.96
+    RowIdx: 10
+    ColIdx: 20
+  - Position: {x: -0.79999995, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 21
+  - Position: {x: -0.79999995, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 22
+  - Position: {x: -0.79999995, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 10
+    ColIdx: 23
+  - Position: {x: -0.79999995, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -0.99999994, y: 0.1, z: 4.6000004}
+    Weight: 2.03
+    RowIdx: 10
+    ColIdx: 24
+  - Position: {x: -0.39999992, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 11
+    ColIdx: 0
+  - Position: {x: -0.39999992, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -4.6}
+    Weight: 1.08
+    RowIdx: 11
+    ColIdx: 1
+  - Position: {x: -0.39999992, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -4.2}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 2
+  - Position: {x: -0.39999992, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -3.8}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 3
+  - Position: {x: -0.39999992, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -3.4}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 4
+  - Position: {x: -0.39999992, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -3}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 5
+  - Position: {x: -0.39999992, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -2.6}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 6
+  - Position: {x: -0.39999992, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -2.2}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 7
+  - Position: {x: -0.39999992, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -1.8}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 8
+  - Position: {x: -0.39999992, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -1.4}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 9
+  - Position: {x: -0.39999992, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -0.99999994}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 10
+  - Position: {x: -0.39999992, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -0.5999999}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 11
+  - Position: {x: -0.39999992, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: -0.19999993}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 12
+  - Position: {x: -0.39999992, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 0.20000009}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 13
+  - Position: {x: -0.39999992, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 0.6000001}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 14
+  - Position: {x: -0.39999992, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 1}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 15
+  - Position: {x: -0.39999992, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 1.4000001}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 16
+  - Position: {x: -0.39999992, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 1.8}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 17
+  - Position: {x: -0.39999992, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 2.2}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 18
+  - Position: {x: -0.39999992, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 2.6000001}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 19
+  - Position: {x: -0.39999992, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 3}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 20
+  - Position: {x: -0.39999992, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 3.4}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 21
+  - Position: {x: -0.39999992, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 3.8}
+    Weight: -1
+    RowIdx: 11
+    ColIdx: 22
+  - Position: {x: -0.39999992, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 4.2000003}
+    Weight: 2.8
+    RowIdx: 11
+    ColIdx: 23
+  - Position: {x: -0.39999992, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -0.5999999, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 11
+    ColIdx: 24
+  - Position: {x: 0.000000074505806, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 12
+    ColIdx: 0
+  - Position: {x: 0.000000074505806, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -4.6}
+    Weight: 1.94
+    RowIdx: 12
+    ColIdx: 1
+  - Position: {x: 0.000000074505806, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -4.2}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 2
+  - Position: {x: 0.000000074505806, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -3.8}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 3
+  - Position: {x: 0.000000074505806, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -3.4}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 4
+  - Position: {x: 0.000000074505806, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -3}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 5
+  - Position: {x: 0.000000074505806, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -2.6}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 6
+  - Position: {x: 0.000000074505806, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -2.2}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 7
+  - Position: {x: 0.000000074505806, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -1.8}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 8
+  - Position: {x: 0.000000074505806, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -1.4}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 9
+  - Position: {x: 0.000000074505806, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -0.99999994}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 10
+  - Position: {x: 0.000000074505806, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -0.5999999}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 11
+  - Position: {x: 0.000000074505806, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: -0.19999993}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 12
+  - Position: {x: 0.000000074505806, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 0.20000009}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 13
+  - Position: {x: 0.000000074505806, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 0.6000001}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 14
+  - Position: {x: 0.000000074505806, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 1}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 15
+  - Position: {x: 0.000000074505806, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 1.4000001}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 16
+  - Position: {x: 0.000000074505806, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 1.8}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 17
+  - Position: {x: 0.000000074505806, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 2.2}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 18
+  - Position: {x: 0.000000074505806, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 2.6000001}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 19
+  - Position: {x: 0.000000074505806, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 3}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 20
+  - Position: {x: 0.000000074505806, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 3.4}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 21
+  - Position: {x: 0.000000074505806, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 3.8}
+    Weight: -1
+    RowIdx: 12
+    ColIdx: 22
+  - Position: {x: 0.000000074505806, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 12
+    ColIdx: 23
+  - Position: {x: 0.000000074505806, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: -0.19999993, y: 0.1, z: 4.6000004}
+    Weight: 1.14
+    RowIdx: 12
+    ColIdx: 24
+  - Position: {x: 0.4000001, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 13
+    ColIdx: 0
+  - Position: {x: 0.4000001, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 13
+    ColIdx: 1
+  - Position: {x: 0.4000001, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -4.2}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 2
+  - Position: {x: 0.4000001, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -3.8}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 3
+  - Position: {x: 0.4000001, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -3.4}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 4
+  - Position: {x: 0.4000001, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -3}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 5
+  - Position: {x: 0.4000001, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -2.6}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 6
+  - Position: {x: 0.4000001, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -2.2}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 7
+  - Position: {x: 0.4000001, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -1.8}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 8
+  - Position: {x: 0.4000001, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -1.4}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 9
+  - Position: {x: 0.4000001, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -0.99999994}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 10
+  - Position: {x: 0.4000001, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -0.5999999}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 11
+  - Position: {x: 0.4000001, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: -0.19999993}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 12
+  - Position: {x: 0.4000001, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 0.20000009}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 13
+  - Position: {x: 0.4000001, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 0.6000001}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 14
+  - Position: {x: 0.4000001, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 1}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 15
+  - Position: {x: 0.4000001, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 1.4000001}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 16
+  - Position: {x: 0.4000001, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 1.8}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 17
+  - Position: {x: 0.4000001, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 2.2}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 18
+  - Position: {x: 0.4000001, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 2.6000001}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 19
+  - Position: {x: 0.4000001, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 3}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 20
+  - Position: {x: 0.4000001, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 3.4}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 21
+  - Position: {x: 0.4000001, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 3.8}
+    Weight: -1
+    RowIdx: 13
+    ColIdx: 22
+  - Position: {x: 0.4000001, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 13
+    ColIdx: 23
+  - Position: {x: 0.4000001, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 0.20000009, y: 0.1, z: 4.6000004}
+    Weight: 3.99
+    RowIdx: 13
+    ColIdx: 24
+  - Position: {x: 0.8000001, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 0
+  - Position: {x: 0.8000001, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 1
+  - Position: {x: 0.8000001, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 2
+  - Position: {x: 0.8000001, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -3.8}
+    Weight: 2.26
+    RowIdx: 14
+    ColIdx: 3
+  - Position: {x: 0.8000001, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -3.4}
+    Weight: 3.8
+    RowIdx: 14
+    ColIdx: 4
+  - Position: {x: 0.8000001, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 5
+  - Position: {x: 0.8000001, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 6
+  - Position: {x: 0.8000001, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -2.2}
+    Weight: 1.04
+    RowIdx: 14
+    ColIdx: 7
+  - Position: {x: 0.8000001, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -1.8}
+    Weight: 2.77
+    RowIdx: 14
+    ColIdx: 8
+  - Position: {x: 0.8000001, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -1.4}
+    Weight: 1.79
+    RowIdx: 14
+    ColIdx: 9
+  - Position: {x: 0.8000001, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -0.99999994}
+    Weight: 1.6700001
+    RowIdx: 14
+    ColIdx: 10
+  - Position: {x: 0.8000001, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 11
+  - Position: {x: 0.8000001, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 12
+  - Position: {x: 0.8000001, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 13
+  - Position: {x: 0.8000001, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 0.6000001}
+    Weight: 1.71
+    RowIdx: 14
+    ColIdx: 14
+  - Position: {x: 0.8000001, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 15
+  - Position: {x: 0.8000001, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 16
+  - Position: {x: 0.8000001, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 17
+  - Position: {x: 0.8000001, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 2.2}
+    Weight: 2.1100001
+    RowIdx: 14
+    ColIdx: 18
+  - Position: {x: 0.8000001, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 19
+  - Position: {x: 0.8000001, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 3}
+    Weight: 2.78
+    RowIdx: 14
+    ColIdx: 20
+  - Position: {x: 0.8000001, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 21
+  - Position: {x: 0.8000001, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 3.8}
+    Weight: 1.9300001
+    RowIdx: 14
+    ColIdx: 22
+  - Position: {x: 0.8000001, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 14
+    ColIdx: 23
+  - Position: {x: 0.8000001, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 0.6000001, y: 0.1, z: 4.6000004}
+    Weight: 2.47
+    RowIdx: 14
+    ColIdx: 24
+  - Position: {x: 1.2, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -5}
+    Weight: 1.04
+    RowIdx: 15
+    ColIdx: 0
+  - Position: {x: 1.2, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -4.6}
+    Weight: 3.16
+    RowIdx: 15
+    ColIdx: 1
+  - Position: {x: 1.2, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 2
+  - Position: {x: 1.2, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -3.8}
+    Weight: 2.83
+    RowIdx: 15
+    ColIdx: 3
+  - Position: {x: 1.2, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -3.4}
+    Weight: 1.3199999
+    RowIdx: 15
+    ColIdx: 4
+  - Position: {x: 1.2, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -3}
+    Weight: 1.45
+    RowIdx: 15
+    ColIdx: 5
+  - Position: {x: 1.2, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -2.6}
+    Weight: 3.53
+    RowIdx: 15
+    ColIdx: 6
+  - Position: {x: 1.2, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -2.2}
+    Weight: 2.37
+    RowIdx: 15
+    ColIdx: 7
+  - Position: {x: 1.2, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -1.8}
+    Weight: 3.32
+    RowIdx: 15
+    ColIdx: 8
+  - Position: {x: 1.2, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 9
+  - Position: {x: 1.2, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -0.99999994}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 10
+  - Position: {x: 1.2, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -0.5999999}
+    Weight: 2.1599998
+    RowIdx: 15
+    ColIdx: 11
+  - Position: {x: 1.2, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 12
+  - Position: {x: 1.2, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 13
+  - Position: {x: 1.2, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 14
+  - Position: {x: 1.2, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 1}
+    Weight: 3.8
+    RowIdx: 15
+    ColIdx: 15
+  - Position: {x: 1.2, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 16
+  - Position: {x: 1.2, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 1.8}
+    Weight: 3.18
+    RowIdx: 15
+    ColIdx: 17
+  - Position: {x: 1.2, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 2.2}
+    Weight: 2.33
+    RowIdx: 15
+    ColIdx: 18
+  - Position: {x: 1.2, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 19
+  - Position: {x: 1.2, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 3}
+    Weight: 3.63
+    RowIdx: 15
+    ColIdx: 20
+  - Position: {x: 1.2, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 3.4}
+    Weight: 2.37
+    RowIdx: 15
+    ColIdx: 21
+  - Position: {x: 1.2, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 22
+  - Position: {x: 1.2, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 23
+  - Position: {x: 1.2, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 1, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 15
+    ColIdx: 24
+  - Position: {x: 1.6000001, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -5}
+    Weight: 2.87
+    RowIdx: 16
+    ColIdx: 0
+  - Position: {x: 1.6000001, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -4.6}
+    Weight: 2.6
+    RowIdx: 16
+    ColIdx: 1
+  - Position: {x: 1.6000001, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 2
+  - Position: {x: 1.6000001, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 3
+  - Position: {x: 1.6000001, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -3.4}
+    Weight: 2.17
+    RowIdx: 16
+    ColIdx: 4
+  - Position: {x: 1.6000001, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 5
+  - Position: {x: 1.6000001, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 6
+  - Position: {x: 1.6000001, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 7
+  - Position: {x: 1.6000001, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -1.8}
+    Weight: 1.77
+    RowIdx: 16
+    ColIdx: 8
+  - Position: {x: 1.6000001, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 9
+  - Position: {x: 1.6000001, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -0.99999994}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 10
+  - Position: {x: 1.6000001, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -0.5999999}
+    Weight: 3.62
+    RowIdx: 16
+    ColIdx: 11
+  - Position: {x: 1.6000001, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 12
+  - Position: {x: 1.6000001, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 13
+  - Position: {x: 1.6000001, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 0.6000001}
+    Weight: 1.13
+    RowIdx: 16
+    ColIdx: 14
+  - Position: {x: 1.6000001, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 1}
+    Weight: 2.1
+    RowIdx: 16
+    ColIdx: 15
+  - Position: {x: 1.6000001, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 16
+  - Position: {x: 1.6000001, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 1.8}
+    Weight: 3.79
+    RowIdx: 16
+    ColIdx: 17
+  - Position: {x: 1.6000001, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 2.2}
+    Weight: 1.97
+    RowIdx: 16
+    ColIdx: 18
+  - Position: {x: 1.6000001, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 19
+  - Position: {x: 1.6000001, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 3}
+    Weight: 1.87
+    RowIdx: 16
+    ColIdx: 20
+  - Position: {x: 1.6000001, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 3.4}
+    Weight: 3.01
+    RowIdx: 16
+    ColIdx: 21
+  - Position: {x: 1.6000001, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 22
+  - Position: {x: 1.6000001, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 4.2000003}
+    Weight: 2.19
+    RowIdx: 16
+    ColIdx: 23
+  - Position: {x: 1.6000001, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 1.4000001, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 16
+    ColIdx: 24
+  - Position: {x: 2, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 0
+  - Position: {x: 2, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 1
+  - Position: {x: 2, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -4.2}
+    Weight: 3.29
+    RowIdx: 17
+    ColIdx: 2
+  - Position: {x: 2, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -3.8}
+    Weight: 1.3199999
+    RowIdx: 17
+    ColIdx: 3
+  - Position: {x: 2, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -3.4}
+    Weight: 1.11
+    RowIdx: 17
+    ColIdx: 4
+  - Position: {x: 2, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -3}
+    Weight: 3.58
+    RowIdx: 17
+    ColIdx: 5
+  - Position: {x: 2, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 6
+  - Position: {x: 2, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -2.2}
+    Weight: 1.42
+    RowIdx: 17
+    ColIdx: 7
+  - Position: {x: 2, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -1.8}
+    Weight: 2.06
+    RowIdx: 17
+    ColIdx: 8
+  - Position: {x: 2, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 9
+  - Position: {x: 2, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -0.99999994}
+    Weight: 3.01
+    RowIdx: 17
+    ColIdx: 10
+  - Position: {x: 2, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 11
+  - Position: {x: 2, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 12
+  - Position: {x: 2, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 0.20000009}
+    Weight: 3.48
+    RowIdx: 17
+    ColIdx: 13
+  - Position: {x: 2, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 14
+  - Position: {x: 2, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 15
+  - Position: {x: 2, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 17
+    ColIdx: 16
+  - Position: {x: 2, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 1.8}
+    Weight: 2.98
+    RowIdx: 17
+    ColIdx: 17
+  - Position: {x: 2, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 2.2}
+    Weight: 3.82
+    RowIdx: 17
+    ColIdx: 18
+  - Position: {x: 2, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 2.6000001}
+    Weight: 2.52
+    RowIdx: 17
+    ColIdx: 19
+  - Position: {x: 2, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 3}
+    Weight: 2.08
+    RowIdx: 17
+    ColIdx: 20
+  - Position: {x: 2, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 3.4}
+    Weight: 3.87
+    RowIdx: 17
+    ColIdx: 21
+  - Position: {x: 2, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 3.8}
+    Weight: 1.8299999
+    RowIdx: 17
+    ColIdx: 22
+  - Position: {x: 2, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 4.2000003}
+    Weight: 2.62
+    RowIdx: 17
+    ColIdx: 23
+  - Position: {x: 2, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 1.8, y: 0.1, z: 4.6000004}
+    Weight: 2.24
+    RowIdx: 17
+    ColIdx: 24
+  - Position: {x: 2.4, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 0
+  - Position: {x: 2.4, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 1
+  - Position: {x: 2.4, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 2
+  - Position: {x: 2.4, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 3
+  - Position: {x: 2.4, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -3.4}
+    Weight: 2.56
+    RowIdx: 18
+    ColIdx: 4
+  - Position: {x: 2.4, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 5
+  - Position: {x: 2.4, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 6
+  - Position: {x: 2.4, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 7
+  - Position: {x: 2.4, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -1.8}
+    Weight: 3.27
+    RowIdx: 18
+    ColIdx: 8
+  - Position: {x: 2.4, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -1.4}
+    Weight: 3.03
+    RowIdx: 18
+    ColIdx: 9
+  - Position: {x: 2.4, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -0.99999994}
+    Weight: 1.87
+    RowIdx: 18
+    ColIdx: 10
+  - Position: {x: 2.4, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 11
+  - Position: {x: 2.4, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 12
+  - Position: {x: 2.4, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 13
+  - Position: {x: 2.4, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 14
+  - Position: {x: 2.4, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 1}
+    Weight: 1.23
+    RowIdx: 18
+    ColIdx: 15
+  - Position: {x: 2.4, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 16
+  - Position: {x: 2.4, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 1.8}
+    Weight: 1.19
+    RowIdx: 18
+    ColIdx: 17
+  - Position: {x: 2.4, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 2.2}
+    Weight: 3.16
+    RowIdx: 18
+    ColIdx: 18
+  - Position: {x: 2.4, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 19
+  - Position: {x: 2.4, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 20
+  - Position: {x: 2.4, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 3.4}
+    Weight: 3.94
+    RowIdx: 18
+    ColIdx: 21
+  - Position: {x: 2.4, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 18
+    ColIdx: 22
+  - Position: {x: 2.4, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 4.2000003}
+    Weight: 2.35
+    RowIdx: 18
+    ColIdx: 23
+  - Position: {x: 2.4, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 2.2, y: 0.1, z: 4.6000004}
+    Weight: 2.3899999
+    RowIdx: 18
+    ColIdx: 24
+  - Position: {x: 2.8000002, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -5}
+    Weight: 3.19
+    RowIdx: 19
+    ColIdx: 0
+  - Position: {x: 2.8000002, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -4.6}
+    Weight: 1.89
+    RowIdx: 19
+    ColIdx: 1
+  - Position: {x: 2.8000002, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 2
+  - Position: {x: 2.8000002, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -3.8}
+    Weight: 3
+    RowIdx: 19
+    ColIdx: 3
+  - Position: {x: 2.8000002, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 4
+  - Position: {x: 2.8000002, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 5
+  - Position: {x: 2.8000002, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 6
+  - Position: {x: 2.8000002, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -2.2}
+    Weight: 1.9200001
+    RowIdx: 19
+    ColIdx: 7
+  - Position: {x: 2.8000002, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -1.8}
+    Weight: 3.31
+    RowIdx: 19
+    ColIdx: 8
+  - Position: {x: 2.8000002, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -1.4}
+    Weight: 1.81
+    RowIdx: 19
+    ColIdx: 9
+  - Position: {x: 2.8000002, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -0.99999994}
+    Weight: 2.67
+    RowIdx: 19
+    ColIdx: 10
+  - Position: {x: 2.8000002, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 11
+  - Position: {x: 2.8000002, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 12
+  - Position: {x: 2.8000002, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 0.20000009}
+    Weight: 1.72
+    RowIdx: 19
+    ColIdx: 13
+  - Position: {x: 2.8000002, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 0.6000001}
+    Weight: 3.07
+    RowIdx: 19
+    ColIdx: 14
+  - Position: {x: 2.8000002, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 15
+  - Position: {x: 2.8000002, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 16
+  - Position: {x: 2.8000002, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 1.8}
+    Weight: 2.65
+    RowIdx: 19
+    ColIdx: 17
+  - Position: {x: 2.8000002, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 18
+  - Position: {x: 2.8000002, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 2.6000001}
+    Weight: 3.93
+    RowIdx: 19
+    ColIdx: 19
+  - Position: {x: 2.8000002, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 3}
+    Weight: 2.24
+    RowIdx: 19
+    ColIdx: 20
+  - Position: {x: 2.8000002, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 3.4}
+    Weight: 2.6799998
+    RowIdx: 19
+    ColIdx: 21
+  - Position: {x: 2.8000002, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 3.8}
+    Weight: 3.09
+    RowIdx: 19
+    ColIdx: 22
+  - Position: {x: 2.8000002, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 19
+    ColIdx: 23
+  - Position: {x: 2.8000002, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 2.6000001, y: 0.1, z: 4.6000004}
+    Weight: 3.2
+    RowIdx: 19
+    ColIdx: 24
+  - Position: {x: 3.2, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -5}
+    Weight: 3.13
+    RowIdx: 20
+    ColIdx: 0
+  - Position: {x: 3.2, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 1
+  - Position: {x: 3.2, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 2
+  - Position: {x: 3.2, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 3
+  - Position: {x: 3.2, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -3.4}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 4
+  - Position: {x: 3.2, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 5
+  - Position: {x: 3.2, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -2.6}
+    Weight: 1.14
+    RowIdx: 20
+    ColIdx: 6
+  - Position: {x: 3.2, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 7
+  - Position: {x: 3.2, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -1.8}
+    Weight: 1.6700001
+    RowIdx: 20
+    ColIdx: 8
+  - Position: {x: 3.2, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -1.4}
+    Weight: 3.29
+    RowIdx: 20
+    ColIdx: 9
+  - Position: {x: 3.2, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -0.99999994}
+    Weight: 3.26
+    RowIdx: 20
+    ColIdx: 10
+  - Position: {x: 3.2, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -0.5999999}
+    Weight: 3.64
+    RowIdx: 20
+    ColIdx: 11
+  - Position: {x: 3.2, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: -0.19999993}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 12
+  - Position: {x: 3.2, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 0.20000009}
+    Weight: 2.13
+    RowIdx: 20
+    ColIdx: 13
+  - Position: {x: 3.2, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 0.6000001}
+    Weight: 1.88
+    RowIdx: 20
+    ColIdx: 14
+  - Position: {x: 3.2, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 15
+  - Position: {x: 3.2, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 16
+  - Position: {x: 3.2, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 1.8}
+    Weight: 2.01
+    RowIdx: 20
+    ColIdx: 17
+  - Position: {x: 3.2, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 2.2}
+    Weight: 2.42
+    RowIdx: 20
+    ColIdx: 18
+  - Position: {x: 3.2, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 2.6000001}
+    Weight: 1.89
+    RowIdx: 20
+    ColIdx: 19
+  - Position: {x: 3.2, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 20
+  - Position: {x: 3.2, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 21
+  - Position: {x: 3.2, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 20
+    ColIdx: 22
+  - Position: {x: 3.2, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 4.2000003}
+    Weight: 2.27
+    RowIdx: 20
+    ColIdx: 23
+  - Position: {x: 3.2, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 3, y: 0.1, z: 4.6000004}
+    Weight: 1.77
+    RowIdx: 20
+    ColIdx: 24
+  - Position: {x: 3.6000001, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -5}
+    Weight: 3.56
+    RowIdx: 21
+    ColIdx: 0
+  - Position: {x: 3.6000001, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -4.6}
+    Weight: 3.73
+    RowIdx: 21
+    ColIdx: 1
+  - Position: {x: 3.6000001, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -4.2}
+    Weight: 1.42
+    RowIdx: 21
+    ColIdx: 2
+  - Position: {x: 3.6000001, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 3
+  - Position: {x: 3.6000001, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -3.4}
+    Weight: 2.9299998
+    RowIdx: 21
+    ColIdx: 4
+  - Position: {x: 3.6000001, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 5
+  - Position: {x: 3.6000001, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -2.6}
+    Weight: 1.87
+    RowIdx: 21
+    ColIdx: 6
+  - Position: {x: 3.6000001, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 7
+  - Position: {x: 3.6000001, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -1.8}
+    Weight: 1.01
+    RowIdx: 21
+    ColIdx: 8
+  - Position: {x: 3.6000001, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 9
+  - Position: {x: 3.6000001, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -0.99999994}
+    Weight: 1.42
+    RowIdx: 21
+    ColIdx: 10
+  - Position: {x: 3.6000001, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -0.5999999}
+    Weight: 2.25
+    RowIdx: 21
+    ColIdx: 11
+  - Position: {x: 3.6000001, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: -0.19999993}
+    Weight: 1.3199999
+    RowIdx: 21
+    ColIdx: 12
+  - Position: {x: 3.6000001, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 0.20000009}
+    Weight: 1.05
+    RowIdx: 21
+    ColIdx: 13
+  - Position: {x: 3.6000001, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 0.6000001}
+    Weight: 1.25
+    RowIdx: 21
+    ColIdx: 14
+  - Position: {x: 3.6000001, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 15
+  - Position: {x: 3.6000001, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 1.4000001}
+    Weight: 2.83
+    RowIdx: 21
+    ColIdx: 16
+  - Position: {x: 3.6000001, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 1.8}
+    Weight: 1.8
+    RowIdx: 21
+    ColIdx: 17
+  - Position: {x: 3.6000001, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 18
+  - Position: {x: 3.6000001, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 19
+  - Position: {x: 3.6000001, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 3}
+    Weight: 2.8600001
+    RowIdx: 21
+    ColIdx: 20
+  - Position: {x: 3.6000001, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 3.4}
+    Weight: 2.79
+    RowIdx: 21
+    ColIdx: 21
+  - Position: {x: 3.6000001, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 22
+  - Position: {x: 3.6000001, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 23
+  - Position: {x: 3.6000001, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 3.4, y: 0.1, z: 4.6000004}
+    Weight: 1
+    RowIdx: 21
+    ColIdx: 24
+  - Position: {x: 4, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -5}
+    Weight: 2.1
+    RowIdx: 22
+    ColIdx: 0
+  - Position: {x: 4, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -4.6}
+    Weight: 1.46
+    RowIdx: 22
+    ColIdx: 1
+  - Position: {x: 4, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 2
+  - Position: {x: 4, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 3
+  - Position: {x: 4, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -3.4}
+    Weight: 2.0900002
+    RowIdx: 22
+    ColIdx: 4
+  - Position: {x: 4, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 5
+  - Position: {x: 4, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 6
+  - Position: {x: 4, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -2.2}
+    Weight: 1.03
+    RowIdx: 22
+    ColIdx: 7
+  - Position: {x: 4, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -1.8}
+    Weight: 2.4
+    RowIdx: 22
+    ColIdx: 8
+  - Position: {x: 4, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -1.4}
+    Weight: 3.79
+    RowIdx: 22
+    ColIdx: 9
+  - Position: {x: 4, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -0.99999994}
+    Weight: 3.37
+    RowIdx: 22
+    ColIdx: 10
+  - Position: {x: 4, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -0.5999999}
+    Weight: 3.06
+    RowIdx: 22
+    ColIdx: 11
+  - Position: {x: 4, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: -0.19999993}
+    Weight: 2.92
+    RowIdx: 22
+    ColIdx: 12
+  - Position: {x: 4, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 13
+  - Position: {x: 4, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 0.6000001}
+    Weight: 1.61
+    RowIdx: 22
+    ColIdx: 14
+  - Position: {x: 4, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 1}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 15
+  - Position: {x: 4, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 1.4000001}
+    Weight: 3.52
+    RowIdx: 22
+    ColIdx: 16
+  - Position: {x: 4, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 17
+  - Position: {x: 4, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 2.2}
+    Weight: 1.33
+    RowIdx: 22
+    ColIdx: 18
+  - Position: {x: 4, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 2.6000001}
+    Weight: 2.73
+    RowIdx: 22
+    ColIdx: 19
+  - Position: {x: 4, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 20
+  - Position: {x: 4, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 22
+    ColIdx: 21
+  - Position: {x: 4, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 3.8}
+    Weight: 2.77
+    RowIdx: 22
+    ColIdx: 22
+  - Position: {x: 4, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 4.2000003}
+    Weight: 1.88
+    RowIdx: 22
+    ColIdx: 23
+  - Position: {x: 4, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 3.8, y: 0.1, z: 4.6000004}
+    Weight: 1.61
+    RowIdx: 22
+    ColIdx: 24
+  - Position: {x: 4.4, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -5}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 0
+  - Position: {x: 4.4, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -4.6}
+    Weight: 3.69
+    RowIdx: 23
+    ColIdx: 1
+  - Position: {x: 4.4, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 2
+  - Position: {x: 4.4, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -3.8}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 3
+  - Position: {x: 4.4, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -3.4}
+    Weight: 3.64
+    RowIdx: 23
+    ColIdx: 4
+  - Position: {x: 4.4, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 5
+  - Position: {x: 4.4, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 6
+  - Position: {x: 4.4, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -2.2}
+    Weight: 2.79
+    RowIdx: 23
+    ColIdx: 7
+  - Position: {x: 4.4, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -1.8}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 8
+  - Position: {x: 4.4, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -1.4}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 9
+  - Position: {x: 4.4, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -0.99999994}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 10
+  - Position: {x: 4.4, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -0.5999999}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 11
+  - Position: {x: 4.4, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: -0.19999993}
+    Weight: 2.56
+    RowIdx: 23
+    ColIdx: 12
+  - Position: {x: 4.4, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 13
+  - Position: {x: 4.4, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 0.6000001}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 14
+  - Position: {x: 4.4, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 1}
+    Weight: 1.22
+    RowIdx: 23
+    ColIdx: 15
+  - Position: {x: 4.4, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 16
+  - Position: {x: 4.4, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 1.8}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 17
+  - Position: {x: 4.4, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 2.2}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 18
+  - Position: {x: 4.4, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 2.6000001}
+    Weight: 3.75
+    RowIdx: 23
+    ColIdx: 19
+  - Position: {x: 4.4, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 20
+  - Position: {x: 4.4, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 21
+  - Position: {x: 4.4, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 22
+  - Position: {x: 4.4, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 23
+    ColIdx: 23
+  - Position: {x: 4.4, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 4.2000003, y: 0.1, z: 4.6000004}
+    Weight: 3.44
+    RowIdx: 23
+    ColIdx: 24
+  - Position: {x: 4.8, y: 0.05, z: -4.8}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -5}
+    Weight: 1.97
+    RowIdx: 24
+    ColIdx: 0
+  - Position: {x: 4.8, y: 0.05, z: -4.4}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -4.6}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 1
+  - Position: {x: 4.8, y: 0.05, z: -4}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -4.2}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 2
+  - Position: {x: 4.8, y: 0.05, z: -3.6}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -3.8}
+    Weight: 2.13
+    RowIdx: 24
+    ColIdx: 3
+  - Position: {x: 4.8, y: 0.05, z: -3.2}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -3.4}
+    Weight: 1.76
+    RowIdx: 24
+    ColIdx: 4
+  - Position: {x: 4.8, y: 0.05, z: -2.8}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -3}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 5
+  - Position: {x: 4.8, y: 0.05, z: -2.3999999}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -2.6}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 6
+  - Position: {x: 4.8, y: 0.05, z: -2}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -2.2}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 7
+  - Position: {x: 4.8, y: 0.05, z: -1.5999999}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -1.8}
+    Weight: 1.28
+    RowIdx: 24
+    ColIdx: 8
+  - Position: {x: 4.8, y: 0.05, z: -1.1999999}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -1.4}
+    Weight: 3.01
+    RowIdx: 24
+    ColIdx: 9
+  - Position: {x: 4.8, y: 0.05, z: -0.79999995}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -0.99999994}
+    Weight: 1.99
+    RowIdx: 24
+    ColIdx: 10
+  - Position: {x: 4.8, y: 0.05, z: -0.39999992}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -0.5999999}
+    Weight: 3
+    RowIdx: 24
+    ColIdx: 11
+  - Position: {x: 4.8, y: 0.05, z: 0.000000074505806}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: -0.19999993}
+    Weight: 1.21
+    RowIdx: 24
+    ColIdx: 12
+  - Position: {x: 4.8, y: 0.05, z: 0.4000001}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 0.20000009}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 13
+  - Position: {x: 4.8, y: 0.05, z: 0.8000001}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 0.6000001}
+    Weight: 2.8600001
+    RowIdx: 24
+    ColIdx: 14
+  - Position: {x: 4.8, y: 0.05, z: 1.2}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 1}
+    Weight: 3.51
+    RowIdx: 24
+    ColIdx: 15
+  - Position: {x: 4.8, y: 0.05, z: 1.6000001}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 1.4000001}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 16
+  - Position: {x: 4.8, y: 0.05, z: 2}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 1.8}
+    Weight: 1.49
+    RowIdx: 24
+    ColIdx: 17
+  - Position: {x: 4.8, y: 0.05, z: 2.4}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 2.2}
+    Weight: 3.49
+    RowIdx: 24
+    ColIdx: 18
+  - Position: {x: 4.8, y: 0.05, z: 2.8000002}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 2.6000001}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 19
+  - Position: {x: 4.8, y: 0.05, z: 3.2}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 3}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 20
+  - Position: {x: 4.8, y: 0.05, z: 3.6000001}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 3.4}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 21
+  - Position: {x: 4.8, y: 0.05, z: 4}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 3.8}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 22
+  - Position: {x: 4.8, y: 0.05, z: 4.4}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 4.2000003}
+    Weight: 1
+    RowIdx: 24
+    ColIdx: 23
+  - Position: {x: 4.8, y: 0.05, z: 4.8}
+    PositionTopLeftCorner: {x: 4.6000004, y: 0.1, z: 4.6000004}
+    Weight: 2.15
+    RowIdx: 24
+    ColIdx: 24
+  settings:
+    TilesInRow: 25
+    TilesInCol: 25
+    TileSize: 0.4
+    MinYHeight: 0.05
+    MaxWeight: 4
+  displayNodes: 1
+  nodeRadius: 0.05
+  nodeColor: {r: 0, g: 0.17964077, b: 1, a: 1}
+  displayTiles: 1
+  drawWireCubes: 0
+  TILE_SIZE_MODIFIER: 0.95
+  walkableTileColor: {r: 0, g: 0.7, b: 0, a: 0.29803923}
+  maxWeightTileColor: {r: 1, g: 0, b: 0.9190922, a: 0.65882355}
+  blockedTileColor: {r: 1, g: 0, b: 0, a: 1}
+  displayWeight: 1
+  weightTextColor: {r: 0, g: 0, b: 0, a: 1}
+  weightAdjustValue: {x: 0.16, y: 0, z: 0.07}
+  displayTileIndex: 0
+  indexTextColor: {r: 0, g: 0, b: 0, a: 1}
+  indexAdjustValue: {x: 0.09, y: 0, z: 0.03}
+--- !u!4 &1515440838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515440835}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalScale: {x: 10, y: 2, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1965162176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1515440839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515440835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de656c0cead6a9e498152dc53bb3da27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReady: 0
+  TextInfo: This script will save all unity grid related data. It also allows to
+    work with the data properly.
+  spaceMessage: 
+--- !u!1 &1860952013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860952014}
+  - component: {fileID: 1860952017}
+  - component: {fileID: 1860952016}
+  - component: {fileID: 1860952015}
+  m_Layer: 0
+  m_Name: Obstacle 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860952014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860952013}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 8}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434279602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1860952015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860952013}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1860952016
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860952013}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1860952017
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860952013}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1965162175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965162176}
+  m_Layer: 0
+  m_Name: Behaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1965162176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965162175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1328793255}
+  - {fileID: 1515440838}
+  - {fileID: 2045078620}
+  - {fileID: 178758571}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2045078619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045078620}
+  - component: {fileID: 2045078622}
+  - component: {fileID: 2045078621}
+  m_Layer: 0
+  m_Name: Navigation Runner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045078620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045078619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1965162176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045078621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045078619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a400b8bac363a2949a0b416b6e0bc5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1515440836}
+  algorithmType: 9
+  goals:
+    Start:
+      Row: 0
+      Col: 0
+    End:
+      Row: 25
+      Col: 25
+  drawPath: 1
+  lineRenderer: {fileID: 178758572}
+  displayPathString: 1
+  printAlgorithmRuntime: 1
+  printPathLength: 1
+  multipleTestsAmount: 100
+--- !u!114 &2045078622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045078619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de656c0cead6a9e498152dc53bb3da27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReady: 0
+  TextInfo: Select algoirithm, set goals and press compute path after Unity Grid
+    was prepared.
+  spaceMessage: 
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 963194228}
+  - {fileID: 705507995}
+  - {fileID: 1434279602}
+  - {fileID: 1965162176}
